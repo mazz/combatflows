@@ -1,0 +1,908 @@
+[
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Intercept punch to trapping to figure four wrist lock, follow with takedown to arm bar",
+        "text": "Intercept punch to trapping to figure four wrist lock, follow with takedown to arm bar",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_01_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_01_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_01_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 01",
+        "tableimage": "tn_cf_listview_01@2x",
+        "tableimage_application": "tn_cf_app_listview_01@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_01@2x",
+        "thumbs": [
+             "cf_01_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow01",
+        "flows": [
+                [
+                    "01-combatflow-1-application.m4v",
+                    "01-combatflow-1-graphicguide.m4v",
+                    "01-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Punch destruction to trapping to locking, follow with rolling takedown to shoulder lock",
+        "text": "Punch destruction to trapping to locking, follow with rolling takedown to shoulder lock",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_02_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_02_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_02_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 02",
+        "tableimage": "tn_cf_listview_02@2x",
+        "tableimage_application": "tn_cf_app_listview_02@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_02@2x",
+        "thumbs": [
+             "cf_02_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow02",
+        "flows": [
+                [
+                    "02-combatflow-1-application.m4v",
+                    "02-combatflow-1-graphicguide.m4v",
+                    "02-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+  {
+  "bundled": false,
+  "thumbs": [
+             "00_bundled-thumb-600.m4v"
+             ],
+  "productIdentifier": "ca.ilearningsolutions.combatflows.combatflowbundle",
+  "name": "Combat Flows Bundle",
+  "text": "The combat flows bundle.",
+  "flows": [
+            [
+                    "01-combatflow-1-application.m4v",
+                    "01-combatflow-1-graphicguide.m4v",
+                    "01-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "02-combatflow-1-application.m4v",
+                    "02-combatflow-1-graphicguide.m4v",
+                    "02-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "03-combatflow-1-application.m4v",
+                    "03-combatflow-1-graphicguide.m4v",
+                    "03-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "04-combatflow-1-application.m4v",
+                    "04-combatflow-1-graphicguide.m4v",
+                    "04-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "05-combatflow-1-application.m4v",
+                    "05-combatflow-1-graphicguide.m4v",
+                    "05-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "06-combatflow-1-application.m4v",
+                    "06-combatflow-1-graphicguide.m4v",
+                    "06-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "07-combatflow-1-application.m4v",
+                    "07-combatflow-1-graphicguide.m4v",
+                    "07-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "08-combatflow-1-application.m4v",
+                    "08-combatflow-1-graphicguide.m4v",
+                    "08-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "09-combatflow-1-application.m4v",
+                    "09-combatflow-1-graphicguide.m4v",
+                    "09-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "10-combatflow-1-application.m4v",
+                    "10-combatflow-1-graphicguide.m4v",
+                    "10-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "11-combatflow-1-application.m4v",
+                    "11-combatflow-1-graphicguide.m4v",
+                    "11-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "12-combatflow-1-application.m4v",
+                    "12-combatflow-1-graphicguide.m4v",
+                    "12-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "13-combatflow-1-application.m4v",
+                    "13-combatflow-1-graphicguide.m4v",
+                    "13-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "14-combatflow-1-application.m4v",
+                    "14-combatflow-1-graphicguide.m4v",
+                    "14-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "15-combatflow-1-application.m4v",
+                    "15-combatflow-1-graphicguide.m4v",
+                    "15-combatflow-1-teaching.m4v"
+             ],
+            [
+                    "16-combatflow-1-application.m4v",
+                    "16-combatflow-1-graphicguide.m4v",
+                    "16-combatflow-1-teaching.m4v"
+             ]
+             ]
+  },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Kicking to boxing, opponent shoots to counter takedown to arm bar",
+        "text": "Kicking to boxing, opponent shoots to counter takedown to arm bar",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_03_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_03_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_03_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 03",
+        "tableimage": "tn_cf_listview_03@2x",
+        "tableimage_application": "tn_cf_app_listview_03@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_03@2x",
+        "thumbs": [
+             "cf_03_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow03",
+        "flows": [
+                [
+                    "03-combatflow-1-application.m4v",
+                    "03-combatflow-1-graphicguide.m4v",
+                    "03-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": true,
+        "graphicGuideBanners": [
+                              "04-combatflow-1-graphicguidebanner@2x.png",
+                              "04-combatflow-1-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "04-combatflow-1-graphicguidecard-1@2x.png",
+                              "04-combatflow-1-graphicguidecard-1@3x.png",
+                              "04-combatflow-1-graphicguidecard-2@2x.png",
+                              "04-combatflow-1-graphicguidecard-2@3x.png",
+                              "04-combatflow-1-graphicguidecard-3@2x.png",
+                              "04-combatflow-1-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Boxing interception to straight blast to headbutt-knees-elbows, shoot to leg submissions",
+        "text": "Boxing interception to straight blast to headbutt-knees-elbows, shoot to leg submissions",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_04_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_04_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_04_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 04",
+        "tableimage": "tn_cf_listview_04@2x",
+        "tableimage_application": "tn_cf_app_listview_04@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_04@2x",
+        "thumbs": [
+             "cf_04_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow04",
+        "flows": [
+                [
+                    "04-combatflow-1-application.m4v",
+                    "04-combatflow-1-graphicguide.m4v",
+                    "04-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Kickboxing to shoot to leg locks",
+        "text": "Kickboxing to shoot to leg locks",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_05_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_05_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_05_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 05",
+        "tableimage": "tn_cf_listview_05@2x",
+        "tableimage_application": "tn_cf_app_listview_05@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_05@2x",
+         "thumbs": [
+             "cf_05_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow05",
+        "flows": [
+                [
+                    "05-combatflow-1-application.m4v",
+                    "05-combatflow-1-graphicguide.m4v",
+                    "05-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Boxing to trapping to takedown, ground and pound to submissions",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_06_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_06_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_06_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 06",
+        "tableimage": "tn_cf_listview_06@2x",
+        "tableimage_application": "tn_cf_app_listview_06@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_06@2x",
+        "thumbs": [
+             "cf_06_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow06",
+        "flows": [
+                [
+                    "06-combatflow-1-application.m4v",
+                    "06-combatflow-1-graphicguide.m4v",
+                    "06-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Finger jab to fake to punching, trapping to arm bar takedown",
+        "text": "Finger jab to fake to punching, trapping to arm bar takedown",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_07_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_07_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_07_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 07",
+        "tableimage": "tn_cf_listview_07@2x",
+        "tableimage_application": "tn_cf_app_listview_07@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_07@2x",
+        "thumbs": [
+             "cf_07_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow07",
+        "flows": [
+                [
+                    "07-combatflow-1-application.m4v",
+                    "07-combatflow-1-graphicguide.m4v",
+                    "07-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Kicking interception to kicking, leg capture to takedown and submissions",
+        "text": "Kicking interception to kicking, leg capture to takedown and submissions",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_08_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_08_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_08_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 08",
+        "tableimage": "tn_cf_listview_08@2x",
+        "tableimage_application": "tn_cf_app_listview_08@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_08@2x",
+        "thumbs": [
+             "cf_08_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow08",
+        "flows": [
+                [
+                    "08-combatflow-1-application.m4v",
+                    "08-combatflow-1-graphicguide.m4v",
+                    "08-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Opponent shoots to arm bar counter, sweep to arm bar",
+        "text": "Opponent shoots to arm bar counter, sweep to arm bar",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_09_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_09_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_09_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 09",
+        "tableimage": "tn_cf_listview_09@2x",
+        "tableimage_application": "tn_cf_app_listview_09@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_09@2x",
+        "thumbs": [
+             "cf_09_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow09",
+        "flows": [
+                [
+                    "09-combatflow-1-application.m4v",
+                    "09-combatflow-1-graphicguide.m4v",
+                    "09-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Gun disarm to counter to control",
+        "text": "Gun disarm to counter to control",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_10_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_10_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_10_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 10",
+        "tableimage": "tn_cf_listview_10@2x",
+        "tableimage_application": "tn_cf_app_listview_10@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_10@2x",
+        "thumbs": [
+             "cf_10_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow10",
+        "flows": [
+                [
+                    "10-combatflow-1-application.m4v",
+                    "10-combatflow-1-graphicguide.m4v",
+                    "10-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Pummeling to striking to locking, takedown to leg submissions",
+        "text": "Pummeling to striking to locking, takedown to leg submissions",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_11_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_11_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_11_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 11",
+        "tableimage": "tn_cf_listview_11@2x",
+        "tableimage_application": "tn_cf_app_listview_11@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_11@2x",
+        "thumbs": [
+             "cf_11_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow11",
+        "flows": [
+                [
+                    "11-combatflow-1-application.m4v",
+                    "11-combatflow-1-graphicguide.m4v",
+                    "11-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Kicking to trapping to neck crank finish",
+        "text": "Kicking to trapping to neck crank finish",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_12_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_12_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_12_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 12",
+        "tableimage": "tn_cf_listview_12@2x",
+        "tableimage_application": "tn_cf_app_listview_12@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_12@2x",
+        "thumbs": [
+             "cf_12_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow12",
+        "flows": [
+                [
+                    "12-combatflow-1-application.m4v",
+                    "12-combatflow-1-graphicguide.m4v",
+                    "12-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Punch interception to straight blast to ground and pound, follow with arm submissions",
+        "text": "Punch interception to straight blast to ground and pound, follow with arm submissions",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_13_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_13_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_13_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 13",
+        "tableimage": "tn_cf_listview_13@2x",
+        "tableimage_application": "tn_cf_app_listview_13@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_13@2x",
+        "thumbs": [
+             "cf_13_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow13",
+        "flows": [
+                [
+                    "13-combatflow-1-application.m4v",
+                    "13-combatflow-1-graphicguide.m4v",
+                    "13-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Stick striking and locking/controls",
+        "text": "Stick striking and locking/controls",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_14_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_14_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_14_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 14",
+        "tableimage": "tn_cf_listview_14@2x",
+        "tableimage_application": "tn_cf_app_listview_14@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_14@2x",
+        "thumbs": [
+             "cf_14_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow14",
+        "flows": [
+                [
+                    "14-combatflow-1-application.m4v",
+                    "14-combatflow-1-graphicguide.m4v",
+                    "14-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Empty hand vs knife, control to disarm",
+        "text": "Empty hand vs knife, control to disarm",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_15_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_15_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_15_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 15",
+        "tableimage": "tn_cf_listview_15@2x",
+        "tableimage_application": "tn_cf_app_listview_15@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_15@2x",
+        "thumbs": [
+             "cf_15_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow15",
+        "flows": [
+                [
+                    "15-combatflow-1-application.m4v",
+                    "15-combatflow-1-graphicguide.m4v",
+                    "15-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    },
+    {
+        "bundled": false,
+        "graphicGuideBanners": [
+                              "02-guardpositionflow-4-graphicguidebanner@2x.png",
+                              "02-guardpositionflow-4-graphicguidebanner@3x.png"
+                              ],
+        "graphicGuideCards" : [
+                              "02-guardpositionflow-4-graphicguidecard-1@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-1@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-2@3x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@2x.png",
+                              "02-guardpositionflow-4-graphicguidecard-3@3x.png"
+                              ],
+        "graphicGuideTitles": [
+                               [
+                                "01- guardpositionfree-1",
+                                "02- guardpositionfree-2",
+                                "03- guardpositionfree-3"
+                                ]
+                               ],
+        "detail": "Clinch to striking to locking, takedown to submission to ground and pound",
+        "text": "Clinch to striking to locking, takedown to submission to ground and pound",
+        "enabled": 1,
+        "lessons": [
+            {
+                "Teaching": "cf_16_teach_4_4s.m4v"
+            },
+            {
+                "Graphic Guide": "cf_16_gg_4_4s.m4v"
+            },
+            {
+                "Application": "cf_16_appl_4_4s.m4v"
+            }
+        ],
+        "name": "COMBAT FLOW 16",
+        "tableimage": "tn_cf_listview_16@2x",
+        "tableimage_application": "tn_cf_app_listview_16@2x",
+        "tableimage_graphicguide": "tn_cf_gg_listview_16@2x",
+        "thumbs": [
+             "cf_16_tn_4_4s.m4v"
+            ],
+        "productIdentifier": "ca.ilearningsolutions.combatflows.combatflow16",
+        "flows": [
+                [
+                    "16-combatflow-1-application.m4v",
+                    "16-combatflow-1-graphicguide.m4v",
+                    "16-combatflow-1-teaching.m4v"
+                 ]
+                ]
+    }
+]

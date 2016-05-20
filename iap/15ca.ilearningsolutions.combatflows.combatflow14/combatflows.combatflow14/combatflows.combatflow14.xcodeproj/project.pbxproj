@@ -1,0 +1,247 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A8174431CEEA52C00D8364F /* 14-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174401CEEA52C00D8364F /* 14-combatflow-1-application.m4v */; };
+		2A8174441CEEA52C00D8364F /* 14-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174411CEEA52C00D8364F /* 14-combatflow-1-graphicguide.m4v */; };
+		2A8174451CEEA52C00D8364F /* 14-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174421CEEA52C00D8364F /* 14-combatflow-1-teaching.m4v */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2A8173BB1CEDDF9C00D8364F /* combatflows.combatflow14 */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = combatflows.combatflow14; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A8173BE1CEDDF9C00D8364F /* ContentInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ContentInfo.plist; sourceTree = "<group>"; };
+		2A8173C41CEDDFB600D8364F /* 14-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-combatflow-1-application.m4v"; sourceTree = "<group>"; };
+		2A8173C51CEDDFB600D8364F /* 14-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-combatflow-1-graphicguide.m4v"; sourceTree = "<group>"; };
+		2A8173C61CEDDFB600D8364F /* 14-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "14-combatflow-1-teaching.m4v"; sourceTree = "<group>"; };
+		2A8174401CEEA52C00D8364F /* 14-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14-combatflow-1-application.m4v"; path = "bogus/14-combatflow-1-application.m4v"; sourceTree = "<group>"; };
+		2A8174411CEEA52C00D8364F /* 14-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14-combatflow-1-graphicguide.m4v"; path = "bogus/14-combatflow-1-graphicguide.m4v"; sourceTree = "<group>"; };
+		2A8174421CEEA52C00D8364F /* 14-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "14-combatflow-1-teaching.m4v"; path = "bogus/14-combatflow-1-teaching.m4v"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2A8173B41CEDDF9C00D8364F = {
+			isa = PBXGroup;
+			children = (
+				2A8173BD1CEDDF9C00D8364F /* combatflows.combatflow14 */,
+				2A8173BC1CEDDF9C00D8364F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A8173BC1CEDDF9C00D8364F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A8173BB1CEDDF9C00D8364F /* combatflows.combatflow14 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A8173BD1CEDDF9C00D8364F /* combatflows.combatflow14 */ = {
+			isa = PBXGroup;
+			children = (
+				2A81743F1CEEA50C00D8364F /* bogus */,
+				2A8173C41CEDDFB600D8364F /* 14-combatflow-1-application.m4v */,
+				2A8173C51CEDDFB600D8364F /* 14-combatflow-1-graphicguide.m4v */,
+				2A8173C61CEDDFB600D8364F /* 14-combatflow-1-teaching.m4v */,
+				2A8173BE1CEDDF9C00D8364F /* ContentInfo.plist */,
+			);
+			path = combatflows.combatflow14;
+			sourceTree = "<group>";
+		};
+		2A81743F1CEEA50C00D8364F /* bogus */ = {
+			isa = PBXGroup;
+			children = (
+				2A8174401CEEA52C00D8364F /* 14-combatflow-1-application.m4v */,
+				2A8174411CEEA52C00D8364F /* 14-combatflow-1-graphicguide.m4v */,
+				2A8174421CEEA52C00D8364F /* 14-combatflow-1-teaching.m4v */,
+			);
+			name = bogus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A8173BA1CEDDF9C00D8364F /* combatflows.combatflow14 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A8173C11CEDDF9C00D8364F /* Build configuration list for PBXNativeTarget "combatflows.combatflow14" */;
+			buildPhases = (
+				2A8173B91CEDDF9C00D8364F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = combatflows.combatflow14;
+			productName = combatflows.combatflow14;
+			productReference = 2A8173BB1CEDDF9C00D8364F /* combatflows.combatflow14 */;
+			productType = "com.apple.product-type.in-app-purchase-content";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A8173B51CEDDF9C00D8364F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Interactive Learning Solutions";
+				TargetAttributes = {
+					2A8173BA1CEDDF9C00D8364F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 2A8173B81CEDDF9C00D8364F /* Build configuration list for PBXProject "combatflows.combatflow14" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A8173B41CEDDF9C00D8364F;
+			productRefGroup = 2A8173BC1CEDDF9C00D8364F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A8173BA1CEDDF9C00D8364F /* combatflows.combatflow14 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A8173B91CEDDF9C00D8364F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A8174441CEEA52C00D8364F /* 14-combatflow-1-graphicguide.m4v in Resources */,
+				2A8174431CEEA52C00D8364F /* 14-combatflow-1-application.m4v in Resources */,
+				2A8174451CEEA52C00D8364F /* 14-combatflow-1-teaching.m4v in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A8173BF1CEDDF9C00D8364F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		2A8173C01CEDDF9C00D8364F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		2A8173C21CEDDF9C00D8364F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = combatflows.combatflow14/ContentInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/InAppPurchaseContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = "";
+			};
+			name = Debug;
+		};
+		2A8173C31CEDDF9C00D8364F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = combatflows.combatflow14/ContentInfo.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/InAppPurchaseContent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A8173B81CEDDF9C00D8364F /* Build configuration list for PBXProject "combatflows.combatflow14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8173BF1CEDDF9C00D8364F /* Debug */,
+				2A8173C01CEDDF9C00D8364F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A8173C11CEDDF9C00D8364F /* Build configuration list for PBXNativeTarget "combatflows.combatflow14" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8173C21CEDDF9C00D8364F /* Debug */,
+				2A8173C31CEDDF9C00D8364F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A8173B51CEDDF9C00D8364F /* Project object */;
+}
