@@ -16,12 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 NSInteger kTeachingIndex = 0;
 NSInteger kApplicationIndex = 1;
+NSInteger kGraphicGuideIndex = 2;
 NSInteger kLessonVideoTypeIndex = 3;
 
 - (id)initWithLessons:(NSArray*)lessonArray_ name:(NSString*)name_ flowGroup:(CMAFlowGroup*)fg_
 {
     if ((self = [super init])) {
-        NSMutableArray* mut = [NSMutableArray arrayWithCapacity:2]; // one for teaching, one for application
+        NSMutableArray* mut = [NSMutableArray arrayWithCapacity:3]; // one for teaching, one for application, graphic guide
+        [mut addObject:[NSNull null]];
         [mut addObject:[NSNull null]];
         [mut addObject:[NSNull null]];
         NSLog(@"lessonArray_: %@ name: %@ fg.name: %@", lessonArray_, name_, fg_.name);
@@ -45,6 +47,9 @@ NSInteger kLessonVideoTypeIndex = 3;
             }
             else if ([[components objectAtIndex:kLessonVideoTypeIndex] containsString:@"teaching"]) {
                 [mut replaceObjectAtIndex:kTeachingIndex withObject:[[CMALesson alloc] initWithFilename:[lessonArray_ objectAtIndex:c] flow:self lessonType:kCMATeaching]];
+            }
+            else if ([[components objectAtIndex:kLessonVideoTypeIndex] containsString:@"graphicguide"]) {
+                [mut replaceObjectAtIndex:kGraphicGuideIndex withObject:[[CMALesson alloc] initWithFilename:[lessonArray_ objectAtIndex:c] flow:self lessonType:kCMAGraphicGuide]];
             }
 
             if (fg_.bundled) {

@@ -75,6 +75,40 @@
 		2A81721F1CED5D7C00D8364F /* SCRTrainingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A81721B1CED5D7C00D8364F /* SCRTrainingItem.m */; };
 		2A8172241CED5DA400D8364F /* SCRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8172211CED5DA400D8364F /* SCRConstants.m */; };
 		2A8172251CED5DA400D8364F /* SCRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8172231CED5DA400D8364F /* SCRNavigationController.m */; };
+		2A9C77591CF0EA8D006D7068 /* SCRMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C773A1CF0EA8D006D7068 /* SCRMoreViewController.m */; };
+		2A9C775A1CF0EA8D006D7068 /* SCRAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C773C1CF0EA8D006D7068 /* SCRAboutUsViewController.m */; };
+		2A9C775B1CF0EA8D006D7068 /* SCRDedicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C773E1CF0EA8D006D7068 /* SCRDedicationViewController.m */; };
+		2A9C775C1CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77401CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m */; };
+		2A9C775D1CF0EA8D006D7068 /* SCRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77421CF0EA8D006D7068 /* SCRMainViewController.m */; };
+		2A9C775E1CF0EA8D006D7068 /* SCRThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77441CF0EA8D006D7068 /* SCRThumbCollectionViewCell.m */; };
+		2A9C775F1CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77461CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.m */; };
+		2A9C77601CF0EA8D006D7068 /* SCROverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77481CF0EA8D006D7068 /* SCROverlayPresentationController.m */; };
+		2A9C77611CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C774A1CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.m */; };
+		2A9C77621CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C774C1CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m */; };
+		2A9C77631CF0EA8D006D7068 /* SCRGetTrainedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C774E1CF0EA8D006D7068 /* SCRGetTrainedViewController.m */; };
+		2A9C77641CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77501CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.m */; };
+		2A9C77651CF0EA8D006D7068 /* SCRSociallAccountsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77521CF0EA8D006D7068 /* SCRSociallAccountsViewController.m */; };
+		2A9C77661CF0EA8D006D7068 /* SCRFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77541CF0EA8D006D7068 /* SCRFavoritesViewController.m */; };
+		2A9C77671CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77561CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.m */; };
+		2A9C77681CF0EA8D006D7068 /* SCRBlankInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77581CF0EA8D006D7068 /* SCRBlankInterstitialViewController.m */; };
+		2A9C776B1CF0EAB9006D7068 /* SCRThumbnailLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C776A1CF0EAB9006D7068 /* SCRThumbnailLoopView.m */; };
+		2A9C776E1CF0EAE0006D7068 /* SCRMasterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C776D1CF0EAE0006D7068 /* SCRMasterTableViewCell.m */; };
+		2A9C77741CF0EB08006D7068 /* SCRFlowGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77731CF0EB08006D7068 /* SCRFlowGroupTableViewController.m */; };
+		2A9C77771CF0EB12006D7068 /* SCRFlowGroupDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77761CF0EB12006D7068 /* SCRFlowGroupDetailViewController.m */; };
+		2A9C777C1CF0EB26006D7068 /* SCRFlowContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77791CF0EB26006D7068 /* SCRFlowContentViewController.m */; };
+		2A9C777D1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C777B1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.m */; };
+		2A9C77801CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C777F1CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.m */; };
+		2A9C77831CF0ED59006D7068 /* MAZTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77821CF0ED59006D7068 /* MAZTableViewCell.m */; };
+		2A9C77861CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77851CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.m */; };
+		2A9C77891CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C77881CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.m */; };
+		2A9C778C1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C778B1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m */; };
+		2A9C778E1CF0EE03006D7068 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C778D1CF0EE03006D7068 /* SystemConfiguration.framework */; };
+		2A9C77901CF0EE09006D7068 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C778F1CF0EE09006D7068 /* MediaPlayer.framework */; };
+		2A9C77921CF0EE0F006D7068 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77911CF0EE0F006D7068 /* Accounts.framework */; };
+		2A9C77941CF0EE14006D7068 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77931CF0EE14006D7068 /* Social.framework */; };
+		2A9C77961CF0EE1A006D7068 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */; };
+		2A9C77981CF0EE1F006D7068 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77971CF0EE1F006D7068 /* AVKit.framework */; };
+		2A9C779A1CF0EE24006D7068 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77991CF0EE24006D7068 /* StoreKit.framework */; };
 		68305EB21CEBFA8A00A963E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB11CEBFA8A00A963E8 /* main.m */; };
 		68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB41CEBFA8A00A963E8 /* AppDelegate.m */; };
 		68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB71CEBFA8A00A963E8 /* ViewController.m */; };
@@ -188,7 +222,70 @@
 		2A8172211CED5DA400D8364F /* SCRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRConstants.m; path = combatflows/app_base/SCRConstants.m; sourceTree = "<group>"; };
 		2A8172221CED5DA400D8364F /* SCRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCRNavigationController.h; path = combatflows/app_base/SCRNavigationController.h; sourceTree = "<group>"; };
 		2A8172231CED5DA400D8364F /* SCRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRNavigationController.m; path = combatflows/app_base/SCRNavigationController.m; sourceTree = "<group>"; };
-		68305EAD1CEBFA8A00A963E8 /* combatflows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = combatflows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9C77391CF0EA8D006D7068 /* SCRMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRMoreViewController.h; sourceTree = "<group>"; };
+		2A9C773A1CF0EA8D006D7068 /* SCRMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRMoreViewController.m; sourceTree = "<group>"; };
+		2A9C773B1CF0EA8D006D7068 /* SCRAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRAboutUsViewController.h; sourceTree = "<group>"; };
+		2A9C773C1CF0EA8D006D7068 /* SCRAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRAboutUsViewController.m; sourceTree = "<group>"; };
+		2A9C773D1CF0EA8D006D7068 /* SCRDedicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRDedicationViewController.h; sourceTree = "<group>"; };
+		2A9C773E1CF0EA8D006D7068 /* SCRDedicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRDedicationViewController.m; sourceTree = "<group>"; };
+		2A9C773F1CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRCombatMMAAppsViewController.h; sourceTree = "<group>"; };
+		2A9C77401CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRCombatMMAAppsViewController.m; sourceTree = "<group>"; };
+		2A9C77411CF0EA8D006D7068 /* SCRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRMainViewController.h; sourceTree = "<group>"; };
+		2A9C77421CF0EA8D006D7068 /* SCRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRMainViewController.m; sourceTree = "<group>"; };
+		2A9C77431CF0EA8D006D7068 /* SCRThumbCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRThumbCollectionViewCell.h; sourceTree = "<group>"; };
+		2A9C77441CF0EA8D006D7068 /* SCRThumbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRThumbCollectionViewCell.m; sourceTree = "<group>"; };
+		2A9C77451CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRDoubleThumbCollectionViewCell.h; sourceTree = "<group>"; };
+		2A9C77461CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRDoubleThumbCollectionViewCell.m; sourceTree = "<group>"; };
+		2A9C77471CF0EA8D006D7068 /* SCROverlayPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCROverlayPresentationController.h; sourceTree = "<group>"; };
+		2A9C77481CF0EA8D006D7068 /* SCROverlayPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCROverlayPresentationController.m; sourceTree = "<group>"; };
+		2A9C77491CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCROverlayTransitioningDelegate.h; sourceTree = "<group>"; };
+		2A9C774A1CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCROverlayTransitioningDelegate.m; sourceTree = "<group>"; };
+		2A9C774B1CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRBouncyViewControllerAnimator.h; sourceTree = "<group>"; };
+		2A9C774C1CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRBouncyViewControllerAnimator.m; sourceTree = "<group>"; };
+		2A9C774D1CF0EA8D006D7068 /* SCRGetTrainedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRGetTrainedViewController.h; sourceTree = "<group>"; };
+		2A9C774E1CF0EA8D006D7068 /* SCRGetTrainedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRGetTrainedViewController.m; sourceTree = "<group>"; };
+		2A9C774F1CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRGetTrainedCollectionViewController.h; sourceTree = "<group>"; };
+		2A9C77501CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRGetTrainedCollectionViewController.m; sourceTree = "<group>"; };
+		2A9C77511CF0EA8D006D7068 /* SCRSociallAccountsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSociallAccountsViewController.h; sourceTree = "<group>"; };
+		2A9C77521CF0EA8D006D7068 /* SCRSociallAccountsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSociallAccountsViewController.m; sourceTree = "<group>"; };
+		2A9C77531CF0EA8D006D7068 /* SCRFavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFavoritesViewController.h; sourceTree = "<group>"; };
+		2A9C77541CF0EA8D006D7068 /* SCRFavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFavoritesViewController.m; sourceTree = "<group>"; };
+		2A9C77551CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFavoritesCollectionViewController.h; sourceTree = "<group>"; };
+		2A9C77561CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFavoritesCollectionViewController.m; sourceTree = "<group>"; };
+		2A9C77571CF0EA8D006D7068 /* SCRBlankInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRBlankInterstitialViewController.h; sourceTree = "<group>"; };
+		2A9C77581CF0EA8D006D7068 /* SCRBlankInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRBlankInterstitialViewController.m; sourceTree = "<group>"; };
+		2A9C77691CF0EAB9006D7068 /* SCRThumbnailLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRThumbnailLoopView.h; sourceTree = "<group>"; };
+		2A9C776A1CF0EAB9006D7068 /* SCRThumbnailLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRThumbnailLoopView.m; sourceTree = "<group>"; };
+		2A9C776C1CF0EAE0006D7068 /* SCRMasterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRMasterTableViewCell.h; sourceTree = "<group>"; };
+		2A9C776D1CF0EAE0006D7068 /* SCRMasterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRMasterTableViewCell.m; sourceTree = "<group>"; };
+		2A9C776F1CF0EAF7006D7068 /* SCRPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRPreviewViewController.h; sourceTree = "<group>"; };
+		2A9C77701CF0EAF7006D7068 /* SCRPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRPreviewViewController.m; sourceTree = "<group>"; };
+		2A9C77721CF0EB08006D7068 /* SCRFlowGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFlowGroupTableViewController.h; sourceTree = "<group>"; };
+		2A9C77731CF0EB08006D7068 /* SCRFlowGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFlowGroupTableViewController.m; sourceTree = "<group>"; };
+		2A9C77751CF0EB12006D7068 /* SCRFlowGroupDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFlowGroupDetailViewController.h; sourceTree = "<group>"; };
+		2A9C77761CF0EB12006D7068 /* SCRFlowGroupDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFlowGroupDetailViewController.m; sourceTree = "<group>"; };
+		2A9C77781CF0EB26006D7068 /* SCRFlowContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFlowContentViewController.h; sourceTree = "<group>"; };
+		2A9C77791CF0EB26006D7068 /* SCRFlowContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFlowContentViewController.m; sourceTree = "<group>"; };
+		2A9C777A1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRFlowContentCollectionViewCell.h; sourceTree = "<group>"; };
+		2A9C777B1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRFlowContentCollectionViewCell.m; sourceTree = "<group>"; };
+		2A9C777E1CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRTitleBodyTableViewCell.h; sourceTree = "<group>"; };
+		2A9C777F1CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRTitleBodyTableViewCell.m; sourceTree = "<group>"; };
+		2A9C77811CF0ED59006D7068 /* MAZTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAZTableViewCell.h; sourceTree = "<group>"; };
+		2A9C77821CF0ED59006D7068 /* MAZTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAZTableViewCell.m; sourceTree = "<group>"; };
+		2A9C77841CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRGraphicGuideCardInfoTableViewCell.h; sourceTree = "<group>"; };
+		2A9C77851CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRGraphicGuideCardInfoTableViewCell.m; sourceTree = "<group>"; };
+		2A9C77871CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRHorizontalCardTableViewCell.h; sourceTree = "<group>"; };
+		2A9C77881CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRHorizontalCardTableViewCell.m; sourceTree = "<group>"; };
+		2A9C778A1CF0EDB3006D7068 /* SCRMultilineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRMultilineTableViewCell.h; sourceTree = "<group>"; };
+		2A9C778B1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRMultilineTableViewCell.m; sourceTree = "<group>"; };
+		2A9C778D1CF0EE03006D7068 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2A9C778F1CF0EE09006D7068 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2A9C77911CF0EE0F006D7068 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2A9C77931CF0EE14006D7068 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2A9C77971CF0EE1F006D7068 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		2A9C77991CF0EE24006D7068 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combat Flows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68305EB11CEBFA8A00A963E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68305EB31CEBFA8A00A963E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68305EB41CEBFA8A00A963E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,6 +307,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9C779A1CF0EE24006D7068 /* StoreKit.framework in Frameworks */,
+				2A9C77981CF0EE1F006D7068 /* AVKit.framework in Frameworks */,
+				2A9C77961CF0EE1A006D7068 /* AVFoundation.framework in Frameworks */,
+				2A9C77941CF0EE14006D7068 /* Social.framework in Frameworks */,
+				2A9C77921CF0EE0F006D7068 /* Accounts.framework in Frameworks */,
+				2A9C77901CF0EE09006D7068 /* MediaPlayer.framework in Frameworks */,
+				2A9C778E1CF0EE03006D7068 /* SystemConfiguration.framework in Frameworks */,
 				03178225CB43145F6556DD87 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +451,69 @@
 			name = video_player;
 			sourceTree = "<group>";
 		};
+		2A9C77381CF0EA71006D7068 /* main_view */ = {
+			isa = PBXGroup;
+			children = (
+				2A9C778A1CF0EDB3006D7068 /* SCRMultilineTableViewCell.h */,
+				2A9C778B1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m */,
+				2A9C77871CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.h */,
+				2A9C77881CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.m */,
+				2A9C77841CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.h */,
+				2A9C77851CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.m */,
+				2A9C77811CF0ED59006D7068 /* MAZTableViewCell.h */,
+				2A9C77821CF0ED59006D7068 /* MAZTableViewCell.m */,
+				2A9C777E1CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.h */,
+				2A9C777F1CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.m */,
+				2A9C77781CF0EB26006D7068 /* SCRFlowContentViewController.h */,
+				2A9C77791CF0EB26006D7068 /* SCRFlowContentViewController.m */,
+				2A9C777A1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.h */,
+				2A9C777B1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.m */,
+				2A9C77751CF0EB12006D7068 /* SCRFlowGroupDetailViewController.h */,
+				2A9C77761CF0EB12006D7068 /* SCRFlowGroupDetailViewController.m */,
+				2A9C77721CF0EB08006D7068 /* SCRFlowGroupTableViewController.h */,
+				2A9C77731CF0EB08006D7068 /* SCRFlowGroupTableViewController.m */,
+				2A9C776F1CF0EAF7006D7068 /* SCRPreviewViewController.h */,
+				2A9C77701CF0EAF7006D7068 /* SCRPreviewViewController.m */,
+				2A9C776C1CF0EAE0006D7068 /* SCRMasterTableViewCell.h */,
+				2A9C776D1CF0EAE0006D7068 /* SCRMasterTableViewCell.m */,
+				2A9C77691CF0EAB9006D7068 /* SCRThumbnailLoopView.h */,
+				2A9C776A1CF0EAB9006D7068 /* SCRThumbnailLoopView.m */,
+				2A9C77391CF0EA8D006D7068 /* SCRMoreViewController.h */,
+				2A9C773A1CF0EA8D006D7068 /* SCRMoreViewController.m */,
+				2A9C773B1CF0EA8D006D7068 /* SCRAboutUsViewController.h */,
+				2A9C773C1CF0EA8D006D7068 /* SCRAboutUsViewController.m */,
+				2A9C773D1CF0EA8D006D7068 /* SCRDedicationViewController.h */,
+				2A9C773E1CF0EA8D006D7068 /* SCRDedicationViewController.m */,
+				2A9C773F1CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.h */,
+				2A9C77401CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m */,
+				2A9C77411CF0EA8D006D7068 /* SCRMainViewController.h */,
+				2A9C77421CF0EA8D006D7068 /* SCRMainViewController.m */,
+				2A9C77431CF0EA8D006D7068 /* SCRThumbCollectionViewCell.h */,
+				2A9C77441CF0EA8D006D7068 /* SCRThumbCollectionViewCell.m */,
+				2A9C77451CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.h */,
+				2A9C77461CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.m */,
+				2A9C77471CF0EA8D006D7068 /* SCROverlayPresentationController.h */,
+				2A9C77481CF0EA8D006D7068 /* SCROverlayPresentationController.m */,
+				2A9C77491CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.h */,
+				2A9C774A1CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.m */,
+				2A9C774B1CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.h */,
+				2A9C774C1CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m */,
+				2A9C774D1CF0EA8D006D7068 /* SCRGetTrainedViewController.h */,
+				2A9C774E1CF0EA8D006D7068 /* SCRGetTrainedViewController.m */,
+				2A9C774F1CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.h */,
+				2A9C77501CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.m */,
+				2A9C77511CF0EA8D006D7068 /* SCRSociallAccountsViewController.h */,
+				2A9C77521CF0EA8D006D7068 /* SCRSociallAccountsViewController.m */,
+				2A9C77531CF0EA8D006D7068 /* SCRFavoritesViewController.h */,
+				2A9C77541CF0EA8D006D7068 /* SCRFavoritesViewController.m */,
+				2A9C77551CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.h */,
+				2A9C77561CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.m */,
+				2A9C77571CF0EA8D006D7068 /* SCRBlankInterstitialViewController.h */,
+				2A9C77581CF0EA8D006D7068 /* SCRBlankInterstitialViewController.m */,
+			);
+			name = main_view;
+			sourceTree = "<group>";
+		};
 		2C22F5D334AEF367E15ABCC8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +526,7 @@
 		68305EA41CEBFA8A00A963E8 = {
 			isa = PBXGroup;
 			children = (
+				2A9C77381CF0EA71006D7068 /* main_view */,
 				2A8171B61CED5D1D00D8364F /* app_base */,
 				68305EAF1CEBFA8A00A963E8 /* combatflows */,
 				68305EAE1CEBFA8A00A963E8 /* Products */,
@@ -370,7 +538,7 @@
 		68305EAE1CEBFA8A00A963E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68305EAD1CEBFA8A00A963E8 /* combatflows.app */,
+				68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,6 +591,13 @@
 		D15E3A3886AE9DCAB4655806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A9C77991CF0EE24006D7068 /* StoreKit.framework */,
+				2A9C77971CF0EE1F006D7068 /* AVKit.framework */,
+				2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */,
+				2A9C77931CF0EE14006D7068 /* Social.framework */,
+				2A9C77911CF0EE0F006D7068 /* Accounts.framework */,
+				2A9C778F1CF0EE09006D7068 /* MediaPlayer.framework */,
+				2A9C778D1CF0EE03006D7068 /* SystemConfiguration.framework */,
 				851098F9530A14ACFE84138D /* libPods.a */,
 			);
 			name = Frameworks;
@@ -448,7 +623,7 @@
 			);
 			name = combatflows;
 			productName = combatflows;
-			productReference = 68305EAD1CEBFA8A00A963E8 /* combatflows.app */;
+			productReference = 68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -592,35 +767,62 @@
 				2A8171DD1CED5D5600D8364F /* THFilmstripView.m in Sources */,
 				2A8172031CED5D6000D8364F /* UIView+Debug.m in Sources */,
 				2A8171FF1CED5D6000D8364F /* UIImage+ImageEffects.m in Sources */,
+				2A9C77671CF0EA8D006D7068 /* SCRFavoritesCollectionViewController.m in Sources */,
+				2A9C77861CF0ED7D006D7068 /* SCRGraphicGuideCardInfoTableViewCell.m in Sources */,
+				2A9C775C1CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m in Sources */,
+				2A9C77681CF0EA8D006D7068 /* SCRBlankInterstitialViewController.m in Sources */,
 				2A8172001CED5D6000D8364F /* UIImage+Scaling.m in Sources */,
 				68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */,
 				2A8171DE1CED5D5600D8364F /* THNotifications.m in Sources */,
 				2A8171E21CED5D5600D8364F /* THPlayerController.m in Sources */,
+				2A9C777C1CF0EB26006D7068 /* SCRFlowContentViewController.m in Sources */,
+				2A9C775B1CF0EA8D006D7068 /* SCRDedicationViewController.m in Sources */,
+				2A9C77641CF0EA8D006D7068 /* SCRGetTrainedCollectionViewController.m in Sources */,
+				2A9C77771CF0EB12006D7068 /* SCRFlowGroupDetailViewController.m in Sources */,
 				2A8171E61CED5D5600D8364F /* THSubtitleViewController.m in Sources */,
+				2A9C778C1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m in Sources */,
+				2A9C77611CF0EA8D006D7068 /* SCROverlayTransitioningDelegate.m in Sources */,
 				2A8171DF1CED5D5600D8364F /* THOverlayView.m in Sources */,
 				2A8171E41CED5D5600D8364F /* THPlayerViewController.m in Sources */,
+				2A9C77601CF0EA8D006D7068 /* SCROverlayPresentationController.m in Sources */,
+				2A9C77891CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.m in Sources */,
 				2A8171E31CED5D5600D8364F /* THPlayerView.m in Sources */,
+				2A9C77661CF0EA8D006D7068 /* SCRFavoritesViewController.m in Sources */,
 				2A8172041CED5D6000D8364F /* Util.m in Sources */,
 				2A8171FC1CED5D6000D8364F /* SCRReachabilityService.m in Sources */,
+				2A9C775F1CF0EA8D006D7068 /* SCRDoubleThumbCollectionViewCell.m in Sources */,
 				2A8171FE1CED5D6000D8364F /* UIFont+SCRFont.m in Sources */,
 				2A81720F1CED5D6D00D8364F /* CMABaseContent.m in Sources */,
 				2A8171E91CED5D5600D8364F /* UIView+THAdditions.m in Sources */,
 				2A8172101CED5D6D00D8364F /* CMACurriculum.m in Sources */,
 				2A8171DA1CED5D5600D8364F /* AVAsset+THAdditions.m in Sources */,
+				2A9C775D1CF0EA8D006D7068 /* SCRMainViewController.m in Sources */,
 				2A81721E1CED5D7C00D8364F /* SCRProductService.m in Sources */,
 				2A8171DC1CED5D5600D8364F /* NSTimer+Additions.m in Sources */,
 				2A8172131CED5D6D00D8364F /* CMALesson.m in Sources */,
+				2A9C775E1CF0EA8D006D7068 /* SCRThumbCollectionViewCell.m in Sources */,
 				2A81721C1CED5D7C00D8364F /* IAHInAppPurchaseHelper.m in Sources */,
+				2A9C777D1CF0EB26006D7068 /* SCRFlowContentCollectionViewCell.m in Sources */,
 				2A8171E81CED5D5600D8364F /* UIAlertView+THAdditions.m in Sources */,
+				2A9C776E1CF0EAE0006D7068 /* SCRMasterTableViewCell.m in Sources */,
 				68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */,
 				2A8171FD1CED5D6000D8364F /* UIColor+ILSColor.m in Sources */,
 				2A81721F1CED5D7C00D8364F /* SCRTrainingItem.m in Sources */,
+				2A9C77741CF0EB08006D7068 /* SCRFlowGroupTableViewController.m in Sources */,
 				2A8172241CED5DA400D8364F /* SCRConstants.m in Sources */,
+				2A9C77631CF0EA8D006D7068 /* SCRGetTrainedViewController.m in Sources */,
 				2A81721D1CED5D7C00D8364F /* IAPHelper.m in Sources */,
+				2A9C77831CF0ED59006D7068 /* MAZTableViewCell.m in Sources */,
+				2A9C77651CF0EA8D006D7068 /* SCRSociallAccountsViewController.m in Sources */,
 				2A8171DB1CED5D5600D8364F /* HCYoutubeParser.m in Sources */,
 				2A8172251CED5DA400D8364F /* SCRNavigationController.m in Sources */,
+				2A9C77621CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m in Sources */,
+				2A9C775A1CF0EA8D006D7068 /* SCRAboutUsViewController.m in Sources */,
 				2A8172011CED5D6000D8364F /* UILabel+AutoLayout.m in Sources */,
+				2A9C776B1CF0EAB9006D7068 /* SCRThumbnailLoopView.m in Sources */,
+				2A9C77801CF0EB3B006D7068 /* SCRTitleBodyTableViewCell.m in Sources */,
 				68305EB21CEBFA8A00A963E8 /* main.m in Sources */,
+				2A9C77591CF0EA8D006D7068 /* SCRMoreViewController.m in Sources */,
 				2A8171E11CED5D5600D8364F /* THPlaybackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,7 +938,7 @@
 				INFOPLIST_FILE = combatflows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Combat Flows";
 			};
 			name = Debug;
 		};
@@ -749,7 +951,7 @@
 				INFOPLIST_FILE = combatflows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Combat Flows";
 			};
 			name = Release;
 		};
