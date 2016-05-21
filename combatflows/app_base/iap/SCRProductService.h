@@ -11,9 +11,8 @@
 
 UIKIT_EXTERN NSString *const SCRProductServiceFetchedProductsNotification;
 
-extern NSString *kSCRScrapplingBundleProductIdentifier;
-extern NSString *kSCRBodyPositionFreeProductIdentifier;
-extern NSString *kSCRGuardPositionFreeProductIdentifier;
+extern NSString *kSCRCombatFlowBundleProductIdentifier;
+extern NSString *kSCRCombatFlowFreeProductIdentifier;
 
 @interface SCRProductService : NSObject
 @property (nonatomic, strong) NSArray *products;

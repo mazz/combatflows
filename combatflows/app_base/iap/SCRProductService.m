@@ -13,12 +13,11 @@
 #import "CMALesson.h"
 #import "IAHInAppPurchaseHelper.h"
 #import "SCRTrainingItem.h"
-static NSUInteger kSCRScrapplingBundleIndex = 2;
+static NSUInteger kSCRCombatFlowBundleIndex = 2;
 
 NSString *const SCRProductServiceFetchedProductsNotification  = @"SCRProductServiceFetchedProductsNotification";
-NSString *kSCRScrapplingBundleProductIdentifier = @"ca.ilearningsolutions.scrappling.scrapplingbundle";
-NSString *kSCRBodyPositionFreeProductIdentifier = @"ca.ilearningsolutions.scrappling.bodypositiondrillfree02";
-NSString *kSCRGuardPositionFreeProductIdentifier = @"ca.ilearningsolutions.scrappling.guardpositionfree";
+NSString *kSCRCombatFlowBundleProductIdentifier = @"ca.ilearningsolutions.combatflows.combatflowbundle";
+NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatflows.combatflow04";
 
 @interface SCRProductService()
 //@property (assign) BOOL fetchingProducts;
@@ -63,10 +62,10 @@ NSString *kSCRGuardPositionFreeProductIdentifier = @"ca.ilearningsolutions.scrap
                 self.products = products; // TODO: remove this line and access [[IAHInAppPurchaseHelper sharedInstance] productService].products to display products in table
                 [[IAHInAppPurchaseHelper sharedInstance] productService].products = products;
                 
-//                for (SKProduct *prod in products)
-//                {
-//                    NSLog(@"prod: %@", prod.productIdentifier);
-//                }
+                for (SKProduct *prod in products)
+                {
+                    NSLog(@"prod: %@", prod.productIdentifier);
+                }
                 
                 NSArray *modelTrainingItems = [self trainingItems];
 //                self.fetchingProducts = NO;
@@ -123,9 +122,9 @@ NSString *kSCRGuardPositionFreeProductIdentifier = @"ca.ilearningsolutions.scrap
      }];
     
     NSArray *modelTrainingItems = trainingItems;
-    if ([self hasPurchasedProductWithProductIdentifier:kSCRScrapplingBundleProductIdentifier])
+    if ([self hasPurchasedProductWithProductIdentifier:kSCRCombatFlowBundleProductIdentifier])
     {
-        modelTrainingItems = [self deleteItemsFromDataSourceAtIndexPaths:@[[NSIndexPath indexPathForRow:kSCRScrapplingBundleIndex inSection:0]] forTrainingItems:trainingItems];
+        modelTrainingItems = [self deleteItemsFromDataSourceAtIndexPaths:@[[NSIndexPath indexPathForRow:kSCRCombatFlowBundleIndex inSection:0]] forTrainingItems:trainingItems];
     }
 
     return modelTrainingItems;
@@ -211,7 +210,7 @@ NSString *kSCRGuardPositionFreeProductIdentifier = @"ca.ilearningsolutions.scrap
 
 - (BOOL)hasPurchasedEverything
 {
-    return [self hasPurchasedProductWithProductIdentifier:kSCRScrapplingBundleProductIdentifier];
+    return [self hasPurchasedProductWithProductIdentifier:kSCRCombatFlowBundleProductIdentifier];
 }
 
 @end

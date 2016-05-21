@@ -33,6 +33,7 @@
     [[SCRReachabilityService sharedInstance] start];
     
 //    [self initializeGoogleAnalytics];
+    [[[IAHInAppPurchaseHelper sharedInstance] productService] fetchProducts];
     return YES;
 }
 
