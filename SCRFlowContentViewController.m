@@ -54,7 +54,7 @@ static NSString* kSCRFlowContentViewTableViewCellGraphicCollectionIdentifier = @
 @property (nonatomic, strong) LoremIpsum* lorem;
 @property (strong, nonatomic) UILabel* guideInstructionLabel;
 @property (strong, nonatomic) UICollectionView* contentCollectionView;
-@property (strong, nonatomic) NSArray* contentCollectionImages;
+//@property (strong, nonatomic) NSArray* contentCollectionImages;
 // view content end     //
 
 @property (nonatomic, strong) CMALesson* currentLesson;
@@ -71,16 +71,16 @@ NSUInteger kBannersPerLesson = 2;
     self.lorem = [[LoremIpsum alloc] init];
 
 
-    NSMutableArray* mutCards = [@[] mutableCopy];
+//    NSMutableArray* mutCards = [@[] mutableCopy];
+//    
+//    for (NSUInteger i = 1; i < self.flow.cardPaths.count; i = i + 2) {
+//        NSString* cardPath = [[[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath] stringByAppendingPathComponent:self.flow.cardPaths[i]];
+//        UIImage *card = [[UIImage alloc] initWithContentsOfFile:cardPath];
+//        
+//        [mutCards addObject:card];
+//    }
     
-    for (NSUInteger i = 1; i < self.flow.cardPaths.count; i = i + 2) {
-        NSString* cardPath = [[[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath] stringByAppendingPathComponent:self.flow.cardPaths[i]];
-        UIImage *card = [[UIImage alloc] initWithContentsOfFile:cardPath];
-        
-        [mutCards addObject:card];
-    }
-    
-    self.contentCollectionImages = [mutCards copy];
+//    self.contentCollectionImages = [mutCards copy];
 
     // ~~ table view
     self.allContentTableView = [[UITableView alloc] init];
@@ -320,15 +320,15 @@ NSUInteger kBannersPerLesson = 2;
 
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.contentCollectionImages.count;
+    return 1;//self.contentCollectionImages.count;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath
 {
     SCRFlowContentCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SCRFlowContentCollectionViewCell" forIndexPath:indexPath];
-    cell.mainImageView.image = self.contentCollectionImages[indexPath.row];
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
+//    cell.mainImageView.image = self.contentCollectionImages[indexPath.row];
+//    [cell setNeedsUpdateConstraints];
+//    [cell updateConstraintsIfNeeded];
 
     return cell;
 }
