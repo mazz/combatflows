@@ -30,14 +30,6 @@
 		2A8171AA1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
 		2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */; };
-		2A8171AD1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A01CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@2x.png */; };
-		2A8171AE1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A11CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@3x.png */; };
-		2A8171AF1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A21CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@2x.png */; };
-		2A8171B01CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A31CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@3x.png */; };
-		2A8171B11CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A41CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@2x.png */; };
-		2A8171B21CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A51CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@3x.png */; };
-		2A8171B31CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A61CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@2x.png */; };
-		2A8171B41CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A71CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@3x.png */; };
 		2A8171B51CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */; };
 		2A8171DA1CED5D5600D8364F /* AVAsset+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171BC1CED5D5600D8364F /* AVAsset+THAdditions.m */; };
 		2A8171DB1CED5D5600D8364F /* HCYoutubeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171BE1CED5D5600D8364F /* HCYoutubeParser.m */; };
@@ -142,14 +134,6 @@
 		2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-graphicguide.m4v"; path = "bundled_content/04-combatflow-1-graphicguide.m4v"; sourceTree = SOURCE_ROOT; };
 		2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@2x.png"; sourceTree = SOURCE_ROOT; };
 		2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@3x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A01CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-1@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-1@2x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A11CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-1@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-1@3x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A21CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-2@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-2@2x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A31CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-2@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-2@3x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A41CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-3@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-3@2x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A51CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-3@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-3@3x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A61CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-4@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-4@2x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A71CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidecard-4@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidecard-4@3x.png"; sourceTree = SOURCE_ROOT; };
 		2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-teaching.m4v"; path = "bundled_content/04-combatflow-1-teaching.m4v"; sourceTree = SOURCE_ROOT; };
 		2A8171BB1CED5D5600D8364F /* AVAsset+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVAsset+THAdditions.h"; path = "combatflows/app_base/video_player/AVAsset+THAdditions.h"; sourceTree = "<group>"; };
 		2A8171BC1CED5D5600D8364F /* AVAsset+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AVAsset+THAdditions.m"; path = "combatflows/app_base/video_player/AVAsset+THAdditions.m"; sourceTree = "<group>"; };
@@ -285,7 +269,7 @@
 		2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2A9C77971CF0EE1F006D7068 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		2A9C77991CF0EE24006D7068 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combat Flows.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombatFlows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68305EB11CEBFA8A00A963E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68305EB31CEBFA8A00A963E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68305EB41CEBFA8A00A963E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -328,14 +312,6 @@
 				2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */,
 				2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */,
 				2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */,
-				2A8171A01CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@2x.png */,
-				2A8171A11CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@3x.png */,
-				2A8171A21CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@2x.png */,
-				2A8171A31CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@3x.png */,
-				2A8171A41CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@2x.png */,
-				2A8171A51CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@3x.png */,
-				2A8171A61CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@2x.png */,
-				2A8171A71CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@3x.png */,
 				2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */,
 			);
 			name = bundled_content;
@@ -538,7 +514,7 @@
 		68305EAE1CEBFA8A00A963E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */,
+				68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -623,7 +599,7 @@
 			);
 			name = combatflows;
 			productName = combatflows;
-			productReference = 68305EAD1CEBFA8A00A963E8 /* Combat Flows.app */;
+			productReference = 68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -668,15 +644,11 @@
 				2A81715C1CED512C00D8364F /* cf_08_tn_4_4s.m4v in Resources */,
 				2A8171E01CED5D5600D8364F /* THOverlayView.xib in Resources */,
 				2A8171561CED512C00D8364F /* cf_02_tn_4_4s.m4v in Resources */,
-				2A8171B21CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@3x.png in Resources */,
 				68305EC01CEBFA8A00A963E8 /* LaunchScreen.storyboard in Resources */,
 				2A8171A91CED5B7C00D8364F /* 04-combatflow-1-application.m4v in Resources */,
-				2A8171B41CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@3x.png in Resources */,
 				2A81715B1CED512C00D8364F /* cf_07_tn_4_4s.m4v in Resources */,
 				2A8171661CED51E300D8364F /* 00_bundled-thumb-600.m4v in Resources */,
 				2A8171551CED512C00D8364F /* CF_01_tn_vid.m4v in Resources */,
-				2A8171B01CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@3x.png in Resources */,
-				2A8171AD1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@2x.png in Resources */,
 				2A8171631CED512C00D8364F /* cf_15_tn_4_4s.m4v in Resources */,
 				2A8171641CED512C00D8364F /* cf_16_tn_4_4s.m4v in Resources */,
 				2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */,
@@ -685,13 +657,9 @@
 				2A8171601CED512C00D8364F /* cf_12_tn_4_4s.m4v in Resources */,
 				2A8171581CED512C00D8364F /* cf_04_tn_4_4s.m4v in Resources */,
 				68305EE31CEC012200A963E8 /* flows.json in Resources */,
-				2A8171B11CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-3@2x.png in Resources */,
 				2A8171AA1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */,
-				2A8171AE1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-1@3x.png in Resources */,
 				68305EBD1CEBFA8A00A963E8 /* Assets.xcassets in Resources */,
-				2A8171B31CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-4@2x.png in Resources */,
 				2A81715D1CED512C00D8364F /* cf_09_tn_4_4s.m4v in Resources */,
-				2A8171AF1CED5B7C00D8364F /* 04-combatflow-1-graphicguidecard-2@2x.png in Resources */,
 				2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */,
 				2A81715A1CED512C00D8364F /* cf_06_tn_4_4s.m4v in Resources */,
 				68305EBB1CEBFA8A00A963E8 /* Main.storyboard in Resources */,
@@ -938,7 +906,7 @@
 				INFOPLIST_FILE = combatflows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "Combat Flows";
+				PRODUCT_NAME = CombatFlows;
 			};
 			name = Debug;
 		};
@@ -951,7 +919,7 @@
 				INFOPLIST_FILE = combatflows/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "Combat Flows";
+				PRODUCT_NAME = CombatFlows;
 			};
 			name = Release;
 		};

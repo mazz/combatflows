@@ -73,9 +73,12 @@
 //        [self.detailLabel setText:@"detail label here"];
         self.detailLabel.font = [UIFont productCellSubtitleFont];
         self.detailLabel.textColor = [UIColor colorWithWhite:1. alpha:1.];
+        self.detailLabel.numberOfLines = 3;
         [self.detailLabel alignLeadingEdgeWithView:self.labelBox predicate:FLKPredicate(2)];
-        [self.detailLabel alignBottomEdgeWithView:self.labelBox predicate:FLKPredicate(-6)];
-        [self.detailLabel constrainTopSpaceToView:self.titleLabel predicate:FLKPredicate(4)];
+//        [self.detailLabel alignBottomEdgeWithView:self.labelBox predicate:FLKPredicate(-6)];
+        [self.detailLabel constrainTopSpaceToView:self.titleLabel predicate:FLKPredicate(2)];
+        [self.detailLabel alignTrailingEdgeWithView:self.labelBox predicate:FLKPredicate(-2)];
+
         //        self.titleLabel.text = [self.previewItem.product.localizedTitle uppercaseString];
         self.titleLabel.font = [UIFont productCellTitleFont];
         self.titleLabel.textColor = [UIColor colorWithWhite:1. alpha:1.];
@@ -89,8 +92,13 @@
 //        [self.priceLabel setText:@"PURCHASED"];
         self.priceLabel.font = [UIFont productCellSubtitleFont];
         self.priceLabel.textColor = [UIColor colorWithWhite:1. alpha:1.];
+//        [self.priceLabel constrainLeadingSpaceToView:self.detailLabel predicate:FLKPredicate(-5)];
         [self.priceLabel alignTrailingEdgeWithView:self.labelBox predicate:FLKPredicate(-2)];
-        [self.priceLabel alignBottomEdgeWithView:self.labelBox predicate:FLKPredicate(-6)];
+        [self.priceLabel alignBottomEdgeWithView:self.labelBox predicate:FLKPredicate(-2)];
+        [self.priceLabel constrainTopSpaceToView:self.detailLabel predicate:FLKPredicate(2)];
+        [self.priceLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+        [self.priceLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+
 //        [self.priceLabel constrainTopSpaceToView:self.titleLabel predicate:FLKPredicate(2)];
         
 //        [self.titleLabel alignTopEdgeWithView:self.labelBox predicate:@"0"];

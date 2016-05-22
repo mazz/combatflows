@@ -42,9 +42,9 @@ NS_ASSUME_NONNULL_BEGIN
         self.thumbs = thumbs;
 
         if (self.bundled) {
-            for (uint8_t c = 0; c < [self.graphicGuideCards count]; c++) {
-                [self copyBundledGraphicGuideContent:self.graphicGuideCards[c]];
-            }
+//            for (uint8_t c = 0; c < [self.graphicGuideCards count]; c++) {
+//                [self copyBundledGraphicGuideContent:self.graphicGuideCards[c]];
+//            }
             for (uint8_t c = 0; c < [self.graphicGuideBanners count]; c++) {
                 [self copyBundledGraphicGuideContent:self.graphicGuideBanners[c]];
             }
