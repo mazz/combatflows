@@ -28,16 +28,12 @@
 #import "NSTimer+Additions.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "THSubtitleViewController.h"
-#import "UIView+FLKAutoLayout.h"
-#import "UIColor+ILSColor.h"
-
-#define FLKPredicate(x) [NSString stringWithFormat:@"%d", x]
 
 @interface THOverlayView () <THSubtitleViewControllerDelegate>
 @property (nonatomic) BOOL controlsHidden;
 @property (nonatomic) BOOL filmstripHidden;
 @property (strong, nonatomic) NSArray *excludedViews;
-@property (nonatomic, assign) CGFloat sliderOffset;
+//@property (nonatomic, assign) CGFloat sliderOffset;
 @property (nonatomic, assign) CGFloat infoViewOffset;
 @property (strong, nonatomic) NSTimer *timer;
 @property (assign) BOOL scrubbing;
@@ -46,7 +42,6 @@
 @property (copy, nonatomic) NSString *selectedSubtitle;
 @property (assign) CGFloat lastPlaybackRate;
 @property (strong, nonatomic) MPVolumeView *volumeView;
-@property (strong, nonatomic) UIButton *applicationVideoButton;
 @end
 
 @implementation THOverlayView
@@ -54,7 +49,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.filmstripHidden = YES;
-    self.excludedViews = @[self.topToolbar, self.toolbar, self.filmStripView];
+    self.excludedViews = @[self.navigationBar, self.toolbar, self.filmStripView];
 
     UIImage *thumbNormalImage = [UIImage imageNamed:@"knob"];
     UIImage *thumbHighlightedImage = [UIImage imageNamed:@"knob_highlighted"];
@@ -70,45 +65,18 @@
     [self.scrubberSlider addTarget:self action:@selector(hidePopupUI) forControlEvents:UIControlEventTouchUpInside];
     [self.scrubberSlider addTarget:self action:@selector(unhidePopupUI) forControlEvents:UIControlEventTouchDown];
 
-    CGRect sliderRect = [self.scrubberSlider bounds];
-    
-    // shrink slider on 4S
-    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-    {
-        CGSize result = [[UIScreen mainScreen] bounds].size;
-        if(result.height == 480)
-        {
-            sliderRect.size.width -= 120.0;
-            [self.scrubberSlider setFrame:sliderRect];
-        }
-    }
-    
     self.filmStripView.layer.shadowOffset = CGSizeMake(0, 2);
     self.filmStripView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
     self.filmStripView.layer.shadowRadius = 2.0f;
     self.filmStripView.layer.shadowOpacity = 0.8f;
 
     [self enableAirplay];
-    [[self.playRateButton imageView] setImage:[UIImage imageNamed:@"icn_speed1x"]];
-
-//    [self.playRateButtonItem setTitle:@"1x"];
-//    self.applicationVideoButton = [[UIButton alloc] init];
-//    [self.applicationVideoButton setTitle:@"Application Video" forState:UIControlStateNormal];
-//    
-////    [self.applicationVideoButton setBackgroundColor:UIColor.greenColor];
-//    [self addSubview:self.applicationVideoButton];
-//    [self.applicationVideoButton alignCenterWithView:self];
-//    [self.applicationVideoButton constrainWidth:FLKPredicate(200)];
-//    [self.applicationVideoButton constrainHeight:FLKPredicate(80)];
-//    [self.applicationVideoButton setBackgroundColor:[[UIColor scrapplingForegroundBlueColor] colorWithAlphaComponent:0.5]];
-//    [[self.applicationVideoButton layer] setCornerRadius:9.0];
-//    [[self.applicationVideoButton layer] setMasksToBounds:YES];
-//    [self.applicationVideoButton.layer setOpacity:0.0];
+    
     [self resetTimer];
 }
 
 - (void)enableAirplay {
-//#if ENABLE_AIRPLAY == 1
+#if ENABLE_AIRPLAY == 1
     UIImage *airplayImage = [UIImage imageNamed:@"airplay"];
     self.volumeView = [[MPVolumeView alloc] initWithFrame:CGRectZero];
     self.volumeView.showsVolumeSlider = NO;
@@ -121,58 +89,7 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.volumeView];
     [items addObject:item];
     self.toolbar.items = items;
-//#endif
-}
-
-- (void)calculateInfoViewOffset {
-    [self.infoView sizeToFit];
-    self.infoViewOffset = ceilf(CGRectGetWidth(self.infoView.frame) / 2);
-    CGRect trackRect = [self.scrubberSlider trackRectForBounds:self.scrubberSlider.bounds];
-    self.sliderOffset = self.scrubberSlider.frame.origin.x + trackRect.origin.x + 12;
-}
-
-- (IBAction)togglePlayRate:(id)sender
-{
-//    if ([[self.playRateButton imageView] image] == [UIImage imageNamed:@"icn_speed1x"])
-    if (self.delegate.rate == 1.0)
-    {
-        [self.playRateButton setImage:[UIImage imageNamed:@"icn_speed0_5x"] forState:UIControlStateNormal];
-//        self.playRateButtonItem.title = [NSString stringWithFormat:@"\u00BDx"];
-        // currently playing at normal speed
-        if (self.delegate.rate == 1.0)
-        {
-            [self.delegate setRate:0.5];
-            [self.delegate setLastPlaybackRate:0.5];
-        }
-        else // currently not playing
-        {
-            [self.delegate setLastPlaybackRate:0.5];
-        }
-
-//        [self.delegate setRate:0.5];
-    }
-//    else if ([[self.playRateButton imageView] image] == [UIImage imageNamed:@"icn_speed0_5x"])
-    else if (self.delegate.rate == 0.5)
-//    else if ([self.playRateButtonItem.title isEqualToString:[NSString stringWithFormat:@"\u00BDx"]])
-    {
-        [self.playRateButton setImage:[UIImage imageNamed:@"icn_speed1x"] forState:UIControlStateNormal];
-        // currently playing at normal speed
-        if (self.delegate.rate == 1.0)
-        {
-            [self.delegate setRate:0.5];
-        }
-        else if (self.delegate.rate == 0.5)
-        {
-            [self.delegate setRate:1.0];
-            [self.delegate setLastPlaybackRate:1.0];
-        }
-        else // currently not playing
-        {
-            [self.delegate setLastPlaybackRate:1.0];
-        }
-    }
-    NSLog(@"self.delegate.lastPlaybackRate: %f", self.delegate.lastPlaybackRate);
-    NSLog(@"self.delegate.rate: %f", self.delegate.rate);
+#endif
 }
 
 float kRewindTime = 10.0;
@@ -186,6 +103,11 @@ float kRewindTime = 10.0;
     }
     [self setScrubbingTime:rewoundTime];
     [self.delegate scrubbedToTime:rewoundTime];
+}
+
+- (void)calculateInfoViewOffset {
+    [self.infoView sizeToFit];
+    self.infoViewOffset = ceilf(CGRectGetWidth(self.infoView.frame) / 2);
 }
 
 - (IBAction)showSubtitles:(id)sender {
@@ -232,20 +154,16 @@ float kRewindTime = 10.0;
 
 - (void)setCurrentTime:(NSTimeInterval)time duration:(NSTimeInterval)duration {
     NSInteger currentSeconds = ceilf(time);
-    NSInteger remainingTime = (NSInteger)(duration - time);
+    double remainingTime = duration - time;
     self.currentTimeLabel.text = [self formatSeconds:currentSeconds];
-    self.remainingTimeLabel.text = [NSString stringWithFormat:@"-%@", [self formatSeconds:remainingTime]];
+    self.remainingTimeLabel.text = [self formatSeconds:remainingTime];
     self.scrubberSlider.minimumValue = 0.0f;
     self.scrubberSlider.maximumValue = duration;
     self.scrubberSlider.value = time;
 }
 
 - (void)setScrubbingTime:(NSTimeInterval)time {
-    NSTimeInterval duration = CMTimeGetSeconds(self.delegate.duration);
-
-    double remainingTime = duration - time;
-    self.currentTimeLabel.text = [self formatSeconds:time];
-    self.remainingTimeLabel.text = [NSString stringWithFormat:@"-%@", [self formatSeconds:remainingTime]];
+    self.scrubbingTimeLabel.text = [self formatSeconds:time];
 }
 
 - (NSString *)formatSeconds:(NSInteger)value {
@@ -293,16 +211,16 @@ float kRewindTime = 10.0;
                 } completion:^(BOOL complete) {
                     self.filmStripView.hidden = YES;
                     [UIView animateWithDuration:0.35 animations:^{
-                        self.topToolbar.frameY -= self.topToolbar.frameHeight;
+                        self.navigationBar.frameY -= self.navigationBar.frameHeight;
                         self.toolbar.frameY += self.toolbar.frameHeight;
                     }];
                 }];
             } else {
-                self.topToolbar.frameY -= self.topToolbar.frameHeight;
+                self.navigationBar.frameY -= self.navigationBar.frameHeight;
                 self.toolbar.frameY += self.toolbar.frameHeight;
             }
         } else {
-            self.topToolbar.frameY += self.topToolbar.frameHeight;
+            self.navigationBar.frameY += self.navigationBar.frameHeight;
             self.toolbar.frameY -= self.toolbar.frameHeight;
         }
         self.controlsHidden = !self.controlsHidden;
@@ -310,12 +228,6 @@ float kRewindTime = 10.0;
 }
 
 - (IBAction)togglePlayback:(UIButton *)sender {
-    
-//    if (self.applicationVideoButton.layer.opacity == 1.0)
-//    {
-//        self.applicationVideoButton.layer.opacity = 0.0;
-//    }
-    
     sender.selected = !sender.selected;
     if (self.delegate) {
         SEL callback = sender.selected ? @selector(play) : @selector(pause);
@@ -332,40 +244,40 @@ float kRewindTime = 10.0;
 }
 
 - (void)showPopupUI {
-//    self.infoView.hidden = NO;
-//    CGRect trackRect = [self.scrubberSlider trackRectForBounds:self.scrubberSlider.bounds];
-//    CGRect thumbRect = [self.scrubberSlider thumbRectForBounds:self.scrubberSlider.bounds trackRect:trackRect value:self.scrubberSlider.value];
+    self.infoView.hidden = NO;
+    CGRect trackRect = [self.scrubberSlider convertRect:self.scrubberSlider.bounds toView:nil];
+    CGRect thumbRect = [self.scrubberSlider thumbRectForBounds:self.scrubberSlider.bounds trackRect:trackRect value:self.scrubberSlider.value];
 
-//    CGRect rect = self.infoView.frame;
-    // The +1 is a fudge factor due to the scrubber knob being larger than normal
-//    rect.origin.x = (self.sliderOffset + thumbRect.origin.x) - self.infoViewOffset;
-//    self.infoView.frame = rect;
+    CGRect rect = self.infoView.frame;
+    rect.origin.x = (thumbRect.origin.x) - self.infoViewOffset + 16;
+    rect.origin.y = self.boundsHeight - 80;
+    self.infoView.frame = rect;
 
-//    self.currentTimeLabel.text = @"-- : --";
-//	self.remainingTimeLabel.text = @"-- : --";
+    self.currentTimeLabel.text = @"-- : --";
+	self.remainingTimeLabel.text = @"-- : --";
     
     [self setScrubbingTime:self.scrubberSlider.value];
     [self.delegate scrubbedToTime:self.scrubberSlider.value];
 }
 
 - (void)unhidePopupUI {
-//    self.infoView.hidden = NO;
-//    self.infoView.alpha = 0.0f;
-//    [UIView animateWithDuration:0.2f animations:^{
-//        self.infoView.alpha = 1.0f;
-//    }];
+    self.infoView.hidden = NO;
+    self.infoView.alpha = 0.0f;
+    [UIView animateWithDuration:0.2f animations:^{
+        self.infoView.alpha = 1.0f;
+    }];
     self.scrubbing = YES;
     [self resetTimer];
     [self.delegate scrubbingDidStart];
 }
 
 - (void)hidePopupUI {
-//    [UIView animateWithDuration:0.3f animations:^{
-//        self.infoView.alpha = 0.0f;
-//    } completion:^(BOOL complete) {
-//        self.infoView.alpha = 1.0f;
-//        self.infoView.hidden = YES;
-//    }];
+    [UIView animateWithDuration:0.3f animations:^{
+        self.infoView.alpha = 0.0f;
+    } completion:^(BOOL complete) {
+        self.infoView.alpha = 1.0f;
+        self.infoView.hidden = YES;
+    }];
     self.scrubbing = NO;
     [self.delegate scrubbingDidEnd];
 }
@@ -382,12 +294,6 @@ float kRewindTime = 10.0;
 - (void)playbackComplete {
     self.scrubberSlider.value = 0.0f;
     self.togglePlaybackButton.selected = NO;
-    NSLog(@"playbackComplete");
-
-//    [UIView animateWithDuration:0.35 animations:^{
-//        [self.applicationVideoButton.layer setOpacity:1.0];
-//    } completion:^(BOOL complete) {
-//    }];
 }
 
 - (void)resetTimer {

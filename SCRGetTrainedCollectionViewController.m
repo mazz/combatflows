@@ -77,7 +77,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         [self.collectionView reloadData];
         [self.collectionView setHidden:NO];
         
-        [self.ringProgress setHidden:YES];
+        [self.ringProgress setHidden:!self.collectionView.hidden];
     });
 }
 
@@ -122,6 +122,10 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         [self.collectionView reloadData];
         self.viewDidDisappear = NO;
     }
+    
+    [self.ringProgress setIndeterminate:YES];
+    [self.ringProgress setHidden:!self.collectionView.hidden];
+
 //    [self.navigationController.navigationBar setBarTintColor:UIColor.scrapplingNavigationBarColor];
     self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0],

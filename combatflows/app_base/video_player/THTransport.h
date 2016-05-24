@@ -39,11 +39,7 @@
 
 @optional
 - (void)subtitleSelected:(NSString *)subtitle;
-- (CMTime)duration;
-- (float)rate;
-- (void)setRate:(float)rate;
-- (float)lastPlaybackRate;
-- (void)setLastPlaybackRate:(float)rate;
+
 @end
 
 @protocol THTransport <NSObject>

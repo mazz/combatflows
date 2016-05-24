@@ -24,12 +24,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
 @interface THPlayerController : NSObject
 
 - (id)initWithURL:(NSURL *)assetURL;
-@property (strong, nonatomic) NSString *title;
+
 @property (strong, nonatomic, readonly) UIView *view;
 
 @end

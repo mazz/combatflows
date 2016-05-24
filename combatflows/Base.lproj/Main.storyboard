@@ -234,10 +234,31 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <segue destination="3L7-af-knt" kind="presentation" identifier="playbackSegue" id="Bo6-fW-zJJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbe-3d-eWF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2597" y="-778"/>
+        </scene>
+        <!--Player View Controller-->
+        <scene sceneID="BUv-ni-KAE">
+            <objects>
+                <viewController id="3L7-af-knt" customClass="THPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HZw-Gz-evG"/>
+                        <viewControllerLayoutGuide type="bottom" id="efe-XZ-nSl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J8I-2i-RAj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHz-hr-mNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3282" y="-778"/>
         </scene>
         <!--Combat Flows-->
         <scene sceneID="PNT-K8-nWM">

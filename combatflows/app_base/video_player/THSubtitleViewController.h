@@ -23,9 +23,6 @@
 //  THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
-
 @protocol THSubtitleViewControllerDelegate <NSObject>
 - (void)subtitleSelected:(NSString *)subtitle;
 @end

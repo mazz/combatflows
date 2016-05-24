@@ -28,12 +28,10 @@
 
 @interface THOverlayView : UIView <THTransport>
 
-@property (weak, nonatomic) IBOutlet UIToolbar *topToolbar;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIButton *filmstripToggleButton;
 @property (weak, nonatomic) IBOutlet UIButton *togglePlaybackButton;
-@property (weak, nonatomic) IBOutlet UIButton *playRateButton;
-@property (weak, nonatomic) IBOutlet UIButton *rewindButton;
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *remainingTimeLabel;
 @property (weak, nonatomic) IBOutlet UISlider *scrubberSlider;
@@ -46,10 +44,9 @@
 
 - (IBAction)toggleFilmstrip:(id)sender;
 - (IBAction)toggleControls:(id)sender;
-- (IBAction)togglePlayRate:(id)sender;
-- (IBAction)rewind:(id)sender;
 - (IBAction)togglePlayback:(UIButton *)sender;
 - (IBAction)closeWindow:(id)sender;
+- (IBAction)rewind:(id)sender;
 - (void)setCurrentTime:(NSTimeInterval)time;
 
 @end

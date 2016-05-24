@@ -23,7 +23,6 @@
 //  THE SOFTWARE.
 //
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
 @interface THFilmstripView : UIView
 

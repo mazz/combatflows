@@ -23,9 +23,9 @@
 //  THE SOFTWARE.
 //
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
 @interface THPlayerViewController : UIViewController
-- (instancetype)initWithAssetURL:(NSURL *)assetURL;
+
 @property (strong, nonatomic) NSURL *assetURL;
+
 @end

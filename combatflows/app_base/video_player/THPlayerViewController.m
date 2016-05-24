@@ -32,20 +32,9 @@
 
 @implementation THPlayerViewController
 
-- (instancetype)initWithAssetURL:(NSURL *)assetURL
-{
-    if ((self = [super init]))
-    {
-        self.assetURL = assetURL;
-    }
-    
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.controller = [[THPlayerController alloc] initWithURL:self.assetURL];
-    self.controller.title = self.title;
     UIView *playerView = self.controller.view;
     playerView.frame = self.view.frame;
     [self.view addSubview:playerView];
@@ -74,22 +63,5 @@
 {
     return UIInterfaceOrientationLandscapeLeft;
 }
-
-//- (BOOL)shouldAutorotate
-//{
-//    return NO;
-//}
-//
-//-(NSUInteger)supportedInterfaceOrientations
-//{
-//    return UIInterfaceOrientationMaskAll;
-//    //    return UIInterfaceOrientationMaskLandscape;
-//}
-//
-//
-//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-//{
-//    return UIInterfaceOrientationLandscapeLeft;
-//}
 
 @end

@@ -25,7 +25,6 @@
 
 #import <CoreMedia/CoreMedia.h>
 #import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
 
 @interface THThumbnail : NSObject
 

@@ -34,9 +34,14 @@
 
 static NSString* kSCRFlowContentViewTableViewCellMultilineIdentifier = @"kSCRFlowContentViewTableViewCellMultilineIdentifier";
 static NSString* kSCRFlowContentViewTableViewCellGraphicCollectionIdentifier = @"kSCRFlowContentViewTableViewCellGraphicCollectionIdentifier";
+static NSString* kSCRFlowContentViewPlaybackSegue = @"playbackSegue";
+
+NSInteger kSCRFlowContentTeachingLessonIndex = 0;
+NSInteger kSCRFlowContentApplicationLessonIndex = 1;
+NSInteger kSCRFlowContentGraphicGuideLessonIndex = 2;
 
 @interface SCRFlowContentViewController () <UITableViewDelegate, UITableViewDataSource> //,SCRFlowContentParentTableViewDelegate>
-@property (nonatomic, strong) THPlayerViewController* playerViewController;
+//@property (nonatomic, strong) THPlayerViewController* playerViewController;
 //@property (weak, nonatomic) IBOutlet UIView* titleBox;
 @property (strong, nonatomic) UILabel* titleLabel;
 @property (strong, nonatomic) UILabel* overviewTextLabel;
@@ -57,7 +62,7 @@ static NSString* kSCRFlowContentViewTableViewCellGraphicCollectionIdentifier = @
 //@property (strong, nonatomic) NSArray* contentCollectionImages;
 // view content end     //
 
-@property (nonatomic, strong) CMALesson* currentLesson;
+@property (nonatomic) NSInteger currentLessonIndex;
 @property (nonatomic, strong) AVQueuePlayer* player;
 @end
 
@@ -338,28 +343,24 @@ NSUInteger kBannersPerLesson = 2;
 - (IBAction)play:(id)sender
 {
     if (sender == self.playTeachingButton) {
-        [self setCurrentLesson:self.flow.lessons[0]];
+        [self setCurrentLessonIndex:kSCRFlowContentTeachingLessonIndex];
     }
     else if (sender == self.playApplicationButton) {
-        [self setCurrentLesson:self.flow.lessons[1]];
+        [self setCurrentLessonIndex:kSCRFlowContentApplicationLessonIndex];
     }
     else if (sender == self.playGraphicGuideButton) {
-        [self setCurrentLesson:self.flow.lessons[2]];
+        [self setCurrentLessonIndex:kSCRFlowContentGraphicGuideLessonIndex];
     }
-    [self doPlaybackWithLesson:[self currentLesson]];
-}
-
-- (void)doPlaybackWithLesson:(CMALesson*)l_
-{
-    //    self.player = [AVQueuePlayer queuePlayerWithItems:[NSArray arrayWithObject:[self playerItemForLesson:l_]]];
-
-    self.playerViewController = [[THPlayerViewController alloc] initWithAssetURL:[self assetURLForLesson:l_]];
+    CMALesson * lesson = self.flow.lessons[self.currentLessonIndex];
+    
+    //    [self doPlaybackWithLesson:[self currentLesson]];
+    
     
     NSString *formatter = @"%@ - Flow %d";
     NSString *displayString = [NSString stringWithFormat:NSLocalizedString(formatter, @""), self.flow.name, self.flow.nominal.integerValue];
     NSString *trackingString = [NSString stringWithFormat:formatter, self.flow.name, (long)self.flow.nominal.integerValue];
     // kGAIEventCategoryWatchVideo
-//    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    //    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     // track connection type
     
@@ -377,25 +378,71 @@ NSUInteger kBannersPerLesson = 2;
                                                                                         action:kGAIEventActionWatchVideoConnectionType
                                                                                          label:connection
                                                                                          value:nil] build]];
-
+    
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:kGAIEventCategoryWatchVideo
                                                           action:trackingString
-                                                           label:l_.filename
+                                                           label:lesson.filename
                                                            value:nil] build]];
 
     
-    self.playerViewController.title = displayString;
+    
+    [self performSegueWithIdentifier:kSCRFlowContentViewPlaybackSegue sender:sender];
 
-    [self presentViewController:self.playerViewController animated:YES completion:^{
-        //        UILabel *label = [[UILabel alloc] init];
-        //        label.text = @"TEST";
-        //        label.textColor = UIColor.whiteColor;
-        //        [label sizeToFit];
-        //        [self.playerViewController.contentOverlayView addSubview:label];
-        //        [label alignCenterWithView:self.playerViewController.contentOverlayView];
-        //        NSLog(@"complete");
-    }];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSURL *url = [self assetURLForLesson:self.flow.lessons[self.currentLessonIndex]]; ;//(sender == self.playTeachingButton) ? self.localURL : self.streamingURL;
+    THPlayerViewController *controller = [segue destinationViewController];
+    controller.assetURL = url;
+}
+
+//- (void)doPlaybackWithLesson:(CMALesson*)l_
+//{
+//    //    self.player = [AVQueuePlayer queuePlayerWithItems:[NSArray arrayWithObject:[self playerItemForLesson:l_]]];
+//
+////    self.playerViewController = [[THPlayerViewController alloc] initWithAssetURL:[self assetURLForLesson:l_]];
+//    
+//    NSString *formatter = @"%@ - Flow %d";
+//    NSString *displayString = [NSString stringWithFormat:NSLocalizedString(formatter, @""), self.flow.name, self.flow.nominal.integerValue];
+//    NSString *trackingString = [NSString stringWithFormat:formatter, self.flow.name, (long)self.flow.nominal.integerValue];
+//    // kGAIEventCategoryWatchVideo
+////    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+//    
+//    // track connection type
+//    
+//    NSString *connection = @"unknown";
+//    if (![[SCRReachabilityService sharedInstance] isOffline]) {
+//        if ([[SCRReachabilityService sharedInstance] isCellular]) {
+//            connection = @"cellular";
+//        } else {
+//            connection = @"wifi";
+//        }
+//    } else {
+//        connection = @"offline";
+//    }
+//    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:kGAIEventCategoryWatchVideo
+//                                                                                        action:kGAIEventActionWatchVideoConnectionType
+//                                                                                         label:connection
+//                                                                                         value:nil] build]];
+//
+//    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:kGAIEventCategoryWatchVideo
+//                                                          action:trackingString
+//                                                           label:l_.filename
+//                                                           value:nil] build]];
+//
+//    
+////    self.playerViewController.title = displayString;
+////
+////    [self presentViewController:self.playerViewController animated:YES completion:^{
+////        //        UILabel *label = [[UILabel alloc] init];
+////        //        label.text = @"TEST";
+////        //        label.textColor = UIColor.whiteColor;
+////        //        [label sizeToFit];
+////        //        [self.playerViewController.contentOverlayView addSubview:label];
+////        //        [label alignCenterWithView:self.playerViewController.contentOverlayView];
+////        //        NSLog(@"complete");
+////    }];
+//}
 
 - (NSURL*)assetURLForLesson:(CMALesson*)lesson
 {
@@ -403,76 +450,76 @@ NSUInteger kBannersPerLesson = 2;
     //scr_bpd_fl01_teach_4_4s.m4v
     return [NSURL fileURLWithPath:path];
 }
-- (AVPlayerItem*)playerItemForLesson:(CMALesson*)lesson
-{
+//- (AVPlayerItem*)playerItemForLesson:(CMALesson*)lesson
+//{
+//
+//    NSString* path = [NSString stringWithFormat:@"%@/%@", [[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath], [lesson filename]];
+//
+//    //scr_bpd_fl01_teach_4_4s.m4v
+//    AVURLAsset* asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:path] options:nil];
+//    //    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"scr_bpd_fl01_teach_4_4s" withExtension:@"m4v"] options:nil];
+//    AVPlayerItem* item = [[AVPlayerItem alloc] initWithAsset:asset];
+//    if (item != nil) {
+//        //
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(playerItemDidReachEnd:)
+//                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+//                                                   object:item];
+//    }
+//
+//    return item;
+//}
 
-    NSString* path = [NSString stringWithFormat:@"%@/%@", [[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath], [lesson filename]];
-
-    //scr_bpd_fl01_teach_4_4s.m4v
-    AVURLAsset* asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:path] options:nil];
-    //    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"scr_bpd_fl01_teach_4_4s" withExtension:@"m4v"] options:nil];
-    AVPlayerItem* item = [[AVPlayerItem alloc] initWithAsset:asset];
-    if (item != nil) {
-        //
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(playerItemDidReachEnd:)
-                                                     name:AVPlayerItemDidPlayToEndTimeNotification
-                                                   object:item];
-    }
-
-    return item;
-}
-
-- (void)playerItemDidReachEnd:(NSNotification*)notification
-{
-    NSLog(@"reached the end of %@", notification);
-
-    NSString* title = ([self.currentLesson lessonType] == kCMATeaching) ? NSLocalizedString(@"Teaching", @"") : ([self.currentLesson lessonType] == kCMAApplication) ? NSLocalizedString(@"Application", @"") : @"";
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction* actionReplay = [UIAlertAction actionWithTitle:NSLocalizedString(@"Replay", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-        [self.player removeAllItems];
-
-        AVPlayerItem* p = [notification object];
-        [p seekToTime:kCMTimeZero];
-
-        [self.player insertItem:p afterItem:nil];
-    }];
-
-    AVPlayerItem* alternateItem = nil;
-    NSString* alternateTitle;
-    if ([self.currentLesson lessonType] == kCMATeaching) {
-        alternateTitle = NSLocalizedString(@"Application", @"");
-        [self setCurrentLesson:self.flow.lessons[kCMAApplication]];
-        alternateItem = [self playerItemForLesson:self.currentLesson];
-    }
-    else if ([self.currentLesson lessonType] == kCMAApplication) {
-        alternateTitle = NSLocalizedString(@"Teaching", @"");
-        [self setCurrentLesson:self.flow.lessons[kCMATeaching]];
-        alternateItem = [self playerItemForLesson:self.currentLesson];
-    }
-
-    UIAlertAction* actionPlayAlternateLesson = [UIAlertAction actionWithTitle:alternateTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-        [self.player removeAllItems];
-        [alternateItem seekToTime:kCMTimeZero];
-        [self.player insertItem:alternateItem afterItem:nil];
-    }];
-
-    UIAlertAction* actionGraphicGuide = [UIAlertAction actionWithTitle:NSLocalizedString(@"Graphic Guide", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
-        [self.playerViewController dismissViewControllerAnimated:YES completion:nil];
-    }];
-
-    [alertController addAction:actionReplay];
-    [alertController addAction:actionPlayAlternateLesson];
-    [alertController addAction:actionGraphicGuide];
-    [self.playerViewController presentViewController:alertController animated:YES completion:nil];
-
-    //    AVQueuePlayer *qp = [self.players objectAtIndex:[self.playerItems indexOfObjectIdenticalTo:[notification object]]];
-    //    [qp removeAllItems];
-    //
-    //    AVPlayerItem *p = [notification object];
-    //    [p seekToTime:kCMTimeZero];
-    //
-    //    [qp insertItem:p afterItem:nil];
-}
+//- (void)playerItemDidReachEnd:(NSNotification*)notification
+//{
+//    NSLog(@"reached the end of %@", notification);
+//
+//    NSString* title = ([self.currentLesson lessonType] == kCMATeaching) ? NSLocalizedString(@"Teaching", @"") : ([self.currentLesson lessonType] == kCMAApplication) ? NSLocalizedString(@"Application", @"") : @"";
+//    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//    UIAlertAction* actionReplay = [UIAlertAction actionWithTitle:NSLocalizedString(@"Replay", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
+//        [self.player removeAllItems];
+//
+//        AVPlayerItem* p = [notification object];
+//        [p seekToTime:kCMTimeZero];
+//
+//        [self.player insertItem:p afterItem:nil];
+//    }];
+//
+//    AVPlayerItem* alternateItem = nil;
+//    NSString* alternateTitle;
+//    if ([self.currentLesson lessonType] == kCMATeaching) {
+//        alternateTitle = NSLocalizedString(@"Application", @"");
+//        [self setCurrentLesson:self.flow.lessons[kCMAApplication]];
+//        alternateItem = [self playerItemForLesson:self.currentLesson];
+//    }
+//    else if ([self.currentLesson lessonType] == kCMAApplication) {
+//        alternateTitle = NSLocalizedString(@"Teaching", @"");
+//        [self setCurrentLesson:self.flow.lessons[kCMATeaching]];
+//        alternateItem = [self playerItemForLesson:self.currentLesson];
+//    }
+//
+//    UIAlertAction* actionPlayAlternateLesson = [UIAlertAction actionWithTitle:alternateTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
+//        [self.player removeAllItems];
+//        [alternateItem seekToTime:kCMTimeZero];
+//        [self.player insertItem:alternateItem afterItem:nil];
+//    }];
+//
+//    UIAlertAction* actionGraphicGuide = [UIAlertAction actionWithTitle:NSLocalizedString(@"Graphic Guide", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction* action) {
+//        [self.playerViewController dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//
+//    [alertController addAction:actionReplay];
+//    [alertController addAction:actionPlayAlternateLesson];
+//    [alertController addAction:actionGraphicGuide];
+//    [self.playerViewController presentViewController:alertController animated:YES completion:nil];
+//
+//    //    AVQueuePlayer *qp = [self.players objectAtIndex:[self.playerItems indexOfObjectIdenticalTo:[notification object]]];
+//    //    [qp removeAllItems];
+//    //
+//    //    AVPlayerItem *p = [notification object];
+//    //    [p seekToTime:kCMTimeZero];
+//    //
+//    //    [qp insertItem:p afterItem:nil];
+//}
 
 @end

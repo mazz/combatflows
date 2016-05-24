@@ -52,23 +52,19 @@ static const NSString *PlayerItemStatusContext;
 @property (strong, nonatomic) THPlayerView *playerView;
 
 @property (weak, nonatomic) id <THTransport> transport;
-@property (nonatomic) CMTime duration;
 
 @property (strong, nonatomic) id timeObserver;
 @property (strong, nonatomic) id itemEndObserver;
-//@property (assign, nonatomic) float lastPlaybackRate;
+@property (assign, nonatomic) float lastPlaybackRate;
 
 @property (strong, nonatomic) AVAssetImageGenerator *imageGenerator;
-
 @property (nonatomic) NSTimeInterval videoPlaybackStartDate;
 @property (nonatomic) NSTimeInterval videoPlaybackEndDate;
 
 @end
 
 @implementation THPlayerController
-{
-    float _lastPlaybackRate;
-}
+
 #pragma mark - Setup
 
 - (id)initWithURL:(NSURL *)assetURL {
@@ -96,8 +92,6 @@ static const NSString *PlayerItemStatusContext;
                          context:&PlayerItemStatusContext];
 
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];          // 4
-    self.player.allowsExternalPlayback = YES;
-    self.player.usesExternalPlaybackWhileExternalScreenIsActive = YES;
 
     self.playerView = [[THPlayerView alloc] initWithPlayer:self.player];    // 5
     self.transport = self.playerView.transport;
@@ -122,18 +116,15 @@ static const NSString *PlayerItemStatusContext;
                 [self addItemEndObserverForPlayerItem];
                 
                 CMTime duration = self.playerItem.duration;
-                self.duration = self.playerItem.duration;
-
+                
                 // Synchronize the time display                             // 3
                 [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero)
                                       duration:CMTimeGetSeconds(duration)];
                 
                 // Set the video title.
+                [self.transport setTitle:self.asset.title];                 // 4
                 
-                [self.transport setTitle:self.title];                 // 4
-                
-                [self.player play];
-                [self.player setRate:(_lastPlaybackRate != 0.0)?_lastPlaybackRate:1.0];
+                [self.player play];                                         // 5
                 
                 [self loadMediaOptions];
                 [self generateThumbnails];
@@ -217,12 +208,6 @@ static const NSString *PlayerItemStatusContext;
         [weakSelf.player seekToTime:kCMTimeZero                             // 2
                   completionHandler:^(BOOL finished) {
             [weakSelf.transport playbackComplete];                          // 3
-                      
-[[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:kGAIEventCategoryWatchVideo
-                                                                                  action:kGAIEventActionWatchVideoCompleted
-                                                                                   label:self.title
-                                                                                   value:nil] build]];
-
         }];
     };
 
@@ -235,60 +220,19 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma mark - THTransportDelegate Methods
 
-- (void)play
-{
-    NSLog(@"play _lastPlaybackRate: %f", _lastPlaybackRate);
-    
+- (void)play {
     self.videoPlaybackStartDate = [[NSDate date] timeIntervalSince1970];
     [self.player play];
-    [self.player setRate:(_lastPlaybackRate != 0.0)?_lastPlaybackRate:1.0];
 }
 
-- (void)pause
-{
-    _lastPlaybackRate = self.player.rate;
-    NSLog(@"pause _lastPlaybackRate: %f", _lastPlaybackRate);
-
+- (void)pause {
+    self.lastPlaybackRate = self.player.rate;
     [self.player pause];
 }
 
-- (void)stop
-{
+- (void)stop {
     [self.player setRate:0.0f];
     [self.transport playbackComplete];
-}
-
-- (float)rate
-{
-    return self.player.rate;
-}
-
-- (CMTime)duration
-{
-    return _duration;
-}
-
-- (void)setRate:(float)rate
-{
-    if (self.player.rate != 0.0)
-    {
-        [self.player setRate:rate];
-    }
-    else
-    {
-        _lastPlaybackRate = rate;
-    }
-}
-
-- (float)lastPlaybackRate
-{
-    return _lastPlaybackRate;
-}
-
-- (void)setLastPlaybackRate:(float)rate
-{
-    NSLog(@"setLastPlaybackRate rate: %f", rate);
-    _lastPlaybackRate = rate;
 }
 
 - (void)jumpedToTime:(NSTimeInterval)time {
@@ -296,7 +240,7 @@ static const NSString *PlayerItemStatusContext;
 }
 
 - (void)scrubbingDidStart {                                                 // 1
-    _lastPlaybackRate = self.player.rate;
+    self.lastPlaybackRate = self.player.rate;
     [self.player pause];
     [self.player removeTimeObserver:self.timeObserver];
 }
@@ -308,9 +252,8 @@ static const NSString *PlayerItemStatusContext;
 
 - (void)scrubbingDidEnd {                                                   // 3
     [self addPlayerItemTimeObserver];
-    if (_lastPlaybackRate > 0.0f) {
+    if (self.lastPlaybackRate > 0.0f) {
         [self.player play];
-        [self.player setRate:(_lastPlaybackRate != 0.0)?_lastPlaybackRate:1.0];
     }
 }
 
@@ -390,10 +333,11 @@ static const NSString *PlayerItemStatusContext;
     self.videoPlaybackEndDate = [[NSDate date] timeIntervalSince1970];
     
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:kGAIEventCategoryWatchVideo
-                                                          action:kGAIEventActionWatchVideoCompleted
-                                                           label:kGAIEventLabelWatchVideoDuration
-                                                           value:[NSNumber numberWithDouble:(self.videoPlaybackEndDate - self.videoPlaybackStartDate)]] build]];
+                                                                                        action:kGAIEventActionWatchVideoCompleted
+                                                                                         label:kGAIEventLabelWatchVideoDuration
+                                                                                         value:[NSNumber numberWithDouble:(self.videoPlaybackEndDate - self.videoPlaybackStartDate)]] build]];
 
+    
 }
 
 @end
