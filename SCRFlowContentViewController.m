@@ -114,7 +114,7 @@ NSUInteger kBannersPerLesson = 2;
     self.allContentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.allContentTableView.backgroundColor = UIColor.clearColor;
 
-    NSString* bannerPath = [[[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath] stringByAppendingPathComponent:self.flow.bannerPaths[1]];
+    NSString* bannerPath = [[[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath] stringByAppendingPathComponent:@"04-combatflow-1-graphicguidebanner@3x"];
     UIImage* scaledImage = [UIImage imageWithImage:[[UIImage alloc] initWithContentsOfFile:bannerPath] scaledToWidth:self.view.frame.size.width];
     UIImageView* headerImage = [[UIImageView alloc] initWithImage:scaledImage];
     [headerImage.layer setMinificationFilter:kCAFilterTrilinear];
