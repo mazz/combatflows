@@ -126,7 +126,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     [self.ringProgress setIndeterminate:YES];
     [self.ringProgress setHidden:!self.collectionView.hidden];
 
-//    [self.navigationController.navigationBar setBarTintColor:UIColor.scrapplingNavigationBarColor];
+    [self.navigationController.navigationBar setBarTintColor:UIColor.blackColor];
     self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0],
                                                                       NSForegroundColorAttributeName:UIColor.whiteColor}];

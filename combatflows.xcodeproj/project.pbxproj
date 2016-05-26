@@ -7,30 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03178225CB43145F6556DD87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 851098F9530A14ACFE84138D /* libPods.a */; };
-		2A8171541CED512C00D8364F /* cf_01_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171431CED512C00D8364F /* cf_01_tn_4_4s.m4v */; };
-		2A8171551CED512C00D8364F /* CF_01_tn_vid.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171441CED512C00D8364F /* CF_01_tn_vid.m4v */; };
-		2A8171561CED512C00D8364F /* cf_02_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171451CED512C00D8364F /* cf_02_tn_4_4s.m4v */; };
-		2A8171571CED512C00D8364F /* cf_03_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171461CED512C00D8364F /* cf_03_tn_4_4s.m4v */; };
-		2A8171581CED512C00D8364F /* cf_04_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171471CED512C00D8364F /* cf_04_tn_4_4s.m4v */; };
-		2A8171591CED512C00D8364F /* cf_05_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171481CED512C00D8364F /* cf_05_tn_4_4s.m4v */; };
-		2A81715A1CED512C00D8364F /* cf_06_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171491CED512C00D8364F /* cf_06_tn_4_4s.m4v */; };
-		2A81715B1CED512C00D8364F /* cf_07_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714A1CED512C00D8364F /* cf_07_tn_4_4s.m4v */; };
-		2A81715C1CED512C00D8364F /* cf_08_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714B1CED512C00D8364F /* cf_08_tn_4_4s.m4v */; };
-		2A81715D1CED512C00D8364F /* cf_09_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714C1CED512C00D8364F /* cf_09_tn_4_4s.m4v */; };
-		2A81715E1CED512C00D8364F /* cf_10_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714D1CED512C00D8364F /* cf_10_tn_4_4s.m4v */; };
-		2A81715F1CED512C00D8364F /* cf_11_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714E1CED512C00D8364F /* cf_11_tn_4_4s.m4v */; };
-		2A8171601CED512C00D8364F /* cf_12_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81714F1CED512C00D8364F /* cf_12_tn_4_4s.m4v */; };
-		2A8171611CED512C00D8364F /* cf_13_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171501CED512C00D8364F /* cf_13_tn_4_4s.m4v */; };
-		2A8171621CED512C00D8364F /* cf_14_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171511CED512C00D8364F /* cf_14_tn_4_4s.m4v */; };
-		2A8171631CED512C00D8364F /* cf_15_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171521CED512C00D8364F /* cf_15_tn_4_4s.m4v */; };
-		2A8171641CED512C00D8364F /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171531CED512C00D8364F /* cf_16_tn_4_4s.m4v */; };
-		2A8171661CED51E300D8364F /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171651CED51E300D8364F /* 00_bundled-thumb-600.m4v */; };
-		2A8171A91CED5B7C00D8364F /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719C1CED5B7C00D8364F /* 04-combatflow-1-application.m4v */; };
-		2A8171AA1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */; };
+		2A1389D11CF75B5A00C39B31 /* cf_01_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BA1CF75B2900C39B31 /* cf_01_tn_4_4s.m4v */; };
+		2A1389D21CF75B5A00C39B31 /* CF_01_tn_vid.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BB1CF75B2900C39B31 /* CF_01_tn_vid.m4v */; };
+		2A1389D31CF75B5A00C39B31 /* cf_02_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BC1CF75B2900C39B31 /* cf_02_tn_4_4s.m4v */; };
+		2A1389D41CF75B5A00C39B31 /* cf_03_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BD1CF75B2900C39B31 /* cf_03_tn_4_4s.m4v */; };
+		2A1389D51CF75B5A00C39B31 /* cf_04_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BE1CF75B2900C39B31 /* cf_04_tn_4_4s.m4v */; };
+		2A1389D61CF75B5A00C39B31 /* cf_05_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BF1CF75B2900C39B31 /* cf_05_tn_4_4s.m4v */; };
+		2A1389D71CF75B5A00C39B31 /* cf_06_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C01CF75B2900C39B31 /* cf_06_tn_4_4s.m4v */; };
+		2A1389D81CF75B5A00C39B31 /* cf_07_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C11CF75B2900C39B31 /* cf_07_tn_4_4s.m4v */; };
+		2A1389D91CF75B5A00C39B31 /* cf_08_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */; };
+		2A1389DA1CF75B5A00C39B31 /* cf_09_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C31CF75B2900C39B31 /* cf_09_tn_4_4s.m4v */; };
+		2A1389DB1CF75B5A00C39B31 /* cf_10_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C41CF75B2900C39B31 /* cf_10_tn_4_4s.m4v */; };
+		2A1389DC1CF75B5A00C39B31 /* cf_11_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C51CF75B2900C39B31 /* cf_11_tn_4_4s.m4v */; };
+		2A1389DD1CF75B5A00C39B31 /* cf_12_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C61CF75B2900C39B31 /* cf_12_tn_4_4s.m4v */; };
+		2A1389DE1CF75B5A00C39B31 /* cf_13_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C71CF75B2900C39B31 /* cf_13_tn_4_4s.m4v */; };
+		2A1389DF1CF75B5A00C39B31 /* cf_14_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C81CF75B2900C39B31 /* cf_14_tn_4_4s.m4v */; };
+		2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */; };
+		2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */; };
+		2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
+		2A1389E91CF75D0D00C39B31 /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */; };
+		2A1389EA1CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */; };
+		2A1389ED1CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */; };
+		2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */; };
+		2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
 		2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */; };
-		2A8171B51CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */; };
 		2A8171DA1CED5D5600D8364F /* AVAsset+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171BC1CED5D5600D8364F /* AVAsset+THAdditions.m */; };
 		2A8171DB1CED5D5600D8364F /* HCYoutubeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171BE1CED5D5600D8364F /* HCYoutubeParser.m */; };
 		2A8171DC1CED5D5600D8364F /* NSTimer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171C01CED5D5600D8364F /* NSTimer+Additions.m */; };
@@ -109,32 +110,37 @@
 		68305EC01CEBFA8A00A963E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68305EBE1CEBFA8A00A963E8 /* LaunchScreen.storyboard */; };
 		68305EE31CEC012200A963E8 /* flows.json in Resources */ = {isa = PBXBuildFile; fileRef = 68305EE21CEC012200A963E8 /* flows.json */; };
 		68305F381CEC07AE00A963E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68305F371CEC07AE00A963E8 /* GoogleService-Info.plist */; };
+		EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A8171431CED512C00D8364F /* cf_01_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_01_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171441CED512C00D8364F /* CF_01_tn_vid.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CF_01_tn_vid.m4v; sourceTree = "<group>"; };
-		2A8171451CED512C00D8364F /* cf_02_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_02_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171461CED512C00D8364F /* cf_03_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_03_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171471CED512C00D8364F /* cf_04_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_04_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171481CED512C00D8364F /* cf_05_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_05_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171491CED512C00D8364F /* cf_06_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_06_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714A1CED512C00D8364F /* cf_07_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_07_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714B1CED512C00D8364F /* cf_08_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_08_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714C1CED512C00D8364F /* cf_09_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_09_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714D1CED512C00D8364F /* cf_10_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_10_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714E1CED512C00D8364F /* cf_11_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_11_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A81714F1CED512C00D8364F /* cf_12_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_12_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171501CED512C00D8364F /* cf_13_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_13_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171511CED512C00D8364F /* cf_14_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_14_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171521CED512C00D8364F /* cf_15_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_15_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171531CED512C00D8364F /* cf_16_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_16_tn_4_4s.m4v; sourceTree = "<group>"; };
-		2A8171651CED51E300D8364F /* 00_bundled-thumb-600.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00_bundled-thumb-600.m4v"; sourceTree = "<group>"; };
-		2A81719C1CED5B7C00D8364F /* 04-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-application.m4v"; path = "bundled_content/04-combatflow-1-application.m4v"; sourceTree = SOURCE_ROOT; };
-		2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-graphicguide.m4v"; path = "bundled_content/04-combatflow-1-graphicguide.m4v"; sourceTree = SOURCE_ROOT; };
+		17CAC5DBEE2DD210318EB395 /* Pods-combatflows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.debug.xcconfig"; sourceTree = "<group>"; };
+		2A1389BA1CF75B2900C39B31 /* cf_01_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_01_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389BB1CF75B2900C39B31 /* CF_01_tn_vid.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CF_01_tn_vid.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389BC1CF75B2900C39B31 /* cf_02_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_02_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389BD1CF75B2900C39B31 /* cf_03_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_03_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389BE1CF75B2900C39B31 /* cf_04_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_04_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389BF1CF75B2900C39B31 /* cf_05_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_05_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C01CF75B2900C39B31 /* cf_06_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_06_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C11CF75B2900C39B31 /* cf_07_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_07_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_08_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C31CF75B2900C39B31 /* cf_09_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_09_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C41CF75B2900C39B31 /* cf_10_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_10_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C51CF75B2900C39B31 /* cf_11_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_11_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C61CF75B2900C39B31 /* cf_12_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_12_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C71CF75B2900C39B31 /* cf_13_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_13_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C81CF75B2900C39B31 /* cf_14_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_14_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_15_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_16_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
+		2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "00_bundled-thumb-600.m4v"; path = "combatflows/00_bundled-thumb-600.m4v"; sourceTree = "<group>"; };
+		2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-application.m4v"; sourceTree = "<group>"; };
+		2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-graphicguide.m4v"; sourceTree = "<group>"; };
+		2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-teaching.m4v"; sourceTree = "<group>"; };
+		2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAMovieViewController.m; sourceTree = "<group>"; };
+		2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAMovieViewController.h; sourceTree = "<group>"; };
+		2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = appintro_sequence_retina4.m4v; path = ../scrappling/scrappling/appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
 		2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@2x.png"; sourceTree = SOURCE_ROOT; };
 		2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@3x.png"; sourceTree = SOURCE_ROOT; };
-		2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-teaching.m4v"; path = "bundled_content/04-combatflow-1-teaching.m4v"; sourceTree = SOURCE_ROOT; };
 		2A8171BB1CED5D5600D8364F /* AVAsset+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVAsset+THAdditions.h"; path = "combatflows/app_base/video_player/AVAsset+THAdditions.h"; sourceTree = "<group>"; };
 		2A8171BC1CED5D5600D8364F /* AVAsset+THAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AVAsset+THAdditions.m"; path = "combatflows/app_base/video_player/AVAsset+THAdditions.m"; sourceTree = "<group>"; };
 		2A8171BD1CED5D5600D8364F /* HCYoutubeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCYoutubeParser.h; path = combatflows/app_base/video_player/HCYoutubeParser.h; sourceTree = "<group>"; };
@@ -281,9 +287,8 @@
 		68305EC11CEBFA8A00A963E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68305EE21CEC012200A963E8 /* flows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flows.json; sourceTree = "<group>"; };
 		68305F371CEC07AE00A963E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		851098F9530A14ACFE84138D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2E0EDF55502A94364B0B11E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D42AD57B231DD9D31363BDD4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-combatflows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.release.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,21 +303,55 @@
 				2A9C77921CF0EE0F006D7068 /* Accounts.framework in Frameworks */,
 				2A9C77901CF0EE09006D7068 /* MediaPlayer.framework in Frameworks */,
 				2A9C778E1CF0EE03006D7068 /* SystemConfiguration.framework in Frameworks */,
-				03178225CB43145F6556DD87 /* libPods.a in Frameworks */,
+				EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1389F41CF76D4700C39B31 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */,
+				2A1389F51CF76D6200C39B31 /* thumbs */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		2A1389F51CF76D6200C39B31 /* thumbs */ = {
+			isa = PBXGroup;
+			children = (
+				2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */,
+				2A1389BA1CF75B2900C39B31 /* cf_01_tn_4_4s.m4v */,
+				2A1389BB1CF75B2900C39B31 /* CF_01_tn_vid.m4v */,
+				2A1389BC1CF75B2900C39B31 /* cf_02_tn_4_4s.m4v */,
+				2A1389BD1CF75B2900C39B31 /* cf_03_tn_4_4s.m4v */,
+				2A1389BE1CF75B2900C39B31 /* cf_04_tn_4_4s.m4v */,
+				2A1389BF1CF75B2900C39B31 /* cf_05_tn_4_4s.m4v */,
+				2A1389C01CF75B2900C39B31 /* cf_06_tn_4_4s.m4v */,
+				2A1389C11CF75B2900C39B31 /* cf_07_tn_4_4s.m4v */,
+				2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */,
+				2A1389C31CF75B2900C39B31 /* cf_09_tn_4_4s.m4v */,
+				2A1389C41CF75B2900C39B31 /* cf_10_tn_4_4s.m4v */,
+				2A1389C51CF75B2900C39B31 /* cf_11_tn_4_4s.m4v */,
+				2A1389C61CF75B2900C39B31 /* cf_12_tn_4_4s.m4v */,
+				2A1389C71CF75B2900C39B31 /* cf_13_tn_4_4s.m4v */,
+				2A1389C81CF75B2900C39B31 /* cf_14_tn_4_4s.m4v */,
+				2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */,
+				2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */,
+			);
+			name = thumbs;
+			sourceTree = "<group>";
+		};
 		2A8171671CED594D00D8364F /* bundled_content */ = {
 			isa = PBXGroup;
 			children = (
-				2A81719C1CED5B7C00D8364F /* 04-combatflow-1-application.m4v */,
-				2A81719D1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v */,
+				2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */,
+				2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */,
+				2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */,
 				2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */,
 				2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */,
-				2A8171A81CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v */,
 			);
 			name = bundled_content;
 			sourceTree = "<group>";
@@ -324,6 +363,8 @@
 				2A8172211CED5DA400D8364F /* SCRConstants.m */,
 				2A8172221CED5DA400D8364F /* SCRNavigationController.h */,
 				2A8172231CED5DA400D8364F /* SCRNavigationController.m */,
+				2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */,
+				2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */,
 				2A8171BA1CED5D4500D8364F /* video_player */,
 				2A8171B91CED5D3D00D8364F /* model */,
 				2A8171B81CED5D2D00D8364F /* util */,
@@ -430,6 +471,7 @@
 		2A9C77381CF0EA71006D7068 /* main_view */ = {
 			isa = PBXGroup;
 			children = (
+				2A1389F41CF76D4700C39B31 /* resources */,
 				2A9C778A1CF0EDB3006D7068 /* SCRMultilineTableViewCell.h */,
 				2A9C778B1CF0EDB3006D7068 /* SCRMultilineTableViewCell.m */,
 				2A9C77871CF0EDA0006D7068 /* SCRHorizontalCardTableViewCell.h */,
@@ -490,11 +532,11 @@
 			name = main_view;
 			sourceTree = "<group>";
 		};
-		2C22F5D334AEF367E15ABCC8 /* Pods */ = {
+		5FEC26CFF049602EF1BB0224 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D42AD57B231DD9D31363BDD4 /* Pods.debug.xcconfig */,
-				A2E0EDF55502A94364B0B11E /* Pods.release.xcconfig */,
+				17CAC5DBEE2DD210318EB395 /* Pods-combatflows.debug.xcconfig */,
+				AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -506,8 +548,8 @@
 				2A8171B61CED5D1D00D8364F /* app_base */,
 				68305EAF1CEBFA8A00A963E8 /* combatflows */,
 				68305EAE1CEBFA8A00A963E8 /* Products */,
-				2C22F5D334AEF367E15ABCC8 /* Pods */,
 				D15E3A3886AE9DCAB4655806 /* Frameworks */,
+				5FEC26CFF049602EF1BB0224 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -523,24 +565,6 @@
 			isa = PBXGroup;
 			children = (
 				2A8171671CED594D00D8364F /* bundled_content */,
-				2A8171651CED51E300D8364F /* 00_bundled-thumb-600.m4v */,
-				2A8171431CED512C00D8364F /* cf_01_tn_4_4s.m4v */,
-				2A8171441CED512C00D8364F /* CF_01_tn_vid.m4v */,
-				2A8171451CED512C00D8364F /* cf_02_tn_4_4s.m4v */,
-				2A8171461CED512C00D8364F /* cf_03_tn_4_4s.m4v */,
-				2A8171471CED512C00D8364F /* cf_04_tn_4_4s.m4v */,
-				2A8171481CED512C00D8364F /* cf_05_tn_4_4s.m4v */,
-				2A8171491CED512C00D8364F /* cf_06_tn_4_4s.m4v */,
-				2A81714A1CED512C00D8364F /* cf_07_tn_4_4s.m4v */,
-				2A81714B1CED512C00D8364F /* cf_08_tn_4_4s.m4v */,
-				2A81714C1CED512C00D8364F /* cf_09_tn_4_4s.m4v */,
-				2A81714D1CED512C00D8364F /* cf_10_tn_4_4s.m4v */,
-				2A81714E1CED512C00D8364F /* cf_11_tn_4_4s.m4v */,
-				2A81714F1CED512C00D8364F /* cf_12_tn_4_4s.m4v */,
-				2A8171501CED512C00D8364F /* cf_13_tn_4_4s.m4v */,
-				2A8171511CED512C00D8364F /* cf_14_tn_4_4s.m4v */,
-				2A8171521CED512C00D8364F /* cf_15_tn_4_4s.m4v */,
-				2A8171531CED512C00D8364F /* cf_16_tn_4_4s.m4v */,
 				68305EE21CEC012200A963E8 /* flows.json */,
 				68305EB31CEBFA8A00A963E8 /* AppDelegate.h */,
 				68305EB41CEBFA8A00A963E8 /* AppDelegate.m */,
@@ -574,7 +598,7 @@
 				2A9C77911CF0EE0F006D7068 /* Accounts.framework */,
 				2A9C778F1CF0EE09006D7068 /* MediaPlayer.framework */,
 				2A9C778D1CF0EE03006D7068 /* SystemConfiguration.framework */,
-				851098F9530A14ACFE84138D /* libPods.a */,
+				88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -586,12 +610,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68305EC41CEBFA8A00A963E8 /* Build configuration list for PBXNativeTarget "combatflows" */;
 			buildPhases = (
-				AC5CC6C248D3CA7250E7B782 /* Check Pods Manifest.lock */,
+				FE54D38E560B751991D5A52E /* 📦 Check Pods Manifest.lock */,
 				68305EA91CEBFA8A00A963E8 /* Sources */,
 				68305EAA1CEBFA8A00A963E8 /* Frameworks */,
 				68305EAB1CEBFA8A00A963E8 /* Resources */,
-				06C0D4DA8CB702268851A6B0 /* Embed Pods Frameworks */,
-				6AB95539AB7EAE5E1A28A7DB /* Copy Pods Resources */,
+				08CDDC0A43D020E134C8313F /* 📦 Embed Pods Frameworks */,
+				54D403FD58D54BC7E6706832 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -640,80 +664,81 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8171611CED512C00D8364F /* cf_13_tn_4_4s.m4v in Resources */,
-				2A81715C1CED512C00D8364F /* cf_08_tn_4_4s.m4v in Resources */,
+				2A1389DF1CF75B5A00C39B31 /* cf_14_tn_4_4s.m4v in Resources */,
+				2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */,
+				2A1389DE1CF75B5A00C39B31 /* cf_13_tn_4_4s.m4v in Resources */,
 				2A8171E01CED5D5600D8364F /* THOverlayView.xib in Resources */,
-				2A8171561CED512C00D8364F /* cf_02_tn_4_4s.m4v in Resources */,
+				2A1389D21CF75B5A00C39B31 /* CF_01_tn_vid.m4v in Resources */,
 				68305EC01CEBFA8A00A963E8 /* LaunchScreen.storyboard in Resources */,
-				2A8171A91CED5B7C00D8364F /* 04-combatflow-1-application.m4v in Resources */,
-				2A81715B1CED512C00D8364F /* cf_07_tn_4_4s.m4v in Resources */,
-				2A8171661CED51E300D8364F /* 00_bundled-thumb-600.m4v in Resources */,
-				2A8171551CED512C00D8364F /* CF_01_tn_vid.m4v in Resources */,
-				2A8171631CED512C00D8364F /* cf_15_tn_4_4s.m4v in Resources */,
-				2A8171641CED512C00D8364F /* cf_16_tn_4_4s.m4v in Resources */,
+				2A1389DD1CF75B5A00C39B31 /* cf_12_tn_4_4s.m4v in Resources */,
+				2A1389DA1CF75B5A00C39B31 /* cf_09_tn_4_4s.m4v in Resources */,
+				2A1389D31CF75B5A00C39B31 /* cf_02_tn_4_4s.m4v in Resources */,
+				2A1389DC1CF75B5A00C39B31 /* cf_11_tn_4_4s.m4v in Resources */,
 				2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */,
-				2A8171541CED512C00D8364F /* cf_01_tn_4_4s.m4v in Resources */,
-				2A8171591CED512C00D8364F /* cf_05_tn_4_4s.m4v in Resources */,
-				2A8171601CED512C00D8364F /* cf_12_tn_4_4s.m4v in Resources */,
-				2A8171581CED512C00D8364F /* cf_04_tn_4_4s.m4v in Resources */,
+				2A1389DB1CF75B5A00C39B31 /* cf_10_tn_4_4s.m4v in Resources */,
+				2A1389D51CF75B5A00C39B31 /* cf_04_tn_4_4s.m4v in Resources */,
+				2A1389ED1CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v in Resources */,
+				2A1389D71CF75B5A00C39B31 /* cf_06_tn_4_4s.m4v in Resources */,
+				2A1389D61CF75B5A00C39B31 /* cf_05_tn_4_4s.m4v in Resources */,
 				68305EE31CEC012200A963E8 /* flows.json in Resources */,
-				2A8171AA1CED5B7C00D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */,
 				68305EBD1CEBFA8A00A963E8 /* Assets.xcassets in Resources */,
-				2A81715D1CED512C00D8364F /* cf_09_tn_4_4s.m4v in Resources */,
 				2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */,
-				2A81715A1CED512C00D8364F /* cf_06_tn_4_4s.m4v in Resources */,
+				2A1389D91CF75B5A00C39B31 /* cf_08_tn_4_4s.m4v in Resources */,
+				2A1389D11CF75B5A00C39B31 /* cf_01_tn_4_4s.m4v in Resources */,
+				2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */,
 				68305EBB1CEBFA8A00A963E8 /* Main.storyboard in Resources */,
-				2A81715F1CED512C00D8364F /* cf_11_tn_4_4s.m4v in Resources */,
 				68305F381CEC07AE00A963E8 /* GoogleService-Info.plist in Resources */,
-				2A8171B51CED5B7C00D8364F /* 04-combatflow-1-teaching.m4v in Resources */,
 				2A8171E51CED5D5600D8364F /* THSubtitleView.xib in Resources */,
-				2A8171621CED512C00D8364F /* cf_14_tn_4_4s.m4v in Resources */,
-				2A8171571CED512C00D8364F /* cf_03_tn_4_4s.m4v in Resources */,
-				2A81715E1CED512C00D8364F /* cf_10_tn_4_4s.m4v in Resources */,
+				2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */,
+				2A1389D41CF75B5A00C39B31 /* cf_03_tn_4_4s.m4v in Resources */,
+				2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */,
+				2A1389EA1CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v in Resources */,
+				2A1389E91CF75D0D00C39B31 /* 04-combatflow-1-application.m4v in Resources */,
+				2A1389D81CF75B5A00C39B31 /* cf_07_tn_4_4s.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06C0D4DA8CB702268851A6B0 /* Embed Pods Frameworks */ = {
+		08CDDC0A43D020E134C8313F /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-combatflows/Pods-combatflows-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6AB95539AB7EAE5E1A28A7DB /* Copy Pods Resources */ = {
+		54D403FD58D54BC7E6706832 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-combatflows/Pods-combatflows-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC5CC6C248D3CA7250E7B782 /* Check Pods Manifest.lock */ = {
+		FE54D38E560B751991D5A52E /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +788,7 @@
 				2A81720F1CED5D6D00D8364F /* CMABaseContent.m in Sources */,
 				2A8171E91CED5D5600D8364F /* UIView+THAdditions.m in Sources */,
 				2A8172101CED5D6D00D8364F /* CMACurriculum.m in Sources */,
+				2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */,
 				2A8171DA1CED5D5600D8364F /* AVAsset+THAdditions.m in Sources */,
 				2A9C775D1CF0EA8D006D7068 /* SCRMainViewController.m in Sources */,
 				2A81721E1CED5D7C00D8364F /* SCRProductService.m in Sources */,
@@ -899,7 +925,7 @@
 		};
 		68305EC51CEBFA8A00A963E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D42AD57B231DD9D31363BDD4 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 17CAC5DBEE2DD210318EB395 /* Pods-combatflows.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -913,7 +939,7 @@
 		};
 		68305EC61CEBFA8A00A963E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A2E0EDF55502A94364B0B11E /* Pods.release.xcconfig */;
+			baseConfigurationReference = AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

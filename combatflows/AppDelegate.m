@@ -13,6 +13,11 @@
 #import "SCRReachabilityService.h"
 #import "CMACurriculum.h"
 #import <Google/Analytics.h>
+#import "SCRMainViewController.h"
+#import "CMAMovieViewController.h"
+#import "SCRNavigationController.h"
+
+double kAppIntroMovieDuration = 6.0;
 
 @interface AppDelegate ()
 
@@ -33,6 +38,15 @@
     [[SCRReachabilityService sharedInstance] start];
     
 //    [self initializeGoogleAnalytics];
+    
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    CMAMovieViewController* introMovieViewController = (CMAMovieViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"CMAMovieViewController"];
+    self.window.rootViewController = introMovieViewController;
+    
+    //    [self initializeGoogleAnalytics];
+    
+    [NSTimer scheduledTimerWithTimeInterval:kAppIntroMovieDuration target:self selector:@selector(removeIntroMovie:) userInfo:nil repeats:NO];
+
     [[[IAHInAppPurchaseHelper sharedInstance] productService] fetchProducts];
     return YES;
 }
@@ -46,6 +60,21 @@
     GAI *gai = [GAI sharedInstance];
     gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
     gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+}
+
+- (void)removeIntroMovie:(id)userInfo
+{
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SCRMainViewController* mainViewController = (SCRMainViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"SCRMainViewController"];
+    
+    SCRNavigationController* navigationContoller = [[SCRNavigationController alloc] initWithRootViewController:mainViewController];
+    self.window.rootViewController = navigationContoller;
+    
+    navigationContoller.view.alpha = 0.0;
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        navigationContoller.view.alpha = 1.0;
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
