@@ -68,6 +68,7 @@ double kAppIntroMovieDuration = 6.0;
     SCRMainViewController* mainViewController = (SCRMainViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"SCRMainViewController"];
     
     SCRNavigationController* navigationContoller = [[SCRNavigationController alloc] initWithRootViewController:mainViewController];
+    navigationContoller.navigationBar.translucent = NO;
     self.window.rootViewController = navigationContoller;
     
     navigationContoller.view.alpha = 0.0;
