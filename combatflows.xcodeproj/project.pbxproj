@@ -25,9 +25,6 @@
 		2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */; };
 		2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */; };
 		2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
-		2A1389E91CF75D0D00C39B31 /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */; };
-		2A1389EA1CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */; };
-		2A1389ED1CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */; };
 		2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */; };
 		2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
@@ -110,6 +107,9 @@
 		68305EC01CEBFA8A00A963E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68305EBE1CEBFA8A00A963E8 /* LaunchScreen.storyboard */; };
 		68305EE31CEC012200A963E8 /* flows.json in Resources */ = {isa = PBXBuildFile; fileRef = 68305EE21CEC012200A963E8 /* flows.json */; };
 		68305F381CEC07AE00A963E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68305F371CEC07AE00A963E8 /* GoogleService-Info.plist */; };
+		685BA91C1CF78C030023CADB /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA9171CF78C030023CADB /* 04-combatflow-1-application.m4v */; };
+		685BA91D1CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA9181CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v */; };
+		685BA9201CF78C030023CADB /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA91B1CF78C030023CADB /* 04-combatflow-1-teaching.m4v */; };
 		EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */; };
 /* End PBXBuildFile section */
 
@@ -133,9 +133,6 @@
 		2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_15_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
 		2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cf_16_tn_4_4s.m4v; sourceTree = SOURCE_ROOT; };
 		2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "00_bundled-thumb-600.m4v"; path = "combatflows/00_bundled-thumb-600.m4v"; sourceTree = "<group>"; };
-		2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-application.m4v"; sourceTree = "<group>"; };
-		2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-graphicguide.m4v"; sourceTree = "<group>"; };
-		2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "04-combatflow-1-teaching.m4v"; sourceTree = "<group>"; };
 		2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAMovieViewController.m; sourceTree = "<group>"; };
 		2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAMovieViewController.h; sourceTree = "<group>"; };
 		2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = appintro_sequence_retina4.m4v; path = ../scrappling/scrappling/appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
@@ -287,6 +284,9 @@
 		68305EC11CEBFA8A00A963E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68305EE21CEC012200A963E8 /* flows.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flows.json; sourceTree = "<group>"; };
 		68305F371CEC07AE00A963E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		685BA9171CF78C030023CADB /* 04-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-application.m4v"; path = "bundled_content/04-combatflow-1-application.m4v"; sourceTree = SOURCE_ROOT; };
+		685BA9181CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-graphicguide.m4v"; path = "bundled_content/04-combatflow-1-graphicguide.m4v"; sourceTree = SOURCE_ROOT; };
+		685BA91B1CF78C030023CADB /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-teaching.m4v"; path = "bundled_content/04-combatflow-1-teaching.m4v"; sourceTree = SOURCE_ROOT; };
 		88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-combatflows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.release.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,11 +347,11 @@
 		2A8171671CED594D00D8364F /* bundled_content */ = {
 			isa = PBXGroup;
 			children = (
-				2A1389E41CF75D0D00C39B31 /* 04-combatflow-1-application.m4v */,
-				2A1389E51CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v */,
-				2A1389E81CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v */,
 				2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */,
 				2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */,
+				685BA9171CF78C030023CADB /* 04-combatflow-1-application.m4v */,
+				685BA9181CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v */,
+				685BA91B1CF78C030023CADB /* 04-combatflow-1-teaching.m4v */,
 			);
 			name = bundled_content;
 			sourceTree = "<group>";
@@ -666,6 +666,8 @@
 			files = (
 				2A1389DF1CF75B5A00C39B31 /* cf_14_tn_4_4s.m4v in Resources */,
 				2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */,
+				685BA91C1CF78C030023CADB /* 04-combatflow-1-application.m4v in Resources */,
+				685BA91D1CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v in Resources */,
 				2A1389DE1CF75B5A00C39B31 /* cf_13_tn_4_4s.m4v in Resources */,
 				2A8171E01CED5D5600D8364F /* THOverlayView.xib in Resources */,
 				2A1389D21CF75B5A00C39B31 /* CF_01_tn_vid.m4v in Resources */,
@@ -675,9 +677,9 @@
 				2A1389D31CF75B5A00C39B31 /* cf_02_tn_4_4s.m4v in Resources */,
 				2A1389DC1CF75B5A00C39B31 /* cf_11_tn_4_4s.m4v in Resources */,
 				2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */,
+				685BA9201CF78C030023CADB /* 04-combatflow-1-teaching.m4v in Resources */,
 				2A1389DB1CF75B5A00C39B31 /* cf_10_tn_4_4s.m4v in Resources */,
 				2A1389D51CF75B5A00C39B31 /* cf_04_tn_4_4s.m4v in Resources */,
-				2A1389ED1CF75D0D00C39B31 /* 04-combatflow-1-teaching.m4v in Resources */,
 				2A1389D71CF75B5A00C39B31 /* cf_06_tn_4_4s.m4v in Resources */,
 				2A1389D61CF75B5A00C39B31 /* cf_05_tn_4_4s.m4v in Resources */,
 				68305EE31CEC012200A963E8 /* flows.json in Resources */,
@@ -692,8 +694,6 @@
 				2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */,
 				2A1389D41CF75B5A00C39B31 /* cf_03_tn_4_4s.m4v in Resources */,
 				2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */,
-				2A1389EA1CF75D0D00C39B31 /* 04-combatflow-1-graphicguide.m4v in Resources */,
-				2A1389E91CF75D0D00C39B31 /* 04-combatflow-1-application.m4v in Resources */,
 				2A1389D81CF75B5A00C39B31 /* cf_07_tn_4_4s.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
