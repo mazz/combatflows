@@ -1,4 +1,12 @@
 PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
   - EBCardCollectionViewLayout (0.2.0)
   - FLKAutoLayout (1.0.0)
   - Google/Analytics (2.0.4):
@@ -21,6 +29,7 @@ PODS:
   - MSCellAccessory (1.1.2)
 
 DEPENDENCIES:
+  - CocoaLumberjack
   - EBCardCollectionViewLayout (from `https://github.com/betzerra/EBCardCollectionViewLayout`)
   - FLKAutoLayout
   - Google/Analytics
@@ -37,6 +46,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/betzerra/EBCardCollectionViewLayout
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   EBCardCollectionViewLayout: 29e4f47ad6883ddf8e5e16078c71fa1142098342
   FLKAutoLayout: 106b14dbae09d32c6730190f4e78a959759ba4a4
   Google: d0932824c5b97c96be489aa6f4e8cd6c294d637d
@@ -48,6 +58,6 @@ SPEC CHECKSUMS:
   M13ProgressSuite: 03d194af6359da440641ba758aed5a18b0386a86
   MSCellAccessory: 8265f3cd2386c1f372da00232472605ab11426e4
 
-PODFILE CHECKSUM: 2037db4bd023fd38fd8be68c06a16fe7fe543c36
+PODFILE CHECKSUM: 0a798192b711421fdcc7a777b1a8d516e09ee7ac
 
 COCOAPODS: 1.0.0

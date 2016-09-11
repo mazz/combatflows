@@ -26,7 +26,7 @@ NSInteger kLessonVideoTypeIndex = 3;
         [mut addObject:[NSNull null]];
         [mut addObject:[NSNull null]];
         [mut addObject:[NSNull null]];
-        NSLog(@"lessonArray_: %@ name: %@ fg.name: %@", lessonArray_, name_, fg_.name);
+        DDLogDebug(@"lessonArray_: %@ name: %@ fg.name: %@", lessonArray_, name_, fg_.name);
         
         NSNumberFormatter* f = [[NSNumberFormatter alloc] init];
 
@@ -98,12 +98,12 @@ NSInteger kLessonVideoTypeIndex = 3;
     NSError* err = nil;
 
     [[NSFileManager defaultManager] createDirectoryAtPath:subdir withIntermediateDirectories:YES attributes:nil error:&err];
-    NSLog(@"creating subdir: %@", subdir);
+    DDLogDebug(@"creating subdir: %@", subdir);
 
     NSString* lessonPath = [[NSBundle mainBundle] pathForResource:[filename stringByDeletingPathExtension] ofType:[filename pathExtension]];
     [[NSFileManager defaultManager] copyItemAtPath:lessonPath toPath:[subdir stringByAppendingPathComponent:filename] error:&err];
 
-    NSLog(@"subdir contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
+    DDLogDebug(@"subdir contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
 }
 
 @end

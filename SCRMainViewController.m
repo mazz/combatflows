@@ -103,7 +103,7 @@
     [self.parentView addSubview:[destinationViewController view]];
     [destinationViewController view].frame = self.parentView.bounds;
     [destinationViewController didMoveToParentViewController:self];
-    NSLog(@"destinationViewController: %@", NSStringFromClass([destinationViewController class]));
+    DDLogDebug(@"destinationViewController: %@", NSStringFromClass([destinationViewController class]));
     
     self.selectedControllerIndex = self.mainSegmentedControl.selectedSegmentIndex;
     

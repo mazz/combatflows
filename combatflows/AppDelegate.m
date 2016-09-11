@@ -28,6 +28,10 @@ double kAppIntroMovieDuration = 6.0;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
     [IAHInAppPurchaseHelper sharedInstance];
     [CMACurriculum sharedCurriculum];
     

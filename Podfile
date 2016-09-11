@@ -5,5 +5,6 @@ target 'combatflows' do
     pod 'EBCardCollectionViewLayout', :git => 'https://github.com/betzerra/EBCardCollectionViewLayout'
     #pod 'PureLayout'
     pod 'Google/Analytics'
+    pod 'CocoaLumberjack'
 end
 

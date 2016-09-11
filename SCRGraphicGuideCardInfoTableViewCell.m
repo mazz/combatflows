@@ -83,7 +83,7 @@ static dispatch_once_t isAnimating;
         dispatch_once(&isAnimating, ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.pageControl setCurrentPage:newPageNumber];
-                NSLog(@"newPageNumber: %ld", (long)newPageNumber);
+                DDLogDebug(@"newPageNumber: %ld", (long)newPageNumber);
                 //        CATransition *animation = [CATransition animation];
                 //        animation.duration = .5;
                 //        animation.type = kCATransitionFade;

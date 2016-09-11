@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)initWithDictionary:(NSDictionary*)aDictionary
 {
     if (self = [super init]) {
-        NSLog(@"productIdentifier: %@", [aDictionary objectForKey:@"productIdentifier"]);
+        DDLogDebug(@"productIdentifier: %@", [aDictionary objectForKey:@"productIdentifier"]);
         self.bundled = [[aDictionary objectForKey:@"bundled"] boolValue];
         [self setName:[aDictionary objectForKey:@"name"]];
         [self setText:[aDictionary objectForKey:@"text"]];
@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)copyBundledGraphicGuideContent:(NSString*)filename
 {
-    NSLog(@"copyBundledGraphicGuideContent: %@", filename);
+    DDLogDebug(@"copyBundledGraphicGuideContent: %@", filename);
     NSString* subdir = [[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath];
 //    subdir = [subdir stringByAppendingPathComponent:@"graphicGuide"];
     BOOL isDir;
@@ -75,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     if (![[NSFileManager defaultManager] fileExistsAtPath:subdir isDirectory:&isDir]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:subdir withIntermediateDirectories:YES attributes:nil error:&err];
-        NSLog(@"creating subdir: %@", subdir);
+        DDLogDebug(@"creating subdir: %@", subdir);
     }
 
     NSString* graphicGuideAsset = [[NSBundle mainBundle] pathForResource:[filename stringByDeletingPathExtension] ofType:[filename pathExtension]];

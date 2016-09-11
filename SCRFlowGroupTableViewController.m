@@ -90,7 +90,7 @@
 
 - (void)playerItemDidReachEnd:(NSNotification *)notification
 {
-    NSLog(@"reached the end of %@", notification);
+    DDLogDebug(@"reached the end of %@", notification);
 //    AVQueuePlayer *qp = [self.players objectAtIndex:[self.playerItems indexOfObjectIdenticalTo:[notification object]]];
 //    [qp removeAllItems];
 //    
@@ -127,7 +127,7 @@
     
     
     [self presentViewController:self.playerViewController animated:YES completion:^{
-        NSLog(@"complete");
+        DDLogDebug(@"complete");
     }];
     
 }

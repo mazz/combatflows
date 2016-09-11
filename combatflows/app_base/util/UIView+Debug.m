@@ -18,7 +18,7 @@
 
 + (void) logViewRect:(UIView*)view level:(NSInteger)level {
     NSString *indentation = [@"" stringByPaddingToLength:level * 2 withString:@"  " startingAtIndex:0];
-    NSLog(@"%@%@: x:%.0f y:%.0f w:%.0f h:%.0f", indentation, NSStringFromClass(view.class), CGRectGetMinX(view.frame), CGRectGetMinY(view.frame), CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
+    DDLogDebug(@"%@%@: x:%.0f y:%.0f w:%.0f h:%.0f", indentation, NSStringFromClass(view.class), CGRectGetMinX(view.frame), CGRectGetMinY(view.frame), CGRectGetWidth(view.frame), CGRectGetHeight(view.frame));
     for (UIView *subview in view.subviews) {
         [UIView logViewRect:subview level:level + 1];
     }
@@ -48,7 +48,7 @@
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", [UIView guid]]];
     
 #if TARGET_IPHONE_SIMULATOR
-    NSLog(@"file: %@", filePath);
+    DDLogDebug(@"file: %@", filePath);
 #endif
     // Save image.
     [UIImagePNGRepresentation(imageView.image) writeToFile:filePath atomically:YES];
@@ -62,7 +62,7 @@
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", [UIView guid]]];
     
 #if TARGET_IPHONE_SIMULATOR
-    NSLog(@"file: %@", filePath);
+    DDLogDebug(@"file: %@", filePath);
 #endif
     // Save image.
     [UIImagePNGRepresentation(imageView.image) writeToFile:filePath atomically:YES];

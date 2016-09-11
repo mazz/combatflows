@@ -109,7 +109,7 @@ CGFloat kSCRPreviewBeginDismissAnimationDuration = 0.3;
 
     CGRect buttonLoc = [self.stickerDestination convertRect:self.stickerDestination.bounds toView:self.view];
     self.stickerPreviewConverted = [[UIView alloc] initWithFrame:buttonLoc];
-    NSLog(@"destView center: %@", NSStringFromCGPoint(self.stickerPreviewConverted.center));
+    DDLogDebug(@"destView center: %@", NSStringFromCGPoint(self.stickerPreviewConverted.center));
     [self.view addSubview:self.beginSticker];
     
     self.infoBox.alpha = 0.0;
@@ -211,7 +211,7 @@ CGFloat kSCRPreviewBeginDismissAnimationDuration = 0.3;
         [self addChildViewController:self.bodyCollectionViewController];
         [self.contentBox addSubview:self.bodyCollectionViewController.view];
         [self.bodyCollectionViewController.view alignToView:self.contentBox];
-        //        NSLog(@"self.previewCollectionViewController.view: %@", self.previewCollectionViewController.view);
+        //        DDLogDebug(@"self.previewCollectionViewController.view: %@", self.previewCollectionViewController.view);
         [self.bodyCollectionViewController didMoveToParentViewController:self];
         
         self.bodyCollectionViewController.collectionView.backgroundColor = UIColor.clearColor;
@@ -231,7 +231,7 @@ CGFloat kSCRPreviewBeginDismissAnimationDuration = 0.3;
 
 //- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 //{
-//    NSLog(@"scrollViewDidScroll scrollView: %@", scrollView);
+//    DDLogDebug(@"scrollViewDidScroll scrollView: %@", scrollView);
 //    if (scrollView == self.bodyCollectionViewController.collectionView)
 //    {
 //        self.titleCollectionViewController.collectionView.contentOffset = scrollView.contentOffset;
@@ -293,7 +293,7 @@ CGFloat kSCRPreviewBeginDismissAnimationDuration = 0.3;
 
 - (void)dismissPreview
 {
-    NSLog(@"dismissPreview indexPathsForVisibleItems: %@", [self.bodyCollectionViewController.collectionView indexPathsForVisibleItems]);
+    DDLogDebug(@"dismissPreview indexPathsForVisibleItems: %@", [self.bodyCollectionViewController.collectionView indexPathsForVisibleItems]);
     
     NSUInteger dismissStickerIndex = [[[self.bodyCollectionViewController.collectionView indexPathsForVisibleItems] objectAtIndex:0] row];
     

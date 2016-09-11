@@ -326,7 +326,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 //    UIButton *button = (UIButton*)sender;
 //    SKProduct *product = [[self.previewItems objectAtIndex:button.tag] product];
 //
-//    NSLog(@"Buying %@...", product.productIdentifier);
+//    DDLogDebug(@"Buying %@...", product.productIdentifier);
 //    [[IAHInAppPurchaseHelper sharedInstance] buyProduct:product];
 
 //    /* TEMP remove until IAP tested
@@ -396,13 +396,13 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 //            }];
 //    });
 
-    NSLog(@"favorites: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"favorite"]);
+    DDLogDebug(@"favorites: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"favorite"]);
 //     */
 }
 
 -(void)transactionCharged:(NSNotification *)note
 {
-    NSLog(@"note: %@", note);
+    DDLogDebug(@"note: %@", note);
     
     //    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:note.userInfo[@"productIdentifier"]];
     //    [[NSUserDefaults standardUserDefaults] synchronize];

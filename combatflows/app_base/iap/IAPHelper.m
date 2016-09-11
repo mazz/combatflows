@@ -53,11 +53,11 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
           [mutPurchased addObject:productIdentifier];
           self.purchasedProductIdentifiers = [mutPurchased copy];
           
-          NSLog(@"Previously purchased: %@", productIdentifier);
+          DDLogDebug(@"Previously purchased: %@", productIdentifier);
       }
       else
       {
-        NSLog(@"Not purchased: %@", productIdentifier);
+        DDLogDebug(@"Not purchased: %@", productIdentifier);
       }
     }
     
@@ -87,14 +87,14 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
 {
-  NSLog(@"Loaded list of products...");
+  DDLogDebug(@"Loaded list of products...");
   _productsRequest = nil;
     [IAHInAppPurchaseHelper sharedInstance].didFetchProducts = YES;
   
   NSArray * skProducts = response.products;
   for (SKProduct * skProduct in skProducts)
   {
-    NSLog(@"Found product: %@ %@ %0.2f",
+    DDLogDebug(@"Found product: %@ %@ %0.2f",
           skProduct.productIdentifier,
           skProduct.localizedTitle,
           skProduct.price.floatValue);
@@ -110,7 +110,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {
   
-    NSLog(@"Failed to load list of products: %@", error);
+    DDLogDebug(@"Failed to load list of products: %@", error);
     _productsRequest = nil;
 
     if (_completionHandler)
@@ -131,7 +131,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 {
   if ([SKPaymentQueue canMakePayments])
   {
-    NSLog(@"Buying %@...", product.productIdentifier);
+    DDLogDebug(@"Buying %@...", product.productIdentifier);
     
     SKPayment * payment = [SKPayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
@@ -147,7 +147,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 -(void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
 {
-  NSLog(@"RestoreCompletedTransactions");
+  DDLogDebug(@"RestoreCompletedTransactions");
 }
 
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions
@@ -180,7 +180,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
             case SKPaymentTransactionStateRestored:
                 [self restoreTransaction:transaction];
             case SKPaymentTransactionStatePurchasing:
-                NSLog(@"SKPaymentTransactionStatePurchasing");
+                DDLogDebug(@"SKPaymentTransactionStatePurchasing");
                 break;
             default:
                 break;
@@ -190,11 +190,11 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 -(void) paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
 {
-  NSLog(@"restoreCompletedTransactionsFailedWithError");
+  DDLogDebug(@"restoreCompletedTransactionsFailedWithError");
 }
 -(void) paymentQueue:(SKPaymentQueue *)queue removedTransactions:(NSArray *)transactions
 {
-  NSLog(@"removedTransactions: %@", transactions);
+  DDLogDebug(@"removedTransactions: %@", transactions);
 }
 
 -(void) paymentQueue:(SKPaymentQueue *)queue updatedDownloads:(NSArray *)downloads
@@ -217,7 +217,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
       case SKDownloadStateCancelled: { break; }
       case SKDownloadStateFailed:
       {
-        NSLog(@"download failed");
+        DDLogDebug(@"download failed");
 //        [Utility showAlert:@"Download Failed"
         
         if (!_showingDownloadFailedAlert)
@@ -240,33 +240,33 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
         
         case SKDownloadStateFinished:
         {
-            NSLog(@"SKDownloadStateFinished");
+            DDLogDebug(@"SKDownloadStateFinished");
 
             NSError *err = nil;
             //            NSString *subdir = [self contentPathForProductIdentifier:download.contentIdentifier];
             NSString *subdir = [self purchasedContentPath];
             
             [[NSFileManager defaultManager] createDirectoryAtPath:subdir withIntermediateDirectories:YES attributes:nil error:&err];
-            NSLog(@"creating subdir: %@", subdir);
+            DDLogDebug(@"creating subdir: %@", subdir);
 
             NSString *sourceContents = [[download.contentURL relativePath] stringByAppendingPathComponent:@"Contents"];
-            NSLog(@"source contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sourceContents error:&err]);
+            DDLogDebug(@"source contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sourceContents error:&err]);
 
             // for each file downloaded, copy it to the new folder structure
             for (id item in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sourceContents error:&err])
             {
               NSString *leaf = [sourceContents stringByAppendingPathComponent:item];
 
-              NSLog(@"dir err: %@", err);
+              DDLogDebug(@"dir err: %@", err);
               [[NSFileManager defaultManager] copyItemAtPath:leaf toPath:[subdir stringByAppendingPathComponent:item] error:&err];
 
             }
 
-            NSLog(@"subdir contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
+            DDLogDebug(@"subdir contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
 
             if (download.transaction.transactionState == SKPaymentTransactionStatePurchased)
             {
-                NSLog(@"purchase complete");
+                DDLogDebug(@"purchase complete");
             //          [Utility showAlert:@"Purchased Complete"
             }
 
@@ -276,13 +276,13 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
         
         case SKDownloadStatePaused:
         {
-        NSLog(@"SKDownloadStatePaused");
+        DDLogDebug(@"SKDownloadStatePaused");
         break;
         }
         
         case SKDownloadStateWaiting:
         {
-            NSLog(@"SKDownloadStateWaiting");
+            DDLogDebug(@"SKDownloadStateWaiting");
             break;
         }
     }
@@ -291,14 +291,14 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 - (void)completeTransaction:(SKPaymentTransaction *)transaction
 {
-  NSLog(@"completeTransaction...");
+  DDLogDebug(@"completeTransaction...");
  
   [self provideContentForProductIdentifier:transaction.payment.productIdentifier];
   [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 - (void)restoreTransaction:(SKPaymentTransaction *)transaction {
-  NSLog(@"restoreTransaction...");
+  DDLogDebug(@"restoreTransaction...");
   
   [self provideContentForProductIdentifier:transaction.originalTransaction.payment.productIdentifier];
   [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
@@ -306,11 +306,11 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 
 - (void)failedTransaction:(SKPaymentTransaction *)transaction {
   
-  NSLog(@"failedTransaction...");
-  NSLog(@"Transaction error: %@", transaction.error.localizedDescription);
+  DDLogDebug(@"failedTransaction...");
+  DDLogDebug(@"Transaction error: %@", transaction.error.localizedDescription);
   if (transaction.error.code != SKErrorPaymentCancelled)
   {
-    NSLog(@"Transaction error: %@", transaction.error.localizedDescription);
+    DDLogDebug(@"Transaction error: %@", transaction.error.localizedDescription);
       [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperTransactionFailedNotification object:transaction userInfo:nil];
 //    BlockAlertView *alert = [BlockAlertView alertWithTitle:NSLocalizedString(@"Transaction Failed", @"") message:transaction.error.localizedDescription];
 //    
@@ -357,11 +357,11 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
 //  subdir = [documentsDirectory stringByAppendingPathComponent:@"CombatMMA"];
 //  subdir = [subdir stringByAppendingPathComponent:appBundleName];
 //  subdir = [subdir stringByAppendingPathComponent:@"purchased_content"];
-//  NSLog(@"purchased_content contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
+//  DDLogDebug(@"purchased_content contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
 //
 ////  subdir = [subdir stringByAppendingPathComponent:packageName];
 //  
-//  NSLog(@"subdir: %@", subdir);
+//  DDLogDebug(@"subdir: %@", subdir);
 //  return subdir;
 //}
 
@@ -380,7 +380,7 @@ NSString *const IAPHelperProductRequestFailedNotification   = @"IAPHelperProduct
         subdir = [documentsDirectory stringByAppendingPathComponent:@"CombatMMA"];
         subdir = [subdir stringByAppendingPathComponent:[[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] lowercaseString]];
         subdir = [subdir stringByAppendingPathComponent:@"purchased_content"];
-        NSLog(@"purchased_content contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
+        DDLogDebug(@"purchased_content contents: %@", [[NSFileManager defaultManager] contentsOfDirectoryAtPath:subdir error:&err]);
     }
 
     return subdir;

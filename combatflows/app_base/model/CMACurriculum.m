@@ -192,9 +192,10 @@ static CMACurriculum *sharedInstance = nil;
 
         NSMutableDictionary *mut = [rawFlowGroup mutableCopy];
         [mut setObject:[NSNumber numberWithInteger:c] forKey:@"number"];
-//        NSLog(@"mut: %@", mut);
+//        DDLog(@"mut: %@", mut);
         CMAFlowGroup *flowGroup = [[CMAFlowGroup alloc] initWithDictionary:[mut copy]];
-        NSLog(@"flowGroup.name: %@", flowGroup.name);
+
+        DDLogDebug(@"flowGroup.name: %@", flowGroup.name);
         // store that item in the elements dictionary with the name as the key
         [_flowGroups setObject:flowGroup forKey:flowGroup.productIdentifier];
 

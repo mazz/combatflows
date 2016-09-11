@@ -1,0 +1,21 @@
+//
+//  combatflows.pch
+//  combatflows
+//
+//  Created by Michael Hanna on 2016-09-11.
+//  Copyright © 2016 ilearningsolutions. All rights reserved.
+//
+
+#ifndef combatflows_pch
+#define combatflows_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/DDASLLogger.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelError;
+
+#endif /* combatflows_pch */

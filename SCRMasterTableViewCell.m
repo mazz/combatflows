@@ -150,10 +150,10 @@ NSString *const kLabelVerticalGap               = @"0";
     for (NSLayoutConstraint *constraint in self.contentView.constraints) {
         if ([constraint firstAttribute] == attribute) {
             [set addObject:constraint];
-            NSLog(@"constraint item: %@, %@", [constraint firstItem], [constraint secondItem]);
+            DDLogDebug(@"constraint item: %@, %@", [constraint firstItem], [constraint secondItem]);
         }
     }
-    NSLog(@"set: %@", set);
+    DDLogDebug(@"set: %@", set);
     return set;
 }
 

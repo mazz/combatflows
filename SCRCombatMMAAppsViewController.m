@@ -132,13 +132,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)topLeftTapped { // kAppITunesCombatFlowLTItemIdentifier
     [self itemTapped];
     
-    NSLog(@"topLeftTapped");
+    DDLogDebug(@"topLeftTapped");
     [self openStoreProductViewControllerWithITunesItemIdentifier:kAppITunesCombatFlowLTItemIdentifier];
 }
 
 - (void)bottomLeftTapped {
     [self itemTapped];
-    NSLog(@"bottomLeftTapped");
+    DDLogDebug(@"bottomLeftTapped");
 }
 
 - (void)topRightTapped {
@@ -170,7 +170,7 @@ NS_ASSUME_NONNULL_BEGIN
                     [self.blankInterstitialViewController removeFromParentViewController];
                 }];
                 
-                NSLog(@"SKStoreProductViewController: %@", error);
+                DDLogDebug(@"SKStoreProductViewController: %@", error);
             }
         }];
 

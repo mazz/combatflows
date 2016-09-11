@@ -296,7 +296,7 @@ static const NSString *PlayerItemStatusContext;
                 [THThumbnail thumbnailWithImage:image time:actualTime];
             [images addObject:thumbnail];
         } else {
-            NSLog(@"Error: %@", [error localizedDescription]);
+            DDLogDebug(@"Error: %@", [error localizedDescription]);
         }
 
         // If the decremented image count is at 0, we're all done.

@@ -87,17 +87,17 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 
     if (!(flags & kSCNetworkReachabilityFlagsIsWWAN) && !(flags & kSCNetworkReachabilityFlagsReachable))
     {
-        NSLog(@"probably offline");
+        DDLogDebug(@"probably offline");
         [self doFetchProducts];
     }
     else if (flags & kSCNetworkReachabilityFlagsIsWWAN)
     {
-        NSLog(@"probably cellular");
+        DDLogDebug(@"probably cellular");
         [self doFetchProducts];
     }
     else if (flags & kSCNetworkReachabilityFlagsReachable)
     {
-        NSLog(@"probably WIFI");
+        DDLogDebug(@"probably WIFI");
         [self doFetchProducts];
     }
 }
@@ -236,17 +236,17 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     
     [[NSNotificationCenter defaultCenter] addObserverForName:IAPHelperDownloadProgessUpdateNotification object:nil queue:nil usingBlock:^(NSNotification *note)
      {
-         //        NSLog(@"observe IAPHelperDownloadProgessUpdateNotification: %@", note);
+         //        DDLogDebug(@"observe IAPHelperDownloadProgessUpdateNotification: %@", note);
          NSDictionary *download = [[note userInfo] objectForKey:@"download"];
          NSString *productIdentifier = [[note userInfo] objectForKey:@"productIdentifier"];
          NSMutableDictionary *downloading = [self.downloadingItems mutableCopy];
          [downloading setObject:download forKey:productIdentifier];
          self.downloadingItems = downloading;
          //
-         //        NSLog(@"self.downloadingItems: %@", self.downloadingItems);
+         //        DDLogDebug(@"self.downloadingItems: %@", self.downloadingItems);
 
 //         self.currentlyDownloading = YES;
-         NSLog(@"observe IAPHelperDownloadProgessUpdateNotification: %@", note);
+         DDLogDebug(@"observe IAPHelperDownloadProgessUpdateNotification: %@", note);
 //         NSDictionary *download = [[note userInfo] objectForKey:@"download"];
          [self.trainingItems enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
              if ([[[obj product] productIdentifier] isEqualToString:productIdentifier]) {
@@ -400,7 +400,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     {
         SCRDoubleThumbCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kSCRDoubleThumbCollectionViewCellIdentifier forIndexPath:indexPath];
 
-//        NSLog(@"self.productRequestFailed: %d", self.productRequestFailed);
+//        DDLogDebug(@"self.productRequestFailed: %d", self.productRequestFailed);
         cell.productRequestFailed = ([[[IAHInAppPurchaseHelper sharedInstance] productService] products] == nil) ? YES : NO;
         
         cell.titleLabel.text = (product != nil) ? [[product localizedTitle] uppercaseString] : [[[trainingItem flowGroup] name] uppercaseString]; //[self.previewItem.product.localizedTitle uppercaseString]
@@ -447,7 +447,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     else
     {
         SCRThumbCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:kSCRThumbCollectionViewCellIdentifier forIndexPath:indexPath];
-//        NSLog(@"self.productRequestFailed: %d", self.productRequestFailed);
+//        DDLogDebug(@"self.productRequestFailed: %d", self.productRequestFailed);
 //        cell.productRequestFailed = self.productRequestFailed;
         cell.productRequestFailed = ([[[IAHInAppPurchaseHelper sharedInstance] productService] products] == nil) ? YES : NO;
         cell.titleLabel.text = (product != nil) ? [[product localizedTitle] uppercaseString] : [[[trainingItem flowGroup] name] uppercaseString]; //[self.previewItem.product.localizedTitle uppercaseString]
@@ -479,7 +479,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         NSString *productIdentifier = [[[self.trainingItems objectAtIndex:indexPath.row] flowGroup] productIdentifier];
         NSDictionary *downloading = [self.downloadingItems objectForKey:productIdentifier];
         
-        NSLog(@"downloading: %@", downloading);
+        DDLogDebug(@"downloading: %@", downloading);
         CGFloat progress = (CGFloat)[[downloading objectForKey:@"progress"] doubleValue];
         if ((downloading != nil && [productIdentifier isEqualToString:kSCRCombatFlowBundleProductIdentifier] && progress > 0.03) || (![productIdentifier isEqualToString:kSCRCombatFlowBundleProductIdentifier] && downloading != nil && progress > 0.10))
         {
@@ -541,7 +541,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
                     self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Purchase", @"Alert view controller title") message:savingsWarning preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction *actionPurchase = [UIAlertAction actionWithTitle:NSLocalizedString(@"Purchase", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                        NSLog(@"Buying %@...", product.productIdentifier);
+                        DDLogDebug(@"Buying %@...", product.productIdentifier);
                         [[IAHInAppPurchaseHelper sharedInstance] buyProduct:product];
                     }];
                     [self.alertController addAction:actionCancel];
@@ -556,7 +556,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
                         self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Unlock More Free Content", @"Alert view controller title") message:NSLocalizedString(@"If you're enjoying our free scrappling content, have another free training video on us just by tweeting out our message.", @"") preferredStyle:UIAlertControllerStyleAlert];
                         UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
                         UIAlertAction *actionTweet = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                            //                        NSLog(@"Buying %@...", product.productIdentifier);
+                            //                        DDLogDebug(@"Buying %@...", product.productIdentifier);
                             //                        [[IAHInAppPurchaseHelper sharedInstance] buyProduct:product];
                             
                             ACAccountStore *accountStore = [[ACAccountStore alloc] init];
@@ -618,7 +618,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
                     }
                     else
                     {
-                        NSLog(@"Buying %@...", product.productIdentifier);
+                        DDLogDebug(@"Buying %@...", product.productIdentifier);
                         [[IAHInAppPurchaseHelper sharedInstance] buyProduct:product];
                     }
                 }
@@ -656,7 +656,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         [postTweet performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
             if (error == nil)
             {
-                NSLog(@"Buying %@...", self.promoContentProduct.productIdentifier);
+                DDLogDebug(@"Buying %@...", self.promoContentProduct.productIdentifier);
                 [[IAHInAppPurchaseHelper sharedInstance] buyProduct:self.promoContentProduct];
             }
             else
@@ -706,7 +706,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 //    UIButton *button = (UIButton*)sender;
 //    SKProduct *product = [[self.previewItems objectAtIndex:button.tag] product];
 //
-//    NSLog(@"Buying %@...", product.productIdentifier);
+//    DDLogDebug(@"Buying %@...", product.productIdentifier);
 //    [[IAHInAppPurchaseHelper sharedInstance] buyProduct:product];
 
 //    /* TEMP remove until IAP tested
@@ -750,13 +750,13 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
             }];
     });
 
-    NSLog(@"favorites: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"favorite"]);
+    DDLogDebug(@"favorites: %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"favorite"]);
 //     */
 }
 
 -(void)transactionCharged:(NSNotification *)note
 {
-    NSLog(@"note: %@", note);
+    DDLogDebug(@"note: %@", note);
     
     //    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:note.userInfo[@"productIdentifier"]];
     //    [[NSUserDefaults standardUserDefaults] synchronize];

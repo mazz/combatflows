@@ -28,7 +28,7 @@ static void SCRReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRe
         @autoreleasepool
         {
             NSNumber *f = [NSNumber numberWithUnsignedInteger:flags];
-            NSLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c \n",
+            DDLogDebug(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c \n",
                   (flags & kSCNetworkReachabilityFlagsIsWWAN)               ? 'W' : '-',
                   (flags & kSCNetworkReachabilityFlagsReachable)            ? 'R' : '-',
                   

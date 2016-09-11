@@ -64,12 +64,14 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
                 
                 for (SKProduct *prod in products)
                 {
-                    NSLog(@"prod: %@", prod.productIdentifier);
+                    DDLogDebug(@"prod: %@", prod.productIdentifier);
                 }
                 
                 NSArray *modelTrainingItems = [self trainingItems];
 //                self.fetchingProducts = NO;
                 [[NSNotificationCenter defaultCenter] postNotificationName:SCRProductServiceFetchedProductsNotification object:nil userInfo:@{@"trainingItems":modelTrainingItems}];
+            } else {
+                DDLogDebug(@"fetch failed");
             }
         }];
 //    }
@@ -86,12 +88,12 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
      {
          SCRTrainingItem *item = [SCRTrainingItem new];
          CMAFlowGroup *group = (CMAFlowGroup *)obj;
-         NSLog(@"**current group: %@", group.name);
+         DDLogDebug(@"**current group: %@", group.name);
          
          if (group.bundled == YES)
          {
              item.flowGroup = group;
-             NSLog(@"added flowGroup: %@ to training item: %@", item.flowGroup.name, item);
+             DDLogDebug(@"added flowGroup: %@ to training item: %@", item.flowGroup.name, item);
              item.product = nil;
          }
          if (self.products.count > 0)
@@ -113,11 +115,11 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
          else // we didn't manage to successfully fetch products from the app store, so make some fake objects
          {
              item.flowGroup = group;
-             NSLog(@"else item.flowGroup: %@", item.flowGroup);
+             DDLogDebug(@"else item.flowGroup: %@", item.flowGroup);
              item.product = nil;
 //             item.productIdentifier = group.productIdentifier;
          }
-         NSLog(@"**adding ti: %@ with product identifer: %@", item, item.product.productIdentifier);
+         DDLogDebug(@"**adding ti: %@ with product identifer: %@", item, item.product.productIdentifier);
          [trainingItems addObject:item];
      }];
     
@@ -171,7 +173,7 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
 
 - (NSArray *)assetNamesForProductIdentifier:(NSString *)pi_
 {
-//    NSLog(@"pi_: %@", pi_);
+//    DDLogDebug(@"pi_: %@", pi_);
 
     NSMutableArray *assets = [NSMutableArray array];
     
@@ -181,14 +183,14 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
     {
         for (CMALesson *lesson in flow.lessons)
         {
-//            NSLog(@"lesson.filename: %@", lesson.filename);
+//            DDLogDebug(@"lesson.filename: %@", lesson.filename);
 
             //            [assets addObject:lesson.filename];
             [assets addObject:[NSString stringWithFormat:@"%@",lesson.filename]];
 //            [assets addObject:[NSString stringWithFormat:@"bogus-%@",lesson.filename]];
         }
     }
-//    NSLog(@"assets: %@", assets);
+//    DDLogDebug(@"assets: %@", assets);
 
     return [assets copy];
 }
@@ -199,11 +201,11 @@ NSString *kSCRCombatFlowFreeProductIdentifier = @"ca.ilearningsolutions.combatfl
     
     NSError *err = nil;
     NSSet *purchasedItems = [NSSet setWithArray:[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[[IAHInAppPurchaseHelper sharedInstance] purchasedContentPath] error:&err]];
-    NSLog(@"purchasedItems: %@", purchasedItems);
+    DDLogDebug(@"purchasedItems: %@", purchasedItems);
     NSSet *productItems = [NSSet setWithArray:[self assetNamesForProductIdentifier:productIdentifier]];
-//    NSLog(@"productItems: %@", productItems);
+//    DDLogDebug(@"productItems: %@", productItems);
     
-    NSLog(@"productIdentifier hasPurchasedItems: %@ %d",productIdentifier, [productItems isSubsetOfSet:purchasedItems]);
+    DDLogDebug(@"productIdentifier hasPurchasedItems: %@ %d",productIdentifier, [productItems isSubsetOfSet:purchasedItems]);
     return [productItems isSubsetOfSet:purchasedItems];
 
 }

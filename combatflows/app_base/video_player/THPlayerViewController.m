@@ -46,7 +46,7 @@
 
 -(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
-    NSLog(@"trait collection changed from: %@", previousTraitCollection);
+    DDLogDebug(@"trait collection changed from: %@", previousTraitCollection);
 }
 
 - (BOOL)shouldAutorotate

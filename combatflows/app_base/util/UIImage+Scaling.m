@@ -118,10 +118,10 @@
     CGImageDestinationAddImage(ref, imageRef, NULL);
 
     if (!CGImageDestinationFinalize(ref)) {
-        NSLog(@"Error writing PNG file %@", [fileUrl path]);
+        DDLogDebug(@"Error writing PNG file %@", [fileUrl path]);
     }
     else {
-        NSLog(@"wrote to: %@", fileUrl);
+        DDLogDebug(@"wrote to: %@", fileUrl);
     }
     CFRelease(ref);
     CGImageRelease(imageRef);

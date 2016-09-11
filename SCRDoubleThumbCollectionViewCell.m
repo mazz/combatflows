@@ -171,7 +171,7 @@
     NSUInteger labelWidth = baseWidth + 50;
     constraints = @[[self.getView constrainWidth:FLKPredicate(labelWidth)]];
     [self.getView removeConstraints:constraints];
-    //    NSLog(@"constraints: %@", constraints);
+    //    DDLogDebug(@"constraints: %@", constraints);
     
     return constraints;
 }
