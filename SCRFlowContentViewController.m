@@ -181,21 +181,21 @@ NSUInteger kBannersPerLesson = 2;
     return header;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView*)scrollView
-{
-    CGFloat trim = self.headerWrapperView.frame.size.height - self.allContentTableView.contentOffset.y;
-//    DDLogDebug(@"contentOffset.y: %f", self.allContentTableView.contentOffset.y);
-//    DDLogDebug(@"size.height: %f", self.headerWrapperView.frame.size.height);
-
-//    DDLogDebug(@"trim: %f", trim);
-    if (trim > 39.0 && trim < self.headerWrapperView.frame.size.height) {
-//        DDLogDebug(@"trim inside: %f", trim);
-        //        self.allContentTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
-        self.allContentTableView.contentInset = UIEdgeInsetsMake(-self.allContentTableView.contentOffset.y, 0, 0, 0);
-        // setting the contentOffset to itself allows us to render the new contentInset WITHOUT needing to -reloadData!
-        self.allContentTableView.contentOffset = self.allContentTableView.contentOffset;
-    }
-}
+//- (void)scrollViewDidScroll:(UIScrollView*)scrollView
+//{
+//    CGFloat trim = self.headerWrapperView.frame.size.height - self.allContentTableView.contentOffset.y;
+////    DDLogDebug(@"contentOffset.y: %f", self.allContentTableView.contentOffset.y);
+////    DDLogDebug(@"size.height: %f", self.headerWrapperView.frame.size.height);
+//
+////    DDLogDebug(@"trim: %f", trim);
+//    if (trim > 39.0 && trim < self.headerWrapperView.frame.size.height) {
+////        DDLogDebug(@"trim inside: %f", trim);
+//        //        self.allContentTableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0);
+//        self.allContentTableView.contentInset = UIEdgeInsetsMake(-self.allContentTableView.contentOffset.y, 0, 0, 0);
+//        // setting the contentOffset to itself allows us to render the new contentInset WITHOUT needing to -reloadData!
+//        self.allContentTableView.contentOffset = self.allContentTableView.contentOffset;
+//    }
+//}
 
 - (void)dealloc
 {
