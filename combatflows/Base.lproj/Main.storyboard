@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icK-bX-rSu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icK-bX-rSu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -584,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k59-n1-qZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="1219"/>
+            <point key="canvasLocation" x="1849" y="1227"/>
         </scene>
         <!--CombatMMA Apps View Controller-->
         <scene sceneID="JhZ-tg-5ob">
@@ -659,8 +659,83 @@
             </objects>
             <point key="canvasLocation" x="-24" y="-1669"/>
         </scene>
+        <!--Social View Controller-->
+        <scene sceneID="Oam-UE-KPy">
+            <objects>
+                <viewController storyboardIdentifier="SCRSocialViewController" id="UTG-oQ-ji6" customClass="SCRSocialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FjB-kR-bKF"/>
+                        <viewControllerLayoutGuide type="bottom" id="wen-M0-MOK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ASJ-5t-gl3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nde-sc-ejJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIr-AC-DIx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow Us On:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot1-Dc-Vr7">
+                                                <rect key="frame" x="174" y="8" width="252" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="51" id="8Fp-Na-OP0"/>
+                                                    <constraint firstAttribute="width" constant="252" id="lvN-Cu-8qr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter_Logo_White_On_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-in-EBG">
+                                                <rect key="frame" x="240" y="67" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="VUx-Mc-0cw"/>
+                                                    <constraint firstAttribute="height" constant="120" id="tb9-8q-ByW"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ot1-Dc-Vr7" firstAttribute="top" secondItem="oIr-AC-DIx" secondAttribute="top" constant="8" id="2Fv-BI-GNv"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="abQ-in-EBG" secondAttribute="bottom" constant="413" id="BTT-oj-Jsq"/>
+                                            <constraint firstItem="abQ-in-EBG" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="Fp1-XJ-EyJ"/>
+                                            <constraint firstItem="ot1-Dc-Vr7" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="PzM-Zg-ULc"/>
+                                            <constraint firstItem="abQ-in-EBG" firstAttribute="top" secondItem="ot1-Dc-Vr7" secondAttribute="bottom" constant="8" id="Z3R-ma-8VH"/>
+                                            <constraint firstItem="abQ-in-EBG" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="jed-fS-rZu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oIr-AC-DIx" secondAttribute="trailing" id="2f9-kC-5qI"/>
+                                    <constraint firstItem="oIr-AC-DIx" firstAttribute="leading" secondItem="nde-sc-ejJ" secondAttribute="leading" id="A5v-fD-Zd6"/>
+                                    <constraint firstAttribute="bottom" secondItem="oIr-AC-DIx" secondAttribute="bottom" id="Ipj-tl-NyL"/>
+                                    <constraint firstItem="oIr-AC-DIx" firstAttribute="top" secondItem="nde-sc-ejJ" secondAttribute="top" id="rle-Cq-iPP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nde-sc-ejJ" firstAttribute="top" secondItem="ASJ-5t-gl3" secondAttribute="top" id="8cg-Pz-LEU"/>
+                            <constraint firstItem="wen-M0-MOK" firstAttribute="top" secondItem="nde-sc-ejJ" secondAttribute="bottom" id="Qcp-TK-vHU"/>
+                            <constraint firstItem="oIr-AC-DIx" firstAttribute="width" secondItem="ASJ-5t-gl3" secondAttribute="width" id="V3i-nS-Rei"/>
+                            <constraint firstItem="nde-sc-ejJ" firstAttribute="leading" secondItem="ASJ-5t-gl3" secondAttribute="leading" id="cZh-jm-Zop"/>
+                            <constraint firstAttribute="trailing" secondItem="nde-sc-ejJ" secondAttribute="trailing" id="og8-PI-A18"/>
+                            <constraint firstItem="oIr-AC-DIx" firstAttribute="height" secondItem="ASJ-5t-gl3" secondAttribute="height" priority="250" id="sQk-ll-WyO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="followUsOnLabel" destination="ot1-Dc-Vr7" id="go6-Lm-W1w"/>
+                        <outlet property="twitterImageView" destination="abQ-in-EBG" id="avq-2R-31Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQd-E0-DO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="1227"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Twitter_Logo_White_On_Blue" width="200" height="200"/>
         <image name="cmma_logo_white" width="59" height="63"/>
         <image name="dedication_pic" width="245" height="160"/>
     </resources>

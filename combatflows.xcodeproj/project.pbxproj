@@ -27,6 +27,7 @@
 		2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
 		2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */; };
 		2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */; };
+		2A7FCDD71D8A35AC0079171E /* SCRSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
 		2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */; };
 		2A8171DA1CED5D5600D8364F /* AVAsset+THAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8171BC1CED5D5600D8364F /* AVAsset+THAdditions.m */; };
@@ -137,6 +138,8 @@
 		2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAMovieViewController.h; sourceTree = "<group>"; };
 		2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = appintro_sequence_retina4.m4v; path = ../scrappling/scrappling/appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
 		2A18E4931D85EA1E00E71D6E /* combatflows-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "combatflows-Prefix.pch"; sourceTree = "<group>"; };
+		2A7FCDD51D8A35AC0079171E /* SCRSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSocialViewController.h; sourceTree = "<group>"; };
+		2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSocialViewController.m; sourceTree = "<group>"; };
 		2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@2x.png"; sourceTree = SOURCE_ROOT; };
 		2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@3x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@3x.png"; sourceTree = SOURCE_ROOT; };
 		2A8171BB1CED5D5600D8364F /* AVAsset+THAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVAsset+THAdditions.h"; path = "combatflows/app_base/video_player/AVAsset+THAdditions.h"; sourceTree = "<group>"; };
@@ -503,6 +506,8 @@
 				2A9C773C1CF0EA8D006D7068 /* SCRAboutUsViewController.m */,
 				2A9C773D1CF0EA8D006D7068 /* SCRDedicationViewController.h */,
 				2A9C773E1CF0EA8D006D7068 /* SCRDedicationViewController.m */,
+				2A7FCDD51D8A35AC0079171E /* SCRSocialViewController.h */,
+				2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */,
 				2A9C773F1CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.h */,
 				2A9C77401CF0EA8D006D7068 /* SCRCombatMMAAppsViewController.m */,
 				2A9C77411CF0EA8D006D7068 /* SCRMainViewController.h */,
@@ -803,6 +808,7 @@
 				2A9C776E1CF0EAE0006D7068 /* SCRMasterTableViewCell.m in Sources */,
 				68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */,
 				2A8171FD1CED5D6000D8364F /* UIColor+ILSColor.m in Sources */,
+				2A7FCDD71D8A35AC0079171E /* SCRSocialViewController.m in Sources */,
 				2A81721F1CED5D7C00D8364F /* SCRTrainingItem.m in Sources */,
 				2A9C77741CF0EB08006D7068 /* SCRFlowGroupTableViewController.m in Sources */,
 				2A8172241CED5DA400D8364F /* SCRConstants.m in Sources */,

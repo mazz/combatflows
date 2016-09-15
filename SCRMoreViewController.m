@@ -16,7 +16,7 @@
 #import "SCRTitleBodyTableViewCell.h"
 #import "SCRAboutUsViewController.h"
 #import "SCRDedicationViewController.h"
-#import "SCRCombatMMAAppsViewController.h"
+#import "SCRSocialViewController.h"
 
 
 @interface SCRMoreViewController () <UITableViewDataSource,UITableViewDelegate>
@@ -38,22 +38,22 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
     self.tableData = @[
                        @{@"title": NSLocalizedString(@"About Us", @""), @"body": NSLocalizedString(@"Find out who we are and what drives us to build the best training apps for you.", @"")},
                        @{@"title": NSLocalizedString(@"Dedication", @""), @"body": NSLocalizedString(@"We owe our success to those who helped us along in our journey.", @"")},
-                       @{@"title": NSLocalizedString(@"Combat MMA Apps", @""), @"body": NSLocalizedString(@"Discover more of our training apps we offer comprehensive MMA training.", @"")},
+//                       @{@"title": NSLocalizedString(@"Combat MMA Apps", @""), @"body": NSLocalizedString(@"Discover more of our training apps we offer comprehensive MMA training.", @"")},
                        @{@"title": NSLocalizedString(@"Social", @""), @"body": NSLocalizedString(@"Follow us and keep us with the latest deals and info on new and current apps.", @"")},
-                       @{@"title": NSLocalizedString(@"Help Guide", @""), @"body": NSLocalizedString(@"Go through our help guide to understand all the best features of our CombatMMA Apps", @"")},
+//                       @{@"title": NSLocalizedString(@"Help Guide", @""), @"body": NSLocalizedString(@"Go through our help guide to understand all the best features of our CombatMMA Apps", @"")},
                        @{@"title": NSLocalizedString(@"Disclaimer", @""), @"body": NSLocalizedString(@"This is our comprehensive agreement between our users and our training apps.", @"")},
-                       @{@"title": NSLocalizedString(@"Free PDF Training Guide", @""), @"body": NSLocalizedString(@"Get your free MMA warm up training guide for comprehensive muscle warm up exercises.", @"")},
+//                       @{@"title": NSLocalizedString(@"Free PDF Training Guide", @""), @"body": NSLocalizedString(@"Get your free MMA warm up training guide for comprehensive muscle warm up exercises.", @"")},
                        @{@"title": NSLocalizedString(@"Restore", @""), @"body": NSLocalizedString(@"Restore your in-app purchases.", @"")}
                        ];
     
     self.rowImages = @[
                        [UIImage imageNamed:@"icn_more_about"],
                        [UIImage imageNamed:@"icn_more_dedication"],
-                       [UIImage imageNamed:@"icn_more_cmma_apps"],
+//                       [UIImage imageNamed:@"icn_more_cmma_apps"],
                        [UIImage imageNamed:@"icn_more_social"],
-                       [UIImage imageNamed:@"icn_more_help"],
+//                       [UIImage imageNamed:@"icn_more_help"],
                        [UIImage imageNamed:@"icn_more_disclaimer"],
-                       [UIImage imageNamed:@"icn_more_free"],
+//                       [UIImage imageNamed:@"icn_more_free"],
                        [UIImage imageNamed:@"icn_more_restore"]
                        ];
     
@@ -145,8 +145,8 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
         [self.navigationController pushViewController:dedicationViewController animated:YES];
     }
     if (indexPath.row == 2) {
-        SCRCombatMMAAppsViewController *cmmaAppsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRCombatMMAAppsViewController"];
-        [self.navigationController pushViewController:cmmaAppsViewController animated:YES];
+        SCRSocialViewController *socialViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSocialViewController"];
+        [self.navigationController pushViewController:socialViewController animated:YES];
     }
 }
 

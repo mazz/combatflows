@@ -206,7 +206,7 @@ NSUInteger kBannersPerLesson = 2;
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
@@ -218,8 +218,8 @@ NSUInteger kBannersPerLesson = 2;
     else {
         cell = (MAZTableViewCell*)[self cellForIndexPath:indexPath];
     }
-    //    MAZTableViewCell *cell = (MAZTableViewCell *)[self cellForIndexPath:indexPath];
-    //    [UIView colorViewsRandomly:cell.contentView];
+//        MAZTableViewCell *cell = (MAZTableViewCell *)[self cellForIndexPath:indexPath];
+//        [UIView colorViewsRandomly:cell.contentView];
     return cell;
 }
 
@@ -253,6 +253,8 @@ NSUInteger kBannersPerLesson = 2;
             //            cell.bodyLabel.text =
             cell.bodyLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
             cell.bodyLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ Overview", @""), self.flow.name];
+            cell.bodyLabel.textColor = UIColor.whiteColor;
+//            cell.bodyLabel.textAlignment = NSTextAlignmentCenter;
         }
         else if (indexPath.row == 1) {
             //            cell.bodyLabel.text = self.tableData[indexPath.row][@"body"];
@@ -261,6 +263,8 @@ NSUInteger kBannersPerLesson = 2;
 
             cell.bodyLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0];
             cell.bodyLabel.text = self.flow.flowGroup.text;
+            cell.bodyLabel.textColor = UIColor.whiteColor;
+//            cell.bodyLabel.textAlignment = NSTextAlignmentCenter;
 
             NSLayoutConstraint* bottomMarginConstraint = cell.bottomMarginConstraints[0];
             bottomMarginConstraint.constant = 0;
