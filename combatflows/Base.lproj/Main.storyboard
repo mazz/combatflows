@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Detail-->
@@ -176,7 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xFr-Bw-qQb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xFr-Bw-qQb">
                                 <rect key="frame" x="0.0" y="56" width="600" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -202,13 +201,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xFr-Bw-qQb" firstAttribute="leading" secondItem="YhO-VP-NbO" secondAttribute="leadingMargin" constant="-16" id="8c5-cB-Len"/>
+                            <constraint firstAttribute="trailing" secondItem="xFr-Bw-qQb" secondAttribute="trailing" id="2UH-wn-PYB"/>
                             <constraint firstItem="SSU-4m-lvq" firstAttribute="top" secondItem="S7N-fu-UQm" secondAttribute="bottom" constant="8" id="8dh-Tw-e36"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xFr-Bw-qQb" secondAttribute="trailing" constant="-16" id="9w7-SW-wnB"/>
                             <constraint firstAttribute="centerX" secondItem="3Jf-Ag-XSx" secondAttribute="centerX" id="KwP-e6-Lw4"/>
                             <constraint firstAttribute="centerX" secondItem="S7N-fu-UQm" secondAttribute="centerX" id="NMr-ka-dub"/>
                             <constraint firstItem="3Jf-Ag-XSx" firstAttribute="top" secondItem="K9S-Vu-fL0" secondAttribute="bottom" constant="8" id="aVc-57-PEO"/>
                             <constraint firstItem="xFr-Bw-qQb" firstAttribute="top" secondItem="3Jf-Ag-XSx" secondAttribute="bottom" constant="7" id="it1-bS-Um2"/>
+                            <constraint firstItem="xFr-Bw-qQb" firstAttribute="leading" secondItem="YhO-VP-NbO" secondAttribute="leading" id="swP-Oi-uaR"/>
                             <constraint firstItem="S7N-fu-UQm" firstAttribute="top" secondItem="xFr-Bw-qQb" secondAttribute="bottom" constant="6.5" id="y5M-jB-WLO"/>
                         </constraints>
                     </view>
@@ -218,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcE-yf-BVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2299" y="-1479"/>
+            <point key="canvasLocation" x="3111" y="1227"/>
         </scene>
         <!--Flow Content View Controller-->
         <scene sceneID="rTi-gS-tKC">
@@ -687,22 +686,51 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter_Logo_White_On_Blue" translatesAutoresizingMaskIntoConstraints="NO" id="abQ-in-EBG">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aos-aU-2sg" userLabel="Twitter Button">
                                                 <rect key="frame" x="240" y="67" width="120" height="120"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="VUx-Mc-0cw"/>
-                                                    <constraint firstAttribute="height" constant="120" id="tb9-8q-ByW"/>
+                                                    <constraint firstAttribute="height" constant="120" id="Hnw-2V-j6V"/>
+                                                    <constraint firstAttribute="width" constant="120" id="sdt-oH-XsG"/>
                                                 </constraints>
-                                            </imageView>
+                                                <state key="normal" title="Button" image="Twitter_Logo_White_On_Blue"/>
+                                                <connections>
+                                                    <action selector="followUsOnTwitter:" destination="UTG-oQ-ji6" eventType="touchUpInside" id="np2-WE-0rd"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65j-Uu-lai">
+                                                <rect key="frame" x="173" y="195" width="254" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="VHp-ha-hdY"/>
+                                                    <constraint firstAttribute="width" constant="254" id="abW-Ec-VAk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                                <state key="normal" title="   Following @CombatMMA" image="green_checkmark">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Try Again Later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOY-Nu-NNd" userLabel="Please Try Again Later">
+                                                <rect key="frame" x="174" y="195" width="252" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="252" id="AFr-AK-Fcd"/>
+                                                    <constraint firstAttribute="height" constant="51" id="UaQ-E0-4Hf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="65j-Uu-lai" firstAttribute="top" secondItem="aos-aU-2sg" secondAttribute="bottom" constant="8" id="0gL-dq-oXt"/>
                                             <constraint firstItem="ot1-Dc-Vr7" firstAttribute="top" secondItem="oIr-AC-DIx" secondAttribute="top" constant="8" id="2Fv-BI-GNv"/>
-                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="abQ-in-EBG" secondAttribute="bottom" constant="413" id="BTT-oj-Jsq"/>
-                                            <constraint firstItem="abQ-in-EBG" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="Fp1-XJ-EyJ"/>
+                                            <constraint firstItem="dOY-Nu-NNd" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="3uD-Jh-gcW"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="dOY-Nu-NNd" secondAttribute="bottom" constant="354" id="I43-e6-fee"/>
+                                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="65j-Uu-lai" secondAttribute="bottom" constant="365" id="IH3-vB-lo3"/>
+                                            <constraint firstItem="dOY-Nu-NNd" firstAttribute="top" secondItem="aos-aU-2sg" secondAttribute="bottom" constant="8" id="K1u-0Z-0fi"/>
                                             <constraint firstItem="ot1-Dc-Vr7" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="PzM-Zg-ULc"/>
-                                            <constraint firstItem="abQ-in-EBG" firstAttribute="top" secondItem="ot1-Dc-Vr7" secondAttribute="bottom" constant="8" id="Z3R-ma-8VH"/>
-                                            <constraint firstItem="abQ-in-EBG" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="jed-fS-rZu"/>
+                                            <constraint firstItem="aos-aU-2sg" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="Xzi-ee-gcV"/>
+                                            <constraint firstItem="65j-Uu-lai" firstAttribute="centerX" secondItem="oIr-AC-DIx" secondAttribute="centerX" id="mpm-bK-pHa"/>
+                                            <constraint firstItem="aos-aU-2sg" firstAttribute="top" secondItem="ot1-Dc-Vr7" secondAttribute="bottom" constant="8" id="pxC-zt-Mcb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -725,8 +753,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="followSuccessButton" destination="65j-Uu-lai" id="YPq-wi-UEP"/>
                         <outlet property="followUsOnLabel" destination="ot1-Dc-Vr7" id="go6-Lm-W1w"/>
-                        <outlet property="twitterImageView" destination="abQ-in-EBG" id="avq-2R-31Y"/>
+                        <outlet property="pleaseTryAgainLaterLabel" destination="dOY-Nu-NNd" id="5gz-Ug-zXy"/>
+                        <outlet property="twitterButton" destination="aos-aU-2sg" id="GdG-WE-yPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQd-E0-DO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -738,6 +768,7 @@
         <image name="Twitter_Logo_White_On_Blue" width="200" height="200"/>
         <image name="cmma_logo_white" width="59" height="63"/>
         <image name="dedication_pic" width="245" height="160"/>
+        <image name="green_checkmark" width="16" height="11"/>
     </resources>
     <color key="tintColor" cyan="0.42999999999999999" magenta="0.16" yellow="0.0" black="0.73999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
 </document>

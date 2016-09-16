@@ -6,82 +6,183 @@
 //
 
 #import "SCRSocialViewController.h"
+#import <Accounts/ACAccountStore.h>
+#import <Accounts/ACAccountType.h>
+#import <Social/Social.h>
+#import "SCRSociallAccountsViewController.h"
+#import "SCROverlayTransitioningDelegate.h"
 
-@interface SCRSocialViewController ()
+@interface SCRSocialViewController () <SCRSocialAccountsViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *followUsOnLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *twitterImageView;
-
+@property (strong, nonatomic) IBOutlet UIButton *twitterButton;
+@property (strong, nonatomic) IBOutlet UIButton *followSuccessButton;
+@property (strong, nonatomic) IBOutlet UILabel *pleaseTryAgainLaterLabel;
+@property (strong, nonatomic) UIAlertController *alertController;
+@property (strong, nonatomic) SCROverlayTransitioningDelegate *overlayTransitioningDelegate;
 @end
 
 @implementation SCRSocialViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.twitterImageView.layer.cornerRadius = 9.0;
-    self.twitterImageView.layer.masksToBounds = YES;
-    /*
-    if ([accountsArray count] > 0) {
-        // Grab the initial Twitter account to tweet from.
-        ACAccount *twitterAccount = [accountsArray objectAtIndex:0];
-        
-        NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] init];
-        [tempDict setValue:@"numerologistiOS" forKey:@"screen_name"];
-        [tempDict setValue:@"true" forKey:@"follow"];
-        
-        TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1/friendships/create.json"]
-                                                     parameters:tempDict
-                                                  requestMethod:TWRequestMethodPOST];
-        
-        
-        [postRequest setAccount:twitterAccount];
-        
-        [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-            NSString *output = [NSString stringWithFormat:@"HTTP response status: %i", [urlResponse statusCode]];
-            NSLog(@"%@", output);
-            if (urlResponse.statusCode == 200)
+    self.twitterButton.layer.cornerRadius = 9.0;
+    self.twitterButton.layer.masksToBounds = YES;
+}
+
+- (IBAction)followUsOnTwitter:(id)sender {
+    
+    ACAccountStore *accountStore = [[ACAccountStore alloc] init];
+    
+    // Create an account type that ensures Twitter accounts are retrieved.
+    ACAccountType *accountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    // Request access from the user to use their Twitter accounts.
+    [accountStore requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        if (granted)
+        {
+            if ([accountStore accountsWithAccountType:accountType].count > 0)
             {
-                UIAlertView *statusOK = [[UIAlertView alloc]
-                                         initWithTitle:@"Thank you for Following!"
-                                         message:@"You are now following us on Twitter!"
-                                         delegate:self
-                                         cancelButtonTitle:@"OK"
-                                         otherButtonTitles:nil];
+                if ([accountStore accountsWithAccountType:accountType].count > 1) // present a view controller to select the twitter account
+                {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        SCRSociallAccountsViewController *socialAccountsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSociallAccountsViewController"];
+                        socialAccountsViewController.accounts = [accountStore accountsWithAccountType:accountType];
+                        socialAccountsViewController.delegate = self;
+                        socialAccountsViewController.modalPresentationStyle = UIModalPresentationCustom;
+                        socialAccountsViewController.transitioningDelegate = self.overlayTransitioningDelegate;
+                        
+                        //                                        [detailViewController setFlowGroup:[[[CMACurriculum sharedCurriculum] flowGroupsSortedByNumber] objectAtIndex:idx]];
+                        [self presentViewController:socialAccountsViewController animated:YES completion:nil];
+                        //                    self.promoContentProduct = product;
+                    });
+                }
+                else
+                {
+                    ACAccount *firstAccount = [[accountStore accountsWithAccountType:accountType] objectAtIndex:0];
+                    if (firstAccount != nil)
+                    {
+                        [self doFollow:firstAccount];
+//                        self.promoContentProduct = product;
+                    }
+                    else
+                    {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Alert view controller title") message:NSLocalizedString(@"There was a problem when attempting to access a Twitter account.", @"") preferredStyle:UIAlertControllerStyleAlert];
+                            UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                            [self.alertController addAction:actionOK];
+                            [self presentViewController:self.alertController animated:YES completion:nil];
+                        });
+                    }
+                }
+            }
+            else
+            {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [statusOK show];
+                    self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Alert view controller title") message:NSLocalizedString(@"A twitter account could not be found.", @"") preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+                    [self.alertController addAction:actionOK];
+                    [self presentViewController:self.alertController animated:YES completion:nil];
                 });
             }
-        }];
-    }
-     */
+        }
+    }];
+
+}
+
+- (void)accountWasSelected:(ACAccount *)selectedAccount
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self doFollow:selectedAccount];
+    });
+}
+
+- (void)doFollow:(ACAccount *)account
+{
     
-    /*
+    NSDictionary *parameters = @{@"screen_name" : @"@CombatMMA", @"follow" : @"true"};
+    SLRequest *getRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:@"https://api.twitter.com/1/friendships/create.json"] parameters:parameters];
     
-    NSDictionary *parameters = @{@"screen_name" : @"@techotopia",
-                                 @"include_rts" : @"0",
-                                 @"trim_user" : @"1",
-                                 @"count" : @"20"};
+    [getRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        if (!error) {
+            self.followSuccessButton.hidden = NO;
+        } else {
+            self.pleaseTryAgainLaterLabel.hidden = NO;
+        }
+    }];
+
+//    self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Follow @CombatMMA", @"Alert view controller title") message:confirmMessage preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
+//    UIAlertAction *actionTweet = [UIAlertAction actionWithTitle:NSLocalizedString(@"Follow", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
+
+//        [postTweet performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+//            if (error == nil)
+//            {
+//    //                DDLogDebug(@"Buying %@...", self.promoContentProduct.productIdentifier);
+//    //                [[IAHInAppPurchaseHelper sharedInstance] buyProduct:self.promoContentProduct];
+//            }
+//            else
+//            {
+//                self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Alert view controller title") message:NSLocalizedString(@"There was a problem posting the message to your twitter account. Please try again.", @"") preferredStyle:UIAlertControllerStyleAlert];
+//                UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+//                [self.alertController addAction:actionOK];
+//                [self presentViewController:self.alertController animated:YES completion:nil];
+//            }
+//        }];
+//    }];
+//    [self.alertController addAction:actionCancel];
+//    [self.alertController addAction:actionTweet];
+//
+//    [self presentViewController:self.alertController animated:YES completion:nil];
     
-    SLRequest *postRequest = [SLRequest
-                              requestForServiceType:SLServiceTypeTwitter
-                              requestMethod:SLRequestMethodGET
-                              URL:requestURL parameters:parameters];
+//    NSDictionary *parameters = @{@"screen_name" : @"@techotopia",
+//                                 @"follow" : @"true"};
+//    SLRequest *getRequest = [SLRequest
+//                              requestForServiceType:SLServiceTypeTwitter
+//                              requestMethod:SLRequestMethodGET
+//                              URL:[NSURL URLWithString:@"https://api.twitter.com/1/friendships/create.json"] parameters:parameters];
+//
+//    [getRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+//        if (!error) {
+//            
+//        }
+//    }];
+//    SLRequest *postRequest = [[SLRequest alloc] initWithURL:[NSURL URLWithString:@"https://api.twitter.com/1/friendships/create.json"]
+//                                                 parameters:tempDict
+//                                              requestMethod:TWRequestMethodPOST];
+//    
+//    
+//    [postRequest setAccount:twitterAccount];
+
     
-    [postRequest performRequestWithHandler:
-     ^(NSData *responseData, NSHTTPURLResponse
-       *urlResponse, NSError *error)
-     {
-         self.dataSource = [NSJSONSerialization
-                            JSONObjectWithData:responseData
-                            options:NSJSONReadingMutableLeaves
-                            error:&error];
-         
-         if (self.dataSource.count != 0) {
-             dispatch_async(dispatch_get_main_queue(), ^{
-                 [self.tweetTableView reloadData];
-             });
-         }
-     }];
-*/
+//    NSString *tweetMessage = @"Hey check out free #mobile #mma #scrappling #jkd #training content from @combatmma http://apple.co/1YiSvAP";
+//    NSString *confirmMessage = [NSString stringWithFormat:NSLocalizedString(@"About to post this tweet with your account %@:\n\n%@", @""), account.username, tweetMessage];
+//    
+//    SLRequest *postTweet = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"] parameters:@{@"status": tweetMessage}];
+//    [postTweet setAccount:account];
+//    
+//    self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Shout Out", @"Alert view controller title") message:confirmMessage preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
+//    UIAlertAction *actionTweet = [UIAlertAction actionWithTitle:NSLocalizedString(@"Tweet", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        [postTweet performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+//            if (error == nil)
+//            {
+////                DDLogDebug(@"Buying %@...", self.promoContentProduct.productIdentifier);
+////                [[IAHInAppPurchaseHelper sharedInstance] buyProduct:self.promoContentProduct];
+//            }
+//            else
+//            {
+//                self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Alert view controller title") message:NSLocalizedString(@"There was a problem posting the message to your twitter account. Please try again.", @"") preferredStyle:UIAlertControllerStyleAlert];
+//                UIAlertAction *actionOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+//                [self.alertController addAction:actionOK];
+//                [self presentViewController:self.alertController animated:YES completion:nil];
+//            }
+//        }];
+//    }];
+//    [self.alertController addAction:actionCancel];
+//    [self.alertController addAction:actionTweet];
+//    
+//    [self presentViewController:self.alertController animated:YES completion:nil];
 }
 
 @end
