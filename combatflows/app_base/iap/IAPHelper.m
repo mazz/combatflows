@@ -275,6 +275,8 @@ NSString* const IAPHelperRestoreCompletedTransactionsFailedNotification = @"IAPH
 
         case SKDownloadStateWaiting: {
             DDLogDebug(@"SKDownloadStateWaiting");
+            //http://stackoverflow.com/questions/19810992/downloading-iap-hosted-content-gets-stucks-on-skdownloadstatewaiting-for-some-us
+            [[SKPaymentQueue defaultQueue] startDownloads:[NSArray arrayWithObject:download]];
             break;
         }
         }
@@ -293,8 +295,8 @@ NSString* const IAPHelperRestoreCompletedTransactionsFailedNotification = @"IAPH
 {
     DDLogDebug(@"restoreTransaction...");
 
-    [self provideContentForProductIdentifier:transaction.originalTransaction.payment.productIdentifier];
-    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+//    [self provideContentForProductIdentifier:transaction.originalTransaction.payment.productIdentifier];
+//    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 - (void)failedTransaction:(SKPaymentTransaction*)transaction
