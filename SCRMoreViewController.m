@@ -17,13 +17,14 @@
 #import "SCRAboutUsViewController.h"
 #import "SCRDedicationViewController.h"
 #import "SCRSocialViewController.h"
-
+#import "IAHInAppPurchaseHelper.h"
 
 @interface SCRMoreViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic, strong) NSArray *tableData;
 @property (nonatomic, strong) NSArray *rowImages;
 @property (nonatomic, strong) LoremIpsum *lorem;
+@property (strong, nonatomic) UIAlertController *alertController;
 @end
 
 #define FLKPredicate(x) [NSString stringWithFormat:@"%d", x]
@@ -147,6 +148,26 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
     if (indexPath.row == 2) {
         SCRSocialViewController *socialViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSocialViewController"];
         [self.navigationController pushViewController:socialViewController animated:YES];
+    }
+    if (indexPath.row == 4) { // Restore downloads
+//        [[IAHInAppPurchaseHelper sharedInstance] restoreDownloads];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            NSString *message = [NSString stringWithFormat:NSLocalizedString(@"Restore all in-app purchases made with %@?", @""), [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]];
+            self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Restore Purchases", @"Alert view controller title") message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction *actionRestore = [UIAlertAction actionWithTitle:NSLocalizedString(@"Restore", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
+                [[IAHInAppPurchaseHelper sharedInstance] restoreDownloads];
+
+            }];
+            [self.alertController addAction:actionCancel];
+            [self.alertController addAction:actionRestore];
+
+            [self presentViewController:self.alertController animated:YES completion:nil];
+        });
+        
     }
 }
 
