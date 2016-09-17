@@ -147,9 +147,9 @@ NSString* const IAPHelperRestoreCompletedTransactionsFailedNotification = @"IAPH
 
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue*)queue
 {
-    _restoringDownloads = NO;
+    // this just means the restoring transactions are queued. It does not mean that the restore
+    // downloads are complete
     DDLogDebug(@"RestoreCompletedTransactions");
-    [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperRestoreCompletedTransactionsFinishedNotification object:nil userInfo:nil];
 }
 
 - (void)paymentQueue:(SKPaymentQueue*)queue restoreCompletedTransactionsFailedWithError:(NSError*)error
@@ -195,6 +195,11 @@ NSString* const IAPHelperRestoreCompletedTransactionsFailedNotification = @"IAPH
 
 - (void)paymentQueue:(SKPaymentQueue*)queue removedTransactions:(NSArray*)transactions
 {
+    if (_restoringDownloads && queue.transactions.count == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperRestoreCompletedTransactionsFinishedNotification object:nil userInfo:nil];
+        _restoringDownloads = NO;
+    }
+
     DDLogDebug(@"removedTransactions: %@", transactions);
 }
 
