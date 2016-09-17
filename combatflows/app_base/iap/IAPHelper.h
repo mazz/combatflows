@@ -15,6 +15,9 @@ UIKIT_EXTERN NSString *const IAPHelperDownloadProgessUpdateNotification;
 UIKIT_EXTERN NSString *const IAPHelperDownloadFailedNotification;
 UIKIT_EXTERN NSString *const IAPHelperTransactionFailedNotification;
 UIKIT_EXTERN NSString *const IAPHelperProductRequestFailedNotification;
+UIKIT_EXTERN NSString *const IAPHelperRestoreCompletedTransactionsBeginNotification;
+UIKIT_EXTERN NSString *const IAPHelperRestoreCompletedTransactionsFinishedNotification;
+UIKIT_EXTERN NSString *const IAPHelperRestoreCompletedTransactionsFailedNotification;
 
 typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * products);
 
@@ -27,7 +30,7 @@ typedef void (^RequestProductsCompletionHandler)(BOOL success, NSArray * product
 - (void)buyProduct:(SKProduct *)product;
 - (BOOL)productPurchased:(NSString *)productIdentifier;
 - (void)restoreDownloads;
-
+- (BOOL)restoringDownloads;
 //- (NSString *)contentPathForProductIdentifier:(NSString *)pi_;
 - (NSString *)purchasedContentPath;
 @end
