@@ -98,12 +98,18 @@
 - (void)doFollow:(ACAccount *)account
 {
     
-    NSDictionary *parameters = @{@"screen_name" : @"@CombatMMA", @"follow" : @"true"};
-    SLRequest *getRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:@"https://api.twitter.com/1/friendships/create.json"] parameters:parameters];
-    
-    [getRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+    NSDictionary *parameters = @{@"screen_name" : @"combatmma",
+                                 @"follow" : @"true"};
+    SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/friendships/create.json"] parameters:parameters];
+    [postRequest setAccount:account];
+    [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
         if (!error) {
-            self.followSuccessButton.hidden = NO;
+            if (urlResponse.statusCode != 200) {
+                self.pleaseTryAgainLaterLabel.hidden = NO;
+            }
+            else {
+                self.followSuccessButton.hidden = NO;
+            }
         } else {
             self.pleaseTryAgainLaterLabel.hidden = NO;
         }
