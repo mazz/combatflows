@@ -7,103 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DF9AB1E4C5F08DEF14471A718569228 /* UIView+FLKAutoLayoutPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C74C1FBB5673B98A442DCDAC82DB707 /* UIView+FLKAutoLayoutPredicate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0EFF617FB3B7722390581B4382E5DD28 /* UIView+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B4944E5835B7E398A54D0ACF23FFB3 /* UIView+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12C3F601EE0BA8F98463D3F7C07AB38E /* MSCellAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A20E4E7FCE542C3F789FC18A882DFF2 /* MSCellAccessory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18FF87C2C63006920D46AAF6E67FFD01 /* M13ProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6266226067FBAC7DCA97EE4DDCA349B6 /* M13ProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B8A4D0A4870037490F3FEC4E1CB9676 /* FLKAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDAD51BD903EE77FAEC753DCFA106D5 /* FLKAutoLayout-dummy.m */; };
-		1E6A591B3DEE6317BB014BD71A50B689 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CC73F5B590506B7874EE779A8F991EB /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F202F43B21B79AF717A282AAA064BDE /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5DCE20CA9AFADA7FF5315B1904A0853 /* UIView+FLKAutoLayoutPredicate.m */; };
-		2033A8B7260BE31D4C42E58524841091 /* UIViewController+FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B8D8B85F8A7FB8B18F8F14B0B7649EBF /* UIViewController+FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		20420055AE1CE927B41F2B67940868D8 /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = 25160301664809D01BBE8D8B29E3DACE /* M13ProgressViewLetterpress.m */; };
-		20E923848B6CD7FF37F4038472C47CCC /* M13ProgressViewStripedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 593FB37079AD63DBC53FE3C193B93E09 /* M13ProgressViewStripedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22EC43772BD3058CBE6E147A8009C397 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079A36DFC45F548ED1AAB0809B3D9BD /* M13ProgressView.m */; };
-		29D7BF1D36F5397105AE45855F00562F /* M13ProgressViewSegmentedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4011211FFC7297F156EEC4E02CB7A47B /* M13ProgressViewSegmentedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2C44B9E3010F02B8D8C988292820D593 /* M13ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7A144BEAB53549E47B06FA84047C2F /* M13ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2CE305E1FE156DC47EFEE19E1627468E /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 990DFBC3DCFF804D6ED03A36CDF20F1E /* M13ProgressViewRing.m */; };
-		2F117A5AEB1491544A8C1C66E62C13D8 /* M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0886BD522DE85A75430730C2D8F2BEC7 /* M13ProgressViewBar.m */; };
-		30FEA38ACD1B05873E6785460C8C1439 /* M13ProgressViewStripedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD859157F5E4E51CFEFCA74A2AA06FE2 /* M13ProgressViewStripedBar.m */; };
-		31E6ED85CA7EBDCC3124DA6D3858A3A5 /* M13ProgressViewSegmentedRing.h in Headers */ = {isa = PBXBuildFile; fileRef = E821D9E79163B5C4991D38B180F51996 /* M13ProgressViewSegmentedRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DDD0FB94D61AB71C8F5C727EC7A0BD9 /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 09DF4A0616FDBDC8D73B47842F9CF59C /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		41B6B2C84D4B17FAD7BEA419413CECD9 /* M13ProgressViewFilteredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D5581C568CB74A88DDD2CFD41AFE05FF /* M13ProgressViewFilteredImage.m */; };
-		41F221F9E8FDE456D3E9EB34B4C5EBF1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A89762DF1DEA03276372ABEAE294FE15 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4533E83E6E6A720707AD1267F6A30286 /* M13ProgressConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 182F28001BA891E6A63B468BF3B2C655 /* M13ProgressConsole.m */; };
-		456BEEAD8F6C8D0B35D5A12E72068119 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B64FF73FB43BB25B44943FEE52626BA /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46F3D9073A49A46E11896B47E3506308 /* NSObject+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = BB2F6052FE737BA33300966992A5D3D4 /* NSObject+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47E6E4C72F26C154AE8B0FAF5E2F9838 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A373605CE37801C6D4F728B5F409BE /* UINavigationController+M13ProgressViewBar.m */; };
-		490E4D68C35BA0480B4397F4ADF05F97 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E73B0143E55FB654D6941F5D875EC6 /* UIView+AccessViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		013C1AEAE9816CD99FC1ABAF02B04D5F /* M13ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C84F595B0DE51D8D3E0CCC21472AA8E /* M13ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0511AA2071F9D651E6391AB8CA5C7CE2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1900BF1D7A301F5DFCB52E1575F3A863 /* CoreImage.framework */; };
+		0580F5714616A921B2D011E0E9D42436 /* M13ProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 92B5A66C0CCC4EFE2CAB6D3972D1C447 /* M13ProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF9AB1E4C5F08DEF14471A718569228 /* UIView+FLKAutoLayoutPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = 363E5098FB66F02B06AD6D2B15A01C60 /* UIView+FLKAutoLayoutPredicate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0EFF617FB3B7722390581B4382E5DD28 /* UIView+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = AE1514E2D439E8CDF829675D1C916190 /* UIView+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11BE5E795B30A3153E53AE3CA76D8502 /* M13ProgressViewFilteredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 797C3B2D8F639E61F4403A1E27E03961 /* M13ProgressViewFilteredImage.m */; };
+		12C3F601EE0BA8F98463D3F7C07AB38E /* MSCellAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = 437CC7B7EFC0A55ED675F3C62A502368 /* MSCellAccessory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15F3947D2E0162C6A8B335F0EE8FCA73 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45329FF1860B2C7BBED8898A1DDB860C /* QuartzCore.framework */; };
+		18BD222ECB12A38EB0CC72E5A702F59D /* M13ProgressViewFilteredImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 846A3371BB423E9BA15E869C301E0578 /* M13ProgressViewFilteredImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B8A4D0A4870037490F3FEC4E1CB9676 /* FLKAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7A33F333CDAC485C1DB66A383A5156 /* FLKAutoLayout-dummy.m */; };
+		1E6A591B3DEE6317BB014BD71A50B689 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 45921E2E326B3D451F38FCA647430C73 /* DDASLLogCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F202F43B21B79AF717A282AAA064BDE /* UIView+FLKAutoLayoutPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F997DCA9E00DDC28482FA969CEF5E /* UIView+FLKAutoLayoutPredicate.m */; };
+		2033A8B7260BE31D4C42E58524841091 /* UIViewController+FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 23F4814E89CD7E7FF07B94E1EF35B1DB /* UIViewController+FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		223A224F4E79C92CF8654DB96C6F91A0 /* M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D7CC66A7164F6380064D10913984462 /* M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28CD6700CD5C5DB6A516A54596784515 /* M13ProgressViewStripedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD5793388314276AAB564418E1CFF01 /* M13ProgressViewStripedBar.m */; };
+		2E8046017DCBC71B9BE9E4FB9300B1E6 /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF93D668B2014FC9C0EBD07C48EE61 /* M13ProgressViewRadiative.m */; };
+		32169C242E172EC6FD1D25D8487EEE6B /* M13ProgressSuite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 812E8BB1FDC4CB5FFA48F3E407633D75 /* M13ProgressSuite-dummy.m */; };
+		3691A45BCF3F451B7837B8596F9981DD /* M13ProgressViewBorderedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A976843F2337C602E42A4672E939D0 /* M13ProgressViewBorderedBar.m */; };
+		37EA0F98165CAB506FB6FA51E90B2EEC /* M13ProgressViewMetroDotPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 41028774B99E517F9FE66C60F892EFF5 /* M13ProgressViewMetroDotPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDD0FB94D61AB71C8F5C727EC7A0BD9 /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DA32E2BF806780F6FE76D9D046001816 /* DDLogMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41A9C33CFE55C456AE8F2E4035F83128 /* M13ProgressViewSegmentedRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 705E6FECA1F98E0537F09CDC7BE5681C /* M13ProgressViewSegmentedRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41F221F9E8FDE456D3E9EB34B4C5EBF1 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC835DC518B10CDEA42AD9FFF5A2BBD /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		456BEEAD8F6C8D0B35D5A12E72068119 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E1D67D5DD52160C676EBA37A4A7846 /* DDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46653919A07C07055FC397458E039A94 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C973DA2E9074BC7AF8FED839818523 /* Accelerate.framework */; };
+		46F3D9073A49A46E11896B47E3506308 /* NSObject+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 71454E609070627D636DAA06252B883C /* NSObject+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		472311F935ADFBD69D0E80DB7598F049 /* M13ProgressViewMetroDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = AD43B826AEF99C3B44CC942AC8238855 /* M13ProgressViewMetroDotPolygon.m */; };
+		4745DD40E3CD2B8C275E19B2B94AB16A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1927BD7B1A45DF2B7A5BE68709D8E7 /* UIKit.framework */; };
+		474AFE7ECE13765FE4A50B32E2CB5B8E /* M13ProgressViewMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = C1F95F11EA1872F1643A5104626367CE /* M13ProgressViewMetro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		490E4D68C35BA0480B4397F4ADF05F97 /* UIView+AccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D68274008EE91E48E1A6C5923000BB18 /* UIView+AccessViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4A216B69E170A9B6406FFE6A9EA8E877 /* M13ProgressViewStripedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = F404A8008AAB59B7220DFB98A75CF03E /* M13ProgressViewStripedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AECD8A65CB79FBCB30759C52275C420 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
 		4C1F81E26E316AC2FBA8C33C1254B42F /* Pods-combatflows-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65876C2060BE16A425AD04228FB11E5F /* Pods-combatflows-dummy.m */; };
-		4CAAFD85FC04FBFFB61A22F14C8D4684 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = D02635A94295C5188D3A343DCF82F951 /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		543F60AA0D0CA409317EAEE7A3DADA58 /* M13ProgressViewImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F371ADD8D265FDD56E6EA30C44942FF9 /* M13ProgressViewImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5539A292EFC958D90F290DBA5FF86220 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E07936D9FE8ED5E40C299D81481A05 /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5DC93A20CD4E0F439A6E5963A3E1A72E /* M13ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1309BC1AB29474634597C4679AFE51 /* M13ProgressHUD.m */; };
-		5DCBA219BC81D9190F11EE56F93BB908 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 16048E34AA4312F1EA9179D70C4CEDDA /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6077EFC05DC2551A7F5A1CFAC0B90187 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E843212AB75EF1E32B25EFB942667B /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6172B7FF60348B4F36A4CA67D3319CCE /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AB3D58399198E42A9ABB5C81386B35 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62D300DAE7EF376D4B7D543E899F3A2A /* UIView+AccessViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 576B5331CCADD67E406BCD319E38BF3E /* UIView+AccessViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6475050C8BA464772209BD6AF03F1EB1 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 488E90A27504C6B5A1DF8337C46E101D /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		656479029A5A15463E080FD25F8903B2 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A4A0D68D71DEF1DF37606BCE86E460 /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		67E741D303696F9A1E863BC42E6A9C79 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFCA20980DFEA951BF6C333502B1074 /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		68CF44C68ACC58310D4671FF0AAD3542 /* UINavigationController+M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDAFB371DDEA8B930462F0D1B15FFDC /* UINavigationController+M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A3E20157AF7521848A7769B0AA5ECE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
-		6DAEF151B35D00265D60C4AD34431DD9 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 053F5676CBF02A672A50388FD6759916 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		701FA6CAD7B29A7BBEC43F7A18468FB8 /* EBCardCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE01023F668C640103BD3DB19C38703E /* EBCardCollectionViewLayout.m */; };
+		4CAAFD85FC04FBFFB61A22F14C8D4684 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1CD7D91CE5B892146A3C2B4D54EF07 /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5539A292EFC958D90F290DBA5FF86220 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F993D84EA5EFC5888AEA9A4BE4BDFDB /* DDDispatchQueueLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		566EE0413C87A7776D72B18D0421C568 /* UINavigationController+M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AE72CAD6E4EFD2ACDDCEAA326B44A5 /* UINavigationController+M13ProgressViewBar.m */; };
+		5DCBA219BC81D9190F11EE56F93BB908 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B252DA34A57E35E7044C5BF1452A51 /* DDTTYLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F756DA4C1394018AD8A9C7516D3C795 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 268AD9486E709E13DB99FD8FD3A203AE /* M13ProgressView.m */; };
+		6077EFC05DC2551A7F5A1CFAC0B90187 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A40D1BF615CCE067BC0EF98C65A8475A /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		62D300DAE7EF376D4B7D543E899F3A2A /* UIView+AccessViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 200A8653E262418F286423425AB7F3F0 /* UIView+AccessViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6475050C8BA464772209BD6AF03F1EB1 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DABA50FAE706B357F641EF40603FE3 /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		656479029A5A15463E080FD25F8903B2 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AA74033EACC64890361B4595F8761D2A /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		67E741D303696F9A1E863BC42E6A9C79 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E126BCF602177C57D1CBB4DDE201A2 /* DDASLLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69B87A6847179262059E491502FF74E1 /* M13ProgressViewLetterpress.h in Headers */ = {isa = PBXBuildFile; fileRef = 11CF0E86A88A49ED65007F7ECEF4D6BD /* M13ProgressViewLetterpress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69D94FD37E73AB7AC0523FE961BE3B68 /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = 799E5731B8EDFE9429678A1DF7B56569 /* M13ProgressViewMetro.m */; };
+		6AB2F645638125BCD8CCE9AE7E3B23C2 /* UIApplication+M13ProgressSuite.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C462B3A3748DCF0B1D55026BA44758 /* UIApplication+M13ProgressSuite.m */; };
+		6DAEF151B35D00265D60C4AD34431DD9 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9BBE667C7CC2EF8559F8D2B184B37C /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		701FA6CAD7B29A7BBEC43F7A18468FB8 /* EBCardCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7188A2CC8F24772953226C5A5E49E /* EBCardCollectionViewLayout.m */; };
 		7BAF12B6B8936971A3DFFE1144D25753 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
-		7E874589704BD228F1B7A3FA95345A3F /* UIViewController+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D5AD1891B031B47F0A8CF97643671A /* UIViewController+FLKAutoLayout.m */; };
-		802E3EDC42F1616644050BB3AA7D3C0E /* EBCardCollectionViewLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0777D1761E1BA08E7C13B44A60E146A /* EBCardCollectionViewLayout-dummy.m */; };
-		8BE95CE9ED6A637781EE78DD496AE3C7 /* M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C155BE11AB393488A13589EAEC8B8F4B /* M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8ECCDB1198C3F16164F59B534346F740 /* M13ProgressViewBorderedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B256C72FA6AFFFDE231649C60423DE /* M13ProgressViewBorderedBar.m */; };
-		8F1332A855A85E064F33577E50C3FD6C /* M13ProgressViewMetro.m in Sources */ = {isa = PBXBuildFile; fileRef = 664A490BCA2E0E7360306C435A5A9BD1 /* M13ProgressViewMetro.m */; };
-		906BA39B4449184A264475B0AAA9CD7B /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF1AEF2703DBD373033F63D7BDBDA90 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91D4268327BFFA7F87B6701126111344 /* UIView+FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A1ACCB82B583E31220BED1B9E98B1B5C /* UIView+FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9258A7B71D4C13DBFC66C4B8BE43B79A /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E7A162992BEC278873553E35A85C25 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92D5B117B06ED9D5A2EADEBF80AF882B /* M13ProgressSuite-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CA59BB4316341BEDCC6525AC24F92D /* M13ProgressSuite-dummy.m */; };
-		941BF595EE1F51149EC5A9582B4D195D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C973DA2E9074BC7AF8FED839818523 /* Accelerate.framework */; };
+		7D5F7996BDE87216BDE03FBC1FDDF4A2 /* M13ProgressViewRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 27AE0AC62489074AE6FDD5B4AA540FD4 /* M13ProgressViewRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E874589704BD228F1B7A3FA95345A3F /* UIViewController+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AA88D3A1EBE9D510C769E902B16E8033 /* UIViewController+FLKAutoLayout.m */; };
+		7EB34665934E0505AC1DEE17760F9565 /* UINavigationController+M13ProgressViewBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2480E3F9401EFAF7FD5A0F4EB03402E2 /* UINavigationController+M13ProgressViewBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		802E3EDC42F1616644050BB3AA7D3C0E /* EBCardCollectionViewLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795C004003E28096DCC89DB6D3B4E21 /* EBCardCollectionViewLayout-dummy.m */; };
+		82A64514CF49BF44148473065D2945FA /* M13ProgressViewRadiative.h in Headers */ = {isa = PBXBuildFile; fileRef = C4392F6CADF00314597938792B33324A /* M13ProgressViewRadiative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F085367B45ADE3007CFDDAEDBE3DB4E /* M13ProgressViewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15C50A73E2BC9E178A908B9D3CCEA7 /* M13ProgressViewImage.m */; };
+		8F3FF3A5E105F5C1173C1BC3D72B8E44 /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FEA78E2C8195555C325D21D0E9BF60 /* M13ProgressViewSegmentedRing.m */; };
+		906BA39B4449184A264475B0AAA9CD7B /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 59124335561054BC9B542DB6E387EE04 /* DDAssertMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91D4268327BFFA7F87B6701126111344 /* UIView+FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DEB03809520F5980F26B3A108155C32 /* UIView+FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9258A7B71D4C13DBFC66C4B8BE43B79A /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 43CE526E60AE895662E7D6293D380252 /* DDAbstractDatabaseLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		927C55BBB3EBD3A3B717F1C36B76BA9F /* M13ProgressViewSegmentedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 859DA3256D7FB812CFB6EE54089144E8 /* M13ProgressViewSegmentedBar.m */; };
+		94B282214057916E9E525B8AD2AAF722 /* M13ProgressViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 518DD18DF1593BE87D235D92C50EA0F7 /* M13ProgressViewBar.m */; };
 		94DE8D9DF0754A38F0B142B0AFA99095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
-		95222EEAB12A518FF1D6AD30040EF33E /* NSObject+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5386039A0A20ADFCA59726A0F7A3B322 /* NSObject+FLKAutoLayoutDebug.m */; };
-		97CCC91C44FC9A3DF8FFBB57987BAB4D /* M13ProgressViewLetterpress.h in Headers */ = {isa = PBXBuildFile; fileRef = F7B0ED0B85778D4E1C88C9ADD74E8FDD /* M13ProgressViewLetterpress.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99F58944C99416FD2FB78BC00ABD4515 /* M13ProgressViewSegmentedBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF03351B991BB1B76F08288E1C9E667 /* M13ProgressViewSegmentedBar.m */; };
-		9A18E4E77F26C271DFCA43E3BFA6921F /* FLKAutoLayoutPredicateList.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D7066382DAEAF06AD3FE35DAB93268 /* FLKAutoLayoutPredicateList.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D237799FF23B25A644C56A96A3B8F57 /* M13ProgressViewRadiative.h in Headers */ = {isa = PBXBuildFile; fileRef = 897D0636DAB8FC25D5C9E73B676737E1 /* M13ProgressViewRadiative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9DFB1378A337698012F7CE5D593DC04F /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 904640FB1DBAECFBBF18C0E875A1E12A /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A15369A817C264175618192E4B8E35D9 /* M13ProgressViewRing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D57D6CEC931C2265A451238798C7496 /* M13ProgressViewRing.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2D0EE5602557677B5D9AB8D46F2F1AF /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF3E585FF14C0310E57C9EE146E6360 /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3215D5BC93CF039282B5C4A83C48A7C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1900BF1D7A301F5DFCB52E1575F3A863 /* CoreImage.framework */; };
-		A34EF7C35E4E0657AFC8B4BA0B343867 /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7434231A2EA6699CAD25480EB7D1D1 /* CocoaLumberjack-dummy.m */; };
-		A75A5AAF11DF75DE970C76E405B4A5A2 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 4207E8137C2D52756858C52CC5719C0D /* UIImage+ImageEffects.m */; };
-		AD5E6A394A6F623F4B43FE426144DB84 /* M13ProgressViewImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A02F31B06576B57ACDBA99E43DC97434 /* M13ProgressViewImage.m */; };
-		ADCEADBAD45F19043D8AD943ED2309C1 /* M13ProgressViewPie.m in Sources */ = {isa = PBXBuildFile; fileRef = BB17ADCF83B821D59FA2450E1ECC7BD7 /* M13ProgressViewPie.m */; };
-		AF62128C5B3CF6CB2E44DABB839671BD /* M13ProgressViewBorderedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 90BF1E349D5949EE96FB9D75BF903964 /* M13ProgressViewBorderedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4CA5E9186220D705B0E024F13D9276B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1927BD7B1A45DF2B7A5BE68709D8E7 /* UIKit.framework */; };
-		BBCA69A708A7B3DD861FB839B3A251B3 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EED209F5DF14614B45871799EFF28C91 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF525D162B9ABC5DFA69FB7A8779F76E /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C3FC0E0FF0D6EFBE4F9DA67CFC5AAE /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C063BFD8D6AD567B74553CD38F5267EE /* M13ProgressViewPie.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DC135B91C5B6DF59230AF1B24EBBE41 /* M13ProgressViewPie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95222EEAB12A518FF1D6AD30040EF33E /* NSObject+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D4938F90A2C7878EEB799EFF5D402A /* NSObject+FLKAutoLayoutDebug.m */; };
+		9A18E4E77F26C271DFCA43E3BFA6921F /* FLKAutoLayoutPredicateList.h in Headers */ = {isa = PBXBuildFile; fileRef = B36D134506E1793817A5C5185F719A82 /* FLKAutoLayoutPredicateList.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9A7F205888E63FB3DC9DAAC9D8231DD5 /* M13ProgressViewSegmentedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = E84A9A6F2994DEFE3B55144C7CA87B96 /* M13ProgressViewSegmentedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BE13463953A51FC60DF2CE0832E9BD2 /* M13ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E1969596058D7F96FD8E622580460E /* M13ProgressHUD.m */; };
+		9DFB1378A337698012F7CE5D593DC04F /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = E73DC05277BB5FE9F2D1AA361D9392E4 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9E58A90A4D6CCD9093A9A293EDD95D4D /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E10AA08B66A7A1D80D51D54F17B1A93F /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2D0EE5602557677B5D9AB8D46F2F1AF /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F5DAD59F8DC5D20D5E8905D0A23500A /* DDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A34EF7C35E4E0657AFC8B4BA0B343867 /* CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B2F25D679F033D5AE5138B387CA878 /* CocoaLumberjack-dummy.m */; };
+		A43A96EA15FF858A32666771E25166F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
+		AAF27DA76D16E79869B878279C938681 /* M13ProgressViewPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 76004AF9FE282E426E23C3ACBBB43FB5 /* M13ProgressViewPie.m */; };
+		BBCA69A708A7B3DD861FB839B3A251B3 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C69B3166E838C96F56FE0D279E5AFB5 /* DDLegacyMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC6D92913075FD0700E62AC27EA2C322 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1936B3BBC20419D303BE70A3E6D58CE /* CoreGraphics.framework */; };
+		BECEFFADF1C7445309CC7DC99FB5A0F4 /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BC16A83C0AC8B7F60117CFA48E25895 /* M13ProgressViewRing.m */; };
+		BF525D162B9ABC5DFA69FB7A8779F76E /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3AC0ABCAAFC54B748F52F7A1B2A031 /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C09E0C3A2F1D665EFEB114898F7FDFE6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 77842DBFEAF4715DDF944C1C35BF364D /* UIImage+ImageEffects.m */; };
 		C21AD31EDAA6AEA9A07CB7C65E060E56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
-		C3202A22B15A05BAA6C970527B657282 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8E9682AA83F767C72D52AC97DD4B01 /* MSCellAccessory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C389E0223F8EEA143FA6575BC6FCFEB1 /* NSLayoutConstraint+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF48C15090CDCF116332AA2DF6B405E /* NSLayoutConstraint+FLKAutoLayoutDebug.m */; };
-		C5126545B5CECFD656EA68E06CDA213F /* M13ProgressViewMetro.h in Headers */ = {isa = PBXBuildFile; fileRef = E9711072CFAF6F2AFA17A07185B81DC9 /* M13ProgressViewMetro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C515A390D549AF8A16A76DD72388BD2C /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B63AB4DFFF83EF02BA9F0B4F4C53BD /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C78522D2BF40A0D63AF1E82AE3794486 /* M13ProgressViewRadiative.m in Sources */ = {isa = PBXBuildFile; fileRef = C9466B61C858F04D16AA29F9A9B264B3 /* M13ProgressViewRadiative.m */; };
-		CBB6BB497EC1A4C36506AD74ECDCD99F /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F871258F4086551DA7740B77B47DF6 /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE6B3B1FD8F5F46F12A7BCE018448557 /* M13ProgressViewMetroDotPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E422D16AF236F1871DCFDF4A35C6265 /* M13ProgressViewMetroDotPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D2B64030F998EE58DD6F6F154F594D67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1936B3BBC20419D303BE70A3E6D58CE /* CoreGraphics.framework */; };
-		D468D4FCCC68E826234F8773F054AE1A /* M13ProgressViewMetroDotPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D1D29C584CB462ED67E0E61506826 /* M13ProgressViewMetroDotPolygon.m */; };
-		D70BDFA09F4803DCFEAD7AF5DFE21C6A /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C67724FE6CB39F034AB99A2F7FB550 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C3202A22B15A05BAA6C970527B657282 /* MSCellAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDCC6DEA3D32071CFA9C6C7E16AF66F /* MSCellAccessory.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C389E0223F8EEA143FA6575BC6FCFEB1 /* NSLayoutConstraint+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1FF4E7210072C8CFF9FF1EC591C3E5 /* NSLayoutConstraint+FLKAutoLayoutDebug.m */; };
+		C515A390D549AF8A16A76DD72388BD2C /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FB9B566A6668E23B1A5EEB5215A32CAB /* DDFileLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C96AB23FC50A5538211FC2DFFC88C6E0 /* M13ProgressViewLetterpress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF445D11B0FDD7988030B62A770A51A /* M13ProgressViewLetterpress.m */; };
+		CBB6BB497EC1A4C36506AD74ECDCD99F /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = BC4E1E707B33A7AB31B5BF27E0B5CB5D /* CocoaLumberjack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF6C345F3A91DC14BB2E1D47B969993F /* M13ProgressViewImage.h in Headers */ = {isa = PBXBuildFile; fileRef = AE17E0EFB5F86AB36BF7F403BBBB83E5 /* M13ProgressViewImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D70BDFA09F4803DCFEAD7AF5DFE21C6A /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E3E7A04C40A86E198C7EF9FE6E0653 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		D73A352756B6EAE82D1D30AAD5849FC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */; };
-		E1772B4066E7DE74C1CB3B34EAFC2409 /* FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6C3373C89556A75C0F8B56AF692470 /* FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1ED34DB49C6A05D740B8425F88CEC20 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D2569C0B7A3C42D508D925B50D0AC9 /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E925FEBC717BFC3170173E6516648636 /* M13ProgressViewFilteredImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C2626C83A8193B76609906970F10A8C3 /* M13ProgressViewFilteredImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB95D653419EF79BF843C2C70B173F30 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8107BB887ED173FF095E83241993C83D /* UIView+FLKAutoLayout.m */; };
-		ED0A07B87A454F37805C13F6F1E4E239 /* M13ProgressViewSegmentedRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 590FEB46511B6E8BE3A90032E64666E5 /* M13ProgressViewSegmentedRing.m */; };
-		EDED535B168A21ADCBA3747AD6CE9181 /* EBCardCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AD52ED77B18373101086E17BAD34ED97 /* EBCardCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F01E82778AC1D66C21025C952643DBA7 /* MSCellAccessory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC08AD5AD31CC8CC25512F2D72147D53 /* MSCellAccessory-dummy.m */; };
-		F11816ED4678B81EEF701D11B5725328 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3319CEB5E71FFF96A67CA65B0FCA6334 /* FLKAutoLayoutPredicateList.m */; };
-		F2509B95DEA7AA63BC41F248842A561D /* UIView+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D0C462D224CB30D8A156E5F8DD68DB /* UIView+FLKAutoLayoutDebug.m */; };
-		F641FFBB1A2DBE331752CBAF7B0B787F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45329FF1860B2C7BBED8898A1DDB860C /* QuartzCore.framework */; };
-		F925890EF24AABC29FD00820D5EE1EAC /* NSLayoutConstraint+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = B08CB3942D0D08D6CA0FC81A04625F71 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FE6239BDE2049B920243DC0F907F57B9 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFBB7BD9118F565FBC6D986AE3F9554 /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FF0DB46592DA9D286DE59E7AA22B5EBA /* M13ProgressConsole.h in Headers */ = {isa = PBXBuildFile; fileRef = 164F31D4861C0E22CBE6E912E0E81190 /* M13ProgressConsole.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D755096DA36C0A62BD6E7B0F5861525E /* UIApplication+M13ProgressSuite.h in Headers */ = {isa = PBXBuildFile; fileRef = 66F51101584B5777358824A922E80AD1 /* UIApplication+M13ProgressSuite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1772B4066E7DE74C1CB3B34EAFC2409 /* FLKAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DADF370CD71BC6EC284CA1425C606EF0 /* FLKAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1ED34DB49C6A05D740B8425F88CEC20 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7441D68C1AFFA99A75AB3D4746D4D27E /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EB95D653419EF79BF843C2C70B173F30 /* UIView+FLKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 19DA0485A644EEC6FC8B5D1AF6E1EEFE /* UIView+FLKAutoLayout.m */; };
+		EDED535B168A21ADCBA3747AD6CE9181 /* EBCardCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0AD8B9C5B96AE7CEBEF07F810F21CC /* EBCardCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFC45E63872A5E0EAA9022766F24B2B9 /* M13ProgressViewPie.h in Headers */ = {isa = PBXBuildFile; fileRef = BCB55D58CB762A32DA634325B3D19892 /* M13ProgressViewPie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F01E82778AC1D66C21025C952643DBA7 /* MSCellAccessory-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4958A07E8787C3A5C48D7D182D58DD47 /* MSCellAccessory-dummy.m */; };
+		F11816ED4678B81EEF701D11B5725328 /* FLKAutoLayoutPredicateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 932B1FB7119623770F56F88E3835B71E /* FLKAutoLayoutPredicateList.m */; };
+		F2509B95DEA7AA63BC41F248842A561D /* UIView+FLKAutoLayoutDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBCC018B25F2DE37E9CEECFEAB6AD11 /* UIView+FLKAutoLayoutDebug.m */; };
+		F391FD41A496733E18BF6D79D192AE58 /* M13ProgressConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 7961C7D860902F726453C2695C6F6387 /* M13ProgressConsole.m */; };
+		F84376092EFAAE86497FA3D43ED3A1A5 /* M13ProgressViewBorderedBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C96DDCE11A3D817888DB158B1C1B9AD6 /* M13ProgressViewBorderedBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F925890EF24AABC29FD00820D5EE1EAC /* NSLayoutConstraint+FLKAutoLayoutDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 88DF4B90B40CC74328D32656358DA840 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FD490472900F45D114E7FBCE26BD0415 /* M13ProgressConsole.h in Headers */ = {isa = PBXBuildFile; fileRef = F0096F0AAFFFA0444B04BFE7D8F5607A /* M13ProgressConsole.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6239BDE2049B920243DC0F907F57B9 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B60FFC1CE00482248F5E3D2C869346 /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +127,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D00FAD2C71C365194221F7781D5FB165;
+			remoteGlobalIDString = EDD9D7EC8FCD6EF30EADD502374D8A81;
 			remoteInfo = M13ProgressSuite;
 		};
 		8650A6D1585E45C9B05629E39BC2680F /* PBXContainerItemProxy */ = {
@@ -145,151 +147,147 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04D7066382DAEAF06AD3FE35DAB93268 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayoutPredicateList.h; path = FLKAutoLayout/Private/FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
-		04E7A162992BEC278873553E35A85C25 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		053F5676CBF02A672A50388FD6759916 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
-		07E73B0143E55FB654D6941F5D875EC6 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AccessViewController.m"; path = "MSCellAccessory/UIView+AccessViewController.m"; sourceTree = "<group>"; };
-		0886BD522DE85A75430730C2D8F2BEC7 /* M13ProgressViewBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewBar.m; path = Classes/ProgressViews/M13ProgressViewBar.m; sourceTree = "<group>"; };
-		09DF4A0616FDBDC8D73B47842F9CF59C /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		01707CAA8C6444554206D4A96D85CDFC /* EBCardCollectionViewLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EBCardCollectionViewLayout.xcconfig; sourceTree = "<group>"; };
+		0783BB79E3A0987B5DAFC0B1D26E6FA2 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Sources/GAITracker.h; sourceTree = "<group>"; };
+		08A976843F2337C602E42A4672E939D0 /* M13ProgressViewBorderedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewBorderedBar.m; path = Classes/ProgressViews/M13ProgressViewBorderedBar.m; sourceTree = "<group>"; };
 		0A223DCEBFE43E40C6EC3E268ABE5571 /* Pods-combatflows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-combatflows.debug.xcconfig"; sourceTree = "<group>"; };
 		0A2322167DB7AE58782AB0F4422DBEF4 /* libMSCellAccessory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMSCellAccessory.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A9346A99E28BE0C524BFAF816A45A90 /* CloudMessaging-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CloudMessaging-Module.h"; path = "Headers/ModuleHeaders/CloudMessaging-Module.h"; sourceTree = "<group>"; };
-		16048E34AA4312F1EA9179D70C4CEDDA /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
-		1638DB6D01991F2434A4055877C00993 /* GGLContext+Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GGLContext+Analytics.h"; path = "Headers/GGLAnalytics/Public/GGLContext+Analytics.h"; sourceTree = "<group>"; };
-		164F31D4861C0E22CBE6E912E0E81190 /* M13ProgressConsole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressConsole.h; path = Classes/Console/M13ProgressConsole.h; sourceTree = "<group>"; };
-		17CA59BB4316341BEDCC6525AC24F92D /* M13ProgressSuite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13ProgressSuite-dummy.m"; sourceTree = "<group>"; };
-		182F28001BA891E6A63B468BF3B2C655 /* M13ProgressConsole.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressConsole.m; path = Classes/Console/M13ProgressConsole.m; sourceTree = "<group>"; };
+		0A491BE695382AD355CF08B3FDBD52CC /* EBCardCollectionViewLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EBCardCollectionViewLayout-prefix.pch"; sourceTree = "<group>"; };
+		0B6F997DCA9E00DDC28482FA969CEF5E /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutPredicate.m"; path = "FLKAutoLayout/Private/UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
+		0BD5793388314276AAB564418E1CFF01 /* M13ProgressViewStripedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewStripedBar.m; path = Classes/ProgressViews/M13ProgressViewStripedBar.m; sourceTree = "<group>"; };
+		11CF0E86A88A49ED65007F7ECEF4D6BD /* M13ProgressViewLetterpress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewLetterpress.h; path = Classes/ProgressViews/M13ProgressViewLetterpress.h; sourceTree = "<group>"; };
+		1238531D21B0CDB31078593D1841B7B6 /* FLKAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLKAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		14CD8BC1BCF354A4EB837D068F18BC97 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		16C462B3A3748DCF0B1D55026BA44758 /* UIApplication+M13ProgressSuite.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+M13ProgressSuite.m"; path = "Classes/Application/UIApplication+M13ProgressSuite.m"; sourceTree = "<group>"; };
 		1900BF1D7A301F5DFCB52E1575F3A863 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		1BDAD51BD903EE77FAEC753DCFA106D5 /* FLKAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLKAutoLayout-dummy.m"; sourceTree = "<group>"; };
-		1C4C80A216C60CC6B32DE86F95C7D3CA /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Headers/Public/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		1C74C1FBB5673B98A442DCDAC82DB707 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutPredicate.h"; path = "FLKAutoLayout/Private/UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
-		1D4DC95E9A4BCB6DD66A837A763AC66B /* Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Analytics.h; path = Headers/GGLAnalytics/Public/Analytics.h; sourceTree = "<group>"; };
-		1F5B9783519B3DB87AB317C72198088C /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Headers/Public/GAITracker.h; sourceTree = "<group>"; };
-		22AB3D58399198E42A9ABB5C81386B35 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/HUD/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		25160301664809D01BBE8D8B29E3DACE /* M13ProgressViewLetterpress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewLetterpress.m; path = Classes/ProgressViews/M13ProgressViewLetterpress.m; sourceTree = "<group>"; };
-		25AE7AB646AEF9EA1B634C356D0C7B40 /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
-		26CE6D24B245323CC0965F199455A4B0 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Headers/Public/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		27A4A0D68D71DEF1DF37606BCE86E460 /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
-		2B64FF73FB43BB25B44943FEE52626BA /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
-		2CF3E585FF14C0310E57C9EE146E6360 /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
-		2FF3AF289814155B6245DA8125E5CC08 /* GGLConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLConfiguration.h; path = Headers/GGLCore/Public/GGLConfiguration.h; sourceTree = "<group>"; };
-		3028F6269B3D88D1C84316BF9A0F66B7 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Headers/Public/GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		3319CEB5E71FFF96A67CA65B0FCA6334 /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLKAutoLayoutPredicateList.m; path = FLKAutoLayout/Private/FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
-		34C67724FE6CB39F034AB99A2F7FB550 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
-		35A373605CE37801C6D4F728B5F409BE /* UINavigationController+M13ProgressViewBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+M13ProgressViewBar.m"; path = "Classes/NavigationController/UINavigationController+M13ProgressViewBar.m"; sourceTree = "<group>"; };
-		35B4944E5835B7E398A54D0ACF23FFB3 /* UIView+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/UIView+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
-		399FAF4B8F4B4ED78A5A9422A624F07D /* libGGLAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGGLAnalytics.a; path = Libraries/libGGLAnalytics.a; sourceTree = "<group>"; };
-		3EFCA20980DFEA951BF6C333502B1074 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
-		4011211FFC7297F156EEC4E02CB7A47B /* M13ProgressViewSegmentedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewSegmentedBar.h; path = Classes/ProgressViews/M13ProgressViewSegmentedBar.h; sourceTree = "<group>"; };
+		19DA0485A644EEC6FC8B5D1AF6E1EEFE /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayout.m"; path = "FLKAutoLayout/UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
+		19F493AE5A6B6BB58A6A616C4B9FBC03 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Sources/GAIEcommerceFields.h; sourceTree = "<group>"; };
+		1A15C50A73E2BC9E178A908B9D3CCEA7 /* M13ProgressViewImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewImage.m; path = Classes/ProgressViews/M13ProgressViewImage.m; sourceTree = "<group>"; };
+		200A8653E262418F286423425AB7F3F0 /* UIView+AccessViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AccessViewController.h"; path = "MSCellAccessory/UIView+AccessViewController.h"; sourceTree = "<group>"; };
+		22A368F1334979D84847B9F7B4A1BD0A /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		22E1969596058D7F96FD8E622580460E /* M13ProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressHUD.m; path = Classes/HUD/M13ProgressHUD.m; sourceTree = "<group>"; };
+		23F4814E89CD7E7FF07B94E1EF35B1DB /* UIViewController+FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+FLKAutoLayout.h"; path = "FLKAutoLayout/UIViewController+FLKAutoLayout.h"; sourceTree = "<group>"; };
+		2480E3F9401EFAF7FD5A0F4EB03402E2 /* UINavigationController+M13ProgressViewBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+M13ProgressViewBar.h"; path = "Classes/NavigationController/UINavigationController+M13ProgressViewBar.h"; sourceTree = "<group>"; };
+		268AD9486E709E13DB99FD8FD3A203AE /* M13ProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressView.m; path = Classes/ProgressViews/M13ProgressView.m; sourceTree = "<group>"; };
+		27AE0AC62489074AE6FDD5B4AA540FD4 /* M13ProgressViewRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewRing.h; path = Classes/ProgressViews/M13ProgressViewRing.h; sourceTree = "<group>"; };
+		2AFBCFDC5A99C48FCB8E9BC6C0BB433F /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		2BF445D11B0FDD7988030B62A770A51A /* M13ProgressViewLetterpress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewLetterpress.m; path = Classes/ProgressViews/M13ProgressViewLetterpress.m; sourceTree = "<group>"; };
+		2C69B3166E838C96F56FE0D279E5AFB5 /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
+		2DEB03809520F5980F26B3A108155C32 /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayout.h"; path = "FLKAutoLayout/UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
+		2EA849849029391EFFB40B8B50656C8A /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Sources/GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		2FC835DC518B10CDEA42AD9FFF5A2BBD /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
+		3183B922DE5457E2587EE9F85938700D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		32B252DA34A57E35E7044C5BF1452A51 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
+		339DA1E0F1B46F6336A52B069F325688 /* Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Analytics.h; path = Headers/Analytics.h; sourceTree = "<group>"; };
+		35297195A045D84FD93CA38801DF0721 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Sources/GAI.h; sourceTree = "<group>"; };
+		363E5098FB66F02B06AD6D2B15A01C60 /* UIView+FLKAutoLayoutPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutPredicate.h"; path = "FLKAutoLayout/Private/UIView+FLKAutoLayoutPredicate.h"; sourceTree = "<group>"; };
+		3B207EB9ED023D62BF1B030E4AF6593F /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
+		3F5DAD59F8DC5D20D5E8905D0A23500A /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		41028774B99E517F9FE66C60F892EFF5 /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
 		41ACFA61CAA627A5077DDEC1A98795A7 /* Pods-combatflows-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-combatflows-frameworks.sh"; sourceTree = "<group>"; };
-		4207E8137C2D52756858C52CC5719C0D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/HUD/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		4365AAA8BE96E150089620F4EB90936A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		437CC7B7EFC0A55ED675F3C62A502368 /* MSCellAccessory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSCellAccessory.h; path = MSCellAccessory/MSCellAccessory.h; sourceTree = "<group>"; };
+		43CE526E60AE895662E7D6293D380252 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		45329FF1860B2C7BBED8898A1DDB860C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		45921E2E326B3D451F38FCA647430C73 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
+		46B60FFC1CE00482248F5E3D2C869346 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		46C1BA0A6A987F61CC04CCF1066D86C6 /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		488E90A27504C6B5A1DF8337C46E101D /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
-		4DC135B91C5B6DF59230AF1B24EBBE41 /* M13ProgressViewPie.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewPie.h; path = Classes/ProgressViews/M13ProgressViewPie.h; sourceTree = "<group>"; };
+		481181D5A4D6F3A8A2BD643F628B2EEF /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Sources/GAIFields.h; sourceTree = "<group>"; };
+		4958A07E8787C3A5C48D7D182D58DD47 /* MSCellAccessory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MSCellAccessory-dummy.m"; sourceTree = "<group>"; };
+		49B2F25D679F033D5AE5138B387CA878 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		49D4938F90A2C7878EEB799EFF5D402A /* NSObject+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/NSObject+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
 		4ED30BF97128D8E2945080B21E311B59 /* libPods-combatflows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-combatflows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F860387FACB3691E41E76DFC6525092 /* GGLContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLContext.h; path = Headers/GGLCore/Public/GGLContext.h; sourceTree = "<group>"; };
+		4F993D84EA5EFC5888AEA9A4BE4BDFDB /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		50CF8826960A9DBB27F6A3EBAC04B935 /* Pods-combatflows-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-combatflows-acknowledgements.plist"; sourceTree = "<group>"; };
-		5386039A0A20ADFCA59726A0F7A3B322 /* NSObject+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/NSObject+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
+		518DD18DF1593BE87D235D92C50EA0F7 /* M13ProgressViewBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewBar.m; path = Classes/ProgressViews/M13ProgressViewBar.m; sourceTree = "<group>"; };
 		53B1B6262D0FA3B259BA3C60B84BAC00 /* libEBCardCollectionViewLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEBCardCollectionViewLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		54D2EEBDF656FF84DCE59A5460D3AFBD /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		576B5331CCADD67E406BCD319E38BF3E /* UIView+AccessViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+AccessViewController.h"; path = "MSCellAccessory/UIView+AccessViewController.h"; sourceTree = "<group>"; };
-		590FEB46511B6E8BE3A90032E64666E5 /* M13ProgressViewSegmentedRing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewSegmentedRing.m; path = Classes/ProgressViews/M13ProgressViewSegmentedRing.m; sourceTree = "<group>"; };
-		593FB37079AD63DBC53FE3C193B93E09 /* M13ProgressViewStripedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewStripedBar.h; path = Classes/ProgressViews/M13ProgressViewStripedBar.h; sourceTree = "<group>"; };
-		5B6C3373C89556A75C0F8B56AF692470 /* FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayout.h; path = FLKAutoLayout/FLKAutoLayout.h; sourceTree = "<group>"; };
-		5D8E9682AA83F767C72D52AC97DD4B01 /* MSCellAccessory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSCellAccessory.m; path = MSCellAccessory/MSCellAccessory.m; sourceTree = "<group>"; };
-		5EF48C15090CDCF116332AA2DF6B405E /* NSLayoutConstraint+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/Private/NSLayoutConstraint+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
-		5F2999336597FB2DC596E1D6D1B815D7 /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/GGLCore/Public/Core.h; sourceTree = "<group>"; };
-		6266226067FBAC7DCA97EE4DDCA349B6 /* M13ProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressView.h; path = Classes/ProgressViews/M13ProgressView.h; sourceTree = "<group>"; };
-		64D2569C0B7A3C42D508D925B50D0AC9 /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
-		64F871258F4086551DA7740B77B47DF6 /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
+		58563F2E93348B9F8750E7DC9883C05B /* GGLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLCore.framework; path = Frameworks/GGLCore.framework; sourceTree = "<group>"; };
+		59124335561054BC9B542DB6E387EE04 /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		5D1CD7D91CE5B892146A3C2B4D54EF07 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		5E7A33F333CDAC485C1DB66A383A5156 /* FLKAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLKAutoLayout-dummy.m"; sourceTree = "<group>"; };
 		65876C2060BE16A425AD04228FB11E5F /* Pods-combatflows-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-combatflows-dummy.m"; sourceTree = "<group>"; };
-		664A490BCA2E0E7360306C435A5A9BD1 /* M13ProgressViewMetro.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetro.m; path = Classes/ProgressViews/M13ProgressViewMetro.m; sourceTree = "<group>"; };
-		6691F40FFF79F3B09C762338E9ECC57B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		6B4E971B09A9C288F63DB544ABA2D9B8 /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
-		6CF03351B991BB1B76F08288E1C9E667 /* M13ProgressViewSegmentedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewSegmentedBar.m; path = Classes/ProgressViews/M13ProgressViewSegmentedBar.m; sourceTree = "<group>"; };
-		7079A36DFC45F548ED1AAB0809B3D9BD /* M13ProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressView.m; path = Classes/ProgressViews/M13ProgressView.m; sourceTree = "<group>"; };
-		708AEA7D7C1A25BA66EFDD2206569B05 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Headers/Public/GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		72E843212AB75EF1E32B25EFB942667B /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		66F51101584B5777358824A922E80AD1 /* UIApplication+M13ProgressSuite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+M13ProgressSuite.h"; path = "Classes/Application/UIApplication+M13ProgressSuite.h"; sourceTree = "<group>"; };
+		705E6FECA1F98E0537F09CDC7BE5681C /* M13ProgressViewSegmentedRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewSegmentedRing.h; path = Classes/ProgressViews/M13ProgressViewSegmentedRing.h; sourceTree = "<group>"; };
+		7140DCC4C2C2C2F23C9E0351367DF3BF /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
+		71454E609070627D636DAA06252B883C /* NSObject+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/NSObject+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
+		74209FE39DF050F0B912AFCE3079D8A0 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		7441D68C1AFFA99A75AB3D4746D4D27E /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
 		74CEE86490950957A6D2214EB555D8E1 /* Pods-combatflows-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-combatflows-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7A20E4E7FCE542C3F789FC18A882DFF2 /* MSCellAccessory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MSCellAccessory.h; path = MSCellAccessory/MSCellAccessory.h; sourceTree = "<group>"; };
-		7D2E8A4FA1F742B5A52175A55505BDFB /* FLKAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLKAutoLayout-prefix.pch"; sourceTree = "<group>"; };
-		7E664BC460D4535C758BE590A1623A38 /* AppInvite-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppInvite-Module.h"; path = "Headers/ModuleHeaders/AppInvite-Module.h"; sourceTree = "<group>"; };
-		8107BB887ED173FF095E83241993C83D /* UIView+FLKAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayout.m"; path = "FLKAutoLayout/UIView+FLKAutoLayout.m"; sourceTree = "<group>"; };
-		82FB34F21C09BE76221CB33BD7C64BAE /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		857A0D6C2F50982BE559B4A69EF08DE0 /* libGGLCore.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGGLCore.a; path = Libraries/libGGLCore.a; sourceTree = "<group>"; };
-		897D0636DAB8FC25D5C9E73B676737E1 /* M13ProgressViewRadiative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewRadiative.h; path = Classes/ProgressViews/M13ProgressViewRadiative.h; sourceTree = "<group>"; };
-		8C7A144BEAB53549E47B06FA84047C2F /* M13ProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressHUD.h; path = Classes/HUD/M13ProgressHUD.h; sourceTree = "<group>"; };
-		8CC73F5B590506B7874EE779A8F991EB /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
-		8D57D6CEC931C2265A451238798C7496 /* M13ProgressViewRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewRing.h; path = Classes/ProgressViews/M13ProgressViewRing.h; sourceTree = "<group>"; };
+		76004AF9FE282E426E23C3ACBBB43FB5 /* M13ProgressViewPie.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewPie.m; path = Classes/ProgressViews/M13ProgressViewPie.m; sourceTree = "<group>"; };
+		77842DBFEAF4715DDF944C1C35BF364D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Classes/HUD/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		7961C7D860902F726453C2695C6F6387 /* M13ProgressConsole.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressConsole.m; path = Classes/Console/M13ProgressConsole.m; sourceTree = "<group>"; };
+		797C3B2D8F639E61F4403A1E27E03961 /* M13ProgressViewFilteredImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewFilteredImage.m; path = Classes/ProgressViews/M13ProgressViewFilteredImage.m; sourceTree = "<group>"; };
+		799E5731B8EDFE9429678A1DF7B56569 /* M13ProgressViewMetro.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetro.m; path = Classes/ProgressViews/M13ProgressViewMetro.m; sourceTree = "<group>"; };
+		7C84F595B0DE51D8D3E0CCC21472AA8E /* M13ProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressHUD.h; path = Classes/HUD/M13ProgressHUD.h; sourceTree = "<group>"; };
+		812E8BB1FDC4CB5FFA48F3E407633D75 /* M13ProgressSuite-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "M13ProgressSuite-dummy.m"; sourceTree = "<group>"; };
+		81E126BCF602177C57D1CBB4DDE201A2 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
+		846A3371BB423E9BA15E869C301E0578 /* M13ProgressViewFilteredImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewFilteredImage.h; path = Classes/ProgressViews/M13ProgressViewFilteredImage.h; sourceTree = "<group>"; };
+		84B7188A2CC8F24772953226C5A5E49E /* EBCardCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EBCardCollectionViewLayout.m; path = EBCardCollectionViewLayout/src/EBCardCollectionViewLayout.m; sourceTree = "<group>"; };
+		859DA3256D7FB812CFB6EE54089144E8 /* M13ProgressViewSegmentedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewSegmentedBar.m; path = Classes/ProgressViews/M13ProgressViewSegmentedBar.m; sourceTree = "<group>"; };
+		8887031A2A6601F68E394B7CD0220032 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Sources/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		88DF4B90B40CC74328D32656358DA840 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/Private/NSLayoutConstraint+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
+		891E6B2428DF692E549D5138E9F59562 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Sources/GAILogger.h; sourceTree = "<group>"; };
+		8BC16A83C0AC8B7F60117CFA48E25895 /* M13ProgressViewRing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRing.m; path = Classes/ProgressViews/M13ProgressViewRing.m; sourceTree = "<group>"; };
+		8D417D524FF49B2970F090072C8E8764 /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/Core.h; sourceTree = "<group>"; };
+		8D7CC66A7164F6380064D10913984462 /* M13ProgressViewBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewBar.h; path = Classes/ProgressViews/M13ProgressViewBar.h; sourceTree = "<group>"; };
 		8EE3EF0271194037F5AD5A7C78A60BD6 /* libFLKAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFLKAutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		904640FB1DBAECFBBF18C0E875A1E12A /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
-		90BF1E349D5949EE96FB9D75BF903964 /* M13ProgressViewBorderedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewBorderedBar.h; path = Classes/ProgressViews/M13ProgressViewBorderedBar.h; sourceTree = "<group>"; };
+		92B5A66C0CCC4EFE2CAB6D3972D1C447 /* M13ProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressView.h; path = Classes/ProgressViews/M13ProgressView.h; sourceTree = "<group>"; };
+		932B1FB7119623770F56F88E3835B71E /* FLKAutoLayoutPredicateList.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLKAutoLayoutPredicateList.m; path = FLKAutoLayout/Private/FLKAutoLayoutPredicateList.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96E07936D9FE8ED5E40C299D81481A05 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
-		990DFBC3DCFF804D6ED03A36CDF20F1E /* M13ProgressViewRing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRing.m; path = Classes/ProgressViews/M13ProgressViewRing.m; sourceTree = "<group>"; };
-		9A4D1D29C584CB462ED67E0E61506826 /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
-		9BDAFB371DDEA8B930462F0D1B15FFDC /* UINavigationController+M13ProgressViewBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+M13ProgressViewBar.h"; path = "Classes/NavigationController/UINavigationController+M13ProgressViewBar.h"; sourceTree = "<group>"; };
+		93EF93D668B2014FC9C0EBD07C48EE61 /* M13ProgressViewRadiative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRadiative.m; path = Classes/ProgressViews/M13ProgressViewRadiative.m; sourceTree = "<group>"; };
+		946DD89A79E8FB2860559A8127130784 /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Sources/GAITrackedViewController.h; sourceTree = "<group>"; };
+		9795C004003E28096DCC89DB6D3B4E21 /* EBCardCollectionViewLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EBCardCollectionViewLayout-dummy.m"; sourceTree = "<group>"; };
+		9A8BBBB002B675DBDC8CBC8B67AFE8D9 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		9D1FF4E7210072C8CFF9FF1EC591C3E5 /* NSLayoutConstraint+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/Private/NSLayoutConstraint+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
 		9E1927BD7B1A45DF2B7A5BE68709D8E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		9E422D16AF236F1871DCFDF4A35C6265 /* M13ProgressViewMetroDotPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetroDotPolygon.h; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.h; sourceTree = "<group>"; };
-		9E73C1BA07103E58B5139040ED2DDA19 /* MSCellAccessory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MSCellAccessory.xcconfig; sourceTree = "<group>"; };
-		A02F31B06576B57ACDBA99E43DC97434 /* M13ProgressViewImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewImage.m; path = Classes/ProgressViews/M13ProgressViewImage.m; sourceTree = "<group>"; };
-		A10A425D59440BDB6A242829D1AD03EB /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Headers/Public/GAI.h; sourceTree = "<group>"; };
-		A1ACCB82B583E31220BED1B9E98B1B5C /* UIView+FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayout.h"; path = "FLKAutoLayout/UIView+FLKAutoLayout.h"; sourceTree = "<group>"; };
-		A1D5AD1891B031B47F0A8CF97643671A /* UIViewController+FLKAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+FLKAutoLayout.m"; path = "FLKAutoLayout/UIViewController+FLKAutoLayout.m"; sourceTree = "<group>"; };
-		A290D009FF8F2A89B44EFDF64E554D9E /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
-		A3A137DE4B8E759F62DDDF44E88C164A /* GGLErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLErrorCode.h; path = Headers/GGLCore/Public/GGLErrorCode.h; sourceTree = "<group>"; };
-		A89762DF1DEA03276372ABEAE294FE15 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
-		A9B63AB4DFFF83EF02BA9F0B4F4C53BD /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
-		AD52ED77B18373101086E17BAD34ED97 /* EBCardCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EBCardCollectionViewLayout.h; path = EBCardCollectionViewLayout/src/EBCardCollectionViewLayout.h; sourceTree = "<group>"; };
-		AF15B8AB12FC8ED6940938CB09B135C4 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
-		B0777D1761E1BA08E7C13B44A60E146A /* EBCardCollectionViewLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EBCardCollectionViewLayout-dummy.m"; sourceTree = "<group>"; };
-		B08CB3942D0D08D6CA0FC81A04625F71 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/Private/NSLayoutConstraint+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
+		A3E1D67D5DD52160C676EBA37A4A7846 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
+		A3FEA78E2C8195555C325D21D0E9BF60 /* M13ProgressViewSegmentedRing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewSegmentedRing.m; path = Classes/ProgressViews/M13ProgressViewSegmentedRing.m; sourceTree = "<group>"; };
+		A40D1BF615CCE067BC0EF98C65A8475A /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		A8AE72CAD6E4EFD2ACDDCEAA326B44A5 /* UINavigationController+M13ProgressViewBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+M13ProgressViewBar.m"; path = "Classes/NavigationController/UINavigationController+M13ProgressViewBar.m"; sourceTree = "<group>"; };
+		AA74033EACC64890361B4595F8761D2A /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
+		AA88D3A1EBE9D510C769E902B16E8033 /* UIViewController+FLKAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+FLKAutoLayout.m"; path = "FLKAutoLayout/UIViewController+FLKAutoLayout.m"; sourceTree = "<group>"; };
+		AD43B826AEF99C3B44CC942AC8238855 /* M13ProgressViewMetroDotPolygon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewMetroDotPolygon.m; path = Classes/ProgressViews/M13ProgressViewMetroDotPolygon.m; sourceTree = "<group>"; };
+		AE1514E2D439E8CDF829675D1C916190 /* UIView+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/UIView+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
+		AE17E0EFB5F86AB36BF7F403BBBB83E5 /* M13ProgressViewImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewImage.h; path = Classes/ProgressViews/M13ProgressViewImage.h; sourceTree = "<group>"; };
+		AE9BBE667C7CC2EF8559F8D2B184B37C /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		B036A7307A837AAA661726C86AA0A40C /* FLKAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLKAutoLayout.xcconfig; sourceTree = "<group>"; };
 		B1936B3BBC20419D303BE70A3E6D58CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		B5E57615564AB6823C2E7DCBB9EFEE5E /* M13ProgressSuite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13ProgressSuite.xcconfig; sourceTree = "<group>"; };
-		B5F0924F42DACDD5F9788F0AFE828606 /* EBCardCollectionViewLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EBCardCollectionViewLayout.xcconfig; sourceTree = "<group>"; };
-		B74D1CF9BBA717BAF2C45119A99D14EA /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Headers/Public/GAIEcommerceFields.h; sourceTree = "<group>"; };
-		B8D8B85F8A7FB8B18F8F14B0B7649EBF /* UIViewController+FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+FLKAutoLayout.h"; path = "FLKAutoLayout/UIViewController+FLKAutoLayout.h"; sourceTree = "<group>"; };
-		BB17ADCF83B821D59FA2450E1ECC7BD7 /* M13ProgressViewPie.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewPie.m; path = Classes/ProgressViews/M13ProgressViewPie.m; sourceTree = "<group>"; };
-		BB2F6052FE737BA33300966992A5D3D4 /* NSObject+FLKAutoLayoutDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+FLKAutoLayoutDebug.h"; path = "FLKAutoLayout/NSObject+FLKAutoLayoutDebug.h"; sourceTree = "<group>"; };
-		BBFBB7BD9118F565FBC6D986AE3F9554 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		BC08AD5AD31CC8CC25512F2D72147D53 /* MSCellAccessory-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MSCellAccessory-dummy.m"; sourceTree = "<group>"; };
-		BE01023F668C640103BD3DB19C38703E /* EBCardCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EBCardCollectionViewLayout.m; path = EBCardCollectionViewLayout/src/EBCardCollectionViewLayout.m; sourceTree = "<group>"; };
-		C155BE11AB393488A13589EAEC8B8F4B /* M13ProgressViewBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewBar.h; path = Classes/ProgressViews/M13ProgressViewBar.h; sourceTree = "<group>"; };
-		C2626C83A8193B76609906970F10A8C3 /* M13ProgressViewFilteredImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewFilteredImage.h; path = Classes/ProgressViews/M13ProgressViewFilteredImage.h; sourceTree = "<group>"; };
-		C5DCE20CA9AFADA7FF5315B1904A0853 /* UIView+FLKAutoLayoutPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutPredicate.m"; path = "FLKAutoLayout/Private/UIView+FLKAutoLayoutPredicate.m"; sourceTree = "<group>"; };
-		C9466B61C858F04D16AA29F9A9B264B3 /* M13ProgressViewRadiative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewRadiative.m; path = Classes/ProgressViews/M13ProgressViewRadiative.m; sourceTree = "<group>"; };
-		C9B256C72FA6AFFFDE231649C60423DE /* M13ProgressViewBorderedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewBorderedBar.m; path = Classes/ProgressViews/M13ProgressViewBorderedBar.m; sourceTree = "<group>"; };
+		B36D134506E1793817A5C5185F719A82 /* FLKAutoLayoutPredicateList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayoutPredicateList.h; path = FLKAutoLayout/Private/FLKAutoLayoutPredicateList.h; sourceTree = "<group>"; };
+		B81737C905AF4FC3BA93125EF8049528 /* M13ProgressSuite.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = M13ProgressSuite.xcconfig; sourceTree = "<group>"; };
+		BC4E1E707B33A7AB31B5BF27E0B5CB5D /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
+		BCB55D58CB762A32DA634325B3D19892 /* M13ProgressViewPie.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewPie.h; path = Classes/ProgressViews/M13ProgressViewPie.h; sourceTree = "<group>"; };
+		BDBCC018B25F2DE37E9CEECFEAB6AD11 /* UIView+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/UIView+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
+		C1F95F11EA1872F1643A5104626367CE /* M13ProgressViewMetro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetro.h; path = Classes/ProgressViews/M13ProgressViewMetro.h; sourceTree = "<group>"; };
+		C4392F6CADF00314597938792B33324A /* M13ProgressViewRadiative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewRadiative.h; path = Classes/ProgressViews/M13ProgressViewRadiative.h; sourceTree = "<group>"; };
+		C7DABA50FAE706B357F641EF40603FE3 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
+		C96DDCE11A3D817888DB158B1C1B9AD6 /* M13ProgressViewBorderedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewBorderedBar.h; path = Classes/ProgressViews/M13ProgressViewBorderedBar.h; sourceTree = "<group>"; };
 		C9C541E736416226956826BF5230A623 /* Pods-combatflows-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-combatflows-resources.sh"; sourceTree = "<group>"; };
-		CB15AC62F90F36A48F963CF43C63B4A6 /* GMRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GMRConfiguration.h; path = Headers/GGLCore/Public/GMRConfiguration.h; sourceTree = "<group>"; };
 		CD1E0242DE067B065692119F17CE6825 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CEE51276B3D9100D8DF544A75D5A004A /* EBCardCollectionViewLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EBCardCollectionViewLayout-prefix.pch"; sourceTree = "<group>"; };
 		CF1E127B44C50D942894DEABA1A1B570 /* libM13ProgressSuite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libM13ProgressSuite.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D02635A94295C5188D3A343DCF82F951 /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
-		D05B2DD3A390850620895BE676C43A7E /* AdMob-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AdMob-Module.h"; path = "Headers/ModuleHeaders/AdMob-Module.h"; sourceTree = "<group>"; };
-		D26CEB2ACA91D0D45965D8EA9433D785 /* MSCellAccessory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSCellAccessory-prefix.pch"; sourceTree = "<group>"; };
-		D3B812279112BA198884D6A9C57E86AC /* FLKAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLKAutoLayout.xcconfig; sourceTree = "<group>"; };
-		D5581C568CB74A88DDD2CFD41AFE05FF /* M13ProgressViewFilteredImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewFilteredImage.m; path = Classes/ProgressViews/M13ProgressViewFilteredImage.m; sourceTree = "<group>"; };
-		DD16B4C4A4ACA47A31A34DF2FA2A27AB /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
-		DD1D28BDAE9E4C06CA88F9CA91ED56B8 /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Headers/Public/GAIFields.h; sourceTree = "<group>"; };
-		DD859157F5E4E51CFEFCA74A2AA06FE2 /* M13ProgressViewStripedBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressViewStripedBar.m; path = Classes/ProgressViews/M13ProgressViewStripedBar.m; sourceTree = "<group>"; };
-		E6F82B53554653D6145EC84CCE145593 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
-		E821D9E79163B5C4991D38B180F51996 /* M13ProgressViewSegmentedRing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewSegmentedRing.h; path = Classes/ProgressViews/M13ProgressViewSegmentedRing.h; sourceTree = "<group>"; };
-		E8EA3B7B4909A3AB0049D01000FD7651 /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Headers/Public/GAITrackedViewController.h; sourceTree = "<group>"; };
-		E9711072CFAF6F2AFA17A07185B81DC9 /* M13ProgressViewMetro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewMetro.h; path = Classes/ProgressViews/M13ProgressViewMetro.h; sourceTree = "<group>"; };
-		EB46EAC139B965B077AADAFB6EFF673C /* M13ProgressSuite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13ProgressSuite-prefix.pch"; sourceTree = "<group>"; };
+		D081C32A555F2FDEE7137FBEC012FAE2 /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
+		D68274008EE91E48E1A6C5923000BB18 /* UIView+AccessViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+AccessViewController.m"; path = "MSCellAccessory/UIView+AccessViewController.m"; sourceTree = "<group>"; };
+		DA32E2BF806780F6FE76D9D046001816 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		DADF370CD71BC6EC284CA1425C606EF0 /* FLKAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLKAutoLayout.h; path = FLKAutoLayout/FLKAutoLayout.h; sourceTree = "<group>"; };
+		DFDC81062D478479983C0CFF68663162 /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
+		E0E3E7A04C40A86E198C7EF9FE6E0653 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
+		E10AA08B66A7A1D80D51D54F17B1A93F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Classes/HUD/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		E6D1D2CF97EFFECDFD459B62E29AB564 /* M13ProgressSuite-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "M13ProgressSuite-prefix.pch"; sourceTree = "<group>"; };
+		E73DC05277BB5FE9F2D1AA361D9392E4 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
+		E84A9A6F2994DEFE3B55144C7CA87B96 /* M13ProgressViewSegmentedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewSegmentedBar.h; path = Classes/ProgressViews/M13ProgressViewSegmentedBar.h; sourceTree = "<group>"; };
+		E8921C95649C2ADB1A6794908F622070 /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
+		EA971745783EB4732330C0AD33B4B266 /* MSCellAccessory-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSCellAccessory-prefix.pch"; sourceTree = "<group>"; };
+		EB47933B7C0194E01D3E1343763E45EB /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Sources/GAIEcommerceProduct.h; sourceTree = "<group>"; };
 		EB99F80D89BA1F24E5CC814E1E35D1C0 /* Pods-combatflows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-combatflows.release.xcconfig"; sourceTree = "<group>"; };
-		EC1309BC1AB29474634597C4679AFE51 /* M13ProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = M13ProgressHUD.m; path = Classes/HUD/M13ProgressHUD.m; sourceTree = "<group>"; };
-		EED209F5DF14614B45871799EFF28C91 /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
-		F0D0C462D224CB30D8A156E5F8DD68DB /* UIView+FLKAutoLayoutDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FLKAutoLayoutDebug.m"; path = "FLKAutoLayout/UIView+FLKAutoLayoutDebug.m"; sourceTree = "<group>"; };
+		EE0AD8B9C5B96AE7CEBEF07F810F21CC /* EBCardCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EBCardCollectionViewLayout.h; path = EBCardCollectionViewLayout/src/EBCardCollectionViewLayout.h; sourceTree = "<group>"; };
+		EF3AC0ABCAAFC54B748F52F7A1B2A031 /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
+		EFDCC6DEA3D32071CFA9C6C7E16AF66F /* MSCellAccessory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MSCellAccessory.m; path = MSCellAccessory/MSCellAccessory.m; sourceTree = "<group>"; };
+		F0096F0AAFFFA0444B04BFE7D8F5607A /* M13ProgressConsole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressConsole.h; path = Classes/Console/M13ProgressConsole.h; sourceTree = "<group>"; };
 		F1C973DA2E9074BC7AF8FED839818523 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		F371ADD8D265FDD56E6EA30C44942FF9 /* M13ProgressViewImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewImage.h; path = Classes/ProgressViews/M13ProgressViewImage.h; sourceTree = "<group>"; };
-		F573BF8B6E06B91E673278B9B8DBAF66 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		F6C3FC0E0FF0D6EFBE4F9DA67CFC5AAE /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
-		F7B0ED0B85778D4E1C88C9ADD74E8FDD /* M13ProgressViewLetterpress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewLetterpress.h; path = Classes/ProgressViews/M13ProgressViewLetterpress.h; sourceTree = "<group>"; };
-		FB3EFEB84D095C558F84C3C1B14C3138 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Headers/Public/GAILogger.h; sourceTree = "<group>"; };
-		FC7434231A2EA6699CAD25480EB7D1D1 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
-		FFF1AEF2703DBD373033F63D7BDBDA90 /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		F404A8008AAB59B7220DFB98A75CF03E /* M13ProgressViewStripedBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = M13ProgressViewStripedBar.h; path = Classes/ProgressViews/M13ProgressViewStripedBar.h; sourceTree = "<group>"; };
+		F56199141C910D24362F2676A80D1078 /* GGLAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLAnalytics.framework; path = Frameworks/GGLAnalytics.framework; sourceTree = "<group>"; };
+		F66DB9B71A067A6A90B91F5056745874 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Sources/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		F8E3D0D63A4A391EA74A372B963F0C9E /* MSCellAccessory.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MSCellAccessory.xcconfig; sourceTree = "<group>"; };
+		FB9B566A6668E23B1A5EEB5215A32CAB /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,19 +307,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		726E9E5DE4EE5CAAA05FC27914DBC8F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				941BF595EE1F51149EC5A9582B4D195D /* Accelerate.framework in Frameworks */,
-				D2B64030F998EE58DD6F6F154F594D67 /* CoreGraphics.framework in Frameworks */,
-				A3215D5BC93CF039282B5C4A83C48A7C /* CoreImage.framework in Frameworks */,
-				6A3E20157AF7521848A7769B0AA5ECE8 /* Foundation.framework in Frameworks */,
-				F641FFBB1A2DBE331752CBAF7B0B787F /* QuartzCore.framework in Frameworks */,
-				B4CA5E9186220D705B0E024F13D9276B /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8997DCD0BC5FE78EFC8F399A3020ED08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +323,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3D8EB063CB2EE7C1D94FE8620673E66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46653919A07C07055FC397458E039A94 /* Accelerate.framework in Frameworks */,
+				BC6D92913075FD0700E62AC27EA2C322 /* CoreGraphics.framework in Frameworks */,
+				0511AA2071F9D651E6391AB8CA5C7CE2 /* CoreImage.framework in Frameworks */,
+				A43A96EA15FF858A32666771E25166F2 /* Foundation.framework in Frameworks */,
+				15F3947D2E0162C6A8B335F0EE8FCA73 /* QuartzCore.framework in Frameworks */,
+				4745DD40E3CD2B8C275E19B2B94AB16A /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E274EA68338B53BA954611751370E70D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,25 +347,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06D0E41D78ECF12A3B94D1D6CEF1F859 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D05B2DD3A390850620895BE676C43A7E /* AdMob-Module.h */,
-				A290D009FF8F2A89B44EFDF64E554D9E /* Analytics-Module.h */,
-				7E664BC460D4535C758BE590A1623A38 /* AppInvite-Module.h */,
-				0A9346A99E28BE0C524BFAF816A45A90 /* CloudMessaging-Module.h */,
-				5F2999336597FB2DC596E1D6D1B815D7 /* Core.h */,
-				25AE7AB646AEF9EA1B634C356D0C7B40 /* Core-Module.h */,
-				2FF3AF289814155B6245DA8125E5CC08 /* GGLConfiguration.h */,
-				4F860387FACB3691E41E76DFC6525092 /* GGLContext.h */,
-				A3A137DE4B8E759F62DDDF44E88C164A /* GGLErrorCode.h */,
-				CB15AC62F90F36A48F963CF43C63B4A6 /* GMRConfiguration.h */,
-				6B4E971B09A9C288F63DB544ABA2D9B8 /* SignIn-Module.h */,
-				F5A11E097F2F2471B428B920D69FB7A9 /* Frameworks */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,70 +355,112 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1BF70255C3B34286AF253916FDD7CB49 /* Support Files */ = {
+		19B2123A1C45336DF8C5C69BE6B3E39D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9E73C1BA07103E58B5139040ED2DDA19 /* MSCellAccessory.xcconfig */,
-				BC08AD5AD31CC8CC25512F2D72147D53 /* MSCellAccessory-dummy.m */,
-				D26CEB2ACA91D0D45965D8EA9433D785 /* MSCellAccessory-prefix.pch */,
+				F8E4DA1E9138D2C05C596B859819D8DA /* CocoaLumberjack */,
+				852C7B1C7D33F38557B32A1A79387775 /* EBCardCollectionViewLayout */,
+				923B1BFFA58554F496D34A29D74C8B99 /* FirebaseAnalytics */,
+				FB577CE1B2123F0700F3E44032409C44 /* FirebaseInstanceID */,
+				20E25F6981468DC9A39F9FF526170E6E /* FLKAutoLayout */,
+				A7784939BEE0967A35471684E3FF9C5E /* Google */,
+				524216C09A16CE0DE25F0C339934E707 /* GoogleAnalytics */,
+				E268DB7783AD1477820846E3ABF88E7D /* GoogleInterchangeUtilities */,
+				D0E35D3C3C75653145A550907E1BD08C /* GoogleSymbolUtilities */,
+				4D2B74279A20BC918A1C65554898CA14 /* GoogleUtilities */,
+				3D4466E715DA6735A6B477F922B43ABF /* M13ProgressSuite */,
+				39094AA26BC89498492064586F714524 /* MSCellAccessory */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MSCellAccessory";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		25189119DAFAEF3BB7B7084C8BE293E4 /* Default */ = {
+		20E25F6981468DC9A39F9FF526170E6E /* FLKAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				64F871258F4086551DA7740B77B47DF6 /* CocoaLumberjack.h */,
-			);
-			name = Default;
-			sourceTree = "<group>";
-		};
-		2FBA1490520E3E8CE3B877E84F346116 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				82FB34F21C09BE76221CB33BD7C64BAE /* GoogleInterchangeUtilities.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3D043E571F1B177F4A7C3EB8ECE5AEEE /* FLKAutoLayout */ = {
-			isa = PBXGroup;
-			children = (
-				5B6C3373C89556A75C0F8B56AF692470 /* FLKAutoLayout.h */,
-				04D7066382DAEAF06AD3FE35DAB93268 /* FLKAutoLayoutPredicateList.h */,
-				3319CEB5E71FFF96A67CA65B0FCA6334 /* FLKAutoLayoutPredicateList.m */,
-				B08CB3942D0D08D6CA0FC81A04625F71 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */,
-				5EF48C15090CDCF116332AA2DF6B405E /* NSLayoutConstraint+FLKAutoLayoutDebug.m */,
-				BB2F6052FE737BA33300966992A5D3D4 /* NSObject+FLKAutoLayoutDebug.h */,
-				5386039A0A20ADFCA59726A0F7A3B322 /* NSObject+FLKAutoLayoutDebug.m */,
-				A1ACCB82B583E31220BED1B9E98B1B5C /* UIView+FLKAutoLayout.h */,
-				8107BB887ED173FF095E83241993C83D /* UIView+FLKAutoLayout.m */,
-				35B4944E5835B7E398A54D0ACF23FFB3 /* UIView+FLKAutoLayoutDebug.h */,
-				F0D0C462D224CB30D8A156E5F8DD68DB /* UIView+FLKAutoLayoutDebug.m */,
-				1C74C1FBB5673B98A442DCDAC82DB707 /* UIView+FLKAutoLayoutPredicate.h */,
-				C5DCE20CA9AFADA7FF5315B1904A0853 /* UIView+FLKAutoLayoutPredicate.m */,
-				B8D8B85F8A7FB8B18F8F14B0B7649EBF /* UIViewController+FLKAutoLayout.h */,
-				A1D5AD1891B031B47F0A8CF97643671A /* UIViewController+FLKAutoLayout.m */,
-				D86EC7F1CD8A11A966D8D6211D698211 /* Support Files */,
+				DADF370CD71BC6EC284CA1425C606EF0 /* FLKAutoLayout.h */,
+				B36D134506E1793817A5C5185F719A82 /* FLKAutoLayoutPredicateList.h */,
+				932B1FB7119623770F56F88E3835B71E /* FLKAutoLayoutPredicateList.m */,
+				88DF4B90B40CC74328D32656358DA840 /* NSLayoutConstraint+FLKAutoLayoutDebug.h */,
+				9D1FF4E7210072C8CFF9FF1EC591C3E5 /* NSLayoutConstraint+FLKAutoLayoutDebug.m */,
+				71454E609070627D636DAA06252B883C /* NSObject+FLKAutoLayoutDebug.h */,
+				49D4938F90A2C7878EEB799EFF5D402A /* NSObject+FLKAutoLayoutDebug.m */,
+				2DEB03809520F5980F26B3A108155C32 /* UIView+FLKAutoLayout.h */,
+				19DA0485A644EEC6FC8B5D1AF6E1EEFE /* UIView+FLKAutoLayout.m */,
+				AE1514E2D439E8CDF829675D1C916190 /* UIView+FLKAutoLayoutDebug.h */,
+				BDBCC018B25F2DE37E9CEECFEAB6AD11 /* UIView+FLKAutoLayoutDebug.m */,
+				363E5098FB66F02B06AD6D2B15A01C60 /* UIView+FLKAutoLayoutPredicate.h */,
+				0B6F997DCA9E00DDC28482FA969CEF5E /* UIView+FLKAutoLayoutPredicate.m */,
+				23F4814E89CD7E7FF07B94E1EF35B1DB /* UIViewController+FLKAutoLayout.h */,
+				AA88D3A1EBE9D510C769E902B16E8033 /* UIViewController+FLKAutoLayout.m */,
+				86065FA49A71D9E7A7982BE7617AF58B /* Support Files */,
 			);
 			path = FLKAutoLayout;
 			sourceTree = "<group>";
 		};
-		407107AC8E18F04B31711D383A46345E /* Frameworks */ = {
+		2F50821D13AC5AB6559D3612F738694E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F573BF8B6E06B91E673278B9B8DBAF66 /* GoogleSymbolUtilities.framework */,
+				2AFBCFDC5A99C48FCB8E9BC6C0BB433F /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		430485F725A7D74F23FE45EFB7DFFAC0 /* GoogleSymbolUtilities */ = {
+		39094AA26BC89498492064586F714524 /* MSCellAccessory */ = {
 			isa = PBXGroup;
 			children = (
-				407107AC8E18F04B31711D383A46345E /* Frameworks */,
+				437CC7B7EFC0A55ED675F3C62A502368 /* MSCellAccessory.h */,
+				EFDCC6DEA3D32071CFA9C6C7E16AF66F /* MSCellAccessory.m */,
+				200A8653E262418F286423425AB7F3F0 /* UIView+AccessViewController.h */,
+				D68274008EE91E48E1A6C5923000BB18 /* UIView+AccessViewController.m */,
+				ED371A6CB12DCE688B9856424C81D985 /* Support Files */,
 			);
-			path = GoogleSymbolUtilities;
+			path = MSCellAccessory;
+			sourceTree = "<group>";
+		};
+		3D4466E715DA6735A6B477F922B43ABF /* M13ProgressSuite */ = {
+			isa = PBXGroup;
+			children = (
+				F0096F0AAFFFA0444B04BFE7D8F5607A /* M13ProgressConsole.h */,
+				7961C7D860902F726453C2695C6F6387 /* M13ProgressConsole.m */,
+				7C84F595B0DE51D8D3E0CCC21472AA8E /* M13ProgressHUD.h */,
+				22E1969596058D7F96FD8E622580460E /* M13ProgressHUD.m */,
+				92B5A66C0CCC4EFE2CAB6D3972D1C447 /* M13ProgressView.h */,
+				268AD9486E709E13DB99FD8FD3A203AE /* M13ProgressView.m */,
+				8D7CC66A7164F6380064D10913984462 /* M13ProgressViewBar.h */,
+				518DD18DF1593BE87D235D92C50EA0F7 /* M13ProgressViewBar.m */,
+				C96DDCE11A3D817888DB158B1C1B9AD6 /* M13ProgressViewBorderedBar.h */,
+				08A976843F2337C602E42A4672E939D0 /* M13ProgressViewBorderedBar.m */,
+				846A3371BB423E9BA15E869C301E0578 /* M13ProgressViewFilteredImage.h */,
+				797C3B2D8F639E61F4403A1E27E03961 /* M13ProgressViewFilteredImage.m */,
+				AE17E0EFB5F86AB36BF7F403BBBB83E5 /* M13ProgressViewImage.h */,
+				1A15C50A73E2BC9E178A908B9D3CCEA7 /* M13ProgressViewImage.m */,
+				11CF0E86A88A49ED65007F7ECEF4D6BD /* M13ProgressViewLetterpress.h */,
+				2BF445D11B0FDD7988030B62A770A51A /* M13ProgressViewLetterpress.m */,
+				C1F95F11EA1872F1643A5104626367CE /* M13ProgressViewMetro.h */,
+				799E5731B8EDFE9429678A1DF7B56569 /* M13ProgressViewMetro.m */,
+				41028774B99E517F9FE66C60F892EFF5 /* M13ProgressViewMetroDotPolygon.h */,
+				AD43B826AEF99C3B44CC942AC8238855 /* M13ProgressViewMetroDotPolygon.m */,
+				BCB55D58CB762A32DA634325B3D19892 /* M13ProgressViewPie.h */,
+				76004AF9FE282E426E23C3ACBBB43FB5 /* M13ProgressViewPie.m */,
+				C4392F6CADF00314597938792B33324A /* M13ProgressViewRadiative.h */,
+				93EF93D668B2014FC9C0EBD07C48EE61 /* M13ProgressViewRadiative.m */,
+				27AE0AC62489074AE6FDD5B4AA540FD4 /* M13ProgressViewRing.h */,
+				8BC16A83C0AC8B7F60117CFA48E25895 /* M13ProgressViewRing.m */,
+				E84A9A6F2994DEFE3B55144C7CA87B96 /* M13ProgressViewSegmentedBar.h */,
+				859DA3256D7FB812CFB6EE54089144E8 /* M13ProgressViewSegmentedBar.m */,
+				705E6FECA1F98E0537F09CDC7BE5681C /* M13ProgressViewSegmentedRing.h */,
+				A3FEA78E2C8195555C325D21D0E9BF60 /* M13ProgressViewSegmentedRing.m */,
+				F404A8008AAB59B7220DFB98A75CF03E /* M13ProgressViewStripedBar.h */,
+				0BD5793388314276AAB564418E1CFF01 /* M13ProgressViewStripedBar.m */,
+				66F51101584B5777358824A922E80AD1 /* UIApplication+M13ProgressSuite.h */,
+				16C462B3A3748DCF0B1D55026BA44758 /* UIApplication+M13ProgressSuite.m */,
+				E10AA08B66A7A1D80D51D54F17B1A93F /* UIImage+ImageEffects.h */,
+				77842DBFEAF4715DDF944C1C35BF364D /* UIImage+ImageEffects.m */,
+				2480E3F9401EFAF7FD5A0F4EB03402E2 /* UINavigationController+M13ProgressViewBar.h */,
+				A8AE72CAD6E4EFD2ACDDCEAA326B44A5 /* UINavigationController+M13ProgressViewBar.m */,
+				F4F9A85AE261B669863D1A09BBDADC15 /* Support Files */,
+			);
+			path = M13ProgressSuite;
 			sourceTree = "<group>";
 		};
 		44D06BA9B3773DE1882382BB2474CFD6 /* Products */ = {
@@ -455,109 +476,63 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		49859C1808E88B0B018DC807A9DFB224 /* Extensions */ = {
+		4D2B74279A20BC918A1C65554898CA14 /* GoogleUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				D02635A94295C5188D3A343DCF82F951 /* DDContextFilterLogFormatter.h */,
-				053F5676CBF02A672A50388FD6759916 /* DDContextFilterLogFormatter.m */,
-				96E07936D9FE8ED5E40C299D81481A05 /* DDDispatchQueueLogFormatter.h */,
-				BBFBB7BD9118F565FBC6D986AE3F9554 /* DDDispatchQueueLogFormatter.m */,
-				488E90A27504C6B5A1DF8337C46E101D /* DDMultiFormatter.h */,
-				64D2569C0B7A3C42D508D925B50D0AC9 /* DDMultiFormatter.m */,
+				D8224628ED075FB01898902915139710 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		524216C09A16CE0DE25F0C339934E707 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				35297195A045D84FD93CA38801DF0721 /* GAI.h */,
+				F66DB9B71A067A6A90B91F5056745874 /* GAIDictionaryBuilder.h */,
+				19F493AE5A6B6BB58A6A616C4B9FBC03 /* GAIEcommerceFields.h */,
+				EB47933B7C0194E01D3E1343763E45EB /* GAIEcommerceProduct.h */,
+				8887031A2A6601F68E394B7CD0220032 /* GAIEcommerceProductAction.h */,
+				2EA849849029391EFFB40B8B50656C8A /* GAIEcommercePromotion.h */,
+				481181D5A4D6F3A8A2BD643F628B2EEF /* GAIFields.h */,
+				891E6B2428DF692E549D5138E9F59562 /* GAILogger.h */,
+				946DD89A79E8FB2860559A8127130784 /* GAITrackedViewController.h */,
+				0783BB79E3A0987B5DAFC0B1D26E6FA2 /* GAITracker.h */,
+				89178D8F3E2C9CFA2F451484818E91C1 /* Frameworks */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		55A4854EF90C0601AE29A2F246F64724 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5D1CD7D91CE5B892146A3C2B4D54EF07 /* DDContextFilterLogFormatter.h */,
+				AE9BBE667C7CC2EF8559F8D2B184B37C /* DDContextFilterLogFormatter.m */,
+				4F993D84EA5EFC5888AEA9A4BE4BDFDB /* DDDispatchQueueLogFormatter.h */,
+				46B60FFC1CE00482248F5E3D2C869346 /* DDDispatchQueueLogFormatter.m */,
+				C7DABA50FAE706B357F641EF40603FE3 /* DDMultiFormatter.h */,
+				7441D68C1AFFA99A75AB3D4746D4D27E /* DDMultiFormatter.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		651C51FA266E69430D5C2B68FE7B8C2B /* Support Files */ = {
+		760E4A8BDC81796467F7DFD178DD6A56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DD16B4C4A4ACA47A31A34DF2FA2A27AB /* CocoaLumberjack.xcconfig */,
-				FC7434231A2EA6699CAD25480EB7D1D1 /* CocoaLumberjack-dummy.m */,
-				E6F82B53554653D6145EC84CCE145593 /* CocoaLumberjack-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CocoaLumberjack";
-			sourceTree = "<group>";
-		};
-		6C0DB0E45C00C5323FD15D2DB47D1F1A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B5E57615564AB6823C2E7DCBB9EFEE5E /* M13ProgressSuite.xcconfig */,
-				17CA59BB4316341BEDCC6525AC24F92D /* M13ProgressSuite-dummy.m */,
-				EB46EAC139B965B077AADAFB6EFF673C /* M13ProgressSuite-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/M13ProgressSuite";
-			sourceTree = "<group>";
-		};
-		7068808A1EF951F44E1FA6F502BC4CF3 /* M13ProgressSuite */ = {
-			isa = PBXGroup;
-			children = (
-				164F31D4861C0E22CBE6E912E0E81190 /* M13ProgressConsole.h */,
-				182F28001BA891E6A63B468BF3B2C655 /* M13ProgressConsole.m */,
-				8C7A144BEAB53549E47B06FA84047C2F /* M13ProgressHUD.h */,
-				EC1309BC1AB29474634597C4679AFE51 /* M13ProgressHUD.m */,
-				6266226067FBAC7DCA97EE4DDCA349B6 /* M13ProgressView.h */,
-				7079A36DFC45F548ED1AAB0809B3D9BD /* M13ProgressView.m */,
-				C155BE11AB393488A13589EAEC8B8F4B /* M13ProgressViewBar.h */,
-				0886BD522DE85A75430730C2D8F2BEC7 /* M13ProgressViewBar.m */,
-				90BF1E349D5949EE96FB9D75BF903964 /* M13ProgressViewBorderedBar.h */,
-				C9B256C72FA6AFFFDE231649C60423DE /* M13ProgressViewBorderedBar.m */,
-				C2626C83A8193B76609906970F10A8C3 /* M13ProgressViewFilteredImage.h */,
-				D5581C568CB74A88DDD2CFD41AFE05FF /* M13ProgressViewFilteredImage.m */,
-				F371ADD8D265FDD56E6EA30C44942FF9 /* M13ProgressViewImage.h */,
-				A02F31B06576B57ACDBA99E43DC97434 /* M13ProgressViewImage.m */,
-				F7B0ED0B85778D4E1C88C9ADD74E8FDD /* M13ProgressViewLetterpress.h */,
-				25160301664809D01BBE8D8B29E3DACE /* M13ProgressViewLetterpress.m */,
-				E9711072CFAF6F2AFA17A07185B81DC9 /* M13ProgressViewMetro.h */,
-				664A490BCA2E0E7360306C435A5A9BD1 /* M13ProgressViewMetro.m */,
-				9E422D16AF236F1871DCFDF4A35C6265 /* M13ProgressViewMetroDotPolygon.h */,
-				9A4D1D29C584CB462ED67E0E61506826 /* M13ProgressViewMetroDotPolygon.m */,
-				4DC135B91C5B6DF59230AF1B24EBBE41 /* M13ProgressViewPie.h */,
-				BB17ADCF83B821D59FA2450E1ECC7BD7 /* M13ProgressViewPie.m */,
-				897D0636DAB8FC25D5C9E73B676737E1 /* M13ProgressViewRadiative.h */,
-				C9466B61C858F04D16AA29F9A9B264B3 /* M13ProgressViewRadiative.m */,
-				8D57D6CEC931C2265A451238798C7496 /* M13ProgressViewRing.h */,
-				990DFBC3DCFF804D6ED03A36CDF20F1E /* M13ProgressViewRing.m */,
-				4011211FFC7297F156EEC4E02CB7A47B /* M13ProgressViewSegmentedBar.h */,
-				6CF03351B991BB1B76F08288E1C9E667 /* M13ProgressViewSegmentedBar.m */,
-				E821D9E79163B5C4991D38B180F51996 /* M13ProgressViewSegmentedRing.h */,
-				590FEB46511B6E8BE3A90032E64666E5 /* M13ProgressViewSegmentedRing.m */,
-				593FB37079AD63DBC53FE3C193B93E09 /* M13ProgressViewStripedBar.h */,
-				DD859157F5E4E51CFEFCA74A2AA06FE2 /* M13ProgressViewStripedBar.m */,
-				22AB3D58399198E42A9ABB5C81386B35 /* UIImage+ImageEffects.h */,
-				4207E8137C2D52756858C52CC5719C0D /* UIImage+ImageEffects.m */,
-				9BDAFB371DDEA8B930462F0D1B15FFDC /* UINavigationController+M13ProgressViewBar.h */,
-				35A373605CE37801C6D4F728B5F409BE /* UINavigationController+M13ProgressViewBar.m */,
-				6C0DB0E45C00C5323FD15D2DB47D1F1A /* Support Files */,
-			);
-			path = M13ProgressSuite;
-			sourceTree = "<group>";
-		};
-		7738C569BBF4EDD084F9086B42A8C33D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				54D2EEBDF656FF84DCE59A5460D3AFBD /* GoogleNetworkingUtilities.framework */,
+				9A8BBBB002B675DBDC8CBC8B67AFE8D9 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		795D413A479D9E261674EFDA9378B5DC /* Pods */ = {
+		7D5655055659522F8B63D3F33D9BFEB3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FCFFB935A2D12CD2A143BB26AD4F3420 /* CocoaLumberjack */,
-				FA357BD8093EDBC7CE6DCC6A6B5393A9 /* EBCardCollectionViewLayout */,
-				3D043E571F1B177F4A7C3EB8ECE5AEEE /* FLKAutoLayout */,
-				874CE5F57F4FB33F96A8EB1D5E70A760 /* Google */,
-				DA71C0239C0E8119D020FBA5B521BA28 /* GoogleAnalytics */,
-				8BD20146C3CC6078932EC90FF4EAB3CB /* GoogleInterchangeUtilities */,
-				89A9174508D74F005B6ED3A7F37182F5 /* GoogleNetworkingUtilities */,
-				430485F725A7D74F23FE45EFB7DFFAC0 /* GoogleSymbolUtilities */,
-				FB37F968C9E615CE64C99B8CC2B1E1DA /* GoogleUtilities */,
-				7068808A1EF951F44E1FA6F502BC4CF3 /* M13ProgressSuite */,
-				B337DB4212FDCE77A9BC14F907FA3AD8 /* MSCellAccessory */,
+				7140DCC4C2C2C2F23C9E0351367DF3BF /* Analytics-Module.h */,
+				8D417D524FF49B2970F090072C8E8764 /* Core.h */,
+				E8921C95649C2ADB1A6794908F622070 /* Core-Module.h */,
+				D081C32A555F2FDEE7137FBEC012FAE2 /* SignIn-Module.h */,
+				97C987D336A34A9D95ECF87E9824E867 /* Frameworks */,
 			);
-			name = Pods;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -565,53 +540,74 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
-				795D413A479D9E261674EFDA9378B5DC /* Pods */,
+				19B2123A1C45336DF8C5C69BE6B3E39D /* Pods */,
 				44D06BA9B3773DE1882382BB2474CFD6 /* Products */,
 				AF7E778FE644148C07785621442F460A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		82A620C7132AACEFB66CE1B750139424 /* Analytics */ = {
+		81F9E25D5A7CD1958394BE75C6E33E07 /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				1D4DC95E9A4BCB6DD66A837A763AC66B /* Analytics.h */,
-				1638DB6D01991F2434A4055877C00993 /* GGLContext+Analytics.h */,
-				E7766BB643DA670AC6207A51B85EA497 /* Frameworks */,
+				BC4E1E707B33A7AB31B5BF27E0B5CB5D /* CocoaLumberjack.h */,
 			);
-			name = Analytics;
+			name = Default;
 			sourceTree = "<group>";
 		};
-		874CE5F57F4FB33F96A8EB1D5E70A760 /* Google */ = {
+		82015FBB40E61F0FF547A1529E34282A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				82A620C7132AACEFB66CE1B750139424 /* Analytics */,
-				06D0E41D78ECF12A3B94D1D6CEF1F859 /* Core */,
+				01707CAA8C6444554206D4A96D85CDFC /* EBCardCollectionViewLayout.xcconfig */,
+				9795C004003E28096DCC89DB6D3B4E21 /* EBCardCollectionViewLayout-dummy.m */,
+				0A491BE695382AD355CF08B3FDBD52CC /* EBCardCollectionViewLayout-prefix.pch */,
 			);
-			path = Google;
+			name = "Support Files";
+			path = "../Target Support Files/EBCardCollectionViewLayout";
 			sourceTree = "<group>";
 		};
-		89A9174508D74F005B6ED3A7F37182F5 /* GoogleNetworkingUtilities */ = {
+		852C7B1C7D33F38557B32A1A79387775 /* EBCardCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
-				7738C569BBF4EDD084F9086B42A8C33D /* Frameworks */,
+				EE0AD8B9C5B96AE7CEBEF07F810F21CC /* EBCardCollectionViewLayout.h */,
+				84B7188A2CC8F24772953226C5A5E49E /* EBCardCollectionViewLayout.m */,
+				82015FBB40E61F0FF547A1529E34282A /* Support Files */,
 			);
-			path = GoogleNetworkingUtilities;
+			path = EBCardCollectionViewLayout;
 			sourceTree = "<group>";
 		};
-		8ABF3109B45A21BE19EEA51FC42A019A /* Frameworks */ = {
+		86065FA49A71D9E7A7982BE7617AF58B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AF15B8AB12FC8ED6940938CB09B135C4 /* libGoogleAnalytics.a */,
+				B036A7307A837AAA661726C86AA0A40C /* FLKAutoLayout.xcconfig */,
+				5E7A33F333CDAC485C1DB66A383A5156 /* FLKAutoLayout-dummy.m */,
+				1238531D21B0CDB31078593D1841B7B6 /* FLKAutoLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FLKAutoLayout";
+			sourceTree = "<group>";
+		};
+		89178D8F3E2C9CFA2F451484818E91C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B207EB9ED023D62BF1B030E4AF6593F /* libGoogleAnalytics.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8BD20146C3CC6078932EC90FF4EAB3CB /* GoogleInterchangeUtilities */ = {
+		923B1BFFA58554F496D34A29D74C8B99 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				2FBA1490520E3E8CE3B877E84F346116 /* Frameworks */,
+				BEA028A1187CF78EC5A26CA7585003EC /* Frameworks */,
 			);
-			path = GoogleInterchangeUtilities;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		97C987D336A34A9D95ECF87E9824E867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58563F2E93348B9F8750E7DC9883C05B /* GGLCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		992C378671CC7F979407985771A3D0FC /* iOS */ = {
@@ -627,15 +623,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		AD9BEE23E4B1F52321CE704908DCFD68 /* Support Files */ = {
+		A18B50E87AEA57CD939A666FFB0EFEA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5F0924F42DACDD5F9788F0AFE828606 /* EBCardCollectionViewLayout.xcconfig */,
-				B0777D1761E1BA08E7C13B44A60E146A /* EBCardCollectionViewLayout-dummy.m */,
-				CEE51276B3D9100D8DF544A75D5A004A /* EBCardCollectionViewLayout-prefix.pch */,
+				4365AAA8BE96E150089620F4EB90936A /* FirebaseInstanceID.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/EBCardCollectionViewLayout";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7784939BEE0967A35471684E3FF9C5E /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				BAEA049EF4D4E2602F3CEDF0A750D23E /* Analytics */,
+				7D5655055659522F8B63D3F33D9BFEB3 /* Core */,
+			);
+			path = Google;
 			sourceTree = "<group>";
 		};
 		AF7E778FE644148C07785621442F460A /* Targets Support Files */ = {
@@ -646,110 +648,129 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B337DB4212FDCE77A9BC14F907FA3AD8 /* MSCellAccessory */ = {
+		BAEA049EF4D4E2602F3CEDF0A750D23E /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				7A20E4E7FCE542C3F789FC18A882DFF2 /* MSCellAccessory.h */,
-				5D8E9682AA83F767C72D52AC97DD4B01 /* MSCellAccessory.m */,
-				576B5331CCADD67E406BCD319E38BF3E /* UIView+AccessViewController.h */,
-				07E73B0143E55FB654D6941F5D875EC6 /* UIView+AccessViewController.m */,
-				1BF70255C3B34286AF253916FDD7CB49 /* Support Files */,
+				339DA1E0F1B46F6336A52B069F325688 /* Analytics.h */,
+				D0F7B60D7D9EC5F74CEF98354CDFEA5F /* Frameworks */,
 			);
-			path = MSCellAccessory;
+			name = Analytics;
 			sourceTree = "<group>";
 		};
-		B94C2AD5690A58572F296A7C30F3EA92 /* Core */ = {
+		BEA028A1187CF78EC5A26CA7585003EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04E7A162992BEC278873553E35A85C25 /* DDAbstractDatabaseLogger.h */,
-				72E843212AB75EF1E32B25EFB942667B /* DDAbstractDatabaseLogger.m */,
-				8CC73F5B590506B7874EE779A8F991EB /* DDASLLogCapture.h */,
-				904640FB1DBAECFBBF18C0E875A1E12A /* DDASLLogCapture.m */,
-				3EFCA20980DFEA951BF6C333502B1074 /* DDASLLogger.h */,
-				27A4A0D68D71DEF1DF37606BCE86E460 /* DDASLLogger.m */,
-				FFF1AEF2703DBD373033F63D7BDBDA90 /* DDAssertMacros.h */,
-				A9B63AB4DFFF83EF02BA9F0B4F4C53BD /* DDFileLogger.h */,
-				A89762DF1DEA03276372ABEAE294FE15 /* DDFileLogger.m */,
-				EED209F5DF14614B45871799EFF28C91 /* DDLegacyMacros.h */,
-				2B64FF73FB43BB25B44943FEE52626BA /* DDLog.h */,
-				34C67724FE6CB39F034AB99A2F7FB550 /* DDLog.m */,
-				2CF3E585FF14C0310E57C9EE146E6360 /* DDLog+LOGV.h */,
-				09DF4A0616FDBDC8D73B47842F9CF59C /* DDLogMacros.h */,
-				16048E34AA4312F1EA9179D70C4CEDDA /* DDTTYLogger.h */,
-				F6C3FC0E0FF0D6EFBE4F9DA67CFC5AAE /* DDTTYLogger.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		D566DB87CE8307A91A3F20343C35A7F1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6691F40FFF79F3B09C762338E9ECC57B /* GoogleUtilities.framework */,
+				3183B922DE5457E2587EE9F85938700D /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D86EC7F1CD8A11A966D8D6211D698211 /* Support Files */ = {
+		D0E35D3C3C75653145A550907E1BD08C /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				D3B812279112BA198884D6A9C57E86AC /* FLKAutoLayout.xcconfig */,
-				1BDAD51BD903EE77FAEC753DCFA106D5 /* FLKAutoLayout-dummy.m */,
-				7D2E8A4FA1F742B5A52175A55505BDFB /* FLKAutoLayout-prefix.pch */,
+				2F50821D13AC5AB6559D3612F738694E /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		D0F7B60D7D9EC5F74CEF98354CDFEA5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F56199141C910D24362F2676A80D1078 /* GGLAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8224628ED075FB01898902915139710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22A368F1334979D84847B9F7B4A1BD0A /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E268DB7783AD1477820846E3ABF88E7D /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				760E4A8BDC81796467F7DFD178DD6A56 /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		ED371A6CB12DCE688B9856424C81D985 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8E3D0D63A4A391EA74A372B963F0C9E /* MSCellAccessory.xcconfig */,
+				4958A07E8787C3A5C48D7D182D58DD47 /* MSCellAccessory-dummy.m */,
+				EA971745783EB4732330C0AD33B4B266 /* MSCellAccessory-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/FLKAutoLayout";
+			path = "../Target Support Files/MSCellAccessory";
 			sourceTree = "<group>";
 		};
-		DA71C0239C0E8119D020FBA5B521BA28 /* GoogleAnalytics */ = {
+		F319E4B3B3855DC82D00D8483D00164A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A10A425D59440BDB6A242829D1AD03EB /* GAI.h */,
-				1C4C80A216C60CC6B32DE86F95C7D3CA /* GAIDictionaryBuilder.h */,
-				B74D1CF9BBA717BAF2C45119A99D14EA /* GAIEcommerceFields.h */,
-				708AEA7D7C1A25BA66EFDD2206569B05 /* GAIEcommerceProduct.h */,
-				26CE6D24B245323CC0965F199455A4B0 /* GAIEcommerceProductAction.h */,
-				3028F6269B3D88D1C84316BF9A0F66B7 /* GAIEcommercePromotion.h */,
-				DD1D28BDAE9E4C06CA88F9CA91ED56B8 /* GAIFields.h */,
-				FB3EFEB84D095C558F84C3C1B14C3138 /* GAILogger.h */,
-				E8EA3B7B4909A3AB0049D01000FD7651 /* GAITrackedViewController.h */,
-				1F5B9783519B3DB87AB317C72198088C /* GAITracker.h */,
-				8ABF3109B45A21BE19EEA51FC42A019A /* Frameworks */,
+				DFDC81062D478479983C0CFF68663162 /* CocoaLumberjack.xcconfig */,
+				49B2F25D679F033D5AE5138B387CA878 /* CocoaLumberjack-dummy.m */,
+				74209FE39DF050F0B912AFCE3079D8A0 /* CocoaLumberjack-prefix.pch */,
 			);
-			path = GoogleAnalytics;
+			name = "Support Files";
+			path = "../Target Support Files/CocoaLumberjack";
 			sourceTree = "<group>";
 		};
-		E7766BB643DA670AC6207A51B85EA497 /* Frameworks */ = {
+		F4F9A85AE261B669863D1A09BBDADC15 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				399FAF4B8F4B4ED78A5A9422A624F07D /* libGGLAnalytics.a */,
+				B81737C905AF4FC3BA93125EF8049528 /* M13ProgressSuite.xcconfig */,
+				812E8BB1FDC4CB5FFA48F3E407633D75 /* M13ProgressSuite-dummy.m */,
+				E6D1D2CF97EFFECDFD459B62E29AB564 /* M13ProgressSuite-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/M13ProgressSuite";
 			sourceTree = "<group>";
 		};
-		F5A11E097F2F2471B428B920D69FB7A9 /* Frameworks */ = {
+		F8E4DA1E9138D2C05C596B859819D8DA /* CocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
-				857A0D6C2F50982BE559B4A69EF08DE0 /* libGGLCore.a */,
+				FB6009396F7FD8DC2029D506B5DAB39B /* Core */,
+				81F9E25D5A7CD1958394BE75C6E33E07 /* Default */,
+				55A4854EF90C0601AE29A2F246F64724 /* Extensions */,
+				F319E4B3B3855DC82D00D8483D00164A /* Support Files */,
 			);
-			name = Frameworks;
+			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
-		FA357BD8093EDBC7CE6DCC6A6B5393A9 /* EBCardCollectionViewLayout */ = {
+		FB577CE1B2123F0700F3E44032409C44 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				AD52ED77B18373101086E17BAD34ED97 /* EBCardCollectionViewLayout.h */,
-				BE01023F668C640103BD3DB19C38703E /* EBCardCollectionViewLayout.m */,
-				AD9BEE23E4B1F52321CE704908DCFD68 /* Support Files */,
+				14CD8BC1BCF354A4EB837D068F18BC97 /* FIRInstanceID.h */,
+				A18B50E87AEA57CD939A666FFB0EFEA9 /* Frameworks */,
 			);
-			path = EBCardCollectionViewLayout;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		FB37F968C9E615CE64C99B8CC2B1E1DA /* GoogleUtilities */ = {
+		FB6009396F7FD8DC2029D506B5DAB39B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D566DB87CE8307A91A3F20343C35A7F1 /* Frameworks */,
+				43CE526E60AE895662E7D6293D380252 /* DDAbstractDatabaseLogger.h */,
+				A40D1BF615CCE067BC0EF98C65A8475A /* DDAbstractDatabaseLogger.m */,
+				45921E2E326B3D451F38FCA647430C73 /* DDASLLogCapture.h */,
+				E73DC05277BB5FE9F2D1AA361D9392E4 /* DDASLLogCapture.m */,
+				81E126BCF602177C57D1CBB4DDE201A2 /* DDASLLogger.h */,
+				AA74033EACC64890361B4595F8761D2A /* DDASLLogger.m */,
+				59124335561054BC9B542DB6E387EE04 /* DDAssertMacros.h */,
+				FB9B566A6668E23B1A5EEB5215A32CAB /* DDFileLogger.h */,
+				2FC835DC518B10CDEA42AD9FFF5A2BBD /* DDFileLogger.m */,
+				2C69B3166E838C96F56FE0D279E5AFB5 /* DDLegacyMacros.h */,
+				A3E1D67D5DD52160C676EBA37A4A7846 /* DDLog.h */,
+				E0E3E7A04C40A86E198C7EF9FE6E0653 /* DDLog.m */,
+				3F5DAD59F8DC5D20D5E8905D0A23500A /* DDLog+LOGV.h */,
+				DA32E2BF806780F6FE76D9D046001816 /* DDLogMacros.h */,
+				32B252DA34A57E35E7044C5BF1452A51 /* DDTTYLogger.h */,
+				EF3AC0ABCAAFC54B748F52F7A1B2A031 /* DDTTYLogger.m */,
 			);
-			path = GoogleUtilities;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		FC51CCCE7ADD2E2A8F1F6F84B3C2C48C /* Pods-combatflows */ = {
@@ -765,17 +786,6 @@
 			);
 			name = "Pods-combatflows";
 			path = "Target Support Files/Pods-combatflows";
-			sourceTree = "<group>";
-		};
-		FCFFB935A2D12CD2A143BB26AD4F3420 /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				B94C2AD5690A58572F296A7C30F3EA92 /* Core */,
-				25189119DAFAEF3BB7B7084C8BE293E4 /* Default */,
-				49859C1808E88B0B018DC807A9DFB224 /* Extensions */,
-				651C51FA266E69430D5C2B68FE7B8C2B /* Support Files */,
-			);
-			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -799,6 +809,32 @@
 				3DDD0FB94D61AB71C8F5C727EC7A0BD9 /* DDLogMacros.h in Headers */,
 				6475050C8BA464772209BD6AF03F1EB1 /* DDMultiFormatter.h in Headers */,
 				5DCBA219BC81D9190F11EE56F93BB908 /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41C683AEC09BE772850F993B7E3A5952 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD490472900F45D114E7FBCE26BD0415 /* M13ProgressConsole.h in Headers */,
+				013C1AEAE9816CD99FC1ABAF02B04D5F /* M13ProgressHUD.h in Headers */,
+				0580F5714616A921B2D011E0E9D42436 /* M13ProgressView.h in Headers */,
+				223A224F4E79C92CF8654DB96C6F91A0 /* M13ProgressViewBar.h in Headers */,
+				F84376092EFAAE86497FA3D43ED3A1A5 /* M13ProgressViewBorderedBar.h in Headers */,
+				18BD222ECB12A38EB0CC72E5A702F59D /* M13ProgressViewFilteredImage.h in Headers */,
+				CF6C345F3A91DC14BB2E1D47B969993F /* M13ProgressViewImage.h in Headers */,
+				69B87A6847179262059E491502FF74E1 /* M13ProgressViewLetterpress.h in Headers */,
+				474AFE7ECE13765FE4A50B32E2CB5B8E /* M13ProgressViewMetro.h in Headers */,
+				37EA0F98165CAB506FB6FA51E90B2EEC /* M13ProgressViewMetroDotPolygon.h in Headers */,
+				EFC45E63872A5E0EAA9022766F24B2B9 /* M13ProgressViewPie.h in Headers */,
+				82A64514CF49BF44148473065D2945FA /* M13ProgressViewRadiative.h in Headers */,
+				7D5F7996BDE87216BDE03FBC1FDDF4A2 /* M13ProgressViewRing.h in Headers */,
+				9A7F205888E63FB3DC9DAAC9D8231DD5 /* M13ProgressViewSegmentedBar.h in Headers */,
+				41A9C33CFE55C456AE8F2E4035F83128 /* M13ProgressViewSegmentedRing.h in Headers */,
+				4A216B69E170A9B6406FFE6A9EA8E877 /* M13ProgressViewStripedBar.h in Headers */,
+				D755096DA36C0A62BD6E7B0F5861525E /* UIApplication+M13ProgressSuite.h in Headers */,
+				9E58A90A4D6CCD9093A9A293EDD95D4D /* UIImage+ImageEffects.h in Headers */,
+				7EB34665934E0505AC1DEE17760F9565 /* UINavigationController+M13ProgressViewBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,31 +867,6 @@
 			files = (
 				12C3F601EE0BA8F98463D3F7C07AB38E /* MSCellAccessory.h in Headers */,
 				62D300DAE7EF376D4B7D543E899F3A2A /* UIView+AccessViewController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4EC806F148B722E9AB48BFD24195B11 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF0DB46592DA9D286DE59E7AA22B5EBA /* M13ProgressConsole.h in Headers */,
-				2C44B9E3010F02B8D8C988292820D593 /* M13ProgressHUD.h in Headers */,
-				18FF87C2C63006920D46AAF6E67FFD01 /* M13ProgressView.h in Headers */,
-				8BE95CE9ED6A637781EE78DD496AE3C7 /* M13ProgressViewBar.h in Headers */,
-				AF62128C5B3CF6CB2E44DABB839671BD /* M13ProgressViewBorderedBar.h in Headers */,
-				E925FEBC717BFC3170173E6516648636 /* M13ProgressViewFilteredImage.h in Headers */,
-				543F60AA0D0CA409317EAEE7A3DADA58 /* M13ProgressViewImage.h in Headers */,
-				97CCC91C44FC9A3DF8FFBB57987BAB4D /* M13ProgressViewLetterpress.h in Headers */,
-				C5126545B5CECFD656EA68E06CDA213F /* M13ProgressViewMetro.h in Headers */,
-				CE6B3B1FD8F5F46F12A7BCE018448557 /* M13ProgressViewMetroDotPolygon.h in Headers */,
-				C063BFD8D6AD567B74553CD38F5267EE /* M13ProgressViewPie.h in Headers */,
-				9D237799FF23B25A644C56A96A3B8F57 /* M13ProgressViewRadiative.h in Headers */,
-				A15369A817C264175618192E4B8E35D9 /* M13ProgressViewRing.h in Headers */,
-				29D7BF1D36F5397105AE45855F00562F /* M13ProgressViewSegmentedBar.h in Headers */,
-				31E6ED85CA7EBDCC3124DA6D3858A3A5 /* M13ProgressViewSegmentedRing.h in Headers */,
-				20E923848B6CD7FF37F4038472C47CCC /* M13ProgressViewStripedBar.h in Headers */,
-				6172B7FF60348B4F36A4CA67D3319CCE /* UIImage+ImageEffects.h in Headers */,
-				68CF44C68ACC58310D4671FF0AAD3542 /* UINavigationController+M13ProgressViewBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,23 +945,6 @@
 			productReference = 4ED30BF97128D8E2945080B21E311B59 /* libPods-combatflows.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D00FAD2C71C365194221F7781D5FB165 /* M13ProgressSuite */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D9388845C42A736901306F71C8502A44 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */;
-			buildPhases = (
-				97CFA1C77ACF869DB1E8E3471E80006D /* Sources */,
-				726E9E5DE4EE5CAAA05FC27914DBC8F6 /* Frameworks */,
-				F4EC806F148B722E9AB48BFD24195B11 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = M13ProgressSuite;
-			productName = M13ProgressSuite;
-			productReference = CF1E127B44C50D942894DEABA1A1B570 /* libM13ProgressSuite.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		D5E6473B93C57DC39E091DF59D44DEC3 /* MSCellAccessory */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4D7E97186F90525FCA4EC020EB992FC /* Build configuration list for PBXNativeTarget "MSCellAccessory" */;
@@ -966,6 +960,23 @@
 			name = MSCellAccessory;
 			productName = MSCellAccessory;
 			productReference = 0A2322167DB7AE58782AB0F4422DBEF4 /* libMSCellAccessory.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EDD9D7EC8FCD6EF30EADD502374D8A81 /* M13ProgressSuite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBCD518F0DED99EEDAD60640C2BE1ACF /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */;
+			buildPhases = (
+				75D1DAE1B62945BC7CC85F55FBAD4DA9 /* Sources */,
+				B3D8EB063CB2EE7C1D94FE8620673E66 /* Frameworks */,
+				41C683AEC09BE772850F993B7E3A5952 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = M13ProgressSuite;
+			productName = M13ProgressSuite;
+			productReference = CF1E127B44C50D942894DEABA1A1B570 /* libM13ProgressSuite.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -992,7 +1003,7 @@
 				12E2BC28C62976C425F4B71C2723F0B1 /* CocoaLumberjack */,
 				2932A481A5F71F19C474862B4365D5F9 /* EBCardCollectionViewLayout */,
 				6847C6CB33DBF8940D3CDE909D94E97A /* FLKAutoLayout */,
-				D00FAD2C71C365194221F7781D5FB165 /* M13ProgressSuite */,
+				EDD9D7EC8FCD6EF30EADD502374D8A81 /* M13ProgressSuite */,
 				D5E6473B93C57DC39E091DF59D44DEC3 /* MSCellAccessory */,
 				A87F892C9E1ACADB1FAEE12321BEE16A /* Pods-combatflows */,
 			);
@@ -1024,6 +1035,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75D1DAE1B62945BC7CC85F55FBAD4DA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F391FD41A496733E18BF6D79D192AE58 /* M13ProgressConsole.m in Sources */,
+				9BE13463953A51FC60DF2CE0832E9BD2 /* M13ProgressHUD.m in Sources */,
+				32169C242E172EC6FD1D25D8487EEE6B /* M13ProgressSuite-dummy.m in Sources */,
+				5F756DA4C1394018AD8A9C7516D3C795 /* M13ProgressView.m in Sources */,
+				94B282214057916E9E525B8AD2AAF722 /* M13ProgressViewBar.m in Sources */,
+				3691A45BCF3F451B7837B8596F9981DD /* M13ProgressViewBorderedBar.m in Sources */,
+				11BE5E795B30A3153E53AE3CA76D8502 /* M13ProgressViewFilteredImage.m in Sources */,
+				8F085367B45ADE3007CFDDAEDBE3DB4E /* M13ProgressViewImage.m in Sources */,
+				C96AB23FC50A5538211FC2DFFC88C6E0 /* M13ProgressViewLetterpress.m in Sources */,
+				69D94FD37E73AB7AC0523FE961BE3B68 /* M13ProgressViewMetro.m in Sources */,
+				472311F935ADFBD69D0E80DB7598F049 /* M13ProgressViewMetroDotPolygon.m in Sources */,
+				AAF27DA76D16E79869B878279C938681 /* M13ProgressViewPie.m in Sources */,
+				2E8046017DCBC71B9BE9E4FB9300B1E6 /* M13ProgressViewRadiative.m in Sources */,
+				BECEFFADF1C7445309CC7DC99FB5A0F4 /* M13ProgressViewRing.m in Sources */,
+				927C55BBB3EBD3A3B717F1C36B76BA9F /* M13ProgressViewSegmentedBar.m in Sources */,
+				8F3FF3A5E105F5C1173C1BC3D72B8E44 /* M13ProgressViewSegmentedRing.m in Sources */,
+				28CD6700CD5C5DB6A516A54596784515 /* M13ProgressViewStripedBar.m in Sources */,
+				6AB2F645638125BCD8CCE9AE7E3B23C2 /* UIApplication+M13ProgressSuite.m in Sources */,
+				C09E0C3A2F1D665EFEB114898F7FDFE6 /* UIImage+ImageEffects.m in Sources */,
+				566EE0413C87A7776D72B18D0421C568 /* UINavigationController+M13ProgressViewBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		896BFDD81CD617BCCE12E7FCD204E6D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1038,32 +1076,6 @@
 				D70BDFA09F4803DCFEAD7AF5DFE21C6A /* DDLog.m in Sources */,
 				E1ED34DB49C6A05D740B8425F88CEC20 /* DDMultiFormatter.m in Sources */,
 				BF525D162B9ABC5DFA69FB7A8779F76E /* DDTTYLogger.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		97CFA1C77ACF869DB1E8E3471E80006D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4533E83E6E6A720707AD1267F6A30286 /* M13ProgressConsole.m in Sources */,
-				5DC93A20CD4E0F439A6E5963A3E1A72E /* M13ProgressHUD.m in Sources */,
-				92D5B117B06ED9D5A2EADEBF80AF882B /* M13ProgressSuite-dummy.m in Sources */,
-				22EC43772BD3058CBE6E147A8009C397 /* M13ProgressView.m in Sources */,
-				2F117A5AEB1491544A8C1C66E62C13D8 /* M13ProgressViewBar.m in Sources */,
-				8ECCDB1198C3F16164F59B534346F740 /* M13ProgressViewBorderedBar.m in Sources */,
-				41B6B2C84D4B17FAD7BEA419413CECD9 /* M13ProgressViewFilteredImage.m in Sources */,
-				AD5E6A394A6F623F4B43FE426144DB84 /* M13ProgressViewImage.m in Sources */,
-				20420055AE1CE927B41F2B67940868D8 /* M13ProgressViewLetterpress.m in Sources */,
-				8F1332A855A85E064F33577E50C3FD6C /* M13ProgressViewMetro.m in Sources */,
-				D468D4FCCC68E826234F8773F054AE1A /* M13ProgressViewMetroDotPolygon.m in Sources */,
-				ADCEADBAD45F19043D8AD943ED2309C1 /* M13ProgressViewPie.m in Sources */,
-				C78522D2BF40A0D63AF1E82AE3794486 /* M13ProgressViewRadiative.m in Sources */,
-				2CE305E1FE156DC47EFEE19E1627468E /* M13ProgressViewRing.m in Sources */,
-				99F58944C99416FD2FB78BC00ABD4515 /* M13ProgressViewSegmentedBar.m in Sources */,
-				ED0A07B87A454F37805C13F6F1E4E239 /* M13ProgressViewSegmentedRing.m in Sources */,
-				30FEA38ACD1B05873E6785460C8C1439 /* M13ProgressViewStripedBar.m in Sources */,
-				A75A5AAF11DF75DE970C76E405B4A5A2 /* UIImage+ImageEffects.m in Sources */,
-				47E6E4C72F26C154AE8B0FAF5E2F9838 /* UINavigationController+M13ProgressViewBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,7 +1109,7 @@
 		73E2E88A4D23FF38EC129DC3FC6DB87A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = M13ProgressSuite;
-			target = D00FAD2C71C365194221F7781D5FB165 /* M13ProgressSuite */;
+			target = EDD9D7EC8FCD6EF30EADD502374D8A81 /* M13ProgressSuite */;
 			targetProxy = 82E9723FD2832CADC8BC3AD8EF77E94A /* PBXContainerItemProxy */;
 		};
 		9B908D5995AA1CB7E1C88646706FB976 /* PBXTargetDependency */ = {
@@ -1123,7 +1135,7 @@
 /* Begin XCBuildConfiguration section */
 		02BBC1BF5461C0A9554D01279FB73772 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3B812279112BA198884D6A9C57E86AC /* FLKAutoLayout.xcconfig */;
+			baseConfigurationReference = B036A7307A837AAA661726C86AA0A40C /* FLKAutoLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1144,7 +1156,7 @@
 		};
 		03F318BC31B676E2FA683333132060AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3B812279112BA198884D6A9C57E86AC /* FLKAutoLayout.xcconfig */;
+			baseConfigurationReference = B036A7307A837AAA661726C86AA0A40C /* FLKAutoLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1228,7 +1240,7 @@
 		};
 		4D0A2A50D3C8AB164C03870D03F5227C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD16B4C4A4ACA47A31A34DF2FA2A27AB /* CocoaLumberjack.xcconfig */;
+			baseConfigurationReference = DFDC81062D478479983C0CFF68663162 /* CocoaLumberjack.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1249,7 +1261,7 @@
 		};
 		5695DDBEECE1B9FE0848C71FA88099D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E73C1BA07103E58B5139040ED2DDA19 /* MSCellAccessory.xcconfig */;
+			baseConfigurationReference = F8E3D0D63A4A391EA74A372B963F0C9E /* MSCellAccessory.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1327,30 +1339,9 @@
 			};
 			name = Release;
 		};
-		7DA9B1D2440B20B74E696A04A0E2762F /* Release */ = {
+		991E432FCD117B5DED804976AC8A1946 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5E57615564AB6823C2E7DCBB9EFEE5E /* M13ProgressSuite.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/M13ProgressSuite/M13ProgressSuite-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		8AB6052FEBDFF3E21DC90BD8406EAD69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5E57615564AB6823C2E7DCBB9EFEE5E /* M13ProgressSuite.xcconfig */;
+			baseConfigurationReference = B81737C905AF4FC3BA93125EF8049528 /* M13ProgressSuite.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1371,7 +1362,7 @@
 		};
 		9DA24749DF6E3148CECD082E1E53D336 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E73C1BA07103E58B5139040ED2DDA19 /* MSCellAccessory.xcconfig */;
+			baseConfigurationReference = F8E3D0D63A4A391EA74A372B963F0C9E /* MSCellAccessory.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1392,7 +1383,7 @@
 		};
 		A2AAF57E49BCD63F54E5009D6EE4ACB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5F0924F42DACDD5F9788F0AFE828606 /* EBCardCollectionViewLayout.xcconfig */;
+			baseConfigurationReference = 01707CAA8C6444554206D4A96D85CDFC /* EBCardCollectionViewLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1411,9 +1402,30 @@
 			};
 			name = Debug;
 		};
+		A3B6EE200E2DF1B38A88269A32F4EA15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81737C905AF4FC3BA93125EF8049528 /* M13ProgressSuite.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/M13ProgressSuite/M13ProgressSuite-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CDADB525FA663B294E9384352DBDABFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD16B4C4A4ACA47A31A34DF2FA2A27AB /* CocoaLumberjack.xcconfig */;
+			baseConfigurationReference = DFDC81062D478479983C0CFF68663162 /* CocoaLumberjack.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1434,7 +1446,7 @@
 		};
 		FF7753958810DCB7424575482621EB02 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5F0924F42DACDD5F9788F0AFE828606 /* EBCardCollectionViewLayout.xcconfig */;
+			baseConfigurationReference = 01707CAA8C6444554206D4A96D85CDFC /* EBCardCollectionViewLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1492,15 +1504,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9388845C42A736901306F71C8502A44 /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8AB6052FEBDFF3E21DC90BD8406EAD69 /* Debug */,
-				7DA9B1D2440B20B74E696A04A0E2762F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E0C8BB684C9CCC379207FFA69ED0D571 /* Build configuration list for PBXNativeTarget "CocoaLumberjack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1515,6 +1518,15 @@
 			buildConfigurations = (
 				5B737B6030340BA9C6D55DBDD16E58A4 /* Debug */,
 				421B29B639F6DE2422CA14572557BFE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBCD518F0DED99EEDAD60640C2BE1ACF /* Build configuration list for PBXNativeTarget "M13ProgressSuite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				991E432FCD117B5DED804976AC8A1946 /* Debug */,
+				A3B6EE200E2DF1B38A88269A32F4EA15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
