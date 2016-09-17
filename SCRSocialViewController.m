@@ -97,7 +97,7 @@
 
 - (void)doFollow:(ACAccount *)account
 {
-    
+    // http://stackoverflow.com/questions/18664519/acaccountstore-trying-to-follow-on-twitter-410-error
     NSDictionary *parameters = @{@"screen_name" : @"combatmma",
                                  @"follow" : @"true"};
     SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/friendships/create.json"] parameters:parameters];

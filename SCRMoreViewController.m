@@ -158,9 +158,9 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
             self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Restore Purchases", @"Alert view controller title") message:message preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
             UIAlertAction *actionRestore = [UIAlertAction actionWithTitle:NSLocalizedString(@"Restore", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-
-                [[IAHInAppPurchaseHelper sharedInstance] restoreDownloads];
-
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    [[IAHInAppPurchaseHelper sharedInstance] restoreDownloads];
+                });
             }];
             [self.alertController addAction:actionCancel];
             [self.alertController addAction:actionRestore];

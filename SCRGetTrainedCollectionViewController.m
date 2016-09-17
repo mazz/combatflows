@@ -537,7 +537,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
                     [formatter setLocale:bundleProduct.priceLocale];
                     NSString *localPrice = [formatter stringFromNumber:[bundleProduct price]];
                     
-                    NSString *savingsWarning = [NSString stringWithFormat:NSLocalizedString(@"Before you purchase %@, Did you know you can Save 66%% by buying the full Scrappling Bundle at %@?", @""), product.localizedTitle, localPrice];
+                    NSString *savingsWarning = [NSString stringWithFormat:NSLocalizedString(@"Before you purchase %@, Did you know you can Save 66%% by buying the full CombatFlows Bundle at %@?", @""), product.localizedTitle, localPrice];
                     self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Purchase", @"Alert view controller title") message:savingsWarning preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction *actionPurchase = [UIAlertAction actionWithTitle:NSLocalizedString(@"Purchase", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
