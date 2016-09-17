@@ -18,6 +18,7 @@
 #import "UIColor+ILSColor.h"
 #import "M13ProgressViewRing.h"
 #import "UIView+FLKAutoLayout.h"
+#import "UILabel+AutoLayout.h"
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
 #import "SCRSociallAccountsViewController.h"
@@ -35,11 +36,13 @@
 @property (strong, nonatomic) NSArray *players;
 @property (strong, nonatomic) NSDictionary *downloadingItems;
 @property (strong, nonatomic) M13ProgressViewRing *ringProgress;
+@property (strong, nonatomic) UILabel *modalDownloadLabel;
 @property (nonatomic) BOOL viewDidDisappear;
 @property (strong, nonatomic) UIAlertController *alertController;
 @property (strong, nonatomic) SCROverlayTransitioningDelegate *overlayTransitioningDelegate;
 @property (strong, nonatomic) SKProduct *promoContentProduct;
 @property (strong, nonatomic) UIAlertController *endAndCreateAlertController;
+@property (assign) BOOL restoringItems;
 @end
 
 @implementation SCRGetTrainedCollectionViewController
@@ -78,6 +81,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         [self.collectionView setHidden:NO];
         
         [self.ringProgress setHidden:!self.collectionView.hidden];
+        self.modalDownloadLabel.hidden = !self.collectionView.hidden;
     });
 }
 
@@ -107,10 +111,26 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 {
 //    self.fetchingProducts = YES;
     
+//    [self.ringProgress setIndeterminate:YES];
+//    [self.ringProgress setHidden:NO];
+//    [self.collectionView setHidden:YES];
+    [self modalDownloadUI:NSLocalizedString(@"Fetching Content", @"")];
+    [[[IAHInAppPurchaseHelper sharedInstance] productService] fetchProducts];
+}
+
+- (void)doRestoreProducts
+{
+    [self modalDownloadUI:NSLocalizedString(@"Restoring Purchases", @"")];
+}
+
+- (void)modalDownloadUI:(NSString *)message
+{
+    [self.collectionView setHidden:YES];
+
     [self.ringProgress setIndeterminate:YES];
     [self.ringProgress setHidden:NO];
-    [self.collectionView setHidden:YES];
-    [[[IAHInAppPurchaseHelper sharedInstance] productService] fetchProducts];
+    self.modalDownloadLabel.hidden = NO;
+    self.modalDownloadLabel.text = message;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -123,8 +143,12 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         self.viewDidDisappear = NO;
     }
     
-    [self.ringProgress setIndeterminate:YES];
-    [self.ringProgress setHidden:!self.collectionView.hidden];
+    if (self.restoringItems) {
+        [self doRestoreProducts];
+    } else {
+        [self.ringProgress setIndeterminate:YES];
+        [self.ringProgress setHidden:!self.collectionView.hidden];
+    }
 
     [self.navigationController.navigationBar setBarTintColor:UIColor.blackColor];
     self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
@@ -178,6 +202,14 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     self.ringProgress.secondaryColor = UIColor.whiteColor;
     [self.ringProgress setHidden:YES];
     
+    self.modalDownloadLabel = [UILabel newAutoLayoutLabel];
+    [self.view addSubview:self.modalDownloadLabel];
+    [self.modalDownloadLabel alignCenterXWithView:self.view predicate:FLKPredicate(0)];
+    [self.modalDownloadLabel constrainBottomSpaceToView:self.ringProgress predicate:FLKPredicate(-10)];
+    self.modalDownloadLabel.text = @"modalDownloadLabel";
+    self.modalDownloadLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
+    self.modalDownloadLabel.textColor = UIColor.whiteColor;
+    self.modalDownloadLabel.hidden = NO;
     [self doFetchProducts];
     
     // ~~~~~~~~~
@@ -276,6 +308,27 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
         [self presentViewController:alertController animated:YES completion:nil];
     }];
     
+    //IAPHelperRestoreCompletedTransactionsBeginNotification
+    //IAPHelperRestoreCompletedTransactionsFinishedNotification
+    //IAPHelperRestoreCompletedTransactionsFailedNotification
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:IAPHelperRestoreCompletedTransactionsBeginNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.restoringItems = YES;
+        [self doRestoreProducts];
+    }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:IAPHelperRestoreCompletedTransactionsFinishedNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.restoringItems = NO;
+        [self doFetchProducts];
+//        [self updateUIForFetchedProducts:nil];
+    }];
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:IAPHelperRestoreCompletedTransactionsFailedNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.restoringItems = NO;
+        [self doFetchProducts];
+    }];
+
+    self.restoringItems = NO;
     self.downloadingItems = [NSDictionary dictionary];
 
     self.alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"foo", @"Alert view controller title") message:NSLocalizedString(@"initialize me.", @"") preferredStyle:UIAlertControllerStyleAlert];
