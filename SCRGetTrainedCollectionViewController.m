@@ -823,11 +823,11 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
 //    return UIEdgeInsetsMake(-20, 5, 30.0, 5); // top, left, bottom, right
 //}
 //
-//- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-//{
-//    return 0.0;
-//}
-//
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 3.0;
+}
+
 //#pragma mark <UICollectionViewDelegate>
 //
  -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
