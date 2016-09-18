@@ -103,16 +103,18 @@
     SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/friendships/create.json"] parameters:parameters];
     [postRequest setAccount:account];
     [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-        if (!error) {
-            if (urlResponse.statusCode != 200) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (!error) {
+                if (urlResponse.statusCode != 200) {
+                    self.pleaseTryAgainLaterLabel.hidden = NO;
+                }
+                else {
+                    self.followSuccessButton.hidden = NO;
+                }
+            } else {
                 self.pleaseTryAgainLaterLabel.hidden = NO;
             }
-            else {
-                self.followSuccessButton.hidden = NO;
-            }
-        } else {
-            self.pleaseTryAgainLaterLabel.hidden = NO;
-        }
+        });
     }];
 }
 
