@@ -27,6 +27,7 @@
 		2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
 		2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */; };
 		2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */; };
+		2A2311811D8DDEEA001AF67A /* MMADisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2311801D8DDEEA001AF67A /* MMADisclaimerViewController.m */; };
 		2A7FCDD71D8A35AC0079171E /* SCRSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
 		2A8171AC1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719F1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@3x.png */; };
@@ -138,6 +139,8 @@
 		2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAMovieViewController.h; sourceTree = "<group>"; };
 		2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = appintro_sequence_retina4.m4v; path = ../scrappling/scrappling/appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
 		2A18E4931D85EA1E00E71D6E /* combatflows-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "combatflows-Prefix.pch"; sourceTree = "<group>"; };
+		2A23117F1D8DDEEA001AF67A /* MMADisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMADisclaimerViewController.h; path = combatflows/app_base/MMADisclaimerViewController.h; sourceTree = "<group>"; };
+		2A2311801D8DDEEA001AF67A /* MMADisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMADisclaimerViewController.m; path = combatflows/app_base/MMADisclaimerViewController.m; sourceTree = "<group>"; };
 		2A7FCDD51D8A35AC0079171E /* SCRSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSocialViewController.h; sourceTree = "<group>"; };
 		2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSocialViewController.m; sourceTree = "<group>"; };
 		2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "04-combatflow-1-graphicguidebanner@2x.png"; path = "bundled_content/04-combatflow-1-graphicguidebanner@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -369,6 +372,8 @@
 				2A8172231CED5DA400D8364F /* SCRNavigationController.m */,
 				2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */,
 				2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */,
+				2A23117F1D8DDEEA001AF67A /* MMADisclaimerViewController.h */,
+				2A2311801D8DDEEA001AF67A /* MMADisclaimerViewController.m */,
 				2A8171BA1CED5D4500D8364F /* video_player */,
 				2A8171B91CED5D3D00D8364F /* model */,
 				2A8171B81CED5D2D00D8364F /* util */,
@@ -774,6 +779,7 @@
 				2A8172001CED5D6000D8364F /* UIImage+Scaling.m in Sources */,
 				68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */,
 				2A8171DE1CED5D5600D8364F /* THNotifications.m in Sources */,
+				2A2311811D8DDEEA001AF67A /* MMADisclaimerViewController.m in Sources */,
 				2A8171E21CED5D5600D8364F /* THPlayerController.m in Sources */,
 				2A9C777C1CF0EB26006D7068 /* SCRFlowContentViewController.m in Sources */,
 				2A9C775B1CF0EA8D006D7068 /* SCRDedicationViewController.m in Sources */,

@@ -18,6 +18,7 @@
 #import "SCRDedicationViewController.h"
 #import "SCRSocialViewController.h"
 #import "IAHInAppPurchaseHelper.h"
+#import "MMADisclaimerViewController.h"
 
 @interface SCRMoreViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) UITableView *tableView;
@@ -148,6 +149,10 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
     if (indexPath.row == 2) {
         SCRSocialViewController *socialViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSocialViewController"];
         [self.navigationController pushViewController:socialViewController animated:YES];
+    }
+    if (indexPath.row == 3) {
+        MMADisclaimerViewController *disclaimerViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MMADisclaimerViewController"];
+        [self.navigationController pushViewController:disclaimerViewController animated:YES];
     }
     if (indexPath.row == 4) { // Restore downloads
 //        [[IAHInAppPurchaseHelper sharedInstance] restoreDownloads];

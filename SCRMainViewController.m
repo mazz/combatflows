@@ -11,12 +11,14 @@
 #import "SCRGetTrainedViewController.h"
 #import "SCRFavoritesViewController.h"
 #import "SCRMoreViewController.h"
+#import "MMADisclaimerViewController.h"
 
-@interface SCRMainViewController ()
+@interface SCRMainViewController () <MMADisclaimerDelegate>
 @property (weak, nonatomic) IBOutlet UIView *parentView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *mainSegmentedControl;
 @property (strong, nonatomic) NSArray *childViewControllers;
 @property (nonatomic) NSUInteger selectedControllerIndex;
+@property (strong, nonatomic) MMADisclaimerViewController *disclaimerViewController;
 - (IBAction)segmentControlValueChanged:(id)sender;
 @end
 
@@ -57,7 +59,14 @@
     [self.childViewControllers[0] didMoveToParentViewController:self];
 
     _navBarHairlineImageView = [self findHairlineImageViewUnder:self.navigationController.navigationBar];
-
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"kMMAUserDefaultsUserConsentedToApplicationUsageDisclaimer"] == nil) {
+        UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.disclaimerViewController = (MMADisclaimerViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"MMADisclaimerViewController"];
+        self.disclaimerViewController.delegate = self;
+        
+        [self presentViewController:self.disclaimerViewController animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,6 +121,12 @@
     //        [self.childViewControllers[i] view].hidden = YES;
     //    }
     //    [self.childViewControllers[self.flowSegmentedControl.selectedSegmentIndex] view].hidden = NO;
+}
+
+#pragma mark MMADisclaimerDelegate
+
+- (void)disclaimerWasAccepted {
+    [self.disclaimerViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
