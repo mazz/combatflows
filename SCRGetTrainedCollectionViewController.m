@@ -132,22 +132,21 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     self.modalDownloadLabel.hidden = NO;
     self.modalDownloadLabel.text = message;
 }
-
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.viewDidDisappear)
-    {
-        [self setupThumbsPlaybackForTrainingItems:self.trainingItems];
-        [self.collectionView reloadData];
-        self.viewDidDisappear = NO;
-    }
     
     if (self.restoringItems) {
         [self doRestoreProducts];
     } else {
         [self.ringProgress setIndeterminate:YES];
         [self.ringProgress setHidden:!self.collectionView.hidden];
+        if (self.viewDidDisappear)
+        {
+            [self setupThumbsPlaybackForTrainingItems:self.trainingItems];
+            [self.collectionView reloadData];
+            self.viewDidDisappear = NO;
+        }
     }
 
     [self.navigationController.navigationBar setBarTintColor:UIColor.blackColor];
