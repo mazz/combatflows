@@ -22,6 +22,7 @@
 + (UIColor*)scrapplingSeparatorColor;
 + (UIColor*)buyColor;
 + (UIColor*)purchasedColor;
++ (UIColor*)combatFlowsConfetti; // #e9d460
 
 + (UIColor *)colorFromRGB:(int)rgbValue;
 + (UIColor *)colorFromRGBA:(int)rgbaValue;

@@ -118,7 +118,7 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
 
     cell.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16.0];
     cell.titleLabel.text = self.tableData[indexPath.row][@"title"];
-
+    cell.titleLabel.textColor = UIColor.combatFlowsConfetti;
     cell.bodyLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0];
     cell.bodyLabel.text = self.tableData[indexPath.row][@"body"];
     cell.backgroundColor = UIColor.clearColor;

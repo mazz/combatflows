@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.mainSegmentedControl setTintColor:UIColor.whiteColor];
+    [self.mainSegmentedControl setTintColor:UIColor.combatFlowsConfetti];
     self.mainSegmentedControl.selectedSegmentIndex = 0;
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0],

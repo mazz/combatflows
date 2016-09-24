@@ -150,9 +150,9 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     }
 
     [self.navigationController.navigationBar setBarTintColor:UIColor.blackColor];
-    self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
+    self.navigationController.navigationBar.tintColor = UIColor.combatFlowsConfetti;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0],
-                                                                      NSForegroundColorAttributeName:UIColor.whiteColor}];
+                                                                      NSForegroundColorAttributeName:UIColor.combatFlowsConfetti}];
 
 }
 

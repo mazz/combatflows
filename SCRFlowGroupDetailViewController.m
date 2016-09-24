@@ -52,7 +52,7 @@
     self.childViewControllers = [viewControllers copy];
 
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:18.0],
-                                                                      NSForegroundColorAttributeName:UIColor.whiteColor}];
+                                                                      NSForegroundColorAttributeName:UIColor.combatFlowsConfetti}];
     self.navigationItem.title = [[[self.flowGroup name] lowercaseString] capitalizedString];
     self.flowSegmentedControl.selectedSegmentIndex = 0;
     self.selectedControllerIndex = 0;

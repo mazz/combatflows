@@ -65,6 +65,10 @@
     return [UIColor colorWithRed:56.0/255.0 green:171.0/255.0 blue:251.0/255.0 alpha:1.0];
 }
 
++ (UIColor*)combatFlowsConfetti { // #e9d460
+    return [UIColor colorWithRed:233.0/255.0 green:212.0/255.0 blue:96.0/255.0 alpha:1.0];
+}
+
 #pragma mark - Utils
 
 + (UIColor *)colorFromRGB:(int)rgbValue

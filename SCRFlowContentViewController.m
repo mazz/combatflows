@@ -253,7 +253,7 @@ NSUInteger kBannersPerLesson = 2;
             //            cell.bodyLabel.text =
             cell.bodyLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
             cell.bodyLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ Overview", @""), self.flow.name];
-            cell.bodyLabel.textColor = UIColor.whiteColor;
+            cell.bodyLabel.textColor = UIColor.combatFlowsConfetti;
 //            cell.bodyLabel.textAlignment = NSTextAlignmentCenter;
         }
         else if (indexPath.row == 1) {

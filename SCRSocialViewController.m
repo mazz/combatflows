@@ -11,6 +11,7 @@
 #import <Social/Social.h>
 #import "SCRSociallAccountsViewController.h"
 #import "SCROverlayTransitioningDelegate.h"
+#import "UIColor+ILSColor.h"
 
 @interface SCRSocialViewController () <SCRSocialAccountsViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *followUsOnLabel;
@@ -27,6 +28,8 @@
     [super viewDidLoad];
     self.twitterButton.layer.cornerRadius = 9.0;
     self.twitterButton.layer.masksToBounds = YES;
+    
+    self.followUsOnLabel.textColor = UIColor.combatFlowsConfetti;
 }
 
 - (IBAction)followUsOnTwitter:(id)sender {
