@@ -27,6 +27,7 @@
 #import "SCRReachabilityService.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "SCRTrainingItem.h"
+#import "UIColor+ILSColor.h"
 
 #define FLKPredicate(x) [NSString stringWithFormat:@"%d", x]
 
@@ -197,8 +198,8 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     [self.view addSubview:self.ringProgress];
     [self.ringProgress constrainWidth:FLKPredicate(150) height:FLKPredicate(150)];
     [self.ringProgress alignCenterWithView:self.view];
-    self.ringProgress.primaryColor = UIColor.whiteColor;
-    self.ringProgress.secondaryColor = UIColor.whiteColor;
+    self.ringProgress.primaryColor = UIColor.combatFlowsConfetti;
+    self.ringProgress.secondaryColor = UIColor.combatFlowsConfetti;
     [self.ringProgress setHidden:YES];
     
     self.modalDownloadLabel = [UILabel newAutoLayoutLabel];
@@ -207,7 +208,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     [self.modalDownloadLabel constrainBottomSpaceToView:self.ringProgress predicate:FLKPredicate(-10)];
     self.modalDownloadLabel.text = @"modalDownloadLabel";
     self.modalDownloadLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:20.0];
-    self.modalDownloadLabel.textColor = UIColor.whiteColor;
+    self.modalDownloadLabel.textColor = UIColor.combatFlowsConfetti;
     self.modalDownloadLabel.hidden = NO;
     [self doFetchProducts];
     
