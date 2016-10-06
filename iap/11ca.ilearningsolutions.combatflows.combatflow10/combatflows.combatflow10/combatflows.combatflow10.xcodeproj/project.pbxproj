@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A81745F1CEEA67C00D8364F /* 10-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81745C1CEEA67C00D8364F /* 10-combatflow-1-application.m4v */; };
-		2A8174601CEEA67C00D8364F /* 10-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81745D1CEEA67C00D8364F /* 10-combatflow-1-graphicguide.m4v */; };
-		2A8174611CEEA67C00D8364F /* 10-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81745E1CEEA67C00D8364F /* 10-combatflow-1-teaching.m4v */; };
+		682542531DA346AB00845A04 /* 10-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81736C1CEDDEA300D8364F /* 10-combatflow-1-application.m4v */; };
+		682542541DA346AB00845A04 /* 10-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81736D1CEDDEA300D8364F /* 10-combatflow-1-graphicguide.m4v */; };
+		682542551DA346AB00845A04 /* 10-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81736E1CEDDEA300D8364F /* 10-combatflow-1-teaching.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,9 +116,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8174601CEEA67C00D8364F /* 10-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174611CEEA67C00D8364F /* 10-combatflow-1-teaching.m4v in Resources */,
-				2A81745F1CEEA67C00D8364F /* 10-combatflow-1-application.m4v in Resources */,
+				682542551DA346AB00845A04 /* 10-combatflow-1-teaching.m4v in Resources */,
+				682542541DA346AB00845A04 /* 10-combatflow-1-graphicguide.m4v in Resources */,
+				682542531DA346AB00845A04 /* 10-combatflow-1-application.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

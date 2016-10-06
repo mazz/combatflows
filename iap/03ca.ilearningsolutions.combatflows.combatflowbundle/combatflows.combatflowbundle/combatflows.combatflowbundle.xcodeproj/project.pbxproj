@@ -7,54 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A8174CB1CEEA9C300D8364F /* 01-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81749B1CEEA9C300D8364F /* 01-combatflow-1-application.m4v */; };
-		2A8174CC1CEEA9C300D8364F /* 01-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81749C1CEEA9C300D8364F /* 01-combatflow-1-graphicguide.m4v */; };
-		2A8174CD1CEEA9C300D8364F /* 01-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81749D1CEEA9C300D8364F /* 01-combatflow-1-teaching.m4v */; };
-		2A8174CE1CEEA9C300D8364F /* 02-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81749E1CEEA9C300D8364F /* 02-combatflow-1-application.m4v */; };
-		2A8174CF1CEEA9C300D8364F /* 02-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81749F1CEEA9C300D8364F /* 02-combatflow-1-graphicguide.m4v */; };
-		2A8174D01CEEA9C300D8364F /* 02-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A01CEEA9C300D8364F /* 02-combatflow-1-teaching.m4v */; };
-		2A8174D11CEEA9C300D8364F /* 03-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A11CEEA9C300D8364F /* 03-combatflow-1-application.m4v */; };
-		2A8174D21CEEA9C300D8364F /* 03-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A21CEEA9C300D8364F /* 03-combatflow-1-graphicguide.m4v */; };
-		2A8174D31CEEA9C300D8364F /* 03-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A31CEEA9C300D8364F /* 03-combatflow-1-teaching.m4v */; };
-		2A8174D41CEEA9C300D8364F /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A41CEEA9C300D8364F /* 04-combatflow-1-application.m4v */; };
-		2A8174D51CEEA9C300D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A51CEEA9C300D8364F /* 04-combatflow-1-graphicguide.m4v */; };
-		2A8174D61CEEA9C300D8364F /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A61CEEA9C300D8364F /* 04-combatflow-1-teaching.m4v */; };
-		2A8174D71CEEA9C300D8364F /* 05-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A71CEEA9C300D8364F /* 05-combatflow-1-application.m4v */; };
-		2A8174D81CEEA9C300D8364F /* 05-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A81CEEA9C300D8364F /* 05-combatflow-1-graphicguide.m4v */; };
-		2A8174D91CEEA9C300D8364F /* 05-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174A91CEEA9C300D8364F /* 05-combatflow-1-teaching.m4v */; };
-		2A8174DA1CEEA9C300D8364F /* 06-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AA1CEEA9C300D8364F /* 06-combatflow-1-application.m4v */; };
-		2A8174DB1CEEA9C300D8364F /* 06-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AB1CEEA9C300D8364F /* 06-combatflow-1-graphicguide.m4v */; };
-		2A8174DC1CEEA9C300D8364F /* 06-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AC1CEEA9C300D8364F /* 06-combatflow-1-teaching.m4v */; };
-		2A8174DD1CEEA9C300D8364F /* 07-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AD1CEEA9C300D8364F /* 07-combatflow-1-application.m4v */; };
-		2A8174DE1CEEA9C300D8364F /* 07-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AE1CEEA9C300D8364F /* 07-combatflow-1-graphicguide.m4v */; };
-		2A8174DF1CEEA9C300D8364F /* 07-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174AF1CEEA9C300D8364F /* 07-combatflow-1-teaching.m4v */; };
-		2A8174E01CEEA9C300D8364F /* 08-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B01CEEA9C300D8364F /* 08-combatflow-1-application.m4v */; };
-		2A8174E11CEEA9C300D8364F /* 08-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B11CEEA9C300D8364F /* 08-combatflow-1-graphicguide.m4v */; };
-		2A8174E21CEEA9C300D8364F /* 08-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B21CEEA9C300D8364F /* 08-combatflow-1-teaching.m4v */; };
-		2A8174E31CEEA9C300D8364F /* 09-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B31CEEA9C300D8364F /* 09-combatflow-1-application.m4v */; };
-		2A8174E41CEEA9C300D8364F /* 09-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B41CEEA9C300D8364F /* 09-combatflow-1-graphicguide.m4v */; };
-		2A8174E51CEEA9C300D8364F /* 09-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B51CEEA9C300D8364F /* 09-combatflow-1-teaching.m4v */; };
-		2A8174E61CEEA9C300D8364F /* 10-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B61CEEA9C300D8364F /* 10-combatflow-1-application.m4v */; };
-		2A8174E71CEEA9C300D8364F /* 10-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B71CEEA9C300D8364F /* 10-combatflow-1-graphicguide.m4v */; };
-		2A8174E81CEEA9C300D8364F /* 10-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B81CEEA9C300D8364F /* 10-combatflow-1-teaching.m4v */; };
-		2A8174E91CEEA9C300D8364F /* 11-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174B91CEEA9C300D8364F /* 11-combatflow-1-application.m4v */; };
-		2A8174EA1CEEA9C300D8364F /* 11-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BA1CEEA9C300D8364F /* 11-combatflow-1-graphicguide.m4v */; };
-		2A8174EB1CEEA9C300D8364F /* 11-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BB1CEEA9C300D8364F /* 11-combatflow-1-teaching.m4v */; };
-		2A8174EC1CEEA9C300D8364F /* 12-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BC1CEEA9C300D8364F /* 12-combatflow-1-application.m4v */; };
-		2A8174ED1CEEA9C300D8364F /* 12-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BD1CEEA9C300D8364F /* 12-combatflow-1-graphicguide.m4v */; };
-		2A8174EE1CEEA9C300D8364F /* 12-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BE1CEEA9C300D8364F /* 12-combatflow-1-teaching.m4v */; };
-		2A8174EF1CEEA9C300D8364F /* 13-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174BF1CEEA9C300D8364F /* 13-combatflow-1-application.m4v */; };
-		2A8174F01CEEA9C300D8364F /* 13-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C01CEEA9C300D8364F /* 13-combatflow-1-graphicguide.m4v */; };
-		2A8174F11CEEA9C300D8364F /* 13-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C11CEEA9C300D8364F /* 13-combatflow-1-teaching.m4v */; };
-		2A8174F21CEEA9C300D8364F /* 14-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C21CEEA9C300D8364F /* 14-combatflow-1-application.m4v */; };
-		2A8174F31CEEA9C300D8364F /* 14-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C31CEEA9C300D8364F /* 14-combatflow-1-graphicguide.m4v */; };
-		2A8174F41CEEA9C300D8364F /* 14-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C41CEEA9C300D8364F /* 14-combatflow-1-teaching.m4v */; };
-		2A8174F51CEEA9C300D8364F /* 15-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C51CEEA9C300D8364F /* 15-combatflow-1-application.m4v */; };
-		2A8174F61CEEA9C300D8364F /* 15-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C61CEEA9C300D8364F /* 15-combatflow-1-graphicguide.m4v */; };
-		2A8174F71CEEA9C300D8364F /* 15-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C71CEEA9C300D8364F /* 15-combatflow-1-teaching.m4v */; };
-		2A8174F81CEEA9C300D8364F /* 16-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C81CEEA9C300D8364F /* 16-combatflow-1-application.m4v */; };
-		2A8174F91CEEA9C300D8364F /* 16-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174C91CEEA9C300D8364F /* 16-combatflow-1-graphicguide.m4v */; };
-		2A8174FA1CEEA9C300D8364F /* 16-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8174CA1CEEA9C300D8364F /* 16-combatflow-1-teaching.m4v */; };
+		682542681DA4A42100845A04 /* 01-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172621CEDDBCD00D8364F /* 01-combatflow-1-application.m4v */; };
+		682542691DA4A42100845A04 /* 01-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172631CEDDBCD00D8364F /* 01-combatflow-1-graphicguide.m4v */; };
+		6825426A1DA4A42100845A04 /* 01-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172641CEDDBCD00D8364F /* 01-combatflow-1-teaching.m4v */; };
+		6825426B1DA4A42100845A04 /* 02-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172651CEDDBCD00D8364F /* 02-combatflow-1-application.m4v */; };
+		6825426C1DA4A42100845A04 /* 02-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172661CEDDBCD00D8364F /* 02-combatflow-1-graphicguide.m4v */; };
+		6825426D1DA4A42100845A04 /* 02-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172671CEDDBCD00D8364F /* 02-combatflow-1-teaching.m4v */; };
+		6825426E1DA4A42100845A04 /* 03-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172681CEDDBCD00D8364F /* 03-combatflow-1-application.m4v */; };
+		6825426F1DA4A42100845A04 /* 03-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172691CEDDBCD00D8364F /* 03-combatflow-1-graphicguide.m4v */; };
+		682542701DA4A42100845A04 /* 03-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726A1CEDDBCD00D8364F /* 03-combatflow-1-teaching.m4v */; };
+		682542711DA4A42100845A04 /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726B1CEDDBCD00D8364F /* 04-combatflow-1-application.m4v */; };
+		682542721DA4A42100845A04 /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726C1CEDDBCD00D8364F /* 04-combatflow-1-graphicguide.m4v */; };
+		682542731DA4A42100845A04 /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726D1CEDDBCD00D8364F /* 04-combatflow-1-teaching.m4v */; };
+		682542741DA4A42100845A04 /* 05-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726E1CEDDBCD00D8364F /* 05-combatflow-1-application.m4v */; };
+		682542751DA4A42100845A04 /* 05-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81726F1CEDDBCD00D8364F /* 05-combatflow-1-graphicguide.m4v */; };
+		682542761DA4A42100845A04 /* 05-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172701CEDDBCD00D8364F /* 05-combatflow-1-teaching.m4v */; };
+		682542771DA4A42100845A04 /* 06-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172711CEDDBCD00D8364F /* 06-combatflow-1-application.m4v */; };
+		682542781DA4A42100845A04 /* 06-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172721CEDDBCD00D8364F /* 06-combatflow-1-graphicguide.m4v */; };
+		682542791DA4A42100845A04 /* 06-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172731CEDDBCD00D8364F /* 06-combatflow-1-teaching.m4v */; };
+		6825427A1DA4A42100845A04 /* 07-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172741CEDDBCD00D8364F /* 07-combatflow-1-application.m4v */; };
+		6825427B1DA4A42100845A04 /* 07-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172751CEDDBCD00D8364F /* 07-combatflow-1-graphicguide.m4v */; };
+		6825427C1DA4A42100845A04 /* 07-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172761CEDDBCD00D8364F /* 07-combatflow-1-teaching.m4v */; };
+		6825427D1DA4A42100845A04 /* 08-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172771CEDDBCD00D8364F /* 08-combatflow-1-application.m4v */; };
+		6825427E1DA4A42100845A04 /* 08-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172781CEDDBCD00D8364F /* 08-combatflow-1-graphicguide.m4v */; };
+		6825427F1DA4A42100845A04 /* 08-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172791CEDDBCD00D8364F /* 08-combatflow-1-teaching.m4v */; };
+		682542801DA4A42100845A04 /* 09-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727A1CEDDBCD00D8364F /* 09-combatflow-1-application.m4v */; };
+		682542811DA4A42100845A04 /* 09-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727B1CEDDBCD00D8364F /* 09-combatflow-1-graphicguide.m4v */; };
+		682542821DA4A42100845A04 /* 09-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727C1CEDDBCD00D8364F /* 09-combatflow-1-teaching.m4v */; };
+		682542831DA4A42100845A04 /* 10-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727D1CEDDBCD00D8364F /* 10-combatflow-1-application.m4v */; };
+		682542841DA4A42100845A04 /* 10-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727E1CEDDBCD00D8364F /* 10-combatflow-1-graphicguide.m4v */; };
+		682542851DA4A42100845A04 /* 10-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81727F1CEDDBCD00D8364F /* 10-combatflow-1-teaching.m4v */; };
+		682542861DA4A42100845A04 /* 11-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172801CEDDBCD00D8364F /* 11-combatflow-1-application.m4v */; };
+		682542871DA4A42100845A04 /* 11-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172811CEDDBCD00D8364F /* 11-combatflow-1-graphicguide.m4v */; };
+		682542881DA4A42100845A04 /* 11-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172821CEDDBCD00D8364F /* 11-combatflow-1-teaching.m4v */; };
+		682542891DA4A42100845A04 /* 12-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172831CEDDBCD00D8364F /* 12-combatflow-1-application.m4v */; };
+		6825428A1DA4A42100845A04 /* 12-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172841CEDDBCD00D8364F /* 12-combatflow-1-graphicguide.m4v */; };
+		6825428B1DA4A42100845A04 /* 12-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172851CEDDBCD00D8364F /* 12-combatflow-1-teaching.m4v */; };
+		6825428C1DA4A42100845A04 /* 13-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172861CEDDBCD00D8364F /* 13-combatflow-1-application.m4v */; };
+		6825428D1DA4A42100845A04 /* 13-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172871CEDDBCD00D8364F /* 13-combatflow-1-graphicguide.m4v */; };
+		6825428E1DA4A42100845A04 /* 13-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172881CEDDBCD00D8364F /* 13-combatflow-1-teaching.m4v */; };
+		6825428F1DA4A42100845A04 /* 14-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172891CEDDBCD00D8364F /* 14-combatflow-1-application.m4v */; };
+		682542901DA4A42100845A04 /* 14-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728A1CEDDBCD00D8364F /* 14-combatflow-1-graphicguide.m4v */; };
+		682542911DA4A42100845A04 /* 14-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728B1CEDDBCD00D8364F /* 14-combatflow-1-teaching.m4v */; };
+		682542921DA4A42100845A04 /* 15-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728C1CEDDBCD00D8364F /* 15-combatflow-1-application.m4v */; };
+		682542931DA4A42100845A04 /* 15-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728D1CEDDBCD00D8364F /* 15-combatflow-1-graphicguide.m4v */; };
+		682542941DA4A42100845A04 /* 15-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728E1CEDDBCD00D8364F /* 15-combatflow-1-teaching.m4v */; };
+		682542951DA4A42100845A04 /* 16-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A81728F1CEDDBCD00D8364F /* 16-combatflow-1-application.m4v */; };
+		682542961DA4A42100845A04 /* 16-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172901CEDDBCD00D8364F /* 16-combatflow-1-graphicguide.m4v */; };
+		682542971DA4A42100845A04 /* 16-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A8172911CEDDBCD00D8364F /* 16-combatflow-1-teaching.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -341,54 +341,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8174DF1CEEA9C300D8364F /* 07-combatflow-1-teaching.m4v in Resources */,
-				2A8174EA1CEEA9C300D8364F /* 11-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174E01CEEA9C300D8364F /* 08-combatflow-1-application.m4v in Resources */,
-				2A8174DA1CEEA9C300D8364F /* 06-combatflow-1-application.m4v in Resources */,
-				2A8174D91CEEA9C300D8364F /* 05-combatflow-1-teaching.m4v in Resources */,
-				2A8174E21CEEA9C300D8364F /* 08-combatflow-1-teaching.m4v in Resources */,
-				2A8174F61CEEA9C300D8364F /* 15-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174E51CEEA9C300D8364F /* 09-combatflow-1-teaching.m4v in Resources */,
-				2A8174D51CEEA9C300D8364F /* 04-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174F91CEEA9C300D8364F /* 16-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174F01CEEA9C300D8364F /* 13-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174E91CEEA9C300D8364F /* 11-combatflow-1-application.m4v in Resources */,
-				2A8174ED1CEEA9C300D8364F /* 12-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174D11CEEA9C300D8364F /* 03-combatflow-1-application.m4v in Resources */,
-				2A8174CC1CEEA9C300D8364F /* 01-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174E81CEEA9C300D8364F /* 10-combatflow-1-teaching.m4v in Resources */,
-				2A8174DB1CEEA9C300D8364F /* 06-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174D21CEEA9C300D8364F /* 03-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174EF1CEEA9C300D8364F /* 13-combatflow-1-application.m4v in Resources */,
-				2A8174F71CEEA9C300D8364F /* 15-combatflow-1-teaching.m4v in Resources */,
-				2A8174D61CEEA9C300D8364F /* 04-combatflow-1-teaching.m4v in Resources */,
-				2A8174CE1CEEA9C300D8364F /* 02-combatflow-1-application.m4v in Resources */,
-				2A8174E41CEEA9C300D8364F /* 09-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174CB1CEEA9C300D8364F /* 01-combatflow-1-application.m4v in Resources */,
-				2A8174E31CEEA9C300D8364F /* 09-combatflow-1-application.m4v in Resources */,
-				2A8174E71CEEA9C300D8364F /* 10-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174F81CEEA9C300D8364F /* 16-combatflow-1-application.m4v in Resources */,
-				2A8174EE1CEEA9C300D8364F /* 12-combatflow-1-teaching.m4v in Resources */,
-				2A8174D81CEEA9C300D8364F /* 05-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174D31CEEA9C300D8364F /* 03-combatflow-1-teaching.m4v in Resources */,
-				2A8174CF1CEEA9C300D8364F /* 02-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174DE1CEEA9C300D8364F /* 07-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174F21CEEA9C300D8364F /* 14-combatflow-1-application.m4v in Resources */,
-				2A8174F11CEEA9C300D8364F /* 13-combatflow-1-teaching.m4v in Resources */,
-				2A8174E61CEEA9C300D8364F /* 10-combatflow-1-application.m4v in Resources */,
-				2A8174EB1CEEA9C300D8364F /* 11-combatflow-1-teaching.m4v in Resources */,
-				2A8174F41CEEA9C300D8364F /* 14-combatflow-1-teaching.m4v in Resources */,
-				2A8174D71CEEA9C300D8364F /* 05-combatflow-1-application.m4v in Resources */,
-				2A8174FA1CEEA9C300D8364F /* 16-combatflow-1-teaching.m4v in Resources */,
-				2A8174D41CEEA9C300D8364F /* 04-combatflow-1-application.m4v in Resources */,
-				2A8174CD1CEEA9C300D8364F /* 01-combatflow-1-teaching.m4v in Resources */,
-				2A8174DC1CEEA9C300D8364F /* 06-combatflow-1-teaching.m4v in Resources */,
-				2A8174F51CEEA9C300D8364F /* 15-combatflow-1-application.m4v in Resources */,
-				2A8174D01CEEA9C300D8364F /* 02-combatflow-1-teaching.m4v in Resources */,
-				2A8174EC1CEEA9C300D8364F /* 12-combatflow-1-application.m4v in Resources */,
-				2A8174E11CEEA9C300D8364F /* 08-combatflow-1-graphicguide.m4v in Resources */,
-				2A8174DD1CEEA9C300D8364F /* 07-combatflow-1-application.m4v in Resources */,
-				2A8174F31CEEA9C300D8364F /* 14-combatflow-1-graphicguide.m4v in Resources */,
+				682542811DA4A42100845A04 /* 09-combatflow-1-graphicguide.m4v in Resources */,
+				6825428B1DA4A42100845A04 /* 12-combatflow-1-teaching.m4v in Resources */,
+				6825426B1DA4A42100845A04 /* 02-combatflow-1-application.m4v in Resources */,
+				6825428F1DA4A42100845A04 /* 14-combatflow-1-application.m4v in Resources */,
+				6825427A1DA4A42100845A04 /* 07-combatflow-1-application.m4v in Resources */,
+				6825426E1DA4A42100845A04 /* 03-combatflow-1-application.m4v in Resources */,
+				682542731DA4A42100845A04 /* 04-combatflow-1-teaching.m4v in Resources */,
+				6825427D1DA4A42100845A04 /* 08-combatflow-1-application.m4v in Resources */,
+				682542941DA4A42100845A04 /* 15-combatflow-1-teaching.m4v in Resources */,
+				6825426C1DA4A42100845A04 /* 02-combatflow-1-graphicguide.m4v in Resources */,
+				6825428A1DA4A42100845A04 /* 12-combatflow-1-graphicguide.m4v in Resources */,
+				682542931DA4A42100845A04 /* 15-combatflow-1-graphicguide.m4v in Resources */,
+				682542771DA4A42100845A04 /* 06-combatflow-1-application.m4v in Resources */,
+				6825427C1DA4A42100845A04 /* 07-combatflow-1-teaching.m4v in Resources */,
+				682542721DA4A42100845A04 /* 04-combatflow-1-graphicguide.m4v in Resources */,
+				682542821DA4A42100845A04 /* 09-combatflow-1-teaching.m4v in Resources */,
+				6825428C1DA4A42100845A04 /* 13-combatflow-1-application.m4v in Resources */,
+				682542691DA4A42100845A04 /* 01-combatflow-1-graphicguide.m4v in Resources */,
+				6825427F1DA4A42100845A04 /* 08-combatflow-1-teaching.m4v in Resources */,
+				682542961DA4A42100845A04 /* 16-combatflow-1-graphicguide.m4v in Resources */,
+				682542841DA4A42100845A04 /* 10-combatflow-1-graphicguide.m4v in Resources */,
+				6825427B1DA4A42100845A04 /* 07-combatflow-1-graphicguide.m4v in Resources */,
+				682542751DA4A42100845A04 /* 05-combatflow-1-graphicguide.m4v in Resources */,
+				6825426F1DA4A42100845A04 /* 03-combatflow-1-graphicguide.m4v in Resources */,
+				682542891DA4A42100845A04 /* 12-combatflow-1-application.m4v in Resources */,
+				682542761DA4A42100845A04 /* 05-combatflow-1-teaching.m4v in Resources */,
+				6825428E1DA4A42100845A04 /* 13-combatflow-1-teaching.m4v in Resources */,
+				682542871DA4A42100845A04 /* 11-combatflow-1-graphicguide.m4v in Resources */,
+				682542701DA4A42100845A04 /* 03-combatflow-1-teaching.m4v in Resources */,
+				6825428D1DA4A42100845A04 /* 13-combatflow-1-graphicguide.m4v in Resources */,
+				682542781DA4A42100845A04 /* 06-combatflow-1-graphicguide.m4v in Resources */,
+				682542831DA4A42100845A04 /* 10-combatflow-1-application.m4v in Resources */,
+				682542911DA4A42100845A04 /* 14-combatflow-1-teaching.m4v in Resources */,
+				682542971DA4A42100845A04 /* 16-combatflow-1-teaching.m4v in Resources */,
+				682542851DA4A42100845A04 /* 10-combatflow-1-teaching.m4v in Resources */,
+				682542951DA4A42100845A04 /* 16-combatflow-1-application.m4v in Resources */,
+				682542791DA4A42100845A04 /* 06-combatflow-1-teaching.m4v in Resources */,
+				6825427E1DA4A42100845A04 /* 08-combatflow-1-graphicguide.m4v in Resources */,
+				682542711DA4A42100845A04 /* 04-combatflow-1-application.m4v in Resources */,
+				682542861DA4A42100845A04 /* 11-combatflow-1-application.m4v in Resources */,
+				6825426A1DA4A42100845A04 /* 01-combatflow-1-teaching.m4v in Resources */,
+				6825426D1DA4A42100845A04 /* 02-combatflow-1-teaching.m4v in Resources */,
+				682542901DA4A42100845A04 /* 14-combatflow-1-graphicguide.m4v in Resources */,
+				682542801DA4A42100845A04 /* 09-combatflow-1-application.m4v in Resources */,
+				682542681DA4A42100845A04 /* 01-combatflow-1-application.m4v in Resources */,
+				682542881DA4A42100845A04 /* 11-combatflow-1-teaching.m4v in Resources */,
+				682542921DA4A42100845A04 /* 15-combatflow-1-application.m4v in Resources */,
+				682542741DA4A42100845A04 /* 05-combatflow-1-application.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

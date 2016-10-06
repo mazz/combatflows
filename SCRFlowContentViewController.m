@@ -145,7 +145,7 @@ NSUInteger kBannersPerLesson = 2;
     [self.playApplicationButton addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
 
     self.playGraphicGuideButton = [[UIButton alloc] init];
-    [self.playGraphicGuideButton setImage:[UIImage imageNamed:@"gg_video_btn_app"] forState:UIControlStateNormal];
+    [self.playGraphicGuideButton setImage:[UIImage imageNamed:@"gg_video_btn_gg"] forState:UIControlStateNormal];
     
     [self.headerWrapperView addSubview:self.playGraphicGuideButton];
     [self.playGraphicGuideButton constrainLeadingSpaceToView:self.playApplicationButton predicate:FLKPredicate(10)];
