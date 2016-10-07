@@ -214,7 +214,7 @@
     if (self.purchased)
     {
         self.priceLabel.text = NSLocalizedString(@"PURCHASED", @"");
-        self.priceLabel.textColor = UIColor.scrapplingForegroundBlueColor;
+//        self.priceLabel.textColor = UIColor.scrapplingForegroundBlueColor;
 
         [self.cornerButton setBackgroundImage:(self.favorite) ? [UIImage imageNamed:@"icn_unlocked_fav_on"] : [UIImage imageNamed:@"icn_unlocked_fav_off"] forState:UIControlStateNormal];
     }

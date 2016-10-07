@@ -212,7 +212,7 @@
     if (self.purchased)
     {
         self.priceLabel.text = NSLocalizedString(@"PURCHASED", @"");
-        self.priceLabel.textColor = UIColor.scrapplingForegroundBlueColor;
+//        self.priceLabel.textColor = UIColor.scrapplingForegroundBlueColor;
 
 //        if (self.canBeFavorited)
 //        {
