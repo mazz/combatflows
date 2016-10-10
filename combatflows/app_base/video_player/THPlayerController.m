@@ -93,6 +93,9 @@ static const NSString *PlayerItemStatusContext;
 
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];          // 4
 
+//    self.player.allowsExternalPlayback = YES;
+//    self.player.usesExternalPlaybackWhileExternalScreenIsActive = YES;
+
     self.playerView = [[THPlayerView alloc] initWithPlayer:self.player];    // 5
     self.transport = self.playerView.transport;
     self.transport.delegate = self;
