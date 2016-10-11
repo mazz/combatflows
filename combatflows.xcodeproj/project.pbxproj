@@ -26,7 +26,6 @@
 		2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */; };
 		2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
 		2A1389F31CF76C6A00C39B31 /* CMAMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */; };
-		2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */; };
 		2A2311811D8DDEEA001AF67A /* MMADisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2311801D8DDEEA001AF67A /* MMADisclaimerViewController.m */; };
 		2A7FCDD71D8A35AC0079171E /* SCRSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */; };
 		2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A81719E1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png */; };
@@ -112,6 +111,9 @@
 		685BA91C1CF78C030023CADB /* 04-combatflow-1-application.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA9171CF78C030023CADB /* 04-combatflow-1-application.m4v */; };
 		685BA91D1CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA9181CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v */; };
 		685BA9201CF78C030023CADB /* 04-combatflow-1-teaching.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 685BA91B1CF78C030023CADB /* 04-combatflow-1-teaching.m4v */; };
+		68B7E89D1DAC7EF100DA1B0F /* SCRSocialMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B7E89C1DAC7EF100DA1B0F /* SCRSocialMainViewController.m */; };
+		68B7E89F1DAC838C00DA1B0F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B7E89E1DAC838C00DA1B0F /* SafariServices.framework */; };
+		68D3330A1DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 68D333091DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v */; };
 		EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */; };
 /* End PBXBuildFile section */
 
@@ -137,7 +139,6 @@
 		2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "00_bundled-thumb-600.m4v"; path = "combatflows/00_bundled-thumb-600.m4v"; sourceTree = "<group>"; };
 		2A1389F11CF76C6A00C39B31 /* CMAMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMAMovieViewController.m; sourceTree = "<group>"; };
 		2A1389F21CF76C6A00C39B31 /* CMAMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMAMovieViewController.h; sourceTree = "<group>"; };
-		2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = appintro_sequence_retina4.m4v; path = ../scrappling/scrappling/appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
 		2A18E4931D85EA1E00E71D6E /* combatflows-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "combatflows-Prefix.pch"; sourceTree = "<group>"; };
 		2A23117F1D8DDEEA001AF67A /* MMADisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMADisclaimerViewController.h; path = combatflows/app_base/MMADisclaimerViewController.h; sourceTree = "<group>"; };
 		2A2311801D8DDEEA001AF67A /* MMADisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MMADisclaimerViewController.m; path = combatflows/app_base/MMADisclaimerViewController.m; sourceTree = "<group>"; };
@@ -294,6 +295,10 @@
 		685BA9171CF78C030023CADB /* 04-combatflow-1-application.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-application.m4v"; path = "bundled_content/04-combatflow-1-application.m4v"; sourceTree = SOURCE_ROOT; };
 		685BA9181CF78C030023CADB /* 04-combatflow-1-graphicguide.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-graphicguide.m4v"; path = "bundled_content/04-combatflow-1-graphicguide.m4v"; sourceTree = SOURCE_ROOT; };
 		685BA91B1CF78C030023CADB /* 04-combatflow-1-teaching.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = "04-combatflow-1-teaching.m4v"; path = "bundled_content/04-combatflow-1-teaching.m4v"; sourceTree = SOURCE_ROOT; };
+		68B7E89B1DAC7EF100DA1B0F /* SCRSocialMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCRSocialMainViewController.h; sourceTree = "<group>"; };
+		68B7E89C1DAC7EF100DA1B0F /* SCRSocialMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCRSocialMainViewController.m; sourceTree = "<group>"; };
+		68B7E89E1DAC838C00DA1B0F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		68D333091DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = appintro_sequence_retina4.m4v; sourceTree = "<group>"; };
 		88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-combatflows.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.release.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -303,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B7E89F1DAC838C00DA1B0F /* SafariServices.framework in Frameworks */,
 				2A9C779A1CF0EE24006D7068 /* StoreKit.framework in Frameworks */,
 				2A9C77981CF0EE1F006D7068 /* AVKit.framework in Frameworks */,
 				2A9C77961CF0EE1A006D7068 /* AVFoundation.framework in Frameworks */,
@@ -320,7 +326,7 @@
 		2A1389F41CF76D4700C39B31 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				2A1389F61CF76D9D00C39B31 /* appintro_sequence_retina4.m4v */,
+				68D333091DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v */,
 				2A1389F51CF76D6200C39B31 /* thumbs */,
 			);
 			name = resources;
@@ -511,6 +517,8 @@
 				2A9C773C1CF0EA8D006D7068 /* SCRAboutUsViewController.m */,
 				2A9C773D1CF0EA8D006D7068 /* SCRDedicationViewController.h */,
 				2A9C773E1CF0EA8D006D7068 /* SCRDedicationViewController.m */,
+				68B7E89B1DAC7EF100DA1B0F /* SCRSocialMainViewController.h */,
+				68B7E89C1DAC7EF100DA1B0F /* SCRSocialMainViewController.m */,
 				2A7FCDD51D8A35AC0079171E /* SCRSocialViewController.h */,
 				2A7FCDD61D8A35AC0079171E /* SCRSocialViewController.m */,
 				2A9C77511CF0EA8D006D7068 /* SCRSociallAccountsViewController.h */,
@@ -603,6 +611,7 @@
 		D15E3A3886AE9DCAB4655806 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68B7E89E1DAC838C00DA1B0F /* SafariServices.framework */,
 				2A9C77991CF0EE24006D7068 /* StoreKit.framework */,
 				2A9C77971CF0EE1F006D7068 /* AVKit.framework */,
 				2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */,
@@ -699,12 +708,12 @@
 				2A8171AB1CED5B7C00D8364F /* 04-combatflow-1-graphicguidebanner@2x.png in Resources */,
 				2A1389D91CF75B5A00C39B31 /* cf_08_tn_4_4s.m4v in Resources */,
 				2A1389D11CF75B5A00C39B31 /* cf_01_tn_4_4s.m4v in Resources */,
-				2A1389F71CF76D9D00C39B31 /* appintro_sequence_retina4.m4v in Resources */,
 				68305EBB1CEBFA8A00A963E8 /* Main.storyboard in Resources */,
 				68305F381CEC07AE00A963E8 /* GoogleService-Info.plist in Resources */,
 				2A8171E51CED5D5600D8364F /* THSubtitleView.xib in Resources */,
 				2A1389E31CF75BE700C39B31 /* 00_bundled-thumb-600.m4v in Resources */,
 				2A1389D41CF75B5A00C39B31 /* cf_03_tn_4_4s.m4v in Resources */,
+				68D3330A1DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v in Resources */,
 				2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */,
 				2A1389D81CF75B5A00C39B31 /* cf_07_tn_4_4s.m4v in Resources */,
 			);
@@ -824,6 +833,7 @@
 				2A9C77651CF0EA8D006D7068 /* SCRSociallAccountsViewController.m in Sources */,
 				2A8171DB1CED5D5600D8364F /* HCYoutubeParser.m in Sources */,
 				2A8172251CED5DA400D8364F /* SCRNavigationController.m in Sources */,
+				68B7E89D1DAC7EF100DA1B0F /* SCRSocialMainViewController.m in Sources */,
 				2A9C77621CF0EA8D006D7068 /* SCRBouncyViewControllerAnimator.m in Sources */,
 				2A9C775A1CF0EA8D006D7068 /* SCRAboutUsViewController.m in Sources */,
 				2A8172011CED5D6000D8364F /* UILabel+AutoLayout.m in Sources */,

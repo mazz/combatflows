@@ -118,13 +118,13 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="SCRGetTrainedViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Scrappling" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="586" y="-778"/>
         </scene>
-        <!--Scrappling-->
+        <!--Combat Flows-->
         <scene sceneID="mkl-eo-9zM">
             <objects>
                 <viewController storyboardIdentifier="SCRGetTrainedViewController" id="dU9-Zx-meL" customClass="SCRGetTrainedViewController" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.90196078431372551" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scrappling" id="YCB-X6-xsy"/>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="YCB-X6-xsy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mka-BY-cWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,7 +308,7 @@
             </objects>
             <point key="canvasLocation" x="1225" y="-778"/>
         </scene>
-        <!--Scrappling-->
+        <!--Combat Flows-->
         <scene sceneID="JTF-je-7WK">
             <objects>
                 <viewController storyboardIdentifier="SCRFavoritesViewController" id="5Vg-HG-RoF" customClass="SCRFavoritesViewController" sceneMemberID="viewController">
@@ -336,7 +336,7 @@
                             <constraint firstAttribute="centerX" secondItem="Uec-hF-MDM" secondAttribute="centerX" id="dpi-uj-Kyr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Scrappling" id="urn-6l-coH"/>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="urn-6l-coH"/>
                     <connections>
                         <outlet property="putYourFavoritesHereLabel" destination="Uec-hF-MDM" id="0Xj-uT-H1s"/>
                     </connections>
@@ -345,7 +345,7 @@
             </objects>
             <point key="canvasLocation" x="1849" y="-778"/>
         </scene>
-        <!--Scrappling-->
+        <!--Combat Flows-->
         <scene sceneID="qRK-Mj-uUS">
             <objects>
                 <viewController storyboardIdentifier="SCRMoreViewController" id="Awe-qc-zlS" customClass="SCRMoreViewController" sceneMemberID="viewController">
@@ -358,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.8980392157" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scrappling" id="Tkz-8z-a0z"/>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="Tkz-8z-a0z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bf-5L-hOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -631,7 +631,7 @@
             </objects>
             <point key="canvasLocation" x="1849" y="1884"/>
         </scene>
-        <!--Scrappling-->
+        <!--Combat Flows-->
         <scene sceneID="jqS-TF-dVV">
             <objects>
                 <viewController storyboardIdentifier="SCRBlankInterstitialViewController" id="clo-HR-mcC" customClass="SCRBlankInterstitialViewController" sceneMemberID="viewController">
@@ -644,7 +644,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.8980392157" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scrappling" id="5si-dl-LEi"/>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="5si-dl-LEi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTJ-JP-g2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -892,6 +892,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bh-1e-f6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-24" y="-778"/>
+        </scene>
+        <!--Combat Flows-->
+        <scene sceneID="FeO-MW-P3l">
+            <objects>
+                <viewController storyboardIdentifier="SCRSocialMainViewController" id="SRX-s7-M2d" customClass="SCRSocialMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sqz-ef-gVM"/>
+                        <viewControllerLayoutGuide type="bottom" id="M30-aZ-nkn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zlJ-hk-iXp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8980392157" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Combat Flows" id="FhR-yz-qVl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyr-PF-OH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="-126"/>
         </scene>
     </scenes>
     <resources>

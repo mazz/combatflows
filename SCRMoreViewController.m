@@ -16,7 +16,7 @@
 #import "SCRTitleBodyTableViewCell.h"
 #import "SCRAboutUsViewController.h"
 #import "SCRDedicationViewController.h"
-#import "SCRSocialViewController.h"
+#import "SCRSocialMainViewController.h"
 #import "IAHInAppPurchaseHelper.h"
 #import "MMADisclaimerViewController.h"
 
@@ -147,8 +147,8 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
         [self.navigationController pushViewController:dedicationViewController animated:YES];
     }
     if (indexPath.row == 2) {
-        SCRSocialViewController *socialViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSocialViewController"];
-        [self.navigationController pushViewController:socialViewController animated:YES];
+        SCRSocialMainViewController *socialMainViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SCRSocialMainViewController"];
+        [self.navigationController pushViewController:socialMainViewController animated:YES];
     }
     if (indexPath.row == 3) {
         MMADisclaimerViewController *disclaimerViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MMADisclaimerViewController"];
