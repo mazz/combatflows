@@ -955,7 +955,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
@@ -970,7 +970,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
