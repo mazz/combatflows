@@ -433,7 +433,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.039215686274509803" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="NAb-Qf-trz" firstAttribute="leading" secondItem="Oxz-aw-jfc" secondAttribute="leading" constant="25" id="5gm-WP-K2b"/>
                                             <constraint firstAttribute="trailing" secondItem="jnL-Fd-QsC" secondAttribute="trailing" constant="25" id="CnA-ja-8PF"/>
@@ -542,7 +542,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.039215686274509803" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="6EA-XN-zoj" firstAttribute="centerX" secondItem="ZPw-OM-bPP" secondAttribute="centerX" id="5Sr-Hk-4Ns"/>
                                             <constraint firstItem="6EA-XN-zoj" firstAttribute="top" secondItem="mvs-RO-oFx" secondAttribute="bottom" constant="8" id="9bO-tM-o1X"/>
@@ -837,7 +837,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="CaO-uj-sRE" firstAttribute="top" secondItem="0Sd-ud-BVx" secondAttribute="top" constant="8" id="1dg-3e-dVm"/>
                                             <constraint firstItem="TC5-Tc-3aD" firstAttribute="leading" secondItem="sGX-B6-r0t" secondAttribute="leading" id="2Tl-E7-n73"/>
@@ -872,7 +872,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.039215686270000001" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Uxz-Cp-98d" secondAttribute="trailing" id="0Ug-AK-mW2"/>
                             <constraint firstItem="0Sd-ud-BVx" firstAttribute="height" secondItem="1Kp-fm-fQr" secondAttribute="height" priority="250" id="2kN-KV-1a2"/>
