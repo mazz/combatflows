@@ -77,6 +77,8 @@ static NSString *kSCRTitleBodyTableViewCell = @"kSCRTitleBodyTableViewCell";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:10.0/255.0 blue:20.0/255.0 alpha:1.0];//[UIColor colorWithRed:216.0/255.0 green:216.0/255.0 blue:216.0/255.0 alpha:1.0];
+    self.tableView.tableFooterView = [UIView new];
+
 }
 
 
