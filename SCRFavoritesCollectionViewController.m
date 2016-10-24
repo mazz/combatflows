@@ -262,7 +262,7 @@ static NSUInteger kSCRScrapplingBundleIndex = 2;
     SCRThumbCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kSCRMasterCollectionViewCellIdentifier forIndexPath:indexPath];
 //    SKProduct *product = [[self.trainingItems objectAtIndex:indexPath.row] product];
     cell.titleLabel.text = (product != nil) ? [[product localizedTitle] uppercaseString] : [[[trainingItem flowGroup] name] uppercaseString]; //[self.previewItem.product.localizedTitle uppercaseString]
-    cell.detailLabel.text = (product != nil) ? [product localizedDescription] : @" ";
+    cell.detailLabel.text = (product != nil) ? [product localizedDescription] : (trainingItem.flowGroup.bundled) ? trainingItem.flowGroup.text : @" ";
     [cell.priceFormatter setLocale:product.priceLocale];
     cell.priceLabel.text = [cell.priceFormatter stringFromNumber:[product price]];
 
