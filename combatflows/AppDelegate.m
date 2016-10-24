@@ -47,7 +47,7 @@ double kAppIntroMovieDuration = 6.0;
     CMAMovieViewController* introMovieViewController = (CMAMovieViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"CMAMovieViewController"];
     self.window.rootViewController = introMovieViewController;
     
-    //    [self initializeGoogleAnalytics];
+    [self initializeGoogleAnalytics];
     
     [NSTimer scheduledTimerWithTimeInterval:kAppIntroMovieDuration target:self selector:@selector(removeIntroMovie:) userInfo:nil repeats:NO];
 

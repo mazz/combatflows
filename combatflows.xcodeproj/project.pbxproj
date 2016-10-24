@@ -953,6 +953,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HM2W42B9L5;
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
@@ -960,6 +961,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -969,6 +971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HM2W42B9L5;
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
@@ -976,6 +979,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
