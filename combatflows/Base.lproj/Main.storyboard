@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icK-bX-rSu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icK-bX-rSu">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -788,7 +788,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Ns-Ww-tbv">
                                 <rect key="frame" x="20" y="59" width="560" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">The following is a legally binding agreement between you and the developer of this application (Interactive Learning Solutions Inc.). Please read it carefully.
+                                <string key="text">The following is a legally binding agreement between you and the developer of this application (Interactive Learning Solutions Inc.). Please read it carefully.
 
 - By using and/or accessing this application, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions and agree to comply with all applicable laws and regulations, including Federal, Provincial and/or State laws.
 
@@ -808,7 +808,7 @@
 
 If you do not agree to the terms and conditions of use as stated above, then please close and uninstall the application from your device. If you have read and accepted the terms and conditions above, then please press the button below to enter the application.
 
-I am at or above the legal age of majority and/or I have permission from a legal guardian to use this App. I have read and accept these terms and conditions of use.</mutableString>
+I am at or above the legal age of majority and/or I have permission from a legal guardian to use this App. I have read and accept these terms and conditions of use.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
