@@ -14,7 +14,7 @@ PODS:
     - GoogleSymbolUtilities (~> 1.1)
     - GoogleUtilities (~> 1.2)
   - FirebaseInstanceID (1.0.8)
-  - FLKAutoLayout (1.0.0)
+  - FLKAutoLayout (1.0.1)
   - Google/Analytics (3.0.3):
     - Google/Core
     - GoogleAnalytics (~> 3.12)
@@ -26,40 +26,62 @@ PODS:
   - GoogleSymbolUtilities (1.1.1)
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
-  - M13ProgressSuite (1.2.8)
+  - M13ProgressSuite (1.2.9)
   - MSCellAccessory (1.1.2)
 
 DEPENDENCIES:
   - CocoaLumberjack
   - EBCardCollectionViewLayout (from `https://github.com/betzerra/EBCardCollectionViewLayout`)
-  - FLKAutoLayout
+  - FLKAutoLayout (from `https://github.com/brightsider/FLKAutoLayout.git`)
   - Google/Analytics
-  - M13ProgressSuite
+  - M13ProgressSuite (from `https://github.com/rogerioth/M13ProgressSuite.git`)
   - MSCellAccessory
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - FirebaseAnalytics
+    - FirebaseInstanceID
+    - Google
+    - GoogleAnalytics
+    - GoogleInterchangeUtilities
+    - GoogleSymbolUtilities
+    - GoogleUtilities
+    - MSCellAccessory
 
 EXTERNAL SOURCES:
   EBCardCollectionViewLayout:
     :git: https://github.com/betzerra/EBCardCollectionViewLayout
+  FLKAutoLayout:
+    :git: https://github.com/brightsider/FLKAutoLayout.git
+  M13ProgressSuite:
+    :git: https://github.com/rogerioth/M13ProgressSuite.git
 
 CHECKOUT OPTIONS:
   EBCardCollectionViewLayout:
     :commit: 661b94bd4eda06d0ad30420bc036613635fae23d
     :git: https://github.com/betzerra/EBCardCollectionViewLayout
+  FLKAutoLayout:
+    :commit: 7bfd1003bdfd1475a9ebea3b6cbfee655f1c2186
+    :git: https://github.com/brightsider/FLKAutoLayout.git
+  M13ProgressSuite:
+    :commit: 203e52a4975296884cc813c7321cdc79aaae514b
+    :git: https://github.com/rogerioth/M13ProgressSuite.git
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   EBCardCollectionViewLayout: 29e4f47ad6883ddf8e5e16078c71fa1142098342
   FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  FLKAutoLayout: 106b14dbae09d32c6730190f4e78a959759ba4a4
-  Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
+  FLKAutoLayout: 37e1e09de6411dbee5526860d9f55d9063323ea8
+  Google: cd92fab98f800f509da88c1e0c570275713bc9d5
   GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  M13ProgressSuite: c357c8c163a59a7405e5a9ad7e9c63a19e5e5d20
+  M13ProgressSuite: ea9f7263e73e9215e6849dfa54e29ee0ad6a145c
   MSCellAccessory: 8265f3cd2386c1f372da00232472605ab11426e4
 
-PODFILE CHECKSUM: 0a798192b711421fdcc7a777b1a8d516e09ee7ac
+PODFILE CHECKSUM: 6e315fa9842ce6fca597ead259229360f798734b
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.16.2
