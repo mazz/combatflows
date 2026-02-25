@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -100,6 +100,7 @@
 		2A9C77961CF0EE1A006D7068 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */; };
 		2A9C77981CF0EE1F006D7068 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77971CF0EE1F006D7068 /* AVKit.framework */; };
 		2A9C779A1CF0EE24006D7068 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77991CF0EE24006D7068 /* StoreKit.framework */; };
+		4C1589382F4FC000002A9FD2 /* flows.json in Resources */ = {isa = PBXBuildFile; fileRef = 68305EE21CEC012200A963E8 /* flows.json */; };
 		68305EB21CEBFA8A00A963E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB11CEBFA8A00A963E8 /* main.m */; };
 		68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB41CEBFA8A00A963E8 /* AppDelegate.m */; };
 		68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB71CEBFA8A00A963E8 /* ViewController.m */; };
@@ -116,6 +117,23 @@
 		68D3330A1DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 68D333091DAC7AAF000BC2C5 /* appintro_sequence_retina4.m4v */; };
 		EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CB5D37A84DBEBFD65FE22E /* libPods-combatflows.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C1589182F4FB66D002A9FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68305EA51CEBFA8A00A963E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C15890A2F4FB66C002A9FD2;
+			remoteInfo = CombatFlowsUni;
+		};
+		4C1589222F4FB66E002A9FD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68305EA51CEBFA8A00A963E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C15890A2F4FB66C002A9FD2;
+			remoteInfo = CombatFlowsUni;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17CAC5DBEE2DD210318EB395 /* Pods-combatflows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.debug.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.debug.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +298,9 @@
 		2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2A9C77971CF0EE1F006D7068 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		2A9C77991CF0EE24006D7068 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombatFlowsUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombatFlowsUniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombatFlowsUniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombatFlows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68305EB11CEBFA8A00A963E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68305EB31CEBFA8A00A963E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -303,7 +324,34 @@
 		AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-combatflows.release.xcconfig"; path = "Pods/Target Support Files/Pods-combatflows/Pods-combatflows.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4C15890C2F4FB66C002A9FD2 /* CombatFlowsUni */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CombatFlowsUni; sourceTree = "<group>"; };
+		4C15891A2F4FB66D002A9FD2 /* CombatFlowsUniTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CombatFlowsUniTests; sourceTree = "<group>"; };
+		4C1589242F4FB66E002A9FD2 /* CombatFlowsUniUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CombatFlowsUniUITests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		4C1589082F4FB66C002A9FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1589142F4FB66D002A9FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C15891E2F4FB66E002A9FD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68305EAA1CEBFA8A00A963E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,6 +615,9 @@
 				2A9C77381CF0EA71006D7068 /* main_view */,
 				2A8171B61CED5D1D00D8364F /* app_base */,
 				68305EAF1CEBFA8A00A963E8 /* combatflows */,
+				4C15890C2F4FB66C002A9FD2 /* CombatFlowsUni */,
+				4C15891A2F4FB66D002A9FD2 /* CombatFlowsUniTests */,
+				4C1589242F4FB66E002A9FD2 /* CombatFlowsUniUITests */,
 				68305EAE1CEBFA8A00A963E8 /* Products */,
 				D15E3A3886AE9DCAB4655806 /* Frameworks */,
 				5FEC26CFF049602EF1BB0224 /* Pods */,
@@ -577,6 +628,9 @@
 			isa = PBXGroup;
 			children = (
 				68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */,
+				4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */,
+				4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */,
+				4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -627,6 +681,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C15890A2F4FB66C002A9FD2 /* CombatFlowsUni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C15892F2F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUni" */;
+			buildPhases = (
+				4C1589072F4FB66C002A9FD2 /* Sources */,
+				4C1589082F4FB66C002A9FD2 /* Frameworks */,
+				4C1589092F4FB66C002A9FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4C15890C2F4FB66C002A9FD2 /* CombatFlowsUni */,
+			);
+			name = CombatFlowsUni;
+			packageProductDependencies = (
+			);
+			productName = CombatFlowsUni;
+			productReference = 4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C1589162F4FB66D002A9FD2 /* CombatFlowsUniTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1589302F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniTests" */;
+			buildPhases = (
+				4C1589132F4FB66D002A9FD2 /* Sources */,
+				4C1589142F4FB66D002A9FD2 /* Frameworks */,
+				4C1589152F4FB66D002A9FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1589192F4FB66D002A9FD2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4C15891A2F4FB66D002A9FD2 /* CombatFlowsUniTests */,
+			);
+			name = CombatFlowsUniTests;
+			packageProductDependencies = (
+			);
+			productName = CombatFlowsUniTests;
+			productReference = 4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C1589202F4FB66E002A9FD2 /* CombatFlowsUniUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1589312F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniUITests" */;
+			buildPhases = (
+				4C15891D2F4FB66E002A9FD2 /* Sources */,
+				4C15891E2F4FB66E002A9FD2 /* Frameworks */,
+				4C15891F2F4FB66E002A9FD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1589232F4FB66E002A9FD2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4C1589242F4FB66E002A9FD2 /* CombatFlowsUniUITests */,
+			);
+			name = CombatFlowsUniUITests;
+			packageProductDependencies = (
+			);
+			productName = CombatFlowsUniUITests;
+			productReference = 4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		68305EAC1CEBFA8A00A963E8 /* combatflows */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68305EC41CEBFA8A00A963E8 /* Build configuration list for PBXNativeTarget "combatflows" */;
@@ -651,9 +773,21 @@
 		68305EA51CEBFA8A00A963E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ilearningsolutions;
 				TargetAttributes = {
+					4C15890A2F4FB66C002A9FD2 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					4C1589162F4FB66D002A9FD2 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = 4C15890A2F4FB66C002A9FD2;
+					};
+					4C1589202F4FB66E002A9FD2 = {
+						CreatedOnToolsVersion = 26.1;
+						TestTargetID = 4C15890A2F4FB66C002A9FD2;
+					};
 					68305EAC1CEBFA8A00A963E8 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 49FU9E98SQ;
@@ -675,11 +809,36 @@
 			projectRoot = "";
 			targets = (
 				68305EAC1CEBFA8A00A963E8 /* combatflows */,
+				4C15890A2F4FB66C002A9FD2 /* CombatFlowsUni */,
+				4C1589162F4FB66D002A9FD2 /* CombatFlowsUniTests */,
+				4C1589202F4FB66E002A9FD2 /* CombatFlowsUniUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C1589092F4FB66C002A9FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1589382F4FC000002A9FD2 /* flows.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1589152F4FB66D002A9FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C15891F2F4FB66E002A9FD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68305EAB1CEBFA8A00A963E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,6 +901,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C1589072F4FB66C002A9FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1589132F4FB66D002A9FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C15891D2F4FB66E002A9FD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		68305EA91CEBFA8A00A963E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +999,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4C1589192F4FB66D002A9FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C15890A2F4FB66C002A9FD2 /* CombatFlowsUni */;
+			targetProxy = 4C1589182F4FB66D002A9FD2 /* PBXContainerItemProxy */;
+		};
+		4C1589232F4FB66E002A9FD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C15890A2F4FB66C002A9FD2 /* CombatFlowsUni */;
+			targetProxy = 4C1589222F4FB66E002A9FD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		68305EB91CEBFA8A00A963E8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -839,6 +1032,304 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C1589292F4FB66E002A9FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C15892A2F4FB66E002A9FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C15892B2F4FB66E002A9FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni.CombatFlowsUniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombatFlowsUni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CombatFlowsUni";
+			};
+			name = Debug;
+		};
+		4C15892C2F4FB66E002A9FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni.CombatFlowsUniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombatFlowsUni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CombatFlowsUni";
+			};
+			name = Release;
+		};
+		4C15892D2F4FB66E002A9FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni.CombatFlowsUniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CombatFlowsUni;
+			};
+			name = Debug;
+		};
+		4C15892E2F4FB66E002A9FD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49FU9E98SQ;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni.CombatFlowsUniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CombatFlowsUni;
+			};
+			name = Release;
+		};
 		68305EC21CEBFA8A00A963E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -930,7 +1421,10 @@
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
 				PROVISIONING_PROFILE = "";
@@ -948,7 +1442,10 @@
 				GCC_PREFIX_HEADER = "combatflows-Prefix.pch";
 				INFOPLIST_FILE = combatflows/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
 				PROVISIONING_PROFILE = "";
@@ -958,6 +1455,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C15892F2F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1589292F4FB66E002A9FD2 /* Debug */,
+				4C15892A2F4FB66E002A9FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1589302F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C15892B2F4FB66E002A9FD2 /* Debug */,
+				4C15892C2F4FB66E002A9FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1589312F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C15892D2F4FB66E002A9FD2 /* Debug */,
+				4C15892E2F4FB66E002A9FD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		68305EA81CEBFA8A00A963E8 /* Build configuration list for PBXProject "combatflows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
