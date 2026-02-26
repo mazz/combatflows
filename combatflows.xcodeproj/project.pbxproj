@@ -140,6 +140,7 @@
 		4C15899F2F4FDBEB002A9FD2 /* cf_08_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */; };
 		4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */; };
 		4C1589A92F5013CC002A9FD2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77991CF0EE24006D7068 /* StoreKit.framework */; };
+		4C849A252F50B321009E7F74 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4C849A242F50B321009E7F74 /* ZIPFoundation */; };
 		68305EB21CEBFA8A00A963E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB11CEBFA8A00A963E8 /* main.m */; };
 		68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB41CEBFA8A00A963E8 /* AppDelegate.m */; };
 		68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB71CEBFA8A00A963E8 /* ViewController.m */; };
@@ -392,6 +393,7 @@
 			files = (
 				4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */,
 				4C1589A92F5013CC002A9FD2 /* StoreKit.framework in Frameworks */,
+				4C849A252F50B321009E7F74 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +774,7 @@
 			name = CombatFlowsUni;
 			packageProductDependencies = (
 				4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */,
+				4C849A242F50B321009E7F74 /* ZIPFoundation */,
 			);
 			productName = CombatFlowsUni;
 			productReference = 4C15890B2F4FB66C002A9FD2 /* CombatFlows.app */;
@@ -880,6 +883,7 @@
 			mainGroup = 68305EA41CEBFA8A00A963E8;
 			packageReferences = (
 				4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */,
+				4C849A232F50B321009E7F74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = 68305EAE1CEBFA8A00A963E8 /* Products */;
 			projectDirPath = "";
@@ -1182,13 +1186,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
@@ -1241,13 +1246,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = CombatFlows;
@@ -1625,6 +1631,14 @@
 				kind = branch;
 			};
 		};
+		4C849A232F50B321009E7F74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.20;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1632,6 +1646,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */;
 			productName = "swiftui-loop-videoplayer";
+		};
+		4C849A242F50B321009E7F74 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C849A232F50B321009E7F74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

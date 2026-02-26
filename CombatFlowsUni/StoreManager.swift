@@ -10,134 +10,96 @@
 import Foundation
 import StoreKit
 import Combine
+import ZIPFoundation
 
 class StoreManager: NSObject, ObservableObject {
     @Published var fetchedProducts: [SKProduct] = []
     @Published var purchasedProductIDs: Set<String> = []
     @Published var isRestoring: Bool = false
-    @Published var downloadProgress: [String: Double] = [:] // productID: progress (0.0 to 1.0)
+    @Published var downloadProgress: [String: Double] = [:]
     @Published var favoriteProductIDs: Set<String> = []
     
     let bundleID = "ca.ilearningsolutions.combatflows.combatflowbundle"
     private var productsRequest: SKProductsRequest?
-    
-    // Injecting the curriculum store so we can map product IDs to asset names
     var curriculumStore: CurriculumStore?
+    
+    let downloadBaseURL = "https://pub-56b90c5a6a374b999e76b568fdd359d0.r2.dev/iap/"
+
+    let downloadMap = [
+        "ca.ilearningsolutions.combatflows.combatflow01": "01-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow02": "02-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow03": "03-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow04": "04-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow05": "05-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow06": "06-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow07": "07-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow08": "08-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow09": "09-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow10": "10-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow11": "11-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow12": "12-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow13": "13-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow14": "14-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow15": "15-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflow16": "16-combatflow-1.zip",
+        "ca.ilearningsolutions.combatflows.combatflowbundle": "combatflowbundle.zip"
+    ]
     
     override init() {
         super.init()
-        // Register as an observer (Equivalent to IAPHelper.m line 68)
         SKPaymentQueue.default().add(self)
-        
-        // Load initial purchase state from local storage or file system
-//        loadPurchasedStates()
         loadFavorites()
     }
     
-    /// This should be called once the CurriculumStore is loaded
     func initializePurchases(with store: CurriculumStore) {
         self.curriculumStore = store
         loadPurchasedStates()
     }
     
-    private func loadPurchasedStates() {
+    func loadPurchasedStates() {
         guard let store = curriculumStore else { return }
-        
         var newlyPurchasedIDs = Set<String>()
         
-        // 1. Check file system for each flow group (Legacy Logic)
         for group in store.flowGroups {
-            if hasPurchasedFiles(for: group.productIdentifier) {
+            if hasPurchasedFiles(for: group.productIdentifier) || UserDefaults.standard.bool(forKey: group.productIdentifier) {
                 newlyPurchasedIDs.insert(group.productIdentifier)
             }
         }
         
-        // 2. Check for the "Everything" Bundle (Legacy Logic)
-        if hasPurchasedFiles(for: bundleID) {
+        if hasPurchasedFiles(for: bundleID) || UserDefaults.standard.bool(forKey: bundleID) {
             newlyPurchasedIDs.insert(bundleID)
-        }
-        
-        // 3. Sync with UserDefaults for good measure
-        for group in store.flowGroups {
-            if UserDefaults.standard.bool(forKey: group.productIdentifier) {
-                newlyPurchasedIDs.insert(group.productIdentifier)
-            }
         }
         
         DispatchQueue.main.async {
             self.purchasedProductIDs = newlyPurchasedIDs
         }
     }
-    
-    func toggleFavorite(for productID: String) {
-        if favoriteProductIDs.contains(productID) {
-            favoriteProductIDs.remove(productID)
-            UserDefaults.standard.set(Array(favoriteProductIDs), forKey: "favorite_flows")
-        } else {
-            favoriteProductIDs.insert(productID)
-            UserDefaults.standard.set(Array(favoriteProductIDs), forKey: "favorite_flows")
-        }
-    }
 
-    func loadFavorites() {
-        let saved = UserDefaults.standard.stringArray(forKey: "favorite_flows") ?? []
-        self.favoriteProductIDs = Set(saved)
-    }
-    
-    // MARK: - Legacy File Verification Logic
-    
+    // MARK: - File Verification Logic
     private var purchasedContentPath: URL? {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         guard let documentsDirectory = paths.first else { return nil }
-        
-        // Hardcode "combatflows" to match the legacy directory exactly
-        let legacyAppName = "combatflows"
-        
-        return documentsDirectory
-            .appendingPathComponent("CombatMMA")
-            .appendingPathComponent(legacyAppName)
-            .appendingPathComponent("purchased_content")
+        return documentsDirectory.appendingPathComponent("CombatMMA/combatflows/purchased_content")
     }
     
     private func hasPurchasedFiles(for productID: String) -> Bool {
-        guard let contentPath = purchasedContentPath,
-              let store = curriculumStore else { return false }
-        
-        // Get list of files actually on disk
+        guard let contentPath = purchasedContentPath, let store = curriculumStore else { return false }
         let fileManager = FileManager.default
-        guard let purchasedFiles = try? fileManager.contentsOfDirectory(atPath: contentPath.path) else {
-            return false
-        }
+        guard let purchasedFiles = try? fileManager.contentsOfDirectory(atPath: contentPath.path) else { return false }
         let purchasedSet = Set(purchasedFiles)
         
-        // Get list of assets that SHOULD be there for this productID
-        // Mirroring assetNamesForProductIdentifier: from SCRProductService.m
         let requiredAssets = getRequiredAssets(for: productID, from: store)
         if requiredAssets.isEmpty { return false }
         
-        // Check if all required assets are present
-        let requiredSet = Set(requiredAssets)
-        return requiredSet.isSubset(of: purchasedSet)
+        return Set(requiredAssets).isSubset(of: purchasedSet)
     }
     
     private func getRequiredAssets(for productID: String, from store: CurriculumStore) -> [String] {
-        // Find the group matching this productID
-        guard let group = store.flowGroups.first(where: { $0.productIdentifier == productID }) else {
-            // If it's the bundle, we might need different logic,
-            // but your legacy code used assetNamesForProductIdentifier for the bundle too.
-            return []
-        }
-        
-        // Collect all lesson filenames in this group
-        var assets: [String] = []
-        for flow in group.combatFlows {
-            for lesson in flow.lessons {
-                assets.append(lesson.filename)
-            }
-        }
-        return assets
+        guard let group = store.flowGroups.first(where: { $0.productIdentifier == productID }) else { return [] }
+        return group.combatFlows.flatMap { $0.lessons.map { $0.filename } }
     }
 
+    // MARK: - StoreKit Actions
     func fetchProducts(productIdentifiers: Set<String>) {
         productsRequest?.cancel()
         productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
@@ -157,7 +119,7 @@ class StoreManager: NSObject, ObservableObject {
     }
 }
 
-
+// MARK: - SKPaymentTransactionObserver
 extension StoreManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
@@ -178,105 +140,150 @@ extension StoreManager: SKPaymentTransactionObserver {
     
     private func handlePurchased(_ transaction: SKPaymentTransaction) {
         let productID = transaction.payment.productIdentifier
-        
-        // Mark as purchased in UserDefaults (Mirroring IAPHelper.m:248)
         UserDefaults.standard.set(true, forKey: productID)
         
-        if !transaction.downloads.isEmpty {
-            print("📦 Starting downloads for \(productID)...")
-            SKPaymentQueue.default().start(transaction.downloads)
-        } else {
-            purchasedProductIDs.insert(productID)
-            SKPaymentQueue.default().finishTransaction(transaction)
-        }
-    }
-    
-    private func handleFailed(_ transaction: SKPaymentTransaction) {
-        if let error = transaction.error as? SKError, error.code != .paymentCancelled {
-            print("Transaction failed: \(error.localizedDescription)")
-        }
+        // 1. Mark as purchased locally
+        DispatchQueue.main.async { self.purchasedProductIDs.insert(productID) }
+        
+        // 2. Start the R2 Download
+        startManualDownload(for: productID)
+        
+        // 3. Finish transaction immediately (since we aren't using SKDownload)
         SKPaymentQueue.default().finishTransaction(transaction)
     }
     
     private func handleRestored(_ transaction: SKPaymentTransaction) {
-        purchasedProductIDs.insert(transaction.payment.productIdentifier)
+        let productID = transaction.payment.productIdentifier
+        UserDefaults.standard.set(true, forKey: productID)
+        
+        DispatchQueue.main.async { self.purchasedProductIDs.insert(productID) }
+        
+        // If the files aren't on disk, download them
+        if !hasPurchasedFiles(for: productID) {
+            startManualDownload(for: productID)
+        }
+        
         SKPaymentQueue.default().finishTransaction(transaction)
     }
-}
+    
+    private func handleFailed(_ transaction: SKPaymentTransaction) {
+        SKPaymentQueue.default().finishTransaction(transaction)
+    }
 
-extension StoreManager: SKProductsRequestDelegate {
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        DispatchQueue.main.async {
-            self.fetchedProducts = response.products
-        }
+    func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
+        DispatchQueue.main.async { self.isRestoring = false }
     }
 }
 
-
-extension StoreManager {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedDownloads downloads: [SKDownload]) {
-        for download in downloads {
-            let productID = download.contentIdentifier
-            
-            switch download.downloadState {
-            case .active:
-                DispatchQueue.main.async {
-                    // Cast to Double to match @Published var downloadProgress: [String: Double]
-                    self.downloadProgress[productID] = Double(download.progress)
-                }
-            case .finished:
-                processFinishedDownload(download)
-                DispatchQueue.main.async {
-                    self.downloadProgress.removeValue(forKey: productID)
-                }
-            case .failed, .cancelled:
-                DispatchQueue.main.async {
-                    self.downloadProgress.removeValue(forKey: productID)
-                }
-                SKPaymentQueue.default().finishTransaction(download.transaction)
-            case .waiting:
-                // Mirroring IAPHelper.m:228 - Force start if waiting
-                SKPaymentQueue.default().start([download])
-            default:
-                break
-            }
+// MARK: - R2 Download Logic
+extension StoreManager: URLSessionDownloadDelegate {
+    
+    func startManualDownload(for productID: String) {
+        guard let fileName = downloadMap[productID],
+              let url = URL(string: downloadBaseURL + fileName) else { return }
+        
+        print("🚀 Starting R2 Download: \(url.absoluteString)")
+        
+        // Create a session that allows us to track progress
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        
+        let task = session.downloadTask(with: url)
+        task.taskDescription = productID // Pass ID to the delegate
+        task.resume()
+    }
+    
+    // Track Progress
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        guard let productID = downloadTask.taskDescription else { return }
+        let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
+        
+        DispatchQueue.main.async {
+            self.downloadProgress[productID] = progress
         }
     }
     
-    private func processFinishedDownload(_ download: SKDownload) {
-        guard let sourceURL = download.contentURL?.appendingPathComponent("Contents") else { return }
-        guard let destinationURL = purchasedContentPath else { return }
+    // Download Finished
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        guard let productID = downloadTask.taskDescription,
+              let destinationFolder = purchasedContentPath else { return }
+        
+        let fileManager = FileManager.default
+        let zipDestination = destinationFolder.appendingPathComponent("\(productID).zip")
+        
+        do {
+            try fileManager.createDirectory(at: destinationFolder, withIntermediateDirectories: true)
+            
+            if fileManager.fileExists(atPath: zipDestination.path) {
+                try fileManager.removeItem(at: zipDestination)
+            }
+            
+            try fileManager.moveItem(at: location, to: zipDestination)
+            
+            // Perform Unzip
+            unzipDownloadedContent(at: zipDestination, to: destinationFolder)
+            
+            // Cleanup
+            try fileManager.removeItem(at: zipDestination)
+            
+            print("✅ Successfully installed \(productID)")
+            
+            DispatchQueue.main.async {
+                self.downloadProgress.removeValue(forKey: productID)
+                self.loadPurchasedStates()
+                
+                // Diagnostic
+                if let path = self.purchasedContentPath?.path {
+                    let files = (try? FileManager.default.contentsOfDirectory(atPath: path)) ?? []
+                    print("📁 Current Purchased Content Directory: \(files)")
+                }
+            }
+            
+        } catch {
+            print("❌ File handling error: \(error)")
+        }
+    }
+    
+    private func unzipDownloadedContent(at zipURL: URL, to destinationURL: URL) {
+        print("📦 Unzipping items to: \(destinationURL.path)")
         
         let fileManager = FileManager.default
         
         do {
-            // Create destination directory: Documents/CombatMMA/[appname]/purchased_content
-            try fileManager.createDirectory(at: destinationURL, withIntermediateDirectories: true)
+            // This requires the ZIPFoundation library
+            // If you haven't added it: File > Add Packages > https://github.com/weichsel/ZIPFoundation.git
+            try fileManager.unzipItem(at: zipURL, to: destinationURL)
             
-            // Get contents of the downloaded 'Contents' folder
-            let items = try fileManager.contentsOfDirectory(atPath: sourceURL.path)
-            
-            for item in items {
-                let sourceFile = sourceURL.appendingPathComponent(item)
-                let destFile = destinationURL.appendingPathComponent(item)
-                
-                // If file already exists, remove it before copying new version
-                if fileManager.fileExists(atPath: destFile.path) {
-                    try fileManager.removeItem(at: destFile)
-                }
-                
-                try fileManager.copyItem(at: sourceFile, to: destFile)
-                print("✅ Moved asset: \(item) to \(destFile.path)")
-            }
-            
-            // Finalize the transaction
-            SKPaymentQueue.default().finishTransaction(download.transaction)
-            
-            // Refresh purchase state to unlock the UI
-            loadPurchasedStates()
+            // DEBUG: List the files to verify they are actually there now
+            let items = try fileManager.contentsOfDirectory(atPath: destinationURL.path)
+            print("🗂 Files extracted: \(items)")
             
         } catch {
-            print("❌ File move error: \(error)")
+            print("❌ Unzip Failed: \(error.localizedDescription)")
         }
+    }
+}
+
+// MARK: - SKProductsRequestDelegate
+extension StoreManager: SKProductsRequestDelegate {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        DispatchQueue.main.async { self.fetchedProducts = response.products }
+    }
+}
+
+// MARK: - Favorites
+extension StoreManager {
+    func toggleFavorite(for productID: String) {
+        if favoriteProductIDs.contains(productID) {
+            favoriteProductIDs.remove(productID)
+        } else {
+            favoriteProductIDs.insert(productID)
+        }
+        UserDefaults.standard.set(Array(favoriteProductIDs), forKey: "favorite_flows")
+    }
+
+    func loadFavorites() {
+        let saved = UserDefaults.standard.stringArray(forKey: "favorite_flows") ?? []
+        self.favoriteProductIDs = Set(saved)
     }
 }

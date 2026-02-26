@@ -19,25 +19,31 @@ struct FlowGridItem: View {
     @EnvironmentObject var storeManager: StoreManager
     
     var body: some View {
+        let activeProgress = storeManager.downloadProgress[group.productIdentifier]
+        let isDownloading = activeProgress != nil
+        
         ZStack {
             // 1. The Video Base
             LoopingThumbnailView(fileName: group.previewVideoName)
-                .frame(height: 150)
-                .frame(maxWidth: .infinity)
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color.black)
-                .blur(radius: isLocked ? 3 : 0)
+                .clipped()
+                .blur(radius: (isLocked || isDownloading) ? 3 : 0)
             
+            // 2. Upper-Right Corner: Lock or Favorite
             VStack {
                 HStack {
                     Spacer()
                     if isLocked {
-                        // Show Lock Icon if locked
+                        // LOCK ICON IN TOP RIGHT
                         Image("icn_lock")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 40, height: 40)
+                            .frame(width: 32, height: 32)
+//                            .padding(8)
                     } else {
-                        // Show Favorite Button if unlocked
+                        // FAVORITE BUTTON IN TOP RIGHT
                         Button {
                             storeManager.toggleFavorite(for: group.productIdentifier)
                         } label: {
@@ -47,80 +53,86 @@ struct FlowGridItem: View {
                                 .scaledToFit()
                                 .frame(width: 40, height: 40)
                         }
-                        .buttonStyle(.plain) // Prevents the whole grid item from highlighting
+//                        .padding(4)
                     }
                 }
                 Spacer()
             }
             
-            // 2. The Info Overlay (Bottom)
+            // 3. Central UI (Price Button or Progress)
+            if let progress = activeProgress {
+                DownloadProgressOverlay(progress: progress)
+            } else if isLocked {
+                // GET BUTTON IN CENTER
+                let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier })
+                Text(product?.localizedPrice ?? "GET")
+                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(
+                        Capsule()
+                            .stroke(Color.green, lineWidth: 2)
+                            .background(Color.black.opacity(0.4).clipShape(Capsule()))
+                    )
+            }
+            
+            // 4. Info Overlay (Bottom)
             VStack {
                 Spacer()
                 VStack(alignment: .leading, spacing: 2) {
                     Text(group.name.uppercased())
                         .font(.system(size: 10, weight: .black, design: .rounded))
-                        .lineLimit(1)
-                    
                     Text(group.text ?? "")
                         .font(.system(size: 9, weight: .medium))
-                        .lineLimit(4)
-                        .opacity(0.9)
+                        .lineLimit(2)
                 }
                 .foregroundColor(.white)
                 .padding(8)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color.black.opacity(0.3))
-            }
-            
-            // 3. The "Get" Capsule or Progress Bar
-            if isLocked {
-                // CHECK FOR ACTIVE DOWNLOAD
-                if let progress = storeManager.downloadProgress[group.productIdentifier] {
-                    DownloadProgressOverlay(progress: progress)
-                } else {
-                    // Standard Purchase Button
-                    let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier })
-                    Text(product?.localizedPrice ?? "GET")
-                        .font(.system(size: 14, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(
-                            Capsule()
-                                .stroke(Color.green, lineWidth: 2)
-                                .background(Color.black.opacity(0.4).clipShape(Capsule()))
-                        )
-                        .shadow(radius: 4)
-                }
+                .background(Color.black.opacity(0.4))
             }
         }
-        .frame(height: 150)
-        .frame(maxWidth: .infinity)
+        .aspectRatio(1.0, contentMode: .fit)
         .overlay(
             Rectangle()
-                .stroke(isLocked ? Color.green : Color.blue, lineWidth: 1)
+                .stroke(isLocked ? Color.green.opacity(0.5) : Color.blue.opacity(0.5), lineWidth: 2)
         )
     }
 }
 
-// Subview for the Progress Bar
 struct DownloadProgressOverlay: View {
     let progress: Double
     
     var body: some View {
-        VStack(spacing: 8) {
-            ProgressView(value: progress)
-                .progressViewStyle(LinearProgressViewStyle(tint: .green))
-                .frame(width: 100)
-                .scaleEffect(x: 1, y: 2, anchor: .center)
+        VStack(spacing: 12) {
+            ZStack {
+                // Background Circle
+                Circle()
+                    .stroke(Color.white.opacity(0.2), lineWidth: 4)
+                    .frame(width: 50, height: 50)
+                
+                // Progress Circle
+                Circle()
+                    .trim(from: 0, to: CGFloat(progress))
+                    .stroke(Color.blue, style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                    .frame(width: 50, height: 50)
+                    .rotationEffect(.degrees(-90))
+                    .animation(.linear, value: progress)
+                
+                Text("\(Int(progress * 100))%")
+                    .font(.system(size: 12, weight: .bold, design: .monospaced))
+                    .foregroundColor(.white)
+            }
             
-            Text("DOWNLOADING \(Int(progress * 100))%")
-                .font(.system(size: 10, weight: .black, design: .rounded))
-                .foregroundColor(.green)
+            Text("DOWNLOADING")
+                .font(.system(size: 10, weight: .black))
+                .foregroundColor(.blue)
+                .kerning(1)
         }
-        .padding(10)
-        .background(Color.black.opacity(0.7).clipShape(RoundedRectangle(cornerRadius: 8)))
+        .padding(20)
+        .background(Circle().fill(Color.black.opacity(0.6)))
+        .shadow(radius: 10)
     }
 }
-
 
