@@ -40,7 +40,7 @@ struct MainSidebarView: View {
                let group = store.flowGroups.first(where: { $0.id == groupID }) {
                 FlowGridView(group: group)
             } else {
-                ContentUnavailableView("Select a Flow", systemImage: "figure.martial-arts")
+                ContentUnavailableView("Select a Flow", systemImage: "figure.martial.arts")
             }
             
         } detail: {
