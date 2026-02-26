@@ -48,13 +48,6 @@ struct ContentView: View {
                                     // Assuming the group has a preview video matching its listImage name
                                     LoopingThumbnailView(fileName: group.previewVideoName)
                                         .frame(width: 150, height: 150)
-                                        .cornerRadius(12)
-                                        .clipped()
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 12)
-                                                .stroke(selectedGroupID == group.id ? Color.accentColor : Color.clear, lineWidth: 3)
-                                        )
-                                    
                                     Text(group.name)
                                         .font(.caption)
                                         .fontWeight(.bold)
@@ -88,10 +81,20 @@ struct ContentView: View {
             // --- DETAIL COLUMN (Tertiary) ---
             if let groupID = selectedGroupID,
                let group = store.flowGroups.first(where: { $0.id == groupID }) {
-                // This is where your square looping video grid goes!
-                FlowGridView(group: group)
+                
+                // OPTION A: Show the Player for the first flow in that group
+                if let firstFlow = group.combatFlows.first {
+                    FlowPlayerView(flow: firstFlow)
+                } else {
+                    ContentUnavailableView("No Videos Available", systemImage: "video.slash")
+                }
+                
+                /* // OPTION B: If you'd rather see the Grid first, keep it as:
+                 // FlowGridView(group: group)
+                 */
+                
             } else {
-                ContentUnavailableView("Select a Flow", systemImage: "play.circle")
+                ContentUnavailableView("Select a Flow Group", systemImage: "play.circle")
             }
         }
     }
@@ -153,58 +156,6 @@ struct LoopingThumbnailView: View {
         .aspectRatio(contentMode: .fill)
     }
 }
-
-
-// A simple wrapper to play the square preview videos looping/muted
-//struct LoopingThumbnailView: UIViewRepresentable {
-//    let fileName: String
-//    
-//    // The Coordinator holds the looper so it doesn't get garbage collected
-//    class Coordinator {
-//        var looper: AVPlayerLooper?
-//        var player: AVQueuePlayer?
-//    }
-//
-//    func makeCoordinator() -> Coordinator {
-//        return Coordinator()
-//    }
-//    
-//    func makeUIView(context: Context) -> UIView {
-//        let view = UIView(frame: .zero)
-//        
-//        // 1. Clean up the filename (Remove @2x and handle extension)
-//        let baseNameWithExt = fileName.replacingOccurrences(of: "@2x", with: "")
-//        let nsString = baseNameWithExt as NSString
-//        let resourceName = nsString.deletingPathExtension
-//        let resourceExt = nsString.pathExtension.isEmpty ? "m4v" : nsString.pathExtension
-//        
-//        // 2. Locate the resource properly
-//        guard let path = Bundle.main.path(forResource: resourceName, ofType: resourceExt) else {
-//            print("❌ Looping video not found: \(resourceName).\(resourceExt)")
-//            return view
-//        }
-//        
-//        let url = URL(fileURLWithPath: path)
-//        let playerItem = AVPlayerItem(url: url)
-//        
-//        let player = AVQueuePlayer(playerItem: playerItem)
-//        let playerLayer = AVPlayerLayer(player: player)
-//        
-//        context.coordinator.player = player
-//        context.coordinator.looper = AVPlayerLooper(player: player, templateItem: playerItem)
-//        
-//        playerLayer.videoGravity = .resizeAspectFill
-//        player.isMuted = true
-//        player.play()
-//        
-//        view.layer.addSublayer(playerLayer)
-//        return view
-//    }
-//    
-//    func updateUIView(_ uiView: UIView, context: Context) {
-//        uiView.layer.sublayers?.first?.frame = uiView.bounds
-//    }
-//}
 
 enum NavCategory: String, CaseIterable, Identifiable {
     case getTrained = "Get Trained"
