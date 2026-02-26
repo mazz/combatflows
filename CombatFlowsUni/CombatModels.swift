@@ -27,7 +27,8 @@ struct Lesson: Identifiable, Hashable {
 /// Note: This isn't directly Decodable because it is constructed 
 /// dynamically from the string arrays in FlowGroup.
 struct Flow: Identifiable, Hashable {
-    let id = UUID()
+//    let id = UUID()
+    var id: String { "\(name)-\(ordinal)-\(nominal)" }
     let name: String
     let ordinal: Int
     let nominal: Int

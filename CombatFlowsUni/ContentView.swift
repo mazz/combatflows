@@ -14,25 +14,16 @@ import StoreKit
 
 struct ContentView: View {
     @State private var store = CurriculumStore()
-    @EnvironmentObject var storeManager: StoreManager // Access the app-wide manager
+    // CRITICAL: We keep this here for initialization, but we do NOT
+    // access it inside the 'body' for grid-item properties.
+    @EnvironmentObject var storeManager: StoreManager
     
-    // Track which main tab is selected
     @State private var selectedCategory: NavCategory? = .getTrained
-    
-    // Track which specific flow group is selected (for the middle column)
-    @State private var selectedGroupID: String?
     @State private var selectedFlow: Flow?
-    
-//    let columns = [
-//        GridItem(.fixed(150), spacing: 16),
-//        GridItem(.fixed(150), spacing: 16)
-//    ]
-    
-    let columns = [GridItem(.adaptive(minimum: 150), spacing: 20)]
+    @State private var viewModel: ContentViewModel?
 
     var body: some View {
         NavigationSplitView {
-            // --- SIDEBAR (Primary) ---
             List(selection: $selectedCategory) {
                 ForEach(NavCategory.allCases) { category in
                     NavigationLink(value: category) {
@@ -43,99 +34,87 @@ struct ContentView: View {
             .navigationTitle("CombatFlows")
             
         } content: {
-            // --- MIDDLE COLUMN (Secondary) ---
-            switch selectedCategory {
-            case .getTrained:
-                ScrollView {
-                    VStack(spacing: 20) { // Added spacing between tile and grid
-                        
-                        // --- THE BUNDLE TILE ---
-                        if !storeManager.purchasedProductIDs.contains(storeManager.bundleID) {
-                            BundleFeatureTile()
-                                .padding(.horizontal)
-                        }
-                        
-                        // --- THE REGULAR FLOW GRID ---
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
-                            ForEach(store.flowGroups) { group in
-                                let locked = !isUnlocked(group)
-                                
-                                ForEach(group.combatFlows) { flow in
-                                    Button {
-                                        if locked {
-                                            if let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier }) {
-                                                storeManager.buy(product: product)
+            if let vm = viewModel {
+                switch selectedCategory {
+                case .getTrained:
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            // Use the ViewModel to check bundle status
+                            // This prevents the whole view from refreshing on favorite toggle
+                            if !vm.storeManager.purchasedProductIDs.contains(vm.storeManager.bundleID) {
+                                BundleFeatureTile()
+                                    .padding(.horizontal)
+                            }
+                            
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
+                                ForEach(vm.store.flowGroups) { group in
+                                    // Use VM for the 'locked' calculation
+                                    let locked = !vm.isUnlocked(group)
+                                    
+                                    ForEach(group.combatFlows) { flow in
+                                        Button {
+                                            vm.handleTap(group: group, flow: flow) { tappedFlow in
+                                                selectedFlow = tappedFlow
                                             }
-                                        } else {
-                                            selectedFlow = flow
+                                        } label: {
+                                            FlowGridItem(
+                                                group: group,
+                                                flow: flow,
+                                                isLocked: locked,
+                                                isFavorite: vm.isFavorite(group),
+                                                downloadProgress: vm.downloadProgress(for: group),
+                                                price: vm.localizedPrice(for: group),
+                                                onToggleFavorite: {
+                                                    vm.toggleFavorite(for: group)
+                                                }
+                                            )
+                                            .equatable()
                                         }
-                                    } label: {
-                                        FlowGridItem(group: group, flow: flow, isLocked: locked)
+                                        .buttonStyle(.plain)
                                     }
-                                    .buttonStyle(.plain)
                                 }
                             }
                         }
+                        .padding(.vertical)
                     }
-                    .padding(.vertical)
-                }
-                .navigationTitle("Get Trained")
-                .navigationDestination(item: $selectedFlow) { flow in
-                    FlowPlayerView(flow: flow)
-                }
-                // This is what prevents the 1-column collapse on Mac/iPad
-                .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
-                
-            case .favorites:
-                ContentUnavailableView("Favorites Coming Soon", systemImage: "star")
+                    .navigationTitle("Get Trained")
+                    .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
+                    
+                case .favorites:
+                    ContentUnavailableView("Favorites Coming Soon", systemImage: "star")
+                        .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
+
+                case .more:
+                    List {
+                        NavigationLink("About CombatFlows") { Text("About View") }
+                        NavigationLink("Settings") { Text("Settings View") }
+                    }
+                    .navigationTitle("More")
                     .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
 
-            case .more:
-                List {
-                    NavigationLink("About CombatFlows") { Text("About View") }
-                    NavigationLink("Settings") { Text("Settings View") }
+                case .none:
+                    Text("Select a Category")
                 }
-                .navigationTitle("More")
-                .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
-
-            case .none:
-                Text("Select a Category")
+            } else {
+                ProgressView("Loading...")
             }
-        }
-        detail: {
-            // --- DETAIL COLUMN (Tertiary) ---
+        } detail: {
             if let flow = selectedFlow {
-                // This shows the actual video player when a flow is picked
                 FlowPlayerView(flow: flow)
             } else {
                 ContentUnavailableView("Select a Flow to Watch", systemImage: "play.rectangle.on.rectangle")
             }
         }
         .onAppear {
+            if viewModel == nil {
+                viewModel = ContentViewModel(store: store, storeManager: storeManager)
+            }
             storeManager.initializePurchases(with: store)
             
-            // Create a combined set of all group IDs PLUS the bundle ID
             var allIDs = Set(store.flowGroups.map { $0.productIdentifier })
-            allIDs.insert("ca.ilearningsolutions.combatflows.combatflowbundle") // The ID from SCRProductService.m
-            
+            allIDs.insert("ca.ilearningsolutions.combatflows.combatflowbundle")
             storeManager.fetchProducts(productIdentifiers: allIDs)
         }
-    }
-    
-    // Add this inside struct ContentView
-    func isUnlocked(_ group: FlowGroup) -> Bool {
-        // 1. Free Product Check (ca.ilearningsolutions.combatflows.combatflow04)
-        if group.productIdentifier == "ca.ilearningsolutions.combatflows.combatflow04" {
-            return true
-        }
-        
-        // 2. Everything Bundle Check
-        if storeManager.purchasedProductIDs.contains(storeManager.bundleID) {
-            return true
-        }
-        
-        // 3. Individual Group Purchase Check
-        return storeManager.purchasedProductIDs.contains(group.productIdentifier)
     }
 }
 

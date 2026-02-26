@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 90;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -401,24 +401,31 @@
 /* Begin PBXFrameworksBuildPhase section */
 		4C1589082F4FB66C002A9FD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 				4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */,
 				4C1589A92F5013CC002A9FD2 /* StoreKit.framework in Frameworks */,
 				4C849A252F50B321009E7F74 /* ZIPFoundation in Frameworks */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C1589142F4FB66D002A9FD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C15891E2F4FB66E002A9FD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		68305EAA1CEBFA8A00A963E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 				68B7E89F1DAC838C00DA1B0F /* SafariServices.framework in Frameworks */,
 				2A9C779A1CF0EE24006D7068 /* StoreKit.framework in Frameworks */,
@@ -430,6 +437,7 @@
 				2A9C778E1CF0EE03006D7068 /* SystemConfiguration.framework in Frameworks */,
 				EEA10EADC2F9C9FB6BDE934F /* libPods-combatflows.a in Frameworks */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -770,6 +778,8 @@
 			);
 			buildRules = (
 			);
+			dependencies = (
+			);
 			fileSystemSynchronizedGroups = (
 				4C15890C2F4FB66C002A9FD2 /* CombatFlowsUni */,
 			);
@@ -799,6 +809,8 @@
 				4C15891A2F4FB66D002A9FD2 /* CombatFlowsUniTests */,
 			);
 			name = CombatFlowsUniTests;
+			packageProductDependencies = (
+			);
 			productName = CombatFlowsUniTests;
 			productReference = 4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -820,6 +832,8 @@
 				4C1589242F4FB66E002A9FD2 /* CombatFlowsUniUITests */,
 			);
 			name = CombatFlowsUniUITests;
+			packageProductDependencies = (
+			);
 			productName = CombatFlowsUniUITests;
 			productReference = 4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -835,7 +849,11 @@
 			);
 			buildRules = (
 			);
+			dependencies = (
+			);
 			name = combatflows;
+			packageProductDependencies = (
+			);
 			productName = combatflows;
 			productReference = 68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */;
 			productType = "com.apple.product-type.application";
@@ -880,7 +898,7 @@
 				4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */,
 				4C849A232F50B321009E7F74 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
-			preferredProjectObjectVersion = 90;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 68305EAE1CEBFA8A00A963E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -896,6 +914,7 @@
 /* Begin PBXResourcesBuildPhase section */
 		4C1589092F4FB66C002A9FD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 				4C15895E2F4FD546002A9FD2 /* tn_cf_listview_10@2x.png in Resources */,
 				4C15895F2F4FD546002A9FD2 /* tn_cf_listview_06@2x.png in Resources */,
@@ -936,19 +955,25 @@
 				4C15895C2F4FD0F4002A9FD2 /* 04-combatflow-1-graphicguide.m4v in Resources */,
 				4C15895B2F4FD0EE002A9FD2 /* 04-combatflow-1-application.m4v in Resources */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C1589152F4FB66D002A9FD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C15891F2F4FB66E002A9FD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		68305EAB1CEBFA8A00A963E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 				2A1389DF1CF75B5A00C39B31 /* cf_14_tn_4_4s.m4v in Resources */,
 				2A1389E11CF75B5A00C39B31 /* cf_16_tn_4_4s.m4v in Resources */,
@@ -982,32 +1007,31 @@
 				2A1389E01CF75B5A00C39B31 /* cf_15_tn_4_4s.m4v in Resources */,
 				2A1389D81CF75B5A00C39B31 /* cf_07_tn_4_4s.m4v in Resources */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		FE54D38E560B751991D5A52E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-combatflows-checkManifestLockResult.txt",
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = (
-				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
-				"if [ $? != 0 ] ; then",
-				"    # print error to STDERR",
-				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
-				"    exit 1",
-				"fi",
-				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
-				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
-				"",
-			);
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1015,21 +1039,28 @@
 /* Begin PBXSourcesBuildPhase section */
 		4C1589072F4FB66C002A9FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C1589132F4FB66D002A9FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4C15891D2F4FB66E002A9FD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		68305EA91CEBFA8A00A963E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
 			files = (
 				2A8171E71CED5D5600D8364F /* THThumbnail.m in Sources */,
 				2A8172021CED5D6000D8364F /* UIView+AutoLayout.m in Sources */,
@@ -1100,6 +1131,7 @@
 				2A9C77591CF0EA8D006D7068 /* SCRMoreViewController.m in Sources */,
 				2A8171E11CED5D5600D8364F /* THPlaybackViewController.m in Sources */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -1136,7 +1168,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4C1589292F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUni" */ = {
+		4C1589292F4FB66E002A9FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1197,7 +1229,7 @@
 			};
 			name = Debug;
 		};
-		4C15892A2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUni" */ = {
+		4C15892A2F4FB66E002A9FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1256,7 +1288,7 @@
 			};
 			name = Release;
 		};
-		4C15892B2F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUniTests" */ = {
+		4C15892B2F4FB66E002A9FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1303,7 +1335,7 @@
 			};
 			name = Debug;
 		};
-		4C15892C2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUniTests" */ = {
+		4C15892C2F4FB66E002A9FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1348,7 +1380,7 @@
 			};
 			name = Release;
 		};
-		4C15892D2F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUniUITests" */ = {
+		4C15892D2F4FB66E002A9FD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1394,7 +1426,7 @@
 			};
 			name = Debug;
 		};
-		4C15892E2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUniUITests" */ = {
+		4C15892E2F4FB66E002A9FD2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1438,7 +1470,7 @@
 			};
 			name = Release;
 		};
-		68305EC21CEBFA8A00A963E8 /* Debug configuration for PBXProject "combatflows" */ = {
+		68305EC21CEBFA8A00A963E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1481,7 +1513,7 @@
 			};
 			name = Debug;
 		};
-		68305EC31CEBFA8A00A963E8 /* Release configuration for PBXProject "combatflows" */ = {
+		68305EC31CEBFA8A00A963E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1518,7 +1550,7 @@
 			};
 			name = Release;
 		};
-		68305EC51CEBFA8A00A963E8 /* Debug configuration for PBXNativeTarget "combatflows" */ = {
+		68305EC51CEBFA8A00A963E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17CAC5DBEE2DD210318EB395 /* Pods-combatflows.debug.xcconfig */;
 			buildSettings = {
@@ -1539,7 +1571,7 @@
 			};
 			name = Debug;
 		};
-		68305EC61CEBFA8A00A963E8 /* Release configuration for PBXNativeTarget "combatflows" */ = {
+		68305EC61CEBFA8A00A963E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFFF93B0ABAB07D6A813F6AB /* Pods-combatflows.release.xcconfig */;
 			buildSettings = {
@@ -1566,41 +1598,46 @@
 		4C15892F2F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUni" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C1589292F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUni" */,
-				4C15892A2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUni" */,
+				4C1589292F4FB66E002A9FD2 /* Debug */,
+				4C15892A2F4FB66E002A9FD2 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4C1589302F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C15892B2F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUniTests" */,
-				4C15892C2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUniTests" */,
+				4C15892B2F4FB66E002A9FD2 /* Debug */,
+				4C15892C2F4FB66E002A9FD2 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4C1589312F4FB66E002A9FD2 /* Build configuration list for PBXNativeTarget "CombatFlowsUniUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C15892D2F4FB66E002A9FD2 /* Debug configuration for PBXNativeTarget "CombatFlowsUniUITests" */,
-				4C15892E2F4FB66E002A9FD2 /* Release configuration for PBXNativeTarget "CombatFlowsUniUITests" */,
+				4C15892D2F4FB66E002A9FD2 /* Debug */,
+				4C15892E2F4FB66E002A9FD2 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		68305EA81CEBFA8A00A963E8 /* Build configuration list for PBXProject "combatflows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68305EC21CEBFA8A00A963E8 /* Debug configuration for PBXProject "combatflows" */,
-				68305EC31CEBFA8A00A963E8 /* Release configuration for PBXProject "combatflows" */,
+				68305EC21CEBFA8A00A963E8 /* Debug */,
+				68305EC31CEBFA8A00A963E8 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		68305EC41CEBFA8A00A963E8 /* Build configuration list for PBXNativeTarget "combatflows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68305EC51CEBFA8A00A963E8 /* Debug configuration for PBXNativeTarget "combatflows" */,
-				68305EC61CEBFA8A00A963E8 /* Release configuration for PBXNativeTarget "combatflows" */,
+				68305EC51CEBFA8A00A963E8 /* Debug */,
+				68305EC61CEBFA8A00A963E8 /* Release */,
 			);
+			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
