@@ -180,3 +180,19 @@ class FlowPlayerViewModel {
         return nil
     }
 }
+
+
+extension FlowPlayerViewModel {
+    func skipTime(by seconds: Double) {
+        let currentTime = player.currentTime()
+        let targetTime = CMTimeAdd(currentTime, CMTime(seconds: seconds, preferredTimescale: 600))
+        player.seek(to: targetTime, toleranceBefore: .zero, toleranceAfter: .zero)
+    }
+    
+    func setPlaybackRate(_ rate: Float) {
+        self.playbackRate = rate
+        player.rate = rate
+    }
+}
+
+
