@@ -74,10 +74,14 @@ struct ContentView: View {
                                     }
                                 }
                             }
+                            .padding(.horizontal)
                         }
                         .padding(.vertical)
                     }
                     .navigationTitle("Get Trained")
+                    .navigationDestination(item: $selectedFlow) { flow in
+                        FlowPlayerView(flow: flow)
+                    }
                     .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
                     
                 case .favorites:

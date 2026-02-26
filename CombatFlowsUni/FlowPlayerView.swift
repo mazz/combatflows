@@ -14,51 +14,72 @@ import swiftui_loop_videoplayer
 struct FlowPlayerView: View {
     let flow: Flow
     @State private var selectedLesson: Lesson?
-    @State private var player = AVPlayer()
+    @State private var player: AVPlayer? // 1. Change to optional
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(spacing: 0) {
-            // 1. The Native Video Player
-            VideoPlayer(player: player)
-                .onAppear {
-                    // Default to the first lesson (usually Teaching or Application)
-                    selectedLesson = flow.lessons.first
-                    playCurrentLesson()
-                }
-                .onDisappear {
-                    player.pause()
-                }
+            // 2. Safely unwrap the player for the VideoPlayer view
+            if let player = player {
+                VideoPlayer(player: player)
+                    .overlay(alignment: .topLeading) {
+                        Button {
+                            player.pause() // Stop audio before leaving
+                            dismiss()
+                        } label: {
+                            Image(systemName: "chevron.left.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.white.opacity(0.7))
+                                .padding(.top, 50)
+                                .padding(.leading, 20)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea(.all, edges: .top)
+            } else {
+                // Background color while player initializes
+                Color.black
+                    .ignoresSafeArea()
+                    .onAppear {
+                        // 3. Initialize the player ONLY ONCE here
+                        if player == nil {
+                            player = AVPlayer()
+                        }
+                        selectedLesson = flow.lessons.first
+                        playCurrentLesson()
+                    }
+            }
             
-            // 2. Lesson Switcher (Teaching / Application / Graphic Guide)
+            // ... (Your Picker Code) ...
             Picker("Lesson Type", selection: $selectedLesson) {
                 ForEach(flow.lessons, id: \.self) { lesson in
                     Text(lesson.type.rawValue.capitalized).tag(lesson as Lesson?)
                 }
             }
             .pickerStyle(.segmented)
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .background(.ultraThinMaterial)
             .onChange(of: selectedLesson) { _ in
                 playCurrentLesson()
             }
         }
-        .navigationTitle("Flow \(flow.nominal)")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.visible, for: .navigationBar)
-        // This ensures the video takes advantage of the full screen width on iPhone
-        .ignoresSafeArea(.all, edges: .bottom)
+        .toolbar(.hidden, for: .navigationBar)
+        .ignoresSafeArea(.container, edges: .bottom)
+        .onDisappear {
+            player?.pause()
+            player = nil // 4. Clean up the player entirely
+        }
     }
     
     private func playCurrentLesson() {
         guard let filename = selectedLesson?.filename else { return }
         
-        // USE THE HELPER HERE
         if let url = getLegacyVideoURL(for: filename) {
             let item = AVPlayerItem(url: url)
-            player.replaceCurrentItem(with: item)
-            player.play()
-        } else {
-            // This will now only print if it's missing from BOTH the bundle and Documents
-            print("Video not found: \(filename)")
+            // Use optional chaining
+            player?.replaceCurrentItem(with: item)
+            player?.play()
         }
     }
     
