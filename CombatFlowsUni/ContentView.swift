@@ -48,10 +48,14 @@ struct ContentView: View {
                             
                             LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
                                 ForEach(vm.store.flowGroups) { group in
-                                    // Use VM for the 'locked' calculation
                                     let locked = !vm.isUnlocked(group)
                                     
                                     ForEach(group.combatFlows) { flow in
+                                        // CORRECT LOGIC: Compare the flow being rendered to the selected flow
+                                        let isCinemaMode = selectedFlow != nil
+                                        let isThisFlowSelected = selectedFlow?.id == flow.id // Use flow.id, not group.id
+                                        let shouldDim = isCinemaMode && !isThisFlowSelected
+
                                         Button {
                                             vm.handleTap(group: group, flow: flow) { tappedFlow in
                                                 selectedFlow = tappedFlow
@@ -64,11 +68,11 @@ struct ContentView: View {
                                                 isFavorite: vm.isFavorite(group),
                                                 downloadProgress: vm.downloadProgress(for: group),
                                                 price: vm.localizedPrice(for: group),
-                                                onToggleFavorite: {
-                                                    vm.toggleFavorite(for: group)
-                                                }
+                                                onToggleFavorite: { vm.toggleFavorite(for: group) },
+                                                isDimmed: shouldDim,
+                                                isSelected: isThisFlowSelected
                                             )
-                                            .equatable()
+                                            .equatable() // This only works if == is updated!
                                         }
                                         .buttonStyle(.plain)
                                     }

@@ -21,29 +21,32 @@ struct FlowGridItem: View, Equatable {
     let downloadProgress: Double?
     let price: String
     var onToggleFavorite: () -> Void
+    let isDimmed: Bool      // New: Dim if another video is playing
+    let isSelected: Bool    // New: Highlight if this is the active video
     
     static func == (lhs: FlowGridItem, rhs: FlowGridItem) -> Bool {
         return lhs.group.productIdentifier == rhs.group.productIdentifier &&
+        lhs.flow.id == rhs.flow.id && // Add flow ID check
         lhs.isLocked == rhs.isLocked &&
         lhs.isFavorite == rhs.isFavorite &&
         lhs.downloadProgress == rhs.downloadProgress &&
-        lhs.price == rhs.price
-        // We do not compare the closure (onToggleFavorite)
+        lhs.price == rhs.price &&
+        lhs.isDimmed == rhs.isDimmed &&  // CRITICAL
+        lhs.isSelected == rhs.isSelected // CRITICAL
     }
-    
+
     var body: some View {
         let isDownloading = downloadProgress != nil
         
         ZStack {
             // 1. The Video Base - Wrap in Optimized player to prevent reloads
             OptimizedVideoPlayer(fileName: group.previewVideoName)
-                .equatable() // Stops flicker
+                .equatable()
                 .scaledToFill()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.black)
-                .clipped()
-                .blur(radius: (isLocked || isDownloading) ? 3 : 0)
-            
+                .grayscale(isDimmed ? 0.8 : 0) // Remove color distraction
+                .opacity(isDimmed ? 0.4 : 1.0) // Dim the brightness
+                .blur(radius: isDimmed ? 1 : 0)
             // 2. Corner UI
             VStack {
                 HStack {
@@ -84,7 +87,12 @@ struct FlowGridItem: View, Equatable {
             }
         }
         .aspectRatio(1.0, contentMode: .fit)
-        .overlay(Rectangle().stroke(isLocked ? Color.green.opacity(0.5) : Color.blue.opacity(0.5), lineWidth: 2))
+        .overlay(
+            Rectangle()
+                .stroke(isSelected ? Color.yellow : (isLocked ? Color.green.opacity(0.5) : Color.blue.opacity(0.5)),
+                        lineWidth: isSelected ? 4 : 2)
+        )
+        .animation(.easeInOut, value: isDimmed)
     }
 }
 
