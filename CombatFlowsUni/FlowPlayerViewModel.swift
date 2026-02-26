@@ -31,6 +31,36 @@ class FlowPlayerViewModel {
     var countdownRemaining: Int = 0
     var isCountingDown: Bool = false
     
+    var playbackRate: Float = 1.0
+    
+    // Toggle between 1.0x and 0.5x
+    func toggleSlowMotion() {
+        playbackRate = (playbackRate == 1.0) ? 0.5 : 1.0
+        player.rate = playbackRate
+    }
+    
+    func togglePlayPause() {
+        if player.timeControlStatus == .playing {
+            player.pause()
+        } else {
+            player.play()
+            player.rate = playbackRate // Ensure it resumes at correct speed
+        }
+    }
+    
+    func skipToNextLesson() {
+        guard let current = selectedLesson,
+              let currentIndex = sortedLessons.firstIndex(of: current),
+              currentIndex + 1 < sortedLessons.count else { return }
+        selectedLesson = sortedLessons[currentIndex + 1]
+    }
+    
+    func skipToPreviousLesson() {
+        guard let current = selectedLesson,
+              let currentIndex = sortedLessons.firstIndex(of: current),
+              currentIndex - 1 >= 0 else { return }
+        selectedLesson = sortedLessons[currentIndex - 1]
+    }
     
     init(flow: Flow) {
         self.flow = flow

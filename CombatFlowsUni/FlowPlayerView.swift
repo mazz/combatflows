@@ -21,74 +21,107 @@ struct FlowPlayerView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            VideoPlayer(player: vm.player)
-                .overlay {
-                    if vm.isCountingDown {
-                        ZStack {
-                            Color.black.opacity(0.8)
-                            VStack {
-                                Text("NEXT DRILL IN")
-                                    .font(.system(size: 24, weight: .black))
-                                Text("\(vm.countdownRemaining)")
-                                    .font(.system(size: 120, weight: .black, design: .rounded))
-                                    .transition(.scale)
-                            }
-                            .foregroundColor(.yellow)
+            VideoPlayer(player: vm.player) {
+                // 1. Move the GESTURE LAYER inside the player's control content
+                // This allows it to coexist with system controls
+                Color.black.opacity(0.001)
+                    .contentShape(Rectangle())
+                    .highPriorityGesture(
+                        TapGesture(count: 2).onEnded { vm.togglePlayPause() }
+                    )
+                    .simultaneousGesture(
+                        LongPressGesture(minimumDuration: 0.5).onEnded { _ in
+                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                            vm.toggleSlowMotion()
                         }
-                    }
-                }
-                .overlay(alignment: .topLeading) {
-                    Button {
-                        vm.player.pause()
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.left.circle.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.white.opacity(0.7))
-                            .padding(.top, 50)
-                            .padding(.leading, 20)
-                    }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea(.all, edges: .top)
-                .onAppear {
-                    vm.playCurrent()
-                }
-            
-            HStack(spacing: 15) {
-                Picker("Lesson Type", selection: $vm.selectedLesson) {
-                    ForEach(vm.sortedLessons, id: \.self) { lesson in
-                        Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
-                            .tag(lesson as Lesson?)
-                    }
-                }
-                .pickerStyle(.segmented)
-                
-                // Loop Toggle Button
+                    )
+                    .gesture(
+                        DragGesture(minimumDistance: 50).onEnded { value in
+                            if value.translation.width < -100 { vm.skipToNextLesson() }
+                            else if value.translation.width > 100 { vm.skipToPreviousLesson() }
+                        }
+                    )
+            }
+            .overlay(alignment: .topLeading) {
+                // 2. The Back Button
                 Button {
-                    vm.toggleLoopMode()
+                    vm.player.pause()
+                    dismiss()
                 } label: {
-                    Image(systemName: vm.loopMode.icon)
-                        .font(.system(size: 18, weight: .bold))
-                        .foregroundColor(vm.loopMode == .off ? .primary : .blue)
-                        .frame(width: 44, height: 44)
-                        .background(.ultraThickMaterial)
-                        .clipShape(Circle())
+                    Image(systemName: "chevron.left.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.white.opacity(0.7))
                 }
+                .padding(.top, 50)
+                .padding(.leading, 20)
             }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
-            .background(.ultraThinMaterial)
-            .onChange(of: vm.selectedLesson) { oldValue, newValue in
-                if oldValue != newValue {
-                    vm.playCurrent()
+            .overlay {
+                // 3. Countdown and Indicators (set to ignore hits)
+                Group {
+                    if vm.isCountingDown { countdownOverlay }
+                    if vm.playbackRate == 0.5 { slowMoIndicator }
                 }
+                .allowsHitTesting(false)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea(.all, edges: .top)
+            
+            pickerToolbar
         }
         .toolbar(.hidden, for: .navigationBar)
-        .ignoresSafeArea(.container, edges: .bottom)
-        .onDisappear {
-            vm.player.pause()
+        .onAppear { vm.playCurrent() }
+        .onDisappear { vm.player.pause() }
+    }
+    
+    // Sub-views for cleanliness
+    private var countdownOverlay: some View {
+        ZStack {
+            Color.black.opacity(0.8)
+            VStack {
+                Text("NEXT DRILL IN").font(.system(size: 24, weight: .black))
+                Text("\(vm.countdownRemaining)")
+                    .font(.system(size: 120, weight: .black, design: .rounded))
+            }
+            .foregroundColor(.yellow)
+        }
+    }
+    
+    private var slowMoIndicator: some View {
+        VStack {
+            Spacer()
+            Text("SLOW MOTION (0.5x)")
+                .font(.system(size: 14, weight: .bold))
+                .foregroundColor(.black)
+                .padding(8)
+                .background(Color.yellow)
+                .clipShape(Capsule())
+                .padding(.bottom, 60) // High enough to stay above the scrubber
+        }
+    }
+    
+    private var pickerToolbar: some View {
+        HStack(spacing: 15) {
+            Picker("Lesson Type", selection: $vm.selectedLesson) {
+                ForEach(vm.sortedLessons, id: \.self) { lesson in
+                    Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
+                        .tag(lesson as Lesson?)
+                }
+            }
+            .pickerStyle(.segmented)
+            
+            Button { vm.toggleLoopMode() } label: {
+                Image(systemName: vm.loopMode.icon)
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(vm.loopMode == .off ? .primary : .blue)
+                    .frame(width: 44, height: 44)
+                    .background(.ultraThickMaterial)
+                    .clipShape(Circle())
+            }
+        }
+        .padding()
+        .background(.ultraThinMaterial)
+        .onChange(of: vm.selectedLesson) { old, new in
+            if old != new { vm.playCurrent() }
         }
     }
 }
