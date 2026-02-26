@@ -12,97 +12,56 @@ import AVKit
 import swiftui_loop_videoplayer
 
 struct FlowPlayerView: View {
-    let flow: Flow
-    @State private var selectedLesson: Lesson?
-    @State private var player: AVPlayer? // 1. Change to optional
+    @State private var vm: FlowPlayerViewModel
     @Environment(\.dismiss) var dismiss
+    
+    init(flow: Flow) {
+        _vm = State(initialValue: FlowPlayerViewModel(flow: flow))
+    }
     
     var body: some View {
         VStack(spacing: 0) {
-            // 2. Safely unwrap the player for the VideoPlayer view
-            if let player = player {
-                VideoPlayer(player: player)
-                    .overlay(alignment: .topLeading) {
-                        Button {
-                            player.pause() // Stop audio before leaving
-                            dismiss()
-                        } label: {
-                            Image(systemName: "chevron.left.circle.fill")
-                                .font(.largeTitle)
-                                .foregroundColor(.white.opacity(0.7))
-                                .padding(.top, 50)
-                                .padding(.leading, 20)
-                        }
+            VideoPlayer(player: vm.player)
+                .overlay(alignment: .topLeading) {
+                    Button {
+                        vm.player.pause()
+                        dismiss()
+                    } label: {
+                        Image(systemName: "chevron.left.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.white.opacity(0.7))
+                            .padding(.top, 50)
+                            .padding(.leading, 20)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .ignoresSafeArea(.all, edges: .top)
-            } else {
-                // Background color while player initializes
-                Color.black
-                    .ignoresSafeArea()
-                    .onAppear {
-                        // 3. Initialize the player ONLY ONCE here
-                        if player == nil {
-                            player = AVPlayer()
-                        }
-                        selectedLesson = flow.lessons.first
-                        playCurrentLesson()
-                    }
-            }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea(.all, edges: .top)
+                .onAppear {
+                    vm.playCurrent()
+                }
             
-            // ... (Your Picker Code) ...
-            Picker("Lesson Type", selection: $selectedLesson) {
-                ForEach(flow.lessons, id: \.self) { lesson in
-                    Text(lesson.type.rawValue.capitalized).tag(lesson as Lesson?)
+            Picker("Lesson Type", selection: $vm.selectedLesson) {
+                ForEach(vm.sortedLessons, id: \.self) { lesson in
+                    Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
+                        .tag(lesson as Lesson?)
                 }
             }
             .pickerStyle(.segmented)
             .padding(.horizontal)
             .padding(.vertical, 8)
             .background(.ultraThinMaterial)
-            .onChange(of: selectedLesson) { _ in
-                playCurrentLesson()
+            .onChange(of: vm.selectedLesson) { oldValue, newValue in
+                // Only play if the lesson actually changed (prevents loop triggers)
+                if oldValue != newValue {
+                    vm.playCurrent()
+                }
             }
         }
         .toolbar(.hidden, for: .navigationBar)
         .ignoresSafeArea(.container, edges: .bottom)
         .onDisappear {
-            player?.pause()
-            player = nil // 4. Clean up the player entirely
+            vm.player.pause()
         }
-    }
-    
-    private func playCurrentLesson() {
-        guard let filename = selectedLesson?.filename else { return }
-        
-        if let url = getLegacyVideoURL(for: filename) {
-            let item = AVPlayerItem(url: url)
-            // Use optional chaining
-            player?.replaceCurrentItem(with: item)
-            player?.play()
-        }
-    }
-    
-    func getLegacyVideoURL(for fileName: String) -> URL? {
-        // 1. Check Bundle (for free content)
-        if let bundleURL = Bundle.main.url(forResource: fileName, withExtension: nil) {
-            return bundleURL
-        }
-        
-        // 2. Check the legacy Documents path
-        let fileManager = FileManager.default
-        if let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let legacyPath = documentsURL
-                .appendingPathComponent("CombatMMA")
-                .appendingPathComponent("combatflows")
-                .appendingPathComponent("purchased_content")
-                .appendingPathComponent(fileName)
-            
-            if fileManager.fileExists(atPath: legacyPath.path) {
-                return legacyPath
-            }
-        }
-        return nil
     }
 }
 
