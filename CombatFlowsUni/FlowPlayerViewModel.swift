@@ -10,14 +10,22 @@ import AVKit
 import Foundation
 import Observation
 
+enum LoopMode: String, CaseIterable {
+    case off = "repeat"
+    case loopOne = "repeat.1"
+    case loopAll = "repeat.circle.fill"
+    
+    var icon: String { self.rawValue }
+}
+
 @Observable
 class FlowPlayerViewModel {
     var flow: Flow
     var sortedLessons: [Lesson] = []
     var selectedLesson: Lesson?
     var player: AVPlayer = AVPlayer()
+    var loopMode: LoopMode = .off // Default state
     
-    // The "Playlist Task" that waits for the video to end
     private var playbackTask: Task<Void, Never>?
 
     init(flow: Flow) {
@@ -29,8 +37,15 @@ class FlowPlayerViewModel {
         self.selectedLesson = sortedLessons.first
     }
     
+    func toggleLoopMode() {
+        let allModes = LoopMode.allCases
+        if let currentIndex = allModes.firstIndex(of: loopMode) {
+            let nextIndex = (currentIndex + 1) % allModes.count
+            loopMode = allModes[nextIndex]
+        }
+    }
+
     func playCurrent() {
-        // 1. Cancel any previous "waiting for end" task immediately
         playbackTask?.cancel()
         
         guard let filename = selectedLesson?.filename,
@@ -40,36 +55,48 @@ class FlowPlayerViewModel {
         player.replaceCurrentItem(with: item)
         player.play()
         
-        // 2. Start a new Async Task to wait for this specific item to finish
         playbackTask = Task { [weak self] in
-            // Listen for the notification as an AsyncSequence
             let sequence = NotificationCenter.default.notifications(
                 named: .AVPlayerItemDidPlayToEndTime,
-                object: item // Filter strictly to THIS item
+                object: item
             )
             
-            // Wait for the first notification (the end of the video)
             for await _ in sequence {
-                // Check if task was cancelled while waiting (e.g., user tapped another tab)
                 if Task.isCancelled { return }
-                
                 await MainActor.run {
-                    self?.advancePlaylist()
+                    self?.handleVideoEnd()
                 }
-                break // We only care about the first "end" event for this item
+                break
             }
         }
     }
     
-    private func advancePlaylist() {
+    private func handleVideoEnd() {
+        switch loopMode {
+        case .off:
+            advancePlaylist(allowLoopAll: false)
+        case .loopOne:
+            // Seek to start and play again without changing the selection
+            player.seek(to: .zero)
+            player.play()
+            // We must restart the notification listener for the same item
+            playCurrent()
+        case .loopAll:
+            advancePlaylist(allowLoopAll: true)
+        }
+    }
+    
+    private func advancePlaylist(allowLoopAll: Bool) {
         guard let current = selectedLesson,
               let currentIndex = sortedLessons.firstIndex(of: current) else { return }
         
         let nextIndex = currentIndex + 1
         
         if nextIndex < sortedLessons.count {
-            // Updating this will trigger the View's .onChange
             selectedLesson = sortedLessons[nextIndex]
+        } else if allowLoopAll {
+            // Restart the entire playlist
+            selectedLesson = sortedLessons.first
         } else {
             print("Playlist finished.")
         }

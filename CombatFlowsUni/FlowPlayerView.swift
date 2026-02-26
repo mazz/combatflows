@@ -40,18 +40,31 @@ struct FlowPlayerView: View {
                     vm.playCurrent()
                 }
             
-            Picker("Lesson Type", selection: $vm.selectedLesson) {
-                ForEach(vm.sortedLessons, id: \.self) { lesson in
-                    Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
-                        .tag(lesson as Lesson?)
+            HStack(spacing: 15) {
+                Picker("Lesson Type", selection: $vm.selectedLesson) {
+                    ForEach(vm.sortedLessons, id: \.self) { lesson in
+                        Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
+                            .tag(lesson as Lesson?)
+                    }
+                }
+                .pickerStyle(.segmented)
+                
+                // Loop Toggle Button
+                Button {
+                    vm.toggleLoopMode()
+                } label: {
+                    Image(systemName: vm.loopMode.icon)
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(vm.loopMode == .off ? .primary : .blue)
+                        .frame(width: 44, height: 44)
+                        .background(.ultraThickMaterial)
+                        .clipShape(Circle())
                 }
             }
-            .pickerStyle(.segmented)
             .padding(.horizontal)
             .padding(.vertical, 8)
             .background(.ultraThinMaterial)
             .onChange(of: vm.selectedLesson) { oldValue, newValue in
-                // Only play if the lesson actually changed (prevents loop triggers)
                 if oldValue != newValue {
                     vm.playCurrent()
                 }
