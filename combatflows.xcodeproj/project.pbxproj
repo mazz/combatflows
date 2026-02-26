@@ -120,6 +120,25 @@
 		4C15896B2F4FD546002A9FD2 /* tn_cf_listview_11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1589452F4FCD47002A9FD2 /* tn_cf_listview_11@2x.png */; };
 		4C15896C2F4FD546002A9FD2 /* tn_cf_listview_12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1589462F4FCD47002A9FD2 /* tn_cf_listview_12@2x.png */; };
 		4C15896D2F4FD546002A9FD2 /* tn_cf_listview_07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1589412F4FCD47002A9FD2 /* tn_cf_listview_07@2x.png */; };
+		4C15898E2F4FDBEB002A9FD2 /* cf_11_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C51CF75B2900C39B31 /* cf_11_tn_4_4s.m4v */; };
+		4C15898F2F4FDBEB002A9FD2 /* 00_bundled-thumb-600.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389E21CF75BE700C39B31 /* 00_bundled-thumb-600.m4v */; };
+		4C1589902F4FDBEB002A9FD2 /* cf_01_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BA1CF75B2900C39B31 /* cf_01_tn_4_4s.m4v */; };
+		4C1589912F4FDBEB002A9FD2 /* cf_05_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BF1CF75B2900C39B31 /* cf_05_tn_4_4s.m4v */; };
+		4C1589922F4FDBEB002A9FD2 /* cf_15_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C91CF75B2900C39B31 /* cf_15_tn_4_4s.m4v */; };
+		4C1589932F4FDBEB002A9FD2 /* CF_01_tn_vid.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BB1CF75B2900C39B31 /* CF_01_tn_vid.m4v */; };
+		4C1589942F4FDBEB002A9FD2 /* cf_13_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C71CF75B2900C39B31 /* cf_13_tn_4_4s.m4v */; };
+		4C1589952F4FDBEB002A9FD2 /* cf_06_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C01CF75B2900C39B31 /* cf_06_tn_4_4s.m4v */; };
+		4C1589962F4FDBEB002A9FD2 /* cf_14_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C81CF75B2900C39B31 /* cf_14_tn_4_4s.m4v */; };
+		4C1589972F4FDBEB002A9FD2 /* cf_04_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BE1CF75B2900C39B31 /* cf_04_tn_4_4s.m4v */; };
+		4C1589982F4FDBEB002A9FD2 /* cf_12_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C61CF75B2900C39B31 /* cf_12_tn_4_4s.m4v */; };
+		4C1589992F4FDBEB002A9FD2 /* cf_07_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C11CF75B2900C39B31 /* cf_07_tn_4_4s.m4v */; };
+		4C15899A2F4FDBEB002A9FD2 /* cf_10_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C41CF75B2900C39B31 /* cf_10_tn_4_4s.m4v */; };
+		4C15899B2F4FDBEB002A9FD2 /* cf_03_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BD1CF75B2900C39B31 /* cf_03_tn_4_4s.m4v */; };
+		4C15899C2F4FDBEB002A9FD2 /* cf_02_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389BC1CF75B2900C39B31 /* cf_02_tn_4_4s.m4v */; };
+		4C15899D2F4FDBEB002A9FD2 /* cf_09_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C31CF75B2900C39B31 /* cf_09_tn_4_4s.m4v */; };
+		4C15899E2F4FDBEB002A9FD2 /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */; };
+		4C15899F2F4FDBEB002A9FD2 /* cf_08_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */; };
+		4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */; };
 		68305EB21CEBFA8A00A963E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB11CEBFA8A00A963E8 /* main.m */; };
 		68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB41CEBFA8A00A963E8 /* AppDelegate.m */; };
 		68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB71CEBFA8A00A963E8 /* ViewController.m */; };
@@ -370,6 +389,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +769,7 @@
 			);
 			name = CombatFlowsUni;
 			packageProductDependencies = (
+				4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */,
 			);
 			productName = CombatFlowsUni;
 			productReference = 4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */;
@@ -855,6 +876,9 @@
 				Base,
 			);
 			mainGroup = 68305EA41CEBFA8A00A963E8;
+			packageReferences = (
+				4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */,
+			);
 			productRefGroup = 68305EAE1CEBFA8A00A963E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -877,6 +901,24 @@
 				4C1589602F4FD546002A9FD2 /* tn_cf_listview_09@2x.png in Resources */,
 				4C1589612F4FD546002A9FD2 /* tn_cf_listview_05@2x.png in Resources */,
 				4C1589622F4FD546002A9FD2 /* tn_cf_listview_01@2x.png in Resources */,
+				4C15898E2F4FDBEB002A9FD2 /* cf_11_tn_4_4s.m4v in Resources */,
+				4C15898F2F4FDBEB002A9FD2 /* 00_bundled-thumb-600.m4v in Resources */,
+				4C1589902F4FDBEB002A9FD2 /* cf_01_tn_4_4s.m4v in Resources */,
+				4C1589912F4FDBEB002A9FD2 /* cf_05_tn_4_4s.m4v in Resources */,
+				4C1589922F4FDBEB002A9FD2 /* cf_15_tn_4_4s.m4v in Resources */,
+				4C1589932F4FDBEB002A9FD2 /* CF_01_tn_vid.m4v in Resources */,
+				4C1589942F4FDBEB002A9FD2 /* cf_13_tn_4_4s.m4v in Resources */,
+				4C1589952F4FDBEB002A9FD2 /* cf_06_tn_4_4s.m4v in Resources */,
+				4C1589962F4FDBEB002A9FD2 /* cf_14_tn_4_4s.m4v in Resources */,
+				4C1589972F4FDBEB002A9FD2 /* cf_04_tn_4_4s.m4v in Resources */,
+				4C1589982F4FDBEB002A9FD2 /* cf_12_tn_4_4s.m4v in Resources */,
+				4C1589992F4FDBEB002A9FD2 /* cf_07_tn_4_4s.m4v in Resources */,
+				4C15899A2F4FDBEB002A9FD2 /* cf_10_tn_4_4s.m4v in Resources */,
+				4C15899B2F4FDBEB002A9FD2 /* cf_03_tn_4_4s.m4v in Resources */,
+				4C15899C2F4FDBEB002A9FD2 /* cf_02_tn_4_4s.m4v in Resources */,
+				4C15899D2F4FDBEB002A9FD2 /* cf_09_tn_4_4s.m4v in Resources */,
+				4C15899E2F4FDBEB002A9FD2 /* cf_16_tn_4_4s.m4v in Resources */,
+				4C15899F2F4FDBEB002A9FD2 /* cf_08_tn_4_4s.m4v in Resources */,
 				4C1589632F4FD546002A9FD2 /* tn_cf_listview_04@2x.png in Resources */,
 				4C1589642F4FD546002A9FD2 /* tn_cf_listview_14@2x.png in Resources */,
 				4C1589652F4FD546002A9FD2 /* tn_cf_listview_15@2x.png in Resources */,
@@ -1571,6 +1613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mazz/swiftui-loop-videoPlayer.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C1589A02F4FE058002A9FD2 /* XCRemoteSwiftPackageReference "swiftui-loop-videoPlayer" */;
+			productName = "swiftui-loop-videoplayer";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68305EA51CEBFA8A00A963E8 /* Project object */;
 }

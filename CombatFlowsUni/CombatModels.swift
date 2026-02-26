@@ -67,6 +67,10 @@ struct FlowGroup: Codable, Identifiable, Hashable {
     // The raw array of string arrays from JSON
     let rawFlows: [[String]]?
 
+    var previewVideoName: String {
+            return thumbs?.first ?? ""
+    }
+    
     // Map the weird JSON keys to our clean Swift properties
     enum CodingKeys: String, CodingKey {
         case productIdentifier, name, text, detail, bundled, thumbs
