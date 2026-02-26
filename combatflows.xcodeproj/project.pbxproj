@@ -139,6 +139,7 @@
 		4C15899E2F4FDBEB002A9FD2 /* cf_16_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389CA1CF75B2900C39B31 /* cf_16_tn_4_4s.m4v */; };
 		4C15899F2F4FDBEB002A9FD2 /* cf_08_tn_4_4s.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A1389C21CF75B2900C39B31 /* cf_08_tn_4_4s.m4v */; };
 		4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */ = {isa = PBXBuildFile; productRef = 4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */; };
+		4C1589A92F5013CC002A9FD2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C77991CF0EE24006D7068 /* StoreKit.framework */; };
 		68305EB21CEBFA8A00A963E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB11CEBFA8A00A963E8 /* main.m */; };
 		68305EB51CEBFA8A00A963E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB41CEBFA8A00A963E8 /* AppDelegate.m */; };
 		68305EB81CEBFA8A00A963E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68305EB71CEBFA8A00A963E8 /* ViewController.m */; };
@@ -390,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1589A22F4FE058002A9FD2 /* swiftui-loop-videoplayer in Frameworks */,
+				4C1589A92F5013CC002A9FD2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,7 +1191,7 @@
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -1247,7 +1249,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflowsuni;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
