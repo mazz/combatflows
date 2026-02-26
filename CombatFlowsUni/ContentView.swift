@@ -143,91 +143,6 @@ struct ContentView: View {
     ContentView()
 }
 
-struct FlowGridItem: View {
-    let group: FlowGroup
-    let flow: Flow
-    let isLocked: Bool
-    @EnvironmentObject var storeManager: StoreManager
-    
-    var body: some View {
-        ZStack {
-            // 1. The Video Base
-            LoopingThumbnailView(fileName: group.previewVideoName)
-                .frame(height: 150)
-                .frame(maxWidth: .infinity)
-                .background(Color.black)
-                .blur(radius: isLocked ? 3 : 0)
-            
-            // 2. The Info Overlay (Bottom)
-            VStack {
-                Spacer()
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(group.name.uppercased())
-                        .font(.system(size: 10, weight: .black, design: .rounded))
-                        .lineLimit(1)
-                    
-                    Text(group.text ?? "")
-                        .font(.system(size: 9, weight: .medium))
-                        .lineLimit(4)
-                        .opacity(0.9)
-                }
-                .foregroundColor(.white)
-                .padding(8)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(Color.black.opacity(0.3))
-            }
-            
-            // 3. The "Get" Capsule (Center)
-            if isLocked {
-                let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier })
-                Text(product?.localizedPrice ?? "GET")
-                    .font(.system(size: 14, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                // This creates the transparent outline look
-                    .background(
-                        Capsule()
-                            .stroke(Color.green, lineWidth: 2)
-                            .background(Color.black.opacity(0.4).clipShape(Capsule())) // Helps text legibility
-                    )
-                .shadow(radius: 4)            }
-        }
-        .frame(height: 150)
-        .frame(maxWidth: .infinity)
-        // --- ADDED BORDER OVERLAY ---
-        .overlay(
-            Rectangle()
-                .stroke(isLocked ? Color.green : Color.blue, lineWidth: 1)
-        )        // ----------------------------
-
-    }
-}
-
-struct LoopingThumbnailView: View {
-    let fileName: String
-    
-    var body: some View {
-        // Remove ONLY the extension, do NOT change casing
-        let cleanName = fileName.replacingOccurrences(of: ".m4v", with: "")
-                                .replacingOccurrences(of: ".mp4", with: "")
-        
-        ExtVideoPlayer {
-            VideoSettings {
-                SourceName(cleanName)
-                Ext("m4v")
-                Gravity(.resizeAspectFill)
-                Loop()
-                Mute()
-            }
-        }
-        .onAppear {
-            // Check your Xcode Console (Cmd + Shift + C)
-            // If this prints the wrong name, that's why it's black.
-            print("🎬 Attempting to play: \(cleanName)")
-        }
-    }
-}
 enum NavCategory: String, CaseIterable, Identifiable {
     case getTrained = "Get Trained"
     case favorites = "Favorites"
@@ -243,3 +158,11 @@ enum NavCategory: String, CaseIterable, Identifiable {
     }
 }
 
+extension SKProduct {
+    var localizedPrice: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = self.priceLocale
+        return formatter.string(from: self.price) ?? "$0.00"
+    }
+}

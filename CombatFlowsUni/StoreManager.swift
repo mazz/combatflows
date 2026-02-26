@@ -15,6 +15,8 @@ class StoreManager: NSObject, ObservableObject {
     @Published var fetchedProducts: [SKProduct] = []
     @Published var purchasedProductIDs: Set<String> = []
     @Published var isRestoring: Bool = false
+    @Published var downloadProgress: [String: Double] = [:] // productID: progress (0.0 to 1.0)
+    
     
     let bundleID = "ca.ilearningsolutions.combatflows.combatflowbundle"
     private var productsRequest: SKProductsRequest?
@@ -69,11 +71,12 @@ class StoreManager: NSObject, ObservableObject {
     // MARK: - Legacy File Verification Logic
     
     private var purchasedContentPath: URL? {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        guard let documentsDirectory = paths.first else { return nil }
+        let fileManager = FileManager.default
+        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
         
-        // Matches IAPHelper.m: documents/CombatMMA/[appname]/purchased_content
+        // CFBundleName is used in IAPHelper.m:296
         let appName = (Bundle.main.infoDictionary?["CFBundleName"] as? String)?.lowercased() ?? "combatflows"
+        
         return documentsDirectory
             .appendingPathComponent("CombatMMA")
             .appendingPathComponent(appName)
@@ -160,14 +163,14 @@ extension StoreManager: SKPaymentTransactionObserver {
     private func handlePurchased(_ transaction: SKPaymentTransaction) {
         let productID = transaction.payment.productIdentifier
         
-        // 1. Mark as purchased locally
-        purchasedProductIDs.insert(productID)
+        // Mark as purchased in UserDefaults (Mirroring IAPHelper.m:248)
         UserDefaults.standard.set(true, forKey: productID)
         
-        // 2. Handle Hosted Content (If your app uses Apple-hosted content)
         if !transaction.downloads.isEmpty {
+            print("📦 Starting downloads for \(productID)...")
             SKPaymentQueue.default().start(transaction.downloads)
         } else {
+            purchasedProductIDs.insert(productID)
             SKPaymentQueue.default().finishTransaction(transaction)
         }
     }
@@ -189,6 +192,75 @@ extension StoreManager: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         DispatchQueue.main.async {
             self.fetchedProducts = response.products
+        }
+    }
+}
+
+
+extension StoreManager {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedDownloads downloads: [SKDownload]) {
+        for download in downloads {
+            let productID = download.contentIdentifier
+            
+            switch download.downloadState {
+            case .active:
+                DispatchQueue.main.async {
+                    // Cast to Double to match @Published var downloadProgress: [String: Double]
+                    self.downloadProgress[productID] = Double(download.progress)
+                }
+            case .finished:
+                processFinishedDownload(download)
+                DispatchQueue.main.async {
+                    self.downloadProgress.removeValue(forKey: productID)
+                }
+            case .failed, .cancelled:
+                DispatchQueue.main.async {
+                    self.downloadProgress.removeValue(forKey: productID)
+                }
+                SKPaymentQueue.default().finishTransaction(download.transaction)
+            case .waiting:
+                // Mirroring IAPHelper.m:228 - Force start if waiting
+                SKPaymentQueue.default().start([download])
+            default:
+                break
+            }
+        }
+    }
+    
+    private func processFinishedDownload(_ download: SKDownload) {
+        guard let sourceURL = download.contentURL?.appendingPathComponent("Contents") else { return }
+        guard let destinationURL = purchasedContentPath else { return }
+        
+        let fileManager = FileManager.default
+        
+        do {
+            // Create destination directory: Documents/CombatMMA/[appname]/purchased_content
+            try fileManager.createDirectory(at: destinationURL, withIntermediateDirectories: true)
+            
+            // Get contents of the downloaded 'Contents' folder
+            let items = try fileManager.contentsOfDirectory(atPath: sourceURL.path)
+            
+            for item in items {
+                let sourceFile = sourceURL.appendingPathComponent(item)
+                let destFile = destinationURL.appendingPathComponent(item)
+                
+                // If file already exists, remove it before copying new version
+                if fileManager.fileExists(atPath: destFile.path) {
+                    try fileManager.removeItem(at: destFile)
+                }
+                
+                try fileManager.copyItem(at: sourceFile, to: destFile)
+                print("✅ Moved asset: \(item) to \(destFile.path)")
+            }
+            
+            // Finalize the transaction
+            SKPaymentQueue.default().finishTransaction(download.transaction)
+            
+            // Refresh purchase state to unlock the UI
+            loadPurchasedStates()
+            
+        } catch {
+            print("❌ File move error: \(error)")
         }
     }
 }
