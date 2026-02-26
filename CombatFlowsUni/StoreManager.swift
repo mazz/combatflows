@@ -16,7 +16,7 @@ class StoreManager: NSObject, ObservableObject {
     @Published var purchasedProductIDs: Set<String> = []
     @Published var isRestoring: Bool = false
     @Published var downloadProgress: [String: Double] = [:] // productID: progress (0.0 to 1.0)
-    
+    @Published var favoriteProductIDs: Set<String> = []
     
     let bundleID = "ca.ilearningsolutions.combatflows.combatflowbundle"
     private var productsRequest: SKProductsRequest?
@@ -31,6 +31,7 @@ class StoreManager: NSObject, ObservableObject {
         
         // Load initial purchase state from local storage or file system
 //        loadPurchasedStates()
+        loadFavorites()
     }
     
     /// This should be called once the CurriculumStore is loaded
@@ -68,18 +69,33 @@ class StoreManager: NSObject, ObservableObject {
         }
     }
     
+    func toggleFavorite(for productID: String) {
+        if favoriteProductIDs.contains(productID) {
+            favoriteProductIDs.remove(productID)
+            UserDefaults.standard.set(Array(favoriteProductIDs), forKey: "favorite_flows")
+        } else {
+            favoriteProductIDs.insert(productID)
+            UserDefaults.standard.set(Array(favoriteProductIDs), forKey: "favorite_flows")
+        }
+    }
+
+    func loadFavorites() {
+        let saved = UserDefaults.standard.stringArray(forKey: "favorite_flows") ?? []
+        self.favoriteProductIDs = Set(saved)
+    }
+    
     // MARK: - Legacy File Verification Logic
     
     private var purchasedContentPath: URL? {
-        let fileManager = FileManager.default
-        guard let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        guard let documentsDirectory = paths.first else { return nil }
         
-        // CFBundleName is used in IAPHelper.m:296
-        let appName = (Bundle.main.infoDictionary?["CFBundleName"] as? String)?.lowercased() ?? "combatflows"
+        // Hardcode "combatflows" to match the legacy directory exactly
+        let legacyAppName = "combatflows"
         
         return documentsDirectory
             .appendingPathComponent("CombatMMA")
-            .appendingPathComponent(appName)
+            .appendingPathComponent(legacyAppName)
             .appendingPathComponent("purchased_content")
     }
     

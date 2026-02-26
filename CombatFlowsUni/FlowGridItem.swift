@@ -27,6 +27,32 @@ struct FlowGridItem: View {
                 .background(Color.black)
                 .blur(radius: isLocked ? 3 : 0)
             
+            VStack {
+                HStack {
+                    Spacer()
+                    if isLocked {
+                        // Show Lock Icon if locked
+                        Image("icn_lock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                    } else {
+                        // Show Favorite Button if unlocked
+                        Button {
+                            storeManager.toggleFavorite(for: group.productIdentifier)
+                        } label: {
+                            let isFav = storeManager.favoriteProductIDs.contains(group.productIdentifier)
+                            Image(isFav ? "icn_unlocked_fav_on" : "icn_unlocked_fav_off")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }
+                        .buttonStyle(.plain) // Prevents the whole grid item from highlighting
+                    }
+                }
+                Spacer()
+            }
+            
             // 2. The Info Overlay (Bottom)
             VStack {
                 Spacer()
@@ -98,27 +124,3 @@ struct DownloadProgressOverlay: View {
 }
 
 
-struct LoopingThumbnailView: View {
-    let fileName: String
-    
-    var body: some View {
-        // Remove ONLY the extension, do NOT change casing
-        let cleanName = fileName.replacingOccurrences(of: ".m4v", with: "")
-                                .replacingOccurrences(of: ".mp4", with: "")
-        
-        ExtVideoPlayer {
-            VideoSettings {
-                SourceName(cleanName)
-                Ext("m4v")
-                Gravity(.resizeAspectFill)
-                Loop()
-                Mute()
-            }
-        }
-        .onAppear {
-            // Check your Xcode Console (Cmd + Shift + C)
-            // If this prints the wrong name, that's why it's black.
-            print("🎬 Attempting to play: \(cleanName)")
-        }
-    }
-}

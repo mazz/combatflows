@@ -337,7 +337,7 @@
 		2A9C77951CF0EE1A006D7068 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2A9C77971CF0EE1F006D7068 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		2A9C77991CF0EE24006D7068 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombatFlowsUni.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C15890B2F4FB66C002A9FD2 /* CombatFlows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombatFlows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombatFlowsUniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombatFlowsUniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C15893B2F4FCD47002A9FD2 /* tn_cf_listview_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tn_cf_listview_01@2x.png"; sourceTree = "<group>"; };
@@ -685,7 +685,7 @@
 			isa = PBXGroup;
 			children = (
 				68305EAD1CEBFA8A00A963E8 /* CombatFlows.app */,
-				4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */,
+				4C15890B2F4FB66C002A9FD2 /* CombatFlows.app */,
 				4C1589172F4FB66D002A9FD2 /* CombatFlowsUniTests.xctest */,
 				4C1589212F4FB66E002A9FD2 /* CombatFlowsUniUITests.xctest */,
 			);
@@ -774,7 +774,7 @@
 				4C1589A12F4FE058002A9FD2 /* swiftui-loop-videoplayer */,
 			);
 			productName = CombatFlowsUni;
-			productReference = 4C15890B2F4FB66C002A9FD2 /* CombatFlowsUni.app */;
+			productReference = 4C15890B2F4FB66C002A9FD2 /* CombatFlows.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4C1589162F4FB66D002A9FD2 /* CombatFlowsUniTests */ = {
@@ -1192,7 +1192,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CombatFlows;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -1250,7 +1250,7 @@
 				MARKETING_VERSION = 1.2.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.ilearningsolutions.combatflows;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CombatFlows;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
