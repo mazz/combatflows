@@ -28,6 +28,10 @@ class FlowPlayerViewModel {
     
     private var playbackTask: Task<Void, Never>?
 
+    var countdownRemaining: Int = 0
+    var isCountingDown: Bool = false
+    
+    
     init(flow: Flow) {
         self.flow = flow
         let order: [LessonPlaybackType: Int] = [.teaching: 0, .application: 1, .graphicGuide: 2]
@@ -71,21 +75,51 @@ class FlowPlayerViewModel {
         }
     }
     
-    private func handleVideoEnd() {
-        switch loopMode {
-        case .off:
-            advancePlaylist(allowLoopAll: false)
-        case .loopOne:
-            // Seek to start and play again without changing the selection
-            player.seek(to: .zero)
-            player.play()
-            // We must restart the notification listener for the same item
-            playCurrent()
-        case .loopAll:
-            advancePlaylist(allowLoopAll: true)
+    private func prepareNextLesson(allowLoopAll: Bool) {
+        guard let current = selectedLesson,
+              let currentIndex = sortedLessons.firstIndex(of: current) else { return }
+        
+        let nextIndex = currentIndex + 1
+        
+        if nextIndex < sortedLessons.count || allowLoopAll {
+            startCountdown {
+                if nextIndex < self.sortedLessons.count {
+                    self.selectedLesson = self.sortedLessons[nextIndex]
+                } else {
+                    self.selectedLesson = self.sortedLessons.first
+                }
+            }
         }
     }
     
+    private func startCountdown(completion: @escaping () -> Void) {
+        isCountingDown = true
+        countdownRemaining = 5 // 5 second reset window
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            if self.countdownRemaining > 1 {
+                self.countdownRemaining -= 1
+            } else {
+                timer.invalidate()
+                self.isCountingDown = false
+                completion()
+            }
+        }
+    }
+    
+    private func handleVideoEnd() {
+        switch loopMode {
+        case .off:
+            prepareNextLesson(allowLoopAll: false)
+        case .loopOne:
+            player.seek(to: .zero)
+            player.play()
+            playCurrent()
+        case .loopAll:
+            prepareNextLesson(allowLoopAll: true)
+        }
+    }
+
     private func advancePlaylist(allowLoopAll: Bool) {
         guard let current = selectedLesson,
               let currentIndex = sortedLessons.firstIndex(of: current) else { return }

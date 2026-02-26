@@ -22,6 +22,21 @@ struct FlowPlayerView: View {
     var body: some View {
         VStack(spacing: 0) {
             VideoPlayer(player: vm.player)
+                .overlay {
+                    if vm.isCountingDown {
+                        ZStack {
+                            Color.black.opacity(0.8)
+                            VStack {
+                                Text("NEXT DRILL IN")
+                                    .font(.system(size: 24, weight: .black))
+                                Text("\(vm.countdownRemaining)")
+                                    .font(.system(size: 120, weight: .black, design: .rounded))
+                                    .transition(.scale)
+                            }
+                            .foregroundColor(.yellow)
+                        }
+                    }
+                }
                 .overlay(alignment: .topLeading) {
                     Button {
                         vm.player.pause()
