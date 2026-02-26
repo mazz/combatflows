@@ -37,30 +37,41 @@ struct ContentView: View {
             switch selectedCategory {
             case .getTrained:
                 ScrollView {
-                    // This grid shows the 16 Flow Groups as looping square previews
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 16)], spacing: 20) {
                         ForEach(store.flowGroups) { group in
-                            Button {
-                                selectedGroupID = group.id
+                            // Using NavigationLink instead of Button for iPhone compatibility
+                            NavigationLink {
+                                // This is the view that will push on iPhone
+                                if let firstFlow = group.combatFlows.first {
+                                    FlowPlayerView(flow: firstFlow)
+                                }
                             } label: {
                                 VStack {
-                                    // Using the group's thumbnail (usually from 'thumbs' or 'listImage')
-                                    // Assuming the group has a preview video matching its listImage name
                                     LoopingThumbnailView(fileName: group.previewVideoName)
                                         .frame(width: 150, height: 150)
+                                        .cornerRadius(12)
+                                        .clipped()
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 12)
+                                                .stroke(selectedGroupID == group.id ? Color.accentColor : Color.clear, lineWidth: 3)
+                                        )
+                                    
                                     Text(group.name)
                                         .font(.caption)
                                         .fontWeight(.bold)
                                         .foregroundColor(selectedGroupID == group.id ? .accentColor : .primary)
                                 }
                             }
+                            .simultaneousGesture(TapGesture().onEnded {
+                                // Update state so iPad/Mac detail view also reacts
+                                selectedGroupID = group.id
+                            })
                             .buttonStyle(.plain)
                         }
                     }
                     .padding()
                 }
                 .navigationTitle("Get Trained")
-                
             case .favorites:
                 Text("Favorites Grid Coming Soon")
                     .navigationTitle("Favorites")

@@ -41,6 +41,10 @@ struct FlowPlayerView: View {
             }
         }
         .navigationTitle("Flow \(flow.nominal)")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.visible, for: .navigationBar)
+        // This ensures the video takes advantage of the full screen width on iPhone
+        .ignoresSafeArea(.all, edges: .bottom)
     }
 
     private func playCurrentLesson() {
