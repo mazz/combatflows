@@ -9,16 +9,15 @@
 import SwiftUI
 
 struct MainSidebarView: View {
-    // 1. Initialize the data store
     @State private var store = CurriculumStore()
-    
-    // 2. Track the ID (String) of the selected group
     @State private var selectedGroupID: String?
+    
+    // 1. Track the specific flow selected for the video player
+    @State private var selectedFlow: Flow?
     
     var body: some View {
         NavigationSplitView {
             List(selection: $selectedGroupID) {
-                // 3. Dynamically generate the list from the JSON data
                 Section("Library") {
                     ForEach(store.flowGroups) { group in
                         NavigationLink(value: group.id) {
@@ -26,26 +25,27 @@ struct MainSidebarView: View {
                         }
                     }
                 }
-                
-                Section("Filters") {
-                    Label("Favorites", systemImage: "star").tag("Favorites")
-                    Label("Recent", systemImage: "clock").tag("Recent")
-                }
+                // ... Filters Section
             }
             .navigationTitle("CombatFlows")
             
         } content: {
-            // 4. Look up the actual FlowGroup object using the ID
             if let groupID = selectedGroupID,
                let group = store.flowGroups.first(where: { $0.id == groupID }) {
-                FlowGridView(group: group)
+                // 2. Pass the binding here with $
+                FlowGridView(group: group, selectedFlow: $selectedFlow)
             } else {
-                ContentUnavailableView("Select a Flow", systemImage: "figure.martial.arts")
+                ContentUnavailableView("Select a Group", systemImage: "figure.martial.arts")
             }
             
         } detail: {
-            Text("Select a flow to begin training")
-                .foregroundStyle(.secondary)
+            // 3. Show the player if a flow is selected
+            if let flow = selectedFlow {
+                FlowPlayerView(flow: flow)
+            } else {
+                Text("Select a flow to begin training")
+                    .foregroundStyle(.secondary)
+            }
         }
     }
 }
