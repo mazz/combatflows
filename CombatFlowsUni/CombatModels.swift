@@ -34,6 +34,16 @@ struct Flow: Identifiable, Hashable {
     let lessons: [Lesson]
     let bannerPaths: [String]
     let cardPaths: [String]
+    let thumbnailName: String // MUST BE ADDED
+    
+    // Explicit hashing to satisfy Hashable
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: Flow, rhs: Flow) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 // MARK: - Flow Group (Replaces CMAFlowGroup.m)
@@ -122,7 +132,8 @@ struct FlowGroup: Codable, Identifiable, Hashable {
                 nominal: nominal,
                 lessons: parsedLessons,
                 bannerPaths: banners,
-                cardPaths: cards
+                cardPaths: cards,
+                thumbnailName: self.listImage ?? ""
             )
         }
     }
