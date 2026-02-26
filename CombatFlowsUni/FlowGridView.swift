@@ -14,22 +14,67 @@ struct FlowGridView: View {
     @EnvironmentObject var storeManager: StoreManager
     @Binding var selectedFlow: Flow?
     
-    // This helper determines if the content should be playable or buyable
     var isUnlocked: Bool {
-        // Free product check
         if group.productIdentifier == "ca.ilearningsolutions.combatflows.combatflow04" { return true }
-        // Bundle check
         if storeManager.purchasedProductIDs.contains(storeManager.bundleID) { return true }
-        // Specific product check
         return storeManager.purchasedProductIDs.contains(group.productIdentifier)
     }
 
+//    var body: some View {
+//        ScrollView {
+//            VStack(spacing: 20) {
+//                // --- THE FEATURE BUNDLE ITEM ---
+////                if !storeManager.purchasedProductIDs.contains(storeManager.bundleID) {
+//                
+//                Color.red.frame(height: 50)
+//                    BundleFeatureTile()
+//                        .padding(.horizontal)
+//                        .environmentObject(storeManager)
+////                }
+//
+//                // --- THE REGULAR FLOW GRID ---
+//                gridContent
+//            }
+//            .padding(.vertical)
+//        }
+//    }
+//    var body: some View {
+//        ScrollView {
+//            VStack(spacing: 20) {
+//                // Test block
+//                Color.red
+//                    .frame(height: 50)
+//                    .frame(maxWidth: .infinity) // Force it to stretch
+//                
+//                BundleFeatureTile()
+//                    .padding(.horizontal)
+//                
+//                gridContent
+//            }
+//            .frame(maxWidth: .infinity) // Force the VStack to fill the ScrollView
+//        }
+//    }
+    
     var body: some View {
-        ScrollView {
-            // We removed the 'if isUnlocked' branch here because you want
-            // the grid to show even when locked, just with "GET" capsules.
-            gridContent
+        List {
+            // --- SECTION 1: THE BUNDLE ---
+            // Placing this in its own section forces the List to give it a row
+            Section {
+                BundleFeatureTile()
+                    .listRowInsets(EdgeInsets()) // Removes default list padding
+                    .listRowSeparator(.hidden)
+            }
+            
+            // --- SECTION 2: THE GRID ---
+            Section {
+                Text("hello")
+                gridContent
+                    .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                    .listRowSeparator(.hidden)
+            }
         }
+        .listStyle(.plain) // Keeps it looking like your clean background
+        .navigationTitle(group.name)
     }
     
     private var gridContent: some View {
@@ -39,19 +84,16 @@ struct FlowGridView: View {
                     if isUnlocked {
                         selectedFlow = flow
                     } else {
-                        // Trigger the legacy buy logic
                         if let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier }) {
                             storeManager.buy(product: product)
                         }
                     }
                 } label: {
-                    // FIX: Pass the 'isLocked' status here
                     FlowGridItem(group: group, flow: flow, isLocked: !isUnlocked)
-                        .environmentObject(storeManager)
                 }
                 .buttonStyle(.plain)
             }
         }
-        .padding()
+        .padding(.horizontal)
     }
 }

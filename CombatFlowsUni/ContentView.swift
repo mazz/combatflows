@@ -47,30 +47,37 @@ struct ContentView: View {
             switch selectedCategory {
             case .getTrained:
                 ScrollView {
-                    // Using adaptive here handles the iPhone rotation "weirdness"
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
-                        ForEach(store.flowGroups) { group in
-                            let locked = !isUnlocked(group) // Using the helper from the previous step
-                            
-                            ForEach(group.combatFlows) { flow in
-                                Button {
-                                    if locked {
-                                        // Trigger purchase logic from legacy SCRProductService/IAPHelper
-                                        if let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier }) {
-                                            storeManager.buy(product: product)
+                    VStack(spacing: 20) { // Added spacing between tile and grid
+                        
+                        // --- THE BUNDLE TILE ---
+                        if !storeManager.purchasedProductIDs.contains(storeManager.bundleID) {
+                            BundleFeatureTile()
+                                .padding(.horizontal)
+                        }
+                        
+                        // --- THE REGULAR FLOW GRID ---
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
+                            ForEach(store.flowGroups) { group in
+                                let locked = !isUnlocked(group)
+                                
+                                ForEach(group.combatFlows) { flow in
+                                    Button {
+                                        if locked {
+                                            if let product = storeManager.fetchedProducts.first(where: { $0.productIdentifier == group.productIdentifier }) {
+                                                storeManager.buy(product: product)
+                                            }
+                                        } else {
+                                            selectedFlow = flow
                                         }
-                                    } else {
-                                        // Navigate to video
-                                        selectedFlow = flow
+                                    } label: {
+                                        FlowGridItem(group: group, flow: flow, isLocked: locked)
                                     }
-                                } label: {
-                                    FlowGridItem(group: group, flow: flow, isLocked: locked)
+                                    .buttonStyle(.plain)
                                 }
-                                .buttonStyle(.plain)
                             }
                         }
                     }
-                    .padding()
+                    .padding(.vertical)
                 }
                 .navigationTitle("Get Trained")
                 .navigationDestination(item: $selectedFlow) { flow in
@@ -105,12 +112,13 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            // 1. Link the managers
             storeManager.initializePurchases(with: store)
             
-            // 2. Fetch from Apple
-            let ids = Set(store.flowGroups.map { $0.productIdentifier })
-            storeManager.fetchProducts(productIdentifiers: ids.union([storeManager.bundleID]))
+            // Create a combined set of all group IDs PLUS the bundle ID
+            var allIDs = Set(store.flowGroups.map { $0.productIdentifier })
+            allIDs.insert("ca.ilearningsolutions.combatflows.combatflowbundle") // The ID from SCRProductService.m
+            
+            storeManager.fetchProducts(productIdentifiers: allIDs)
         }
     }
     
