@@ -15,10 +15,16 @@ import swiftui_loop_videoplayer
 
 struct FlowPlayerView: View {
     @State private var vm: FlowPlayerViewModel
+    @Binding var columnVisibility: NavigationSplitViewVisibility
+    
+    @State private var isTheaterMode: Bool = false
+
     @Environment(\.dismiss) var dismiss
     
-    init(flow: Flow) {
+//    init(flow: Flow) {
+    init(flow: Flow, columnVisibility: Binding<NavigationSplitViewVisibility>) {
         _vm = State(initialValue: FlowPlayerViewModel(flow: flow))
+        _columnVisibility = columnVisibility
     }
     
     var body: some View {
@@ -35,18 +41,6 @@ struct FlowPlayerView: View {
                     
                     // 2. CENTER ZONE: Momentary Slo-Mo
                     Color.black.opacity(0.001)
-//                        .gesture(
-//                            DragGesture(minimumDistance: 0)
-//                                .onChanged { _ in
-//                                    if vm.playbackRate != 0.5 {
-//                                        vm.setPlaybackRate(0.5)
-//                                        triggerHaptic(.medium)
-//                                    }
-//                                }
-//                                .onEnded { _ in
-//                                    vm.setPlaybackRate(1.0)
-//                                }
-//                        )
                         .gesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged { value in
@@ -111,11 +105,13 @@ struct FlowPlayerView: View {
             dismiss()
         } label: {
             Image(systemName: "chevron.left.circle.fill")
-                .font(.largeTitle)
-                .foregroundColor(.white.opacity(0.7))
+                .font(.title)
+                .foregroundColor(.white.opacity(0.8))
         }
-        .padding(.top, 50)
         .padding(.leading, 20)
+        .padding(.top, 8) // Small extra padding
+        // This automatically respects the notch/status bar height
+        .safeAreaPadding(.top)
     }
     
     private var slowMoIndicator: some View {
@@ -145,25 +141,57 @@ struct FlowPlayerView: View {
     }
     
     private var pickerToolbar: some View {
-        HStack(spacing: 15) {
-            Picker("Lesson Type", selection: $vm.selectedLesson) {
-                ForEach(vm.sortedLessons, id: \.self) { lesson in
-                    Text(lesson.type == .graphicGuide ? "Graphic Guide" : lesson.type.rawValue.capitalized)
-                        .tag(lesson as Lesson?)
+        HStack(spacing: 12) {
+//            if !isTheaterMode {
+                Picker("Lesson Type", selection: $vm.selectedLesson) {
+                    ForEach(vm.sortedLessons, id: \.self) { lesson in
+                        Text(lesson.type == .graphicGuide ? "Graphic" : lesson.type.rawValue.capitalized)
+                            .tag(lesson as Lesson?)
+                    }
                 }
-            }
-            .pickerStyle(.segmented)
+                .pickerStyle(.segmented)
+                .transition(.move(edge: .leading).combined(with: .opacity))
+//            } else {
+//                // Optional: Show current lesson title when picker is hidden
+//                Text(vm.selectedLesson?.type.rawValue.capitalized ?? "")
+//                    .font(.caption.bold())
+//                    .foregroundColor(.secondary)
+//                Spacer()
+//            }
             
+            // Loop Button
             Button { vm.toggleLoopMode() } label: {
                 Image(systemName: vm.loopMode.icon)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.system(size: 16, weight: .bold))
                     .foregroundColor(vm.loopMode == .off ? .primary : .blue)
-                    .frame(width: 44, height: 44)
+                    .frame(width: 40, height: 40)
+                    .background(.ultraThickMaterial)
+                    .clipShape(Circle())
+            }
+            
+            // Theater Mode Button
+            Button {
+                withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+                    isTheaterMode.toggle()
+                    
+                    // COLLAPSE/EXPAND LOGIC
+                    if isTheaterMode {
+                        columnVisibility = .detailOnly // Hides sidebar
+                    } else {
+                        columnVisibility = .all // Shows sidebar
+                    }
+                }
+            } label: {
+                Image(systemName: isTheaterMode ? "arrow.down.right.and.arrow.up.left" : "arrow.up.left.and.arrow.down.right")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(isTheaterMode ? .blue : .primary)
+                    .frame(width: 40, height: 40)
                     .background(.ultraThickMaterial)
                     .clipShape(Circle())
             }
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.vertical, 8)
         .background(.ultraThinMaterial)
     }
     

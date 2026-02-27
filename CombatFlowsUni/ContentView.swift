@@ -21,9 +21,11 @@ struct ContentView: View {
     @State private var selectedCategory: NavCategory? = .getTrained
     @State private var selectedFlow: Flow?
     @State private var viewModel: ContentViewModel?
-
+    @State private var columnVisibility = NavigationSplitViewVisibility.all
+    
     var body: some View {
-        NavigationSplitView {
+//        NavigationSplitView {
+        NavigationSplitView(columnVisibility: $columnVisibility) {
             List(selection: $selectedCategory) {
                 ForEach(NavCategory.allCases) { category in
                     NavigationLink(value: category) {
@@ -37,54 +39,12 @@ struct ContentView: View {
             if let vm = viewModel {
                 switch selectedCategory {
                 case .getTrained:
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            // Use the ViewModel to check bundle status
-                            // This prevents the whole view from refreshing on favorite toggle
-                            if !vm.storeManager.purchasedProductIDs.contains(vm.storeManager.bundleID) {
-                                BundleFeatureTile()
-                                    .padding(.horizontal)
-                            }
-                            
-                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 150))], spacing: 20) {
-                                ForEach(vm.store.flowGroups) { group in
-                                    let locked = !vm.isUnlocked(group)
-                                    
-                                    ForEach(group.combatFlows) { flow in
-                                        // CORRECT LOGIC: Compare the flow being rendered to the selected flow
-                                        let isCinemaMode = selectedFlow != nil
-                                        let isThisFlowSelected = selectedFlow?.id == flow.id // Use flow.id, not group.id
-                                        let shouldDim = isCinemaMode && !isThisFlowSelected
-
-                                        Button {
-                                            vm.handleTap(group: group, flow: flow) { tappedFlow in
-                                                selectedFlow = tappedFlow
-                                            }
-                                        } label: {
-                                            FlowGridItem(
-                                                group: group,
-                                                flow: flow,
-                                                isLocked: locked,
-                                                isFavorite: vm.isFavorite(group),
-                                                downloadProgress: vm.downloadProgress(for: group),
-                                                price: vm.localizedPrice(for: group),
-                                                onToggleFavorite: { vm.toggleFavorite(for: group) },
-                                                isDimmed: shouldDim,
-                                                isSelected: isThisFlowSelected
-                                            )
-                                            .equatable() // This only works if == is updated!
-                                        }
-                                        .buttonStyle(.plain)
-                                    }
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                        .padding(.vertical)
-                    }
+                    GetTrainedGridView(vm: vm, selectedFlow: $selectedFlow)
                     .navigationTitle("Get Trained")
                     .navigationDestination(item: $selectedFlow) { flow in
-                        FlowPlayerView(flow: flow)
+//                        FlowPlayerView(flow: flow)
+
+                        FlowPlayerView(flow: flow, columnVisibility: $columnVisibility)
                     }
                     .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
                     
@@ -108,7 +68,7 @@ struct ContentView: View {
             }
         } detail: {
             if let flow = selectedFlow {
-                FlowPlayerView(flow: flow)
+                FlowPlayerView(flow: flow, columnVisibility: $columnVisibility)
             } else {
                 ContentUnavailableView("Select a Flow to Watch", systemImage: "play.rectangle.on.rectangle")
             }
