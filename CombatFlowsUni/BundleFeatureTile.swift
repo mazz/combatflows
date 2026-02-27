@@ -10,7 +10,7 @@ import SwiftUI
 import StoreKit
 
 struct BundleFeatureTile: View {
-    @EnvironmentObject var storeManager: StoreManager
+    @Environment(StoreManager.self) var storeManager
     
     var body: some View {
         let bundleID = storeManager.bundleID

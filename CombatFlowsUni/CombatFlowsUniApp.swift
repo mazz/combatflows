@@ -10,15 +10,15 @@ import SwiftUI
 
 @main
 struct CombatFlowsUniApp: App {
-    // Connect the App Delegate
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
-    @StateObject private var storeManager = StoreManager()
+    @State private var storeManager = StoreManager()
     
     var body: some Scene {
         WindowGroup {
+            // Remove the (storeManager: storeManager) parameter
             ContentView()
-                .environmentObject(storeManager)
+                .environment(storeManager)
         }
     }
 }

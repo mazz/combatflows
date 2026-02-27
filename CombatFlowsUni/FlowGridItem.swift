@@ -114,9 +114,9 @@ struct DownloadProgressOverlay: View {
         VStack(spacing: 12) {
             ZStack {
                 // Background Circle
-                Circle()
-                    .stroke(Color.white.opacity(0.2), lineWidth: 4)
-                    .frame(width: 50, height: 50)
+//                Circle()
+//                    .stroke(Color.white.opacity(0.2), lineWidth: 4)
+//                    .frame(width: 50, height: 50)
                 
                 // Progress Circle
                 Circle()

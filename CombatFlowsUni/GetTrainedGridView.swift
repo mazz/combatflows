@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct GetTrainedGridView: View {
-    let vm: ContentViewModel
+    @Bindable var vm: ContentViewModel
     @Binding var selectedFlow: Flow?
     
     var body: some View {

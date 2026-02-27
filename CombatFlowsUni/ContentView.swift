@@ -16,7 +16,8 @@ struct ContentView: View {
     @State private var store = CurriculumStore()
     // CRITICAL: We keep this here for initialization, but we do NOT
     // access it inside the 'body' for grid-item properties.
-    @EnvironmentObject var storeManager: StoreManager
+//    @Environment var storeManager: StoreManager
+    @Environment(StoreManager.self) var storeManager
     
     @State private var selectedCategory: NavCategory? = .getTrained
     @State private var selectedFlow: Flow?
@@ -49,9 +50,12 @@ struct ContentView: View {
                     .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
                     
                 case .favorites:
-                    ContentUnavailableView("Favorites Coming Soon", systemImage: "star")
-                        .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
-
+                    FavoritesGridView(vm: vm, selectedFlow: $selectedFlow)
+                            .navigationTitle("Favorites")
+                            .navigationDestination(item: $selectedFlow) { flow in
+                                FlowPlayerView(flow: flow, columnVisibility: $columnVisibility)
+                            }
+                            .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
                 case .more:
                     List {
                         NavigationLink("About CombatFlows") { Text("About View") }
@@ -87,7 +91,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+//    ContentView(storeManager: StoreManager())
+    EmptyView()
 }
 
 enum NavCategory: String, CaseIterable, Identifiable {

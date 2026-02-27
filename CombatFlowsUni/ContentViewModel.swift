@@ -28,9 +28,28 @@ class ContentViewModel {
         return storeManager.purchasedProductIDs.contains(group.productIdentifier)
     }
     
-    func isFavorite(_ group: FlowGroup) -> Bool {
-        storeManager.favoriteProductIDs.contains(group.productIdentifier)
+    var favoriteFlows: [(group: FlowGroup, flow: Flow)] {
+        var favorites: [(group: FlowGroup, flow: Flow)] = []
+        
+        for group in store.flowGroups {
+            // Use group.combatFlows as seen in StoreManager.getRequiredAssets
+            for flow in group.combatFlows {
+                // Favoriting is currently tracked by productIdentifier (Group level)
+                // If you want to favorite individual flows, you'd need a Set<UUID>
+                // but based on your current StoreManager, we check the group ID:
+                if storeManager.favoriteProductIDs.contains(group.productIdentifier) {
+                    favorites.append((group, flow))
+                }
+            }
+        }
+        return favorites
     }
+
+    // 2. Fix the missing isFavorite method call
+    func isFavorite(_ group: FlowGroup) -> Bool {
+        return storeManager.favoriteProductIDs.contains(group.productIdentifier)
+    }
+    
     
     func downloadProgress(for group: FlowGroup) -> Double? {
         storeManager.downloadProgress[group.productIdentifier]

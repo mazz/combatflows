@@ -11,13 +11,15 @@ import Foundation
 import StoreKit
 import Combine
 import ZIPFoundation
+import Observation
 
-class StoreManager: NSObject, ObservableObject {
-    @Published var fetchedProducts: [SKProduct] = []
-    @Published var purchasedProductIDs: Set<String> = []
-    @Published var isRestoring: Bool = false
-    @Published var downloadProgress: [String: Double] = [:]
-    @Published var favoriteProductIDs: Set<String> = []
+@Observable
+class StoreManager: NSObject {
+    var fetchedProducts: [SKProduct] = []
+    var purchasedProductIDs: Set<String> = []
+    var isRestoring: Bool = false
+    var downloadProgress: [String: Double] = [:]
+    var favoriteProductIDs: Set<String> = []
     
     let bundleID = "ca.ilearningsolutions.combatflows.combatflowbundle"
     private var productsRequest: SKProductsRequest?
