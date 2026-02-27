@@ -9,6 +9,7 @@
 import AVKit
 import Foundation
 import Observation
+import MediaPlayer
 
 enum LoopMode: String, CaseIterable {
     case off = "repeat"
@@ -195,4 +196,55 @@ extension FlowPlayerViewModel {
     }
 }
 
+
+extension FlowPlayerViewModel {
+    func setupRemoteTransportControls() {
+        let commandCenter = MPRemoteCommandCenter.shared()
+
+        // Play/Pause Command
+        commandCenter.playCommand.addTarget { [unowned self] _ in
+            if self.player.rate == 0.0 {
+                self.togglePlayPause()
+                return .success
+            }
+            return .commandFailed
+        }
+        
+        commandCenter.pauseCommand.addTarget { [unowned self] _ in
+            if self.player.rate > 0.0 {
+                self.togglePlayPause()
+                return .success
+            }
+            return .commandFailed
+        }
+
+        // Next/Previous (Crucial for Watch/Lock Screen control)
+        commandCenter.nextTrackCommand.addTarget { [unowned self] _ in
+            self.skipToNextLesson()
+            return .success
+        }
+        
+        commandCenter.previousTrackCommand.addTarget { [unowned self] _ in
+            self.skipToPreviousLesson()
+            return .success
+        }
+    }
+
+    func updateNowPlayingInfo() {
+        guard let current = selectedLesson else { return }
+        
+        var nowPlayingInfo = [String: Any]()
+        nowPlayingInfo[MPMediaItemPropertyTitle] = current.type.rawValue.capitalized
+        nowPlayingInfo[MPMediaItemPropertyArtist] = flow.name
+        
+        // This makes the progress bar on the Lock Screen/TV move correctly
+        if let item = player.currentItem {
+            nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = item.currentTime().seconds
+            nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = item.duration.seconds
+            nowPlayingInfo[MPNowPlayingInfoPropertyPlaybackRate] = player.rate
+        }
+
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
+}
 
