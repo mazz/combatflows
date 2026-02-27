@@ -57,13 +57,16 @@ struct ContentView: View {
                             }
                             .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
                 case .more:
-                    List {
-                        NavigationLink("About CombatFlows") { Text("About View") }
-                        NavigationLink("Settings") { Text("Settings View") }
-                    }
-                    .navigationTitle("More")
-                    .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
-
+                    //                    List {
+                    //                        NavigationLink("About CombatFlows") { Text("About View") }
+                    //                        NavigationLink("Settings") { Text("Settings View") }
+                    //                    }
+                    //                    .navigationTitle("More")
+                    //                    .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
+                    
+                    MoreMenuView()
+                        .navigationSplitViewColumnWidth(min: 360, ideal: 375, max: 380)
+                    
                 case .none:
                     Text("Select a Category")
                 }

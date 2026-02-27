@@ -31,8 +31,8 @@ struct FlowGridItem: View, Equatable {
         lhs.isFavorite == rhs.isFavorite &&
         lhs.downloadProgress == rhs.downloadProgress &&
         lhs.price == rhs.price &&
-        lhs.isDimmed == rhs.isDimmed &&  // CRITICAL
-        lhs.isSelected == rhs.isSelected // CRITICAL
+        lhs.isDimmed == rhs.isDimmed &&
+        lhs.isSelected == rhs.isSelected
     }
 
     var body: some View {

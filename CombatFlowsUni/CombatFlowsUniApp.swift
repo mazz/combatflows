@@ -11,14 +11,22 @@ import SwiftUI
 @main
 struct CombatFlowsUniApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
     @State private var storeManager = StoreManager()
+    
+    // Check if user has already accepted
+    @AppStorage("hasAcceptedDisclaimer") var hasAcceptedDisclaimer: Bool = false
     
     var body: some Scene {
         WindowGroup {
-            // Remove the (storeManager: storeManager) parameter
             ContentView()
                 .environment(storeManager)
+                // Show modal if not accepted
+                .fullScreenCover(isPresented: .init(
+                    get: { !hasAcceptedDisclaimer },
+                    set: { _ in } // Managed by the modal's internal state
+                )) {
+                    DisclaimerModalView()
+                }
         }
     }
 }
