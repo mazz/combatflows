@@ -120,12 +120,13 @@ struct FlowPlayerView: View {
             dismiss()
         } label: {
             Image(systemName: "chevron.left.circle.fill")
-                .font(.title)
+                .font(.system(size: 36))           // bigger icon (was .title ~28pt)
                 .foregroundColor(.white.opacity(0.8))
+                .frame(width: 56, height: 56)      // large tap target
+                .contentShape(Rectangle())         // full frame is hittable
         }
-        .padding(.leading, 20)
-        .padding(.top, 8) // Small extra padding
-        // This automatically respects the notch/status bar height
+        .padding(.leading, 12)
+        .padding(.top, 8)
         .safeAreaPadding(.top)
     }
     
