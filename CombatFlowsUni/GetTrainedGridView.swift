@@ -15,7 +15,12 @@ struct GetTrainedGridView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                if !vm.storeManager.purchasedProductIDs.contains(vm.storeManager.bundleID) {
+                let bundleID = vm.storeManager.bundleID
+                let isPurchased = vm.storeManager.purchasedProductIDs.contains(bundleID)
+                let isDownloading = vm.storeManager.downloadProgress[bundleID] != nil
+                
+                // Keep tile if NOT purchased OR if it IS currently downloading/unzipping
+                if !isPurchased || isDownloading {
                     BundleFeatureTile()
                         .padding(.horizontal)
                 }

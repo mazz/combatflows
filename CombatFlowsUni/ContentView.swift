@@ -27,15 +27,27 @@ struct ContentView: View {
     var body: some View {
 //        NavigationSplitView {
         NavigationSplitView(columnVisibility: $columnVisibility) {
+            
             List(selection: $selectedCategory) {
                 ForEach(NavCategory.allCases) { category in
                     NavigationLink(value: category) {
-                        Label(category.rawValue, systemImage: category.icon)
+                        HStack {
+                            Label(category.rawValue, systemImage: category.icon)
+                            
+                            Spacer()
+                            
+                            // Show global progress next to "Get Trained" if the bundle is downloading
+                            if category == .getTrained,
+                               let progress = storeManager.downloadProgress[storeManager.bundleID] {
+                                ProgressView(value: progress)
+                                    .progressViewStyle(.circular)
+                                    .scaleEffect(0.7)
+                            }
+                        }
                     }
                 }
             }
             .navigationTitle("CombatFlows")
-            
         } content: {
             if let vm = viewModel {
                 switch selectedCategory {

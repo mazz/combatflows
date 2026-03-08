@@ -249,19 +249,48 @@ extension StoreManager: URLSessionDownloadDelegate {
     private func unzipDownloadedContent(at zipURL: URL, to destinationURL: URL) {
         print("📦 Unzipping items to: \(destinationURL.path)")
         
+        // 1. Create the destination directory if it doesn't exist
         let fileManager = FileManager.default
+        try? fileManager.createDirectory(at: destinationURL, withIntermediateDirectories: true)
+        
+        // 2. Use the Archive object to extract
+        guard let archive = Archive(url: zipURL, accessMode: .read) else {
+            print("❌ Failed to create archive from \(zipURL.path)")
+            return
+        }
         
         do {
-            // This requires the ZIPFoundation library
-            // If you haven't added it: File > Add Packages > https://github.com/weichsel/ZIPFoundation.git
-            try fileManager.unzipItem(at: zipURL, to: destinationURL)
+            for entry in archive {
+                try archive.extract(entry, to: destinationURL.appendingPathComponent(entry.path), skipCRC32: false, progress: nil)
+            }
+            print("✅ Extraction complete.")
             
-            // DEBUG: List the files to verify they are actually there now
+            // DEBUG: List files
             let items = try fileManager.contentsOfDirectory(atPath: destinationURL.path)
             print("🗂 Files extracted: \(items)")
-            
         } catch {
-            print("❌ Unzip Failed: \(error.localizedDescription)")
+            // If the error is 'file already exists', we manually delete and retry for that entry
+            print("⚠️ Unzip encountered an issue: \(error.localizedDescription)")
+            
+            // Manual Overwrite Fallback:
+            // If your specific version of ZIPFoundation is failing on existing files,
+            // handle the entry extraction with a check:
+            handleManualOverwriteUnzip(archive: archive, destinationURL: destinationURL)
+        }
+    }
+    
+    private func handleManualOverwriteUnzip(archive: Archive, destinationURL: URL) {
+        let fileManager = FileManager.default
+        for entry in archive {
+            let targetURL = destinationURL.appendingPathComponent(entry.path)
+            do {
+                if fileManager.fileExists(atPath: targetURL.path) {
+                    try fileManager.removeItem(at: targetURL)
+                }
+                try archive.extract(entry, to: targetURL)
+            } catch {
+                print("❌ Still failed to extract \(entry.path): \(error)")
+            }
         }
     }
 }
